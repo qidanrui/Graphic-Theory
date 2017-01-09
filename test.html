@@ -1,0 +1,2707 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+#licensing {
+  fill: green;
+}
+
+.link.licensing {
+  stroke: green;
+}
+
+.link.resolved {
+  stroke-dasharray: 0,2 1;
+}
+
+circle {
+  fill: #ccc;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+text {
+  font: 12px Microsoft YaHei;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+.linetext {
+    font-size: 12px Microsoft YaHei;
+}
+
+html,
+body {
+  background-color: #333;
+}
+
+</style>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $("#slider").slider({
+      orientation: "horizontal",
+      range: "min",
+      max: 100,
+      min: 10,
+      value: 30,
+      slide: changeScale,
+      change: changeScale
+    });
+  });
+</script>
+<body>
+<div id='slider'></div>
+<div id='node_info' style="width:100; height:100;"></div>
+<div id='selector'>
+  <select id='calculator'>
+  <option value="MinimumSpanningTree">Minimum Spanning Tree</option>
+  <option value="PointCloseness">Point Closeness</option>
+  <option value="PointBetweeness">Point Betweeness</option>
+  <option value="ConnectedComponent">Connected Component</option>
+  </select>
+  <button onclick="draw()">Draw</button>
+</div>
+<div id='gotoSelector'>
+  From
+  <select id='fromOptions'>    
+  </select>
+  To
+  <select id='toOptions'>
+  </select>
+  <button onclick="drawShortestPath()">Goto</button>
+</div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="static/js/npm.js"></script>
+<script>
+
+// http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
+var node_info =[
+{"id" : 0, "group" : 1},
+{"id" : 1, "group" : 1},
+{"id" : 2, "group" : 1},
+{"id" : 3, "group" : 1},
+{"id" : 4, "group" : 1},
+{"id" : 5, "group" : 1},
+{"id" : 6, "group" : 1},
+{"id" : 7, "group" : 1},
+{"id" : 8, "group" : 1},
+{"id" : 9, "group" : 1},
+{"id" : 10, "group" : 1},
+{"id" : 11, "group" : 1},
+{"id" : 12, "group" : 1},
+{"id" : 13, "group" : 1},
+{"id" : 14, "group" : 1},
+{"id" : 15, "group" : 1},
+{"id" : 16, "group" : 1},
+{"id" : 17, "group" : 1},
+{"id" : 18, "group" : 1},
+{"id" : 19, "group" : 1},
+{"id" : 20, "group" : 1},
+{"id" : 21, "group" : 1},
+{"id" : 22, "group" : 1},
+{"id" : 23, "group" : 1},
+{"id" : 24, "group" : 1},
+{"id" : 25, "group" : 1},
+{"id" : 26, "group" : 1},
+{"id" : 27, "group" : 1},
+{"id" : 28, "group" : 1},
+{"id" : 29, "group" : 1},
+{"id" : 30, "group" : 1},
+{"id" : 31, "group" : 1},
+{"id" : 32, "group" : 1},
+{"id" : 33, "group" : 1},
+{"id" : 34, "group" : 1},
+{"id" : 35, "group" : 1},
+{"id" : 36, "group" : 1},
+{"id" : 37, "group" : 1},
+{"id" : 38, "group" : 1},
+{"id" : 39, "group" : 1},
+{"id" : 40, "group" : 1},
+{"id" : 41, "group" : 1},
+{"id" : 42, "group" : 1},
+{"id" : 43, "group" : 1},
+{"id" : 44, "group" : 1},
+{"id" : 45, "group" : 1},
+{"id" : 46, "group" : 1},
+{"id" : 47, "group" : 1},
+{"id" : 48, "group" : 1},
+{"id" : 49, "group" : 1},
+{"id" : 50, "group" : 1},
+{"id" : 51, "group" : 1},
+{"id" : 52, "group" : 1},
+{"id" : 53, "group" : 1},
+{"id" : 54, "group" : 1},
+{"id" : 55, "group" : 1},
+{"id" : 56, "group" : 1},
+{"id" : 57, "group" : 1},
+{"id" : 58, "group" : 1},
+{"id" : 59, "group" : 1},
+{"id" : 60, "group" : 1},
+{"id" : 61, "group" : 1},
+{"id" : 62, "group" : 1},
+{"id" : 63, "group" : 1},
+{"id" : 64, "group" : 1},
+{"id" : 65, "group" : 1},
+{"id" : 66, "group" : 1},
+{"id" : 67, "group" : 1},
+{"id" : 68, "group" : 1},
+{"id" : 69, "group" : 1},
+{"id" : 70, "group" : 1},
+{"id" : 71, "group" : 1},
+{"id" : 72, "group" : 1},
+{"id" : 73, "group" : 1},
+{"id" : 74, "group" : 1},
+{"id" : 75, "group" : 1},
+{"id" : 76, "group" : 1},
+{"id" : 77, "group" : 1},
+{"id" : 78, "group" : 1},
+{"id" : 79, "group" : 1},
+{"id" : 80, "group" : 1},
+{"id" : 81, "group" : 1},
+{"id" : 82, "group" : 1},
+{"id" : 83, "group" : 1},
+{"id" : 84, "group" : 1},
+{"id" : 85, "group" : 1},
+{"id" : 86, "group" : 1},
+{"id" : 87, "group" : 1},
+{"id" : 88, "group" : 1},
+{"id" : 89, "group" : 1},
+{"id" : 90, "group" : 1},
+{"id" : 91, "group" : 1},
+{"id" : 92, "group" : 1},
+{"id" : 93, "group" : 1},
+{"id" : 94, "group" : 1},
+{"id" : 95, "group" : 1},
+{"id" : 96, "group" : 1},
+{"id" : 97, "group" : 1},
+{"id" : 98, "group" : 1},
+{"id" : 99, "group" : 1},
+{"id" : 100, "group" : 1},
+{"id" : 101, "group" : 1},
+{"id" : 102, "group" : 1},
+{"id" : 103, "group" : 1},
+{"id" : 104, "group" : 1},
+{"id" : 105, "group" : 1},
+{"id" : 106, "group" : 1},
+{"id" : 107, "group" : 1},
+{"id" : 108, "group" : 1},
+{"id" : 109, "group" : 1},
+{"id" : 110, "group" : 1},
+{"id" : 111, "group" : 1},
+{"id" : 112, "group" : 1},
+{"id" : 113, "group" : 1},
+{"id" : 114, "group" : 1},
+{"id" : 115, "group" : 1},
+{"id" : 116, "group" : 1},
+{"id" : 117, "group" : 1},
+{"id" : 118, "group" : 1},
+{"id" : 119, "group" : 1},
+{"id" : 120, "group" : 1},
+{"id" : 121, "group" : 1},
+{"id" : 122, "group" : 1},
+{"id" : 123, "group" : 1},
+{"id" : 124, "group" : 1},
+{"id" : 125, "group" : 1},
+{"id" : 126, "group" : 1},
+{"id" : 127, "group" : 1},
+{"id" : 128, "group" : 1},
+{"id" : 129, "group" : 1},
+{"id" : 130, "group" : 1},
+{"id" : 131, "group" : 1},
+{"id" : 132, "group" : 1},
+{"id" : 133, "group" : 1},
+{"id" : 134, "group" : 1},
+{"id" : 135, "group" : 1},
+{"id" : 136, "group" : 1},
+{"id" : 137, "group" : 1},
+{"id" : 138, "group" : 1},
+{"id" : 139, "group" : 1},
+{"id" : 140, "group" : 1},
+{"id" : 141, "group" : 1},
+{"id" : 142, "group" : 1},
+{"id" : 143, "group" : 1},
+{"id" : 144, "group" : 1},
+{"id" : 145, "group" : 1},
+{"id" : 146, "group" : 1},
+{"id" : 147, "group" : 1},
+{"id" : 148, "group" : 1},
+{"id" : 149, "group" : 1},
+{"id" : 150, "group" : 1},
+{"id" : 151, "group" : 1},
+{"id" : 152, "group" : 1},
+{"id" : 153, "group" : 1},
+{"id" : 154, "group" : 1},
+{"id" : 155, "group" : 1},
+{"id" : 156, "group" : 1},
+{"id" : 157, "group" : 1},
+{"id" : 158, "group" : 1},
+{"id" : 159, "group" : 1},
+{"id" : 160, "group" : 1},
+{"id" : 161, "group" : 1},
+{"id" : 162, "group" : 1},
+{"id" : 163, "group" : 1},
+{"id" : 164, "group" : 1},
+{"id" : 165, "group" : 1},
+{"id" : 166, "group" : 1},
+{"id" : 167, "group" : 1},
+{"id" : 168, "group" : 1},
+{"id" : 169, "group" : 1},
+{"id" : 170, "group" : 1},
+{"id" : 171, "group" : 1},
+{"id" : 172, "group" : 1},
+{"id" : 173, "group" : 1},
+{"id" : 174, "group" : 1},
+{"id" : 175, "group" : 1},
+{"id" : 176, "group" : 1},
+{"id" : 177, "group" : 1},
+{"id" : 178, "group" : 1},
+{"id" : 179, "group" : 1},
+{"id" : 180, "group" : 1},
+{"id" : 181, "group" : 1},
+{"id" : 182, "group" : 1},
+{"id" : 183, "group" : 1},
+{"id" : 184, "group" : 1},
+{"id" : 185, "group" : 1},
+{"id" : 186, "group" : 1},
+{"id" : 187, "group" : 1},
+{"id" : 188, "group" : 1},
+{"id" : 189, "group" : 1},
+{"id" : 190, "group" : 1},
+{"id" : 191, "group" : 1},
+{"id" : 192, "group" : 1},
+{"id" : 193, "group" : 1},
+{"id" : 194, "group" : 1},
+{"id" : 195, "group" : 1},
+{"id" : 196, "group" : 1},
+{"id" : 197, "group" : 1},
+{"id" : 198, "group" : 1},
+{"id" : 199, "group" : 1},
+{"id" : 200, "group" : 1},
+{"id" : 201, "group" : 1},
+{"id" : 202, "group" : 1},
+{"id" : 203, "group" : 1},
+{"id" : 204, "group" : 1},
+{"id" : 205, "group" : 1},
+{"id" : 206, "group" : 1},
+{"id" : 207, "group" : 1},
+{"id" : 208, "group" : 1},
+{"id" : 209, "group" : 1},
+{"id" : 210, "group" : 1},
+{"id" : 211, "group" : 1},
+{"id" : 212, "group" : 1},
+{"id" : 213, "group" : 1},
+{"id" : 214, "group" : 1},
+{"id" : 215, "group" : 1},
+{"id" : 216, "group" : 1},
+{"id" : 217, "group" : 1},
+{"id" : 218, "group" : 1},
+{"id" : 219, "group" : 1},
+{"id" : 220, "group" : 1},
+{"id" : 221, "group" : 1},
+{"id" : 222, "group" : 1},
+{"id" : 223, "group" : 1},
+{"id" : 224, "group" : 1},
+{"id" : 225, "group" : 1},
+{"id" : 226, "group" : 1},
+{"id" : 227, "group" : 1},
+{"id" : 228, "group" : 1},
+{"id" : 229, "group" : 1},
+{"id" : 230, "group" : 1},
+{"id" : 231, "group" : 1},
+{"id" : 232, "group" : 1},
+{"id" : 233, "group" : 1},
+{"id" : 234, "group" : 1},
+{"id" : 235, "group" : 1},
+{"id" : 236, "group" : 1},
+{"id" : 237, "group" : 1},
+{"id" : 238, "group" : 1},
+{"id" : 239, "group" : 1},
+{"id" : 240, "group" : 1},
+{"id" : 241, "group" : 1},
+{"id" : 242, "group" : 1},
+{"id" : 243, "group" : 1},
+{"id" : 244, "group" : 1},
+{"id" : 245, "group" : 1},
+{"id" : 246, "group" : 1},
+{"id" : 247, "group" : 1},
+{"id" : 248, "group" : 1},
+{"id" : 249, "group" : 1},
+{"id" : 250, "group" : 1},
+{"id" : 251, "group" : 1},
+{"id" : 252, "group" : 1},
+{"id" : 253, "group" : 1},
+{"id" : 254, "group" : 1},
+{"id" : 255, "group" : 1},
+{"id" : 256, "group" : 1},
+{"id" : 257, "group" : 1},
+{"id" : 258, "group" : 1},
+{"id" : 259, "group" : 1},
+{"id" : 260, "group" : 1},
+{"id" : 261, "group" : 1},
+{"id" : 262, "group" : 1},
+{"id" : 263, "group" : 1},
+{"id" : 264, "group" : 1},
+{"id" : 265, "group" : 1},
+{"id" : 266, "group" : 1},
+{"id" : 267, "group" : 1},
+{"id" : 268, "group" : 1},
+{"id" : 269, "group" : 1},
+{"id" : 270, "group" : 1},
+{"id" : 271, "group" : 1},
+{"id" : 272, "group" : 1},
+{"id" : 273, "group" : 1},
+{"id" : 274, "group" : 1},
+{"id" : 275, "group" : 1},
+{"id" : 276, "group" : 1},
+{"id" : 277, "group" : 1},
+{"id" : 278, "group" : 1},
+{"id" : 279, "group" : 1},
+{"id" : 280, "group" : 1},
+{"id" : 281, "group" : 1},
+{"id" : 282, "group" : 1},
+{"id" : 283, "group" : 1},
+{"id" : 284, "group" : 1},
+{"id" : 285, "group" : 1},
+{"id" : 286, "group" : 1},
+{"id" : 287, "group" : 1},
+{"id" : 288, "group" : 1},
+{"id" : 289, "group" : 1},
+{"id" : 290, "group" : 1},
+{"id" : 291, "group" : 1},
+{"id" : 292, "group" : 1},
+{"id" : 293, "group" : 1},
+{"id" : 294, "group" : 1},
+{"id" : 295, "group" : 1},
+{"id" : 296, "group" : 1},
+{"id" : 297, "group" : 1},
+{"id" : 298, "group" : 1},
+{"id" : 299, "group" : 1},
+{"id" : 300, "group" : 1},
+{"id" : 301, "group" : 1},
+{"id" : 302, "group" : 1},
+{"id" : 303, "group" : 1},
+{"id" : 304, "group" : 1},
+{"id" : 305, "group" : 1},
+{"id" : 306, "group" : 1},
+{"id" : 307, "group" : 1},
+{"id" : 308, "group" : 1},
+{"id" : 309, "group" : 1},
+{"id" : 310, "group" : 1},
+{"id" : 311, "group" : 1},
+{"id" : 312, "group" : 1},
+{"id" : 313, "group" : 1},
+{"id" : 314, "group" : 1},
+{"id" : 315, "group" : 1},
+{"id" : 316, "group" : 1},
+{"id" : 317, "group" : 1},
+{"id" : 318, "group" : 1},
+{"id" : 319, "group" : 1},
+{"id" : 320, "group" : 1},
+{"id" : 321, "group" : 1},
+{"id" : 322, "group" : 1},
+{"id" : 323, "group" : 1},
+{"id" : 324, "group" : 1},
+{"id" : 325, "group" : 1},
+{"id" : 326, "group" : 1},
+{"id" : 327, "group" : 1},
+{"id" : 328, "group" : 1},
+{"id" : 329, "group" : 1},
+{"id" : 330, "group" : 1},
+{"id" : 331, "group" : 1},
+{"id" : 332, "group" : 1},
+{"id" : 333, "group" : 1},
+{"id" : 334, "group" : 1},
+{"id" : 335, "group" : 1},
+{"id" : 336, "group" : 1},
+{"id" : 337, "group" : 1},
+{"id" : 338, "group" : 1},
+{"id" : 339, "group" : 1},
+{"id" : 340, "group" : 1},
+{"id" : 341, "group" : 1},
+{"id" : 342, "group" : 1},
+{"id" : 343, "group" : 1},
+{"id" : 344, "group" : 1},
+{"id" : 345, "group" : 1},
+{"id" : 346, "group" : 1},
+{"id" : 347, "group" : 1},
+{"id" : 348, "group" : 1},
+{"id" : 349, "group" : 1},
+{"id" : 350, "group" : 1},
+{"id" : 351, "group" : 1},
+{"id" : 352, "group" : 1},
+{"id" : 353, "group" : 1},
+{"id" : 354, "group" : 1},
+{"id" : 355, "group" : 1},
+{"id" : 356, "group" : 1},
+{"id" : 357, "group" : 1},
+{"id" : 358, "group" : 1},
+{"id" : 359, "group" : 1},
+{"id" : 360, "group" : 1},
+{"id" : 361, "group" : 1},
+{"id" : 362, "group" : 1},
+{"id" : 363, "group" : 1},
+{"id" : 364, "group" : 1},
+{"id" : 365, "group" : 1},
+{"id" : 366, "group" : 1},
+{"id" : 367, "group" : 1},
+{"id" : 368, "group" : 1},
+{"id" : 369, "group" : 1},
+{"id" : 370, "group" : 1},
+{"id" : 371, "group" : 1},
+{"id" : 372, "group" : 1},
+{"id" : 373, "group" : 1},
+{"id" : 374, "group" : 1},
+{"id" : 375, "group" : 1},
+{"id" : 376, "group" : 1},
+{"id" : 377, "group" : 1},
+{"id" : 378, "group" : 1},
+{"id" : 379, "group" : 1},
+{"id" : 380, "group" : 1},
+{"id" : 381, "group" : 1},
+{"id" : 382, "group" : 1},
+{"id" : 383, "group" : 1},
+{"id" : 384, "group" : 1},
+{"id" : 385, "group" : 1},
+{"id" : 386, "group" : 1},
+{"id" : 387, "group" : 1},
+{"id" : 388, "group" : 1},
+{"id" : 389, "group" : 1},
+{"id" : 390, "group" : 1},
+{"id" : 391, "group" : 1},
+{"id" : 392, "group" : 1},
+{"id" : 393, "group" : 1},
+{"id" : 394, "group" : 1},
+{"id" : 395, "group" : 1},
+{"id" : 396, "group" : 1},
+{"id" : 397, "group" : 1},
+{"id" : 398, "group" : 1},
+{"id" : 399, "group" : 1},
+{"id" : 400, "group" : 1},
+{"id" : 401, "group" : 1},
+{"id" : 402, "group" : 1},
+{"id" : 403, "group" : 1},
+{"id" : 404, "group" : 1},
+{"id" : 405, "group" : 1},
+{"id" : 406, "group" : 1},
+{"id" : 407, "group" : 1},
+{"id" : 408, "group" : 1},
+{"id" : 409, "group" : 1},
+{"id" : 410, "group" : 1},
+{"id" : 411, "group" : 1},
+{"id" : 412, "group" : 1},
+{"id" : 413, "group" : 1},
+{"id" : 414, "group" : 1},
+{"id" : 415, "group" : 1},
+{"id" : 416, "group" : 1},
+{"id" : 417, "group" : 1},
+{"id" : 418, "group" : 1},
+{"id" : 419, "group" : 1},
+{"id" : 420, "group" : 1},
+{"id" : 421, "group" : 1},
+{"id" : 422, "group" : 1},
+{"id" : 423, "group" : 1},
+{"id" : 424, "group" : 1},
+{"id" : 425, "group" : 1},
+{"id" : 426, "group" : 1},
+{"id" : 427, "group" : 1},
+{"id" : 428, "group" : 1},
+{"id" : 429, "group" : 1},
+{"id" : 430, "group" : 1},
+{"id" : 431, "group" : 1},
+{"id" : 432, "group" : 1},
+{"id" : 433, "group" : 1},
+{"id" : 434, "group" : 1},
+{"id" : 435, "group" : 1},
+{"id" : 436, "group" : 1},
+{"id" : 437, "group" : 1},
+{"id" : 438, "group" : 1},
+{"id" : 439, "group" : 1},
+{"id" : 440, "group" : 1},
+{"id" : 441, "group" : 1},
+{"id" : 442, "group" : 1},
+{"id" : 443, "group" : 1},
+{"id" : 444, "group" : 1},
+{"id" : 445, "group" : 1},
+{"id" : 446, "group" : 1},
+{"id" : 447, "group" : 1},
+{"id" : 448, "group" : 1},
+{"id" : 449, "group" : 1},
+{"id" : 450, "group" : 1},
+{"id" : 451, "group" : 1},
+{"id" : 452, "group" : 1},
+{"id" : 453, "group" : 1},
+{"id" : 454, "group" : 1},
+{"id" : 455, "group" : 1},
+{"id" : 456, "group" : 1},
+{"id" : 457, "group" : 1},
+{"id" : 458, "group" : 1},
+{"id" : 459, "group" : 1},
+{"id" : 460, "group" : 1},
+{"id" : 461, "group" : 1},
+{"id" : 462, "group" : 1},
+{"id" : 463, "group" : 1},
+{"id" : 464, "group" : 1},
+{"id" : 465, "group" : 1},
+{"id" : 466, "group" : 1},
+{"id" : 467, "group" : 1},
+{"id" : 468, "group" : 1},
+{"id" : 469, "group" : 1},
+{"id" : 470, "group" : 1},
+{"id" : 471, "group" : 1},
+{"id" : 472, "group" : 1},
+{"id" : 473, "group" : 1},
+{"id" : 474, "group" : 1},
+{"id" : 475, "group" : 1},
+{"id" : 476, "group" : 1},
+{"id" : 477, "group" : 1},
+{"id" : 478, "group" : 1},
+{"id" : 479, "group" : 1},
+{"id" : 480, "group" : 1},
+{"id" : 481, "group" : 1},
+{"id" : 482, "group" : 1},
+{"id" : 483, "group" : 1},
+{"id" : 484, "group" : 1},
+{"id" : 485, "group" : 1},
+{"id" : 486, "group" : 1},
+{"id" : 487, "group" : 1},
+{"id" : 488, "group" : 1},
+{"id" : 489, "group" : 1},
+{"id" : 490, "group" : 1},
+{"id" : 491, "group" : 1},
+{"id" : 492, "group" : 1},
+{"id" : 493, "group" : 1},
+{"id" : 494, "group" : 1},
+{"id" : 495, "group" : 1},
+{"id" : 496, "group" : 1},
+{"id" : 497, "group" : 1},
+{"id" : 498, "group" : 1},
+{"id" : 499, "group" : 1},
+{"id" : 500, "group" : 1},
+{"id" : 501, "group" : 1},
+{"id" : 502, "group" : 1},
+{"id" : 503, "group" : 1},
+{"id" : 504, "group" : 1},
+{"id" : 505, "group" : 1},
+{"id" : 506, "group" : 1},
+{"id" : 507, "group" : 1},
+{"id" : 508, "group" : 1},
+{"id" : 509, "group" : 1},
+{"id" : 510, "group" : 1},
+{"id" : 511, "group" : 1},
+{"id" : 512, "group" : 1},
+{"id" : 513, "group" : 1},
+{"id" : 514, "group" : 1},
+{"id" : 515, "group" : 1},
+{"id" : 516, "group" : 1},
+{"id" : 517, "group" : 1},
+{"id" : 518, "group" : 1},
+{"id" : 519, "group" : 1},
+{"id" : 520, "group" : 1},
+{"id" : 521, "group" : 1},
+{"id" : 522, "group" : 1},
+{"id" : 523, "group" : 1},
+{"id" : 524, "group" : 1},
+{"id" : 525, "group" : 1},
+{"id" : 526, "group" : 1},
+{"id" : 527, "group" : 1},
+{"id" : 528, "group" : 1},
+{"id" : 529, "group" : 1},
+{"id" : 530, "group" : 1},
+{"id" : 531, "group" : 1},
+{"id" : 532, "group" : 1},
+{"id" : 533, "group" : 1},
+{"id" : 534, "group" : 1},
+{"id" : 535, "group" : 1},
+{"id" : 536, "group" : 1},
+{"id" : 537, "group" : 1},
+{"id" : 538, "group" : 1},
+{"id" : 539, "group" : 1},
+{"id" : 540, "group" : 1},
+{"id" : 541, "group" : 1},
+{"id" : 542, "group" : 1},
+{"id" : 543, "group" : 1},
+{"id" : 544, "group" : 1},
+{"id" : 545, "group" : 1},
+{"id" : 546, "group" : 1},
+{"id" : 547, "group" : 1},
+{"id" : 548, "group" : 1},
+{"id" : 549, "group" : 1},
+{"id" : 550, "group" : 1},
+{"id" : 551, "group" : 1},
+{"id" : 552, "group" : 1},
+{"id" : 553, "group" : 1},
+{"id" : 554, "group" : 1},
+{"id" : 555, "group" : 1},
+{"id" : 556, "group" : 1},
+{"id" : 557, "group" : 1},
+{"id" : 558, "group" : 1},
+{"id" : 559, "group" : 1},
+{"id" : 560, "group" : 1},
+{"id" : 561, "group" : 1},
+{"id" : 562, "group" : 1},
+{"id" : 563, "group" : 1},
+{"id" : 564, "group" : 1},
+{"id" : 565, "group" : 1},
+{"id" : 566, "group" : 1},
+{"id" : 567, "group" : 1},
+{"id" : 568, "group" : 1},
+{"id" : 569, "group" : 1},
+{"id" : 570, "group" : 1},
+{"id" : 571, "group" : 1},
+{"id" : 572, "group" : 1},
+{"id" : 573, "group" : 1},
+{"id" : 574, "group" : 1},
+{"id" : 575, "group" : 1},
+{"id" : 576, "group" : 1},
+{"id" : 577, "group" : 1},
+{"id" : 578, "group" : 1},
+{"id" : 579, "group" : 1},
+{"id" : 580, "group" : 1},
+{"id" : 581, "group" : 1},
+{"id" : 582, "group" : 1},
+{"id" : 583, "group" : 1},
+{"id" : 584, "group" : 1},
+{"id" : 585, "group" : 1},
+{"id" : 586, "group" : 1},
+{"id" : 587, "group" : 1},
+{"id" : 588, "group" : 1},
+{"id" : 589, "group" : 1},
+{"id" : 590, "group" : 1},
+{"id" : 591, "group" : 1},
+{"id" : 592, "group" : 1},
+{"id" : 593, "group" : 1},
+{"id" : 594, "group" : 1},
+{"id" : 595, "group" : 1},
+{"id" : 596, "group" : 1},
+{"id" : 597, "group" : 1},
+{"id" : 598, "group" : 1},
+{"id" : 599, "group" : 1},
+{"id" : 600, "group" : 1},
+{"id" : 601, "group" : 1},
+{"id" : 602, "group" : 1},
+{"id" : 603, "group" : 1},
+{"id" : 604, "group" : 1},
+{"id" : 605, "group" : 1},
+{"id" : 606, "group" : 1},
+{"id" : 607, "group" : 1},
+{"id" : 608, "group" : 1},
+{"id" : 609, "group" : 1},
+{"id" : 610, "group" : 1},
+{"id" : 611, "group" : 1},
+{"id" : 612, "group" : 1},
+{"id" : 613, "group" : 1},
+{"id" : 614, "group" : 1},
+{"id" : 615, "group" : 1},
+{"id" : 616, "group" : 1},
+{"id" : 617, "group" : 1},
+{"id" : 618, "group" : 1},
+{"id" : 619, "group" : 1},
+{"id" : 620, "group" : 1},
+{"id" : 621, "group" : 1},
+{"id" : 622, "group" : 1},
+{"id" : 623, "group" : 1},
+{"id" : 624, "group" : 1},
+{"id" : 625, "group" : 1},
+{"id" : 626, "group" : 1},
+{"id" : 627, "group" : 1},
+{"id" : 628, "group" : 1},
+{"id" : 629, "group" : 1},
+{"id" : 630, "group" : 1},
+{"id" : 631, "group" : 1},
+{"id" : 632, "group" : 1},
+{"id" : 633, "group" : 1},
+{"id" : 634, "group" : 1},
+{"id" : 635, "group" : 1},
+{"id" : 636, "group" : 1},
+{"id" : 637, "group" : 1},
+{"id" : 638, "group" : 1},
+{"id" : 639, "group" : 1},
+{"id" : 640, "group" : 1},
+{"id" : 641, "group" : 1},
+{"id" : 642, "group" : 1},
+{"id" : 643, "group" : 1},
+{"id" : 644, "group" : 1},
+{"id" : 645, "group" : 1},
+{"id" : 646, "group" : 1},
+{"id" : 647, "group" : 1},
+{"id" : 648, "group" : 1},
+{"id" : 649, "group" : 1},
+{"id" : 650, "group" : 1},
+{"id" : 651, "group" : 1},
+{"id" : 652, "group" : 1},
+{"id" : 653, "group" : 1},
+{"id" : 654, "group" : 1},
+{"id" : 655, "group" : 1},
+{"id" : 656, "group" : 1},
+{"id" : 657, "group" : 1},
+{"id" : 658, "group" : 1},
+{"id" : 659, "group" : 1},
+{"id" : 660, "group" : 1},
+{"id" : 661, "group" : 1},
+{"id" : 662, "group" : 1},
+{"id" : 663, "group" : 1},
+{"id" : 664, "group" : 1},
+{"id" : 665, "group" : 1},
+{"id" : 666, "group" : 1},
+{"id" : 667, "group" : 1},
+{"id" : 668, "group" : 1},
+{"id" : 669, "group" : 1},
+{"id" : 670, "group" : 1},
+{"id" : 671, "group" : 1},
+{"id" : 672, "group" : 1},
+{"id" : 673, "group" : 1},
+{"id" : 674, "group" : 1},
+{"id" : 675, "group" : 1},
+{"id" : 676, "group" : 1},
+{"id" : 677, "group" : 1},
+{"id" : 678, "group" : 1},
+{"id" : 679, "group" : 1},
+{"id" : 680, "group" : 1},
+{"id" : 681, "group" : 1},
+{"id" : 682, "group" : 1},
+{"id" : 683, "group" : 1},
+{"id" : 684, "group" : 1},
+{"id" : 685, "group" : 1},
+{"id" : 686, "group" : 1},
+{"id" : 687, "group" : 1},
+{"id" : 688, "group" : 1},
+{"id" : 689, "group" : 1},
+{"id" : 690, "group" : 1},
+{"id" : 691, "group" : 1},
+{"id" : 692, "group" : 1},
+{"id" : 693, "group" : 1},
+{"id" : 694, "group" : 1},
+{"id" : 695, "group" : 1},
+{"id" : 696, "group" : 1},
+{"id" : 697, "group" : 1},
+{"id" : 698, "group" : 1},
+{"id" : 699, "group" : 1},
+{"id" : 700, "group" : 1},
+{"id" : 701, "group" : 1},
+{"id" : 702, "group" : 1},
+{"id" : 703, "group" : 1},
+{"id" : 704, "group" : 1},
+{"id" : 705, "group" : 1},
+{"id" : 706, "group" : 1},
+{"id" : 707, "group" : 1},
+{"id" : 708, "group" : 1},
+{"id" : 709, "group" : 1},
+{"id" : 710, "group" : 1},
+{"id" : 711, "group" : 1},
+{"id" : 712, "group" : 1},
+{"id" : 713, "group" : 1},
+{"id" : 714, "group" : 1},
+{"id" : 715, "group" : 1},
+{"id" : 716, "group" : 1},
+{"id" : 717, "group" : 1},
+{"id" : 718, "group" : 1},
+{"id" : 719, "group" : 1},
+{"id" : 720, "group" : 1},
+{"id" : 721, "group" : 1},
+{"id" : 722, "group" : 1},
+{"id" : 723, "group" : 1},
+{"id" : 724, "group" : 1},
+{"id" : 725, "group" : 1},
+{"id" : 726, "group" : 1},
+{"id" : 727, "group" : 1},
+{"id" : 728, "group" : 1},
+{"id" : 729, "group" : 1},
+{"id" : 730, "group" : 1},
+{"id" : 731, "group" : 1},
+{"id" : 732, "group" : 1},
+{"id" : 733, "group" : 1},
+{"id" : 734, "group" : 1},
+{"id" : 735, "group" : 1},
+{"id" : 736, "group" : 1},
+{"id" : 737, "group" : 1},
+{"id" : 738, "group" : 1},
+{"id" : 739, "group" : 1},
+{"id" : 740, "group" : 1},
+{"id" : 741, "group" : 1},
+{"id" : 742, "group" : 1},
+{"id" : 743, "group" : 1},
+{"id" : 744, "group" : 1},
+{"id" : 745, "group" : 1},
+{"id" : 746, "group" : 1},
+{"id" : 747, "group" : 1},
+{"id" : 748, "group" : 1},
+{"id" : 749, "group" : 1},
+{"id" : 750, "group" : 1},
+{"id" : 751, "group" : 1},
+{"id" : 752, "group" : 1},
+{"id" : 753, "group" : 1},
+{"id" : 754, "group" : 1},
+{"id" : 755, "group" : 1},
+{"id" : 756, "group" : 1},
+{"id" : 757, "group" : 1},
+{"id" : 758, "group" : 1},
+{"id" : 759, "group" : 1},
+{"id" : 760, "group" : 1},
+{"id" : 761, "group" : 1},
+{"id" : 762, "group" : 1},
+{"id" : 763, "group" : 1},
+{"id" : 764, "group" : 1},
+{"id" : 765, "group" : 1},
+{"id" : 766, "group" : 1},
+{"id" : 767, "group" : 1},
+{"id" : 768, "group" : 1},
+{"id" : 769, "group" : 1},
+{"id" : 770, "group" : 1},
+{"id" : 771, "group" : 1},
+{"id" : 772, "group" : 1},
+{"id" : 773, "group" : 1},
+{"id" : 774, "group" : 1},
+{"id" : 775, "group" : 1},
+{"id" : 776, "group" : 1},
+{"id" : 777, "group" : 1},
+{"id" : 778, "group" : 1},
+{"id" : 779, "group" : 1},
+{"id" : 780, "group" : 1},
+{"id" : 781, "group" : 1},
+{"id" : 782, "group" : 1},
+{"id" : 783, "group" : 1},
+{"id" : 784, "group" : 1},
+{"id" : 785, "group" : 1},
+{"id" : 786, "group" : 1},
+{"id" : 787, "group" : 1},
+{"id" : 788, "group" : 1},
+{"id" : 789, "group" : 1},
+{"id" : 790, "group" : 1},
+{"id" : 791, "group" : 1},
+{"id" : 792, "group" : 1},
+{"id" : 793, "group" : 1},
+{"id" : 794, "group" : 1},
+{"id" : 795, "group" : 1},
+{"id" : 796, "group" : 1},
+{"id" : 797, "group" : 1},
+{"id" : 798, "group" : 1},
+{"id" : 799, "group" : 1},
+{"id" : 800, "group" : 1},
+{"id" : 801, "group" : 1},
+{"id" : 802, "group" : 1},
+{"id" : 803, "group" : 1},
+{"id" : 804, "group" : 1},
+{"id" : 805, "group" : 1},
+{"id" : 806, "group" : 1},
+{"id" : 807, "group" : 1},
+{"id" : 808, "group" : 1},
+{"id" : 809, "group" : 1},
+{"id" : 810, "group" : 1},
+{"id" : 811, "group" : 1},
+{"id" : 812, "group" : 1},
+{"id" : 813, "group" : 1},
+{"id" : 814, "group" : 1},
+{"id" : 815, "group" : 1},
+{"id" : 816, "group" : 1},
+{"id" : 817, "group" : 1},
+{"id" : 818, "group" : 1},
+{"id" : 819, "group" : 1},
+{"id" : 820, "group" : 1},
+{"id" : 821, "group" : 1},
+{"id" : 822, "group" : 1},
+{"id" : 823, "group" : 1},
+{"id" : 824, "group" : 1},
+{"id" : 825, "group" : 1},
+{"id" : 826, "group" : 1},
+{"id" : 827, "group" : 1},
+{"id" : 828, "group" : 1},
+{"id" : 829, "group" : 1},
+{"id" : 830, "group" : 1},
+{"id" : 831, "group" : 1},
+{"id" : 832, "group" : 1},
+{"id" : 833, "group" : 1},
+{"id" : 834, "group" : 1},
+{"id" : 835, "group" : 1},
+{"id" : 836, "group" : 1},
+{"id" : 837, "group" : 1},
+{"id" : 838, "group" : 1},
+{"id" : 839, "group" : 1},
+{"id" : 840, "group" : 1},
+{"id" : 841, "group" : 1},
+{"id" : 842, "group" : 1},
+{"id" : 843, "group" : 1},
+{"id" : 844, "group" : 1},
+{"id" : 845, "group" : 1},
+{"id" : 846, "group" : 1},
+{"id" : 847, "group" : 1},
+{"id" : 848, "group" : 1},
+{"id" : 849, "group" : 1},
+{"id" : 850, "group" : 1},
+{"id" : 851, "group" : 1},
+{"id" : 852, "group" : 1},
+{"id" : 853, "group" : 1},
+{"id" : 854, "group" : 1},
+{"id" : 855, "group" : 1},
+{"id" : 856, "group" : 1},
+{"id" : 857, "group" : 1},
+{"id" : 858, "group" : 1},
+{"id" : 859, "group" : 1},
+{"id" : 860, "group" : 1},
+{"id" : 861, "group" : 1},
+{"id" : 862, "group" : 1},
+{"id" : 863, "group" : 1},
+{"id" : 864, "group" : 1},
+{"id" : 865, "group" : 1},
+{"id" : 866, "group" : 1},
+{"id" : 867, "group" : 1},
+{"id" : 868, "group" : 1},
+{"id" : 869, "group" : 1},
+{"id" : 870, "group" : 1},
+{"id" : 871, "group" : 1},
+{"id" : 872, "group" : 1},
+{"id" : 873, "group" : 1},
+{"id" : 874, "group" : 1},
+{"id" : 875, "group" : 1},
+{"id" : 876, "group" : 1},
+{"id" : 877, "group" : 1},
+{"id" : 878, "group" : 1},
+{"id" : 879, "group" : 1},
+{"id" : 880, "group" : 1},
+{"id" : 881, "group" : 1},
+{"id" : 882, "group" : 1},
+{"id" : 883, "group" : 1},
+{"id" : 884, "group" : 1},
+{"id" : 885, "group" : 1},
+{"id" : 886, "group" : 1},
+{"id" : 887, "group" : 1},
+{"id" : 888, "group" : 1},
+{"id" : 889, "group" : 1},
+{"id" : 890, "group" : 1},
+{"id" : 891, "group" : 1},
+{"id" : 892, "group" : 1},
+{"id" : 893, "group" : 1},
+{"id" : 894, "group" : 1},
+{"id" : 895, "group" : 1},
+{"id" : 896, "group" : 1},
+{"id" : 897, "group" : 1},
+{"id" : 898, "group" : 1},
+{"id" : 899, "group" : 1},
+{"id" : 900, "group" : 1},
+{"id" : 901, "group" : 1},
+{"id" : 902, "group" : 1},
+{"id" : 903, "group" : 1},
+{"id" : 904, "group" : 1},
+{"id" : 905, "group" : 1},
+{"id" : 906, "group" : 1},
+{"id" : 907, "group" : 1},
+{"id" : 908, "group" : 1},
+{"id" : 909, "group" : 1},
+{"id" : 910, "group" : 1},
+{"id" : 911, "group" : 1},
+{"id" : 912, "group" : 1},
+{"id" : 913, "group" : 1},
+{"id" : 914, "group" : 1},
+{"id" : 915, "group" : 1},
+{"id" : 916, "group" : 1},
+{"id" : 917, "group" : 1},
+{"id" : 918, "group" : 1},
+{"id" : 919, "group" : 1},
+{"id" : 920, "group" : 1},
+{"id" : 921, "group" : 1},
+{"id" : 922, "group" : 1},
+{"id" : 923, "group" : 1},
+{"id" : 924, "group" : 1},
+{"id" : 925, "group" : 1},
+{"id" : 926, "group" : 1},
+{"id" : 927, "group" : 1},
+{"id" : 928, "group" : 1},
+{"id" : 929, "group" : 1},
+{"id" : 930, "group" : 1},
+{"id" : 931, "group" : 1},
+{"id" : 932, "group" : 1},
+{"id" : 933, "group" : 1},
+{"id" : 934, "group" : 1},
+{"id" : 935, "group" : 1},
+{"id" : 936, "group" : 1},
+{"id" : 937, "group" : 1},
+{"id" : 938, "group" : 1},
+{"id" : 939, "group" : 1},
+{"id" : 940, "group" : 1},
+{"id" : 941, "group" : 1},
+{"id" : 942, "group" : 1},
+{"id" : 943, "group" : 1},
+{"id" : 944, "group" : 1},
+{"id" : 945, "group" : 1},
+{"id" : 946, "group" : 1},
+{"id" : 947, "group" : 1},
+{"id" : 948, "group" : 1},
+{"id" : 949, "group" : 1},
+{"id" : 950, "group" : 1},
+{"id" : 951, "group" : 1},
+{"id" : 952, "group" : 1},
+{"id" : 953, "group" : 1},
+{"id" : 954, "group" : 1},
+{"id" : 955, "group" : 1},
+{"id" : 956, "group" : 1},
+{"id" : 957, "group" : 1},
+{"id" : 958, "group" : 1},
+{"id" : 959, "group" : 1},
+{"id" : 960, "group" : 1},
+{"id" : 961, "group" : 1},
+{"id" : 962, "group" : 1},
+{"id" : 963, "group" : 1},
+{"id" : 964, "group" : 1},
+{"id" : 965, "group" : 1},
+{"id" : 966, "group" : 1},
+{"id" : 967, "group" : 1},
+{"id" : 968, "group" : 1},
+{"id" : 969, "group" : 1},
+{"id" : 970, "group" : 1}
+];
+
+var links = [
+{"source":382,"target":412,"value":5.58},
+{"source":730,"target":904,"value":8.9},
+{"source":18,"target":642,"value":5.74},
+{"source":781,"target":963,"value":4.75},
+{"source":6,"target":411,"value":2.9},
+{"source":700,"target":889,"value":3.833},
+{"source":703,"target":910,"value":15.78},
+{"source":587,"target":790,"value":5.82},
+{"source":52,"target":959,"value":8.8},
+{"source":610,"target":810,"value":5.86},
+{"source":192,"target":273,"value":1.9},
+{"source":234,"target":910,"value":7.871},
+{"source":697,"target":789,"value":3.9},
+{"source":262,"target":811,"value":4.8},
+{"source":627,"target":707,"value":4.85},
+{"source":676,"target":954,"value":1.9},
+{"source":238,"target":664,"value":4.8},
+{"source":528,"target":573,"value":7.843},
+{"source":268,"target":319,"value":1.9},
+{"source":42,"target":954,"value":6.867},
+{"source":242,"target":301,"value":8.8},
+{"source":678,"target":887,"value":8.775},
+{"source":764,"target":807,"value":3.633},
+{"source":672,"target":920,"value":3.767},
+{"source":88,"target":963,"value":2.7},
+{"source":857,"target":958,"value":2.9},
+{"source":750,"target":964,"value":3.9},
+{"source":114,"target":319,"value":15.873},
+{"source":760,"target":935,"value":1.9},
+{"source":179,"target":790,"value":4.6},
+{"source":815,"target":925,"value":11.845},
+{"source":150,"target":816,"value":1.9},
+{"source":760,"target":879,"value":11.9},
+{"source":708,"target":775,"value":5.74},
+{"source":616,"target":636,"value":2.9},
+{"source":276,"target":940,"value":4.8},
+{"source":905,"target":947,"value":2.9},
+{"source":240,"target":895,"value":3.9},
+{"source":276,"target":704,"value":13.854},
+{"source":655,"target":719,"value":12.733},
+{"source":55,"target":255,"value":1.9},
+{"source":66,"target":643,"value":11.9},
+{"source":844,"target":968,"value":2.7},
+{"source":667,"target":940,"value":13.808},
+{"source":96,"target":206,"value":6.867},
+{"source":7,"target":294,"value":3.7},
+{"source":211,"target":786,"value":11.9},
+{"source":156,"target":649,"value":3.767},
+{"source":405,"target":421,"value":1.9},
+{"source":434,"target":960,"value":1.7},
+{"source":766,"target":865,"value":4.75},
+{"source":344,"target":576,"value":7.729},
+{"source":297,"target":579,"value":5.78},
+{"source":890,"target":898,"value":5.74},
+{"source":67,"target":320,"value":9.789},
+{"source":108,"target":811,"value":3.833},
+{"source":28,"target":962,"value":16.7},
+{"source":206,"target":632,"value":7.843},
+{"source":475,"target":689,"value":6.9},
+{"source":344,"target":681,"value":7.7},
+{"source":112,"target":754,"value":4.85},
+{"source":109,"target":629,"value":1.7},
+{"source":218,"target":900,"value":8.775},
+{"source":769,"target":947,"value":3.633},
+{"source":911,"target":965,"value":1.7},
+{"source":240,"target":756,"value":4.8},
+{"source":735,"target":862,"value":16.788},
+{"source":467,"target":794,"value":1.5},
+{"source":233,"target":685,"value":1.7},
+{"source":40,"target":728,"value":1.9},
+{"source":49,"target":746,"value":1.5},
+{"source":374,"target":918,"value":2.8},
+{"source":62,"target":226,"value":3.9},
+{"source":240,"target":737,"value":5.78},
+{"source":41,"target":784,"value":13.808},
+{"source":619,"target":709,"value":22.645},
+{"source":246,"target":336,"value":1.9},
+{"source":211,"target":860,"value":6.7},
+{"source":712,"target":761,"value":8.825},
+{"source":385,"target":718,"value":3.833},
+{"source":647,"target":938,"value":15.82},
+{"source":235,"target":799,"value":2.7},
+{"source":81,"target":901,"value":10.84},
+{"source":187,"target":891,"value":6.633},
+{"source":647,"target":699,"value":9.833},
+{"source":270,"target":946,"value":7.843},
+{"source":16,"target":743,"value":11.718},
+{"source":613,"target":903,"value":3.7},
+{"source":708,"target":841,"value":1.7},
+{"source":382,"target":676,"value":3.767},
+{"source":819,"target":841,"value":4.8},
+{"source":258,"target":764,"value":1.9},
+{"source":420,"target":456,"value":10.74},
+{"source":180,"target":360,"value":1.5},
+{"source":736,"target":897,"value":4.85},
+{"source":347,"target":761,"value":1.9},
+{"source":12,"target":960,"value":8.7},
+{"source":29,"target":886,"value":1.9},
+{"source":781,"target":815,"value":15.78},
+{"source":579,"target":943,"value":2.7},
+{"source":102,"target":245,"value":11.827},
+{"source":201,"target":789,"value":5.82},
+{"source":758,"target":787,"value":12.717},
+{"source":744,"target":845,"value":8.825},
+{"source":114,"target":245,"value":9.767},
+{"source":54,"target":593,"value":6.733},
+{"source":128,"target":393,"value":3.9},
+{"source":911,"target":967,"value":1.9},
+{"source":441,"target":958,"value":1.9},
+{"source":100,"target":929,"value":8.725},
+{"source":796,"target":869,"value":1.9},
+{"source":325,"target":949,"value":2.8},
+{"source":20,"target":281,"value":1.9},
+{"source":710,"target":841,"value":2.9},
+{"source":483,"target":604,"value":5.86},
+{"source":412,"target":749,"value":4.7},
+{"source":16,"target":901,"value":8.65},
+{"source":335,"target":564,"value":5.78},
+{"source":694,"target":716,"value":7.843},
+{"source":107,"target":385,"value":1.9},
+{"source":730,"target":959,"value":9.789},
+{"source":678,"target":770,"value":1.9},
+{"source":621,"target":944,"value":14.786},
+{"source":521,"target":703,"value":1.9},
+{"source":781,"target":859,"value":9.722},
+{"source":28,"target":717,"value":11.7},
+{"source":126,"target":389,"value":2.6},
+{"source":687,"target":747,"value":1.5},
+{"source":23,"target":659,"value":3.767},
+{"source":159,"target":220,"value":7.643},
+{"source":160,"target":889,"value":4.8},
+{"source":764,"target":863,"value":2.8},
+{"source":338,"target":760,"value":2.9},
+{"source":180,"target":294,"value":11.809},
+{"source":695,"target":866,"value":11.827},
+{"source":58,"target":213,"value":2.9},
+{"source":123,"target":845,"value":4.85},
+{"source":272,"target":941,"value":2.6},
+{"source":720,"target":742,"value":8.75},
+{"source":431,"target":632,"value":2.8},
+{"source":186,"target":724,"value":1.7},
+{"source":220,"target":807,"value":4.75},
+{"source":180,"target":796,"value":5.78},
+{"source":653,"target":737,"value":18.722},
+{"source":1,"target":479,"value":1.9},
+{"source":783,"target":833,"value":8.775},
+{"source":187,"target":674,"value":1.7},
+{"source":649,"target":741,"value":1.9},
+{"source":396,"target":760,"value":6.733},
+{"source":173,"target":853,"value":5.58},
+{"source":188,"target":764,"value":2.9},
+{"source":788,"target":821,"value":10.74},
+{"source":424,"target":836,"value":1.9},
+{"source":111,"target":598,"value":6.833},
+{"source":8,"target":711,"value":1.7},
+{"source":28,"target":424,"value":3.567},
+{"source":246,"target":731,"value":1.9},
+{"source":667,"target":744,"value":15.753},
+{"source":297,"target":404,"value":6.633},
+{"source":61,"target":378,"value":1.7},
+{"source":100,"target":614,"value":11.755},
+{"source":388,"target":643,"value":2.9},
+{"source":824,"target":829,"value":3.7},
+{"source":158,"target":318,"value":1.5},
+{"source":658,"target":946,"value":2.9},
+{"source":93,"target":622,"value":6.8},
+{"source":158,"target":292,"value":2.9},
+{"source":63,"target":556,"value":2.8},
+{"source":34,"target":929,"value":1.9},
+{"source":637,"target":680,"value":8.675},
+{"source":107,"target":153,"value":1.5},
+{"source":158,"target":613,"value":3.833},
+{"source":6,"target":162,"value":1.9},
+{"source":162,"target":680,"value":14.729},
+{"source":75,"target":875,"value":1.5},
+{"source":888,"target":906,"value":13.715},
+{"source":720,"target":786,"value":10.86},
+{"source":88,"target":610,"value":5.82},
+{"source":482,"target":775,"value":8.7},
+{"source":243,"target":405,"value":1.5},
+{"source":412,"target":725,"value":10.86},
+{"source":490,"target":705,"value":1.9},
+{"source":656,"target":763,"value":2.9},
+{"source":268,"target":729,"value":1.9},
+{"source":123,"target":320,"value":9.767},
+{"source":484,"target":791,"value":2.9},
+{"source":81,"target":144,"value":1.9},
+{"source":150,"target":699,"value":3.833},
+{"source":633,"target":694,"value":16.775},
+{"source":412,"target":696,"value":8.65},
+{"source":72,"target":251,"value":3.7},
+{"source":927,"target":939,"value":19.668},
+{"source":936,"target":968,"value":3.767},
+{"source":513,"target":939,"value":7.843},
+{"source":766,"target":925,"value":5.86},
+{"source":55,"target":647,"value":5.74},
+{"source":363,"target":872,"value":17.747},
+{"source":89,"target":227,"value":6.833},
+{"source":401,"target":752,"value":4.8},
+{"source":384,"target":565,"value":2.8},
+{"source":189,"target":758,"value":1.9},
+{"source":585,"target":799,"value":18.8},
+{"source":404,"target":748,"value":3.833},
+{"source":86,"target":463,"value":1.9},
+{"source":688,"target":800,"value":1.9},
+{"source":393,"target":573,"value":11.755},
+{"source":669,"target":934,"value":2.8},
+{"source":354,"target":446,"value":10.74},
+{"source":181,"target":904,"value":7.9},
+{"source":202,"target":860,"value":6.767},
+{"source":49,"target":965,"value":6.7},
+{"source":7,"target":308,"value":3.767},
+{"source":776,"target":915,"value":3.767},
+{"source":719,"target":954,"value":3.767},
+{"source":413,"target":965,"value":1.9},
+{"source":37,"target":159,"value":5.74},
+{"source":9,"target":782,"value":8.725},
+{"source":178,"target":688,"value":1.9},
+{"source":106,"target":808,"value":6.733},
+{"source":251,"target":743,"value":4.6},
+{"source":838,"target":859,"value":3.833},
+{"source":64,"target":353,"value":3.9},
+{"source":224,"target":248,"value":6.6},
+{"source":66,"target":932,"value":1.9},
+{"source":147,"target":214,"value":10.8},
+{"source":216,"target":763,"value":1.9},
+{"source":320,"target":672,"value":5.78},
+{"source":788,"target":861,"value":5.78},
+{"source":575,"target":670,"value":1.9},
+{"source":579,"target":623,"value":5.74},
+{"source":18,"target":141,"value":1.5},
+{"source":234,"target":946,"value":3.9},
+{"source":699,"target":790,"value":3.833},
+{"source":263,"target":651,"value":1.9},
+{"source":584,"target":721,"value":1.9},
+{"source":314,"target":424,"value":2.9},
+{"source":412,"target":566,"value":1.9},
+{"source":199,"target":647,"value":1.9},
+{"source":686,"target":805,"value":8.775},
+{"source":376,"target":745,"value":1.9},
+{"source":576,"target":676,"value":7.814},
+{"source":100,"target":761,"value":3.767},
+{"source":571,"target":700,"value":3.767},
+{"source":80,"target":360,"value":1.5},
+{"source":720,"target":902,"value":7.786},
+{"source":789,"target":798,"value":1.9},
+{"source":25,"target":245,"value":5.82},
+{"source":363,"target":381,"value":10.74},
+{"source":394,"target":783,"value":18.756},
+{"source":6,"target":190,"value":1.9},
+{"source":96,"target":862,"value":1.7},
+{"source":224,"target":824,"value":4.75},
+{"source":303,"target":585,"value":5.78},
+{"source":25,"target":843,"value":4.7},
+{"source":167,"target":897,"value":8.8},
+{"source":23,"target":693,"value":4.75},
+{"source":457,"target":866,"value":1.5},
+{"source":614,"target":862,"value":6.633},
+{"source":153,"target":669,"value":2.8},
+{"source":758,"target":938,"value":13.869},
+{"source":625,"target":645,"value":11.845},
+{"source":619,"target":833,"value":9.722},
+{"source":263,"target":750,"value":1.9},
+{"source":200,"target":581,"value":6.8},
+{"source":585,"target":871,"value":7.757},
+{"source":157,"target":884,"value":2.9},
+{"source":574,"target":862,"value":3.9},
+{"source":323,"target":658,"value":2.7},
+{"source":246,"target":612,"value":3.633},
+{"source":218,"target":656,"value":2.6},
+{"source":220,"target":783,"value":18.7},
+{"source":224,"target":908,"value":11.736},
+{"source":305,"target":895,"value":18.822},
+{"source":37,"target":250,"value":10.8},
+{"source":625,"target":936,"value":6.767},
+{"source":696,"target":967,"value":3.767},
+{"source":195,"target":679,"value":5.74},
+{"source":146,"target":262,"value":1.9},
+{"source":678,"target":936,"value":10.8},
+{"source":465,"target":778,"value":2.9},
+{"source":0,"target":612,"value":7.757},
+{"source":1,"target":686,"value":15.78},
+{"source":125,"target":201,"value":2.8},
+{"source":773,"target":960,"value":3.833},
+{"source":267,"target":412,"value":8.75},
+{"source":657,"target":789,"value":14.857},
+{"source":162,"target":180,"value":13.792},
+{"source":448,"target":705,"value":3.833},
+{"source":166,"target":279,"value":1.9},
+{"source":159,"target":773,"value":5.7},
+{"source":244,"target":258,"value":2.9},
+{"source":106,"target":180,"value":9.833},
+{"source":153,"target":293,"value":1.7},
+{"source":93,"target":873,"value":4.85},
+{"source":202,"target":589,"value":5.82},
+{"source":578,"target":809,"value":3.833},
+{"source":211,"target":662,"value":4.8},
+{"source":781,"target":820,"value":4.75},
+{"source":109,"target":754,"value":4.9},
+{"source":148,"target":231,"value":3.767},
+{"source":200,"target":876,"value":1.9},
+{"source":280,"target":458,"value":3.833},
+{"source":683,"target":950,"value":1.9},
+{"source":394,"target":421,"value":9.656},
+{"source":201,"target":216,"value":1.9},
+{"source":128,"target":664,"value":4.9},
+{"source":344,"target":795,"value":1.9},
+{"source":292,"target":920,"value":4.7},
+{"source":200,"target":735,"value":5.82},
+{"source":570,"target":632,"value":3.833},
+{"source":19,"target":647,"value":3.833},
+{"source":153,"target":814,"value":1.9},
+{"source":72,"target":274,"value":3.7},
+{"source":289,"target":567,"value":12.75},
+{"source":657,"target":692,"value":7.729},
+{"source":348,"target":454,"value":1.7},
+{"source":389,"target":827,"value":3.833},
+{"source":614,"target":838,"value":2.9},
+{"source":58,"target":323,"value":1.9},
+{"source":316,"target":564,"value":4.55},
+{"source":2,"target":625,"value":2.5},
+{"source":110,"target":458,"value":1.9},
+{"source":160,"target":600,"value":12.733},
+{"source":185,"target":411,"value":4.9},
+{"source":449,"target":688,"value":1.9},
+{"source":247,"target":630,"value":1.9},
+{"source":949,"target":967,"value":2.6},
+{"source":177,"target":179,"value":3.9},
+{"source":185,"target":596,"value":7.786},
+{"source":811,"target":830,"value":6.733},
+{"source":390,"target":706,"value":1.9},
+{"source":699,"target":946,"value":2.6},
+{"source":244,"target":589,"value":2.8},
+{"source":330,"target":592,"value":11.827},
+{"source":2,"target":852,"value":3.9},
+{"source":67,"target":336,"value":1.7},
+{"source":200,"target":460,"value":4.75},
+{"source":173,"target":841,"value":7.9},
+{"source":360,"target":390,"value":1.9},
+{"source":455,"target":924,"value":1.7},
+{"source":251,"target":687,"value":7.729},
+{"source":118,"target":757,"value":4.9},
+{"source":193,"target":841,"value":1.9},
+{"source":204,"target":663,"value":4.8},
+{"source":768,"target":882,"value":15.767},
+{"source":72,"target":178,"value":4.75},
+{"source":109,"target":642,"value":3.833},
+{"source":590,"target":621,"value":10.82},
+{"source":761,"target":916,"value":15.833},
+{"source":28,"target":696,"value":10.72},
+{"source":108,"target":674,"value":2.9},
+{"source":294,"target":909,"value":4.9},
+{"source":55,"target":783,"value":4.75},
+{"source":199,"target":687,"value":3.433},
+{"source":616,"target":708,"value":1.5},
+{"source":88,"target":889,"value":2.7},
+{"source":652,"target":809,"value":13.792},
+{"source":667,"target":786,"value":11.864},
+{"source":742,"target":810,"value":4.65},
+{"source":895,"target":943,"value":5.86},
+{"source":379,"target":434,"value":1.7},
+{"source":518,"target":829,"value":1.9},
+{"source":118,"target":601,"value":2.9},
+{"source":150,"target":773,"value":3.833},
+{"source":64,"target":361,"value":4.9},
+{"source":11,"target":597,"value":12.9},
+{"source":230,"target":712,"value":10.76},
+{"source":269,"target":458,"value":2.8},
+{"source":233,"target":801,"value":4.8},
+{"source":152,"target":443,"value":1.1},
+{"source":227,"target":813,"value":3.833},
+{"source":329,"target":772,"value":2.7},
+{"source":44,"target":738,"value":4.75},
+{"source":255,"target":848,"value":1.9},
+{"source":713,"target":940,"value":11.827},
+{"source":412,"target":468,"value":2.9},
+{"source":625,"target":779,"value":11.736},
+{"source":707,"target":781,"value":11.827},
+{"source":105,"target":667,"value":4.85},
+{"source":216,"target":224,"value":1.7},
+{"source":23,"target":245,"value":7.614},
+{"source":693,"target":698,"value":1.7},
+{"source":105,"target":923,"value":1.7},
+{"source":103,"target":226,"value":2.9},
+{"source":257,"target":416,"value":3.767},
+{"source":166,"target":186,"value":2.8},
+{"source":305,"target":717,"value":11.755},
+{"source":33,"target":319,"value":4.75},
+{"source":178,"target":288,"value":6.7},
+{"source":305,"target":410,"value":1.9},
+{"source":232,"target":259,"value":3.833},
+{"source":385,"target":838,"value":3.767},
+{"source":884,"target":903,"value":2.6},
+{"source":637,"target":709,"value":4.8},
+{"source":245,"target":904,"value":1.9},
+{"source":676,"target":823,"value":2.6},
+{"source":439,"target":649,"value":9.722},
+{"source":72,"target":422,"value":1.7},
+{"source":363,"target":806,"value":7.786},
+{"source":119,"target":172,"value":8.725},
+{"source":440,"target":602,"value":3.767},
+{"source":218,"target":868,"value":6.733},
+{"source":59,"target":950,"value":1.9},
+{"source":531,"target":676,"value":2.6},
+{"source":730,"target":832,"value":7.671},
+{"source":617,"target":899,"value":4.8},
+{"source":215,"target":486,"value":8.85},
+{"source":436,"target":651,"value":1.7},
+{"source":692,"target":852,"value":13.885},
+{"source":484,"target":762,"value":1.9},
+{"source":236,"target":266,"value":2.8},
+{"source":35,"target":97,"value":1.9},
+{"source":810,"target":866,"value":1.7},
+{"source":150,"target":704,"value":9.722},
+{"source":269,"target":412,"value":1.7},
+{"source":230,"target":663,"value":3.9},
+{"source":857,"target":916,"value":13.731},
+{"source":655,"target":908,"value":12.817},
+{"source":335,"target":442,"value":1.9},
+{"source":441,"target":494,"value":1.9},
+{"source":68,"target":353,"value":5.7},
+{"source":338,"target":597,"value":3.9},
+{"source":92,"target":117,"value":1.7},
+{"source":146,"target":162,"value":1.5},
+{"source":100,"target":233,"value":6.833},
+{"source":195,"target":714,"value":23.778},
+{"source":128,"target":942,"value":6.9},
+{"source":724,"target":943,"value":8.85},
+{"source":97,"target":674,"value":1.7},
+{"source":198,"target":615,"value":7.729},
+{"source":449,"target":736,"value":1.9},
+{"source":581,"target":696,"value":9.567},
+{"source":449,"target":601,"value":2.8},
+{"source":61,"target":170,"value":1.9},
+{"source":52,"target":936,"value":2.8},
+{"source":425,"target":594,"value":1.9},
+{"source":412,"target":970,"value":6.733},
+{"source":258,"target":783,"value":1.9},
+{"source":62,"target":658,"value":3.833},
+{"source":361,"target":680,"value":4.85},
+{"source":42,"target":688,"value":1.9},
+{"source":791,"target":822,"value":2.7},
+{"source":93,"target":663,"value":4.9},
+{"source":26,"target":904,"value":1.9},
+{"source":633,"target":797,"value":2.9},
+{"source":98,"target":578,"value":16.838},
+{"source":717,"target":757,"value":4.9},
+{"source":478,"target":841,"value":1.9},
+{"source":1,"target":153,"value":2.9},
+{"source":136,"target":959,"value":10.8},
+{"source":388,"target":694,"value":4.7},
+{"source":317,"target":426,"value":1.9},
+{"source":816,"target":937,"value":2.8},
+{"source":211,"target":644,"value":13.762},
+{"source":316,"target":790,"value":7.757},
+{"source":185,"target":313,"value":1.9},
+{"source":243,"target":634,"value":6.833},
+{"source":557,"target":921,"value":1.7},
+{"source":238,"target":637,"value":6.733},
+{"source":665,"target":830,"value":11.718},
+{"source":237,"target":238,"value":1.9},
+{"source":98,"target":589,"value":8.775},
+{"source":153,"target":230,"value":4.55},
+{"source":248,"target":359,"value":3.633},
+{"source":8,"target":911,"value":2.6},
+{"source":628,"target":899,"value":7.757},
+{"source":164,"target":932,"value":3.767},
+{"source":400,"target":936,"value":5.82},
+{"source":390,"target":413,"value":3.833},
+{"source":126,"target":177,"value":3.767},
+{"source":837,"target":906,"value":13.808},
+{"source":89,"target":714,"value":6.8},
+{"source":697,"target":860,"value":3.833},
+{"source":88,"target":329,"value":4.8},
+{"source":601,"target":842,"value":1.7},
+{"source":406,"target":932,"value":8.9},
+{"source":11,"target":743,"value":15.74},
+{"source":289,"target":823,"value":13.746},
+{"source":467,"target":781,"value":1.5},
+{"source":678,"target":680,"value":11.7},
+{"source":244,"target":375,"value":3.833},
+{"source":234,"target":675,"value":9.833},
+{"source":352,"target":606,"value":2.8},
+{"source":772,"target":905,"value":1.9},
+{"source":823,"target":828,"value":5.7},
+{"source":479,"target":483,"value":1.9},
+{"source":86,"target":628,"value":5.78},
+{"source":668,"target":670,"value":1.3},
+{"source":266,"target":648,"value":7.757},
+{"source":25,"target":78,"value":2.7},
+{"source":23,"target":766,"value":2.8},
+{"source":716,"target":867,"value":2.7},
+{"source":399,"target":663,"value":2.9},
+{"source":0,"target":145,"value":7.814},
+{"source":89,"target":934,"value":1.7},
+{"source":42,"target":178,"value":1.9},
+{"source":23,"target":764,"value":10.68},
+{"source":190,"target":828,"value":4.65},
+{"source":227,"target":794,"value":2.7},
+{"source":668,"target":800,"value":3.7},
+{"source":119,"target":962,"value":12.8},
+{"source":672,"target":833,"value":7.814},
+{"source":302,"target":769,"value":2.7},
+{"source":781,"target":913,"value":2.6},
+{"source":2,"target":58,"value":7.729},
+{"source":250,"target":379,"value":7.843},
+{"source":187,"target":768,"value":3.7},
+{"source":605,"target":708,"value":3.633},
+{"source":7,"target":826,"value":3.767},
+{"source":696,"target":923,"value":1.9},
+{"source":48,"target":847,"value":1.7},
+{"source":422,"target":826,"value":1.9},
+{"source":478,"target":848,"value":8.825},
+{"source":316,"target":431,"value":4.75},
+{"source":91,"target":479,"value":1.9},
+{"source":134,"target":969,"value":8.65},
+{"source":45,"target":638,"value":3.7},
+{"source":195,"target":391,"value":4.8},
+{"source":533,"target":845,"value":1.7},
+{"source":52,"target":896,"value":2.9},
+{"source":58,"target":146,"value":2.7},
+{"source":325,"target":813,"value":8.7},
+{"source":381,"target":963,"value":2.9},
+{"source":695,"target":939,"value":7.871},
+{"source":155,"target":163,"value":7.757},
+{"source":652,"target":887,"value":8.725},
+{"source":764,"target":911,"value":5.86},
+{"source":141,"target":160,"value":2.9},
+{"source":235,"target":642,"value":1.9},
+{"source":362,"target":711,"value":1.9},
+{"source":46,"target":873,"value":5.82},
+{"source":21,"target":788,"value":6.733},
+{"source":23,"target":323,"value":2.5},
+{"source":114,"target":663,"value":11.791},
+{"source":4,"target":947,"value":7.786},
+{"source":126,"target":318,"value":2.5},
+{"source":254,"target":329,"value":1.9},
+{"source":404,"target":406,"value":1.9},
+{"source":127,"target":173,"value":1.9},
+{"source":80,"target":93,"value":7.843},
+{"source":160,"target":260,"value":15.833},
+{"source":11,"target":618,"value":13.731},
+{"source":792,"target":879,"value":2.9},
+{"source":591,"target":950,"value":5.9},
+{"source":243,"target":656,"value":8.8},
+{"source":111,"target":634,"value":6.9},
+{"source":211,"target":925,"value":8.85},
+{"source":45,"target":150,"value":4.8},
+{"source":642,"target":786,"value":8.875},
+{"source":641,"target":873,"value":1.9},
+{"source":149,"target":246,"value":1.9},
+{"source":105,"target":687,"value":1.9},
+{"source":19,"target":957,"value":1.5},
+{"source":388,"target":704,"value":6.733},
+{"source":318,"target":575,"value":2.7},
+{"source":463,"target":663,"value":1.9},
+{"source":173,"target":950,"value":2.6},
+{"source":83,"target":204,"value":2.8},
+{"source":68,"target":122,"value":1.9},
+{"source":555,"target":722,"value":1.5},
+{"source":94,"target":484,"value":1.9},
+{"source":248,"target":772,"value":2.6},
+{"source":91,"target":504,"value":5.82},
+{"source":132,"target":771,"value":4.8},
+{"source":126,"target":737,"value":4.9},
+{"source":531,"target":699,"value":2.6},
+{"source":619,"target":879,"value":5.9},
+{"source":24,"target":185,"value":5.86},
+{"source":32,"target":101,"value":14.786},
+{"source":175,"target":940,"value":6.833},
+{"source":172,"target":655,"value":12.75},
+{"source":342,"target":596,"value":3.7},
+{"source":401,"target":959,"value":20.82},
+{"source":5,"target":833,"value":5.9},
+{"source":37,"target":885,"value":13.808},
+{"source":597,"target":909,"value":5.9},
+{"source":245,"target":596,"value":12.8},
+{"source":146,"target":363,"value":3.633},
+{"source":164,"target":404,"value":3.833},
+{"source":196,"target":899,"value":1.9},
+{"source":121,"target":180,"value":10.64},
+{"source":384,"target":692,"value":1.9},
+{"source":166,"target":849,"value":1.9},
+{"source":202,"target":761,"value":3.7},
+{"source":383,"target":967,"value":2.7},
+{"source":23,"target":805,"value":7.729},
+{"source":920,"target":947,"value":4.85},
+{"source":335,"target":854,"value":3.767},
+{"source":233,"target":749,"value":2.8},
+{"source":412,"target":853,"value":3.833},
+{"source":270,"target":446,"value":7.786},
+{"source":313,"target":663,"value":1.9},
+{"source":252,"target":320,"value":1.9},
+{"source":320,"target":555,"value":2.8},
+{"source":601,"target":722,"value":1.7},
+{"source":19,"target":175,"value":1.5},
+{"source":392,"target":878,"value":3.9},
+{"source":576,"target":871,"value":2.8},
+{"source":231,"target":451,"value":1.9},
+{"source":234,"target":359,"value":4.85},
+{"source":567,"target":793,"value":2.8},
+{"source":341,"target":957,"value":2.9},
+{"source":713,"target":950,"value":8.825},
+{"source":337,"target":891,"value":1.5},
+{"source":618,"target":891,"value":7.729},
+{"source":652,"target":701,"value":1.5},
+{"source":15,"target":601,"value":1.5},
+{"source":138,"target":868,"value":3.9},
+{"source":247,"target":901,"value":2.8},
+{"source":698,"target":929,"value":3.833},
+{"source":202,"target":725,"value":6.9},
+{"source":627,"target":776,"value":5.82},
+{"source":387,"target":791,"value":8.8},
+{"source":604,"target":797,"value":4.9},
+{"source":781,"target":947,"value":3.767},
+{"source":108,"target":655,"value":4.7},
+{"source":447,"target":496,"value":1.9},
+{"source":280,"target":600,"value":7.786},
+{"source":226,"target":564,"value":3.9},
+{"source":378,"target":502,"value":1.7},
+{"source":60,"target":596,"value":6.9},
+{"source":687,"target":884,"value":2.8},
+{"source":439,"target":718,"value":6.833},
+{"source":150,"target":598,"value":3.833},
+{"source":41,"target":105,"value":3.767},
+{"source":44,"target":297,"value":9.856},
+{"source":90,"target":946,"value":2.7},
+{"source":48,"target":373,"value":1.9},
+{"source":796,"target":889,"value":5.82},
+{"source":0,"target":400,"value":4.75},
+{"source":495,"target":776,"value":1.7},
+{"source":624,"target":925,"value":8.85},
+{"source":102,"target":648,"value":15.7},
+{"source":111,"target":462,"value":1.9},
+{"source":164,"target":572,"value":12.733},
+{"source":637,"target":661,"value":2.9},
+{"source":14,"target":189,"value":1.9},
+{"source":289,"target":301,"value":5.78},
+{"source":416,"target":600,"value":5.74},
+{"source":478,"target":690,"value":3.833},
+{"source":30,"target":120,"value":2.7},
+{"source":664,"target":855,"value":12.833},
+{"source":116,"target":126,"value":2.8},
+{"source":58,"target":692,"value":5.9},
+{"source":613,"target":736,"value":7.786},
+{"source":313,"target":573,"value":1.5},
+{"source":157,"target":848,"value":4.8},
+{"source":240,"target":823,"value":3.7},
+{"source":728,"target":870,"value":1.7},
+{"source":657,"target":904,"value":5.9},
+{"source":376,"target":490,"value":1.9},
+{"source":71,"target":788,"value":3.767},
+{"source":262,"target":317,"value":11.7},
+{"source":737,"target":836,"value":1.9},
+{"source":375,"target":586,"value":10.82},
+{"source":157,"target":249,"value":2.9},
+{"source":87,"target":118,"value":2.9},
+{"source":351,"target":602,"value":18.833},
+{"source":194,"target":908,"value":5.82},
+{"source":763,"target":861,"value":3.833},
+{"source":15,"target":645,"value":2.9},
+{"source":641,"target":690,"value":6.9},
+{"source":199,"target":840,"value":2.7},
+{"source":181,"target":610,"value":18.867},
+{"source":482,"target":954,"value":5.78},
+{"source":106,"target":838,"value":10.8},
+{"source":103,"target":210,"value":2.8},
+{"source":210,"target":849,"value":8.825},
+{"source":276,"target":862,"value":4.85},
+{"source":689,"target":736,"value":5.9},
+{"source":22,"target":344,"value":6.867},
+{"source":504,"target":803,"value":2.8},
+{"source":108,"target":612,"value":1.7},
+{"source":147,"target":390,"value":4.8},
+{"source":18,"target":234,"value":4.75},
+{"source":136,"target":738,"value":4.8},
+{"source":54,"target":344,"value":7.729},
+{"source":867,"target":919,"value":1.7},
+{"source":362,"target":610,"value":2.9},
+{"source":387,"target":637,"value":2.9},
+{"source":344,"target":943,"value":2.8},
+{"source":703,"target":963,"value":1.7},
+{"source":710,"target":815,"value":6.8},
+{"source":581,"target":768,"value":15.78},
+{"source":709,"target":764,"value":8.775},
+{"source":794,"target":823,"value":7.814},
+{"source":98,"target":576,"value":1.9},
+{"source":60,"target":720,"value":2.9},
+{"source":589,"target":801,"value":3.7},
+{"source":478,"target":573,"value":4.8},
+{"source":396,"target":456,"value":9.767},
+{"source":288,"target":678,"value":12.833},
+{"source":204,"target":729,"value":2.7},
+{"source":169,"target":181,"value":1.9},
+{"source":107,"target":124,"value":3.633},
+{"source":245,"target":678,"value":11.791},
+{"source":125,"target":620,"value":4.75},
+{"source":95,"target":285,"value":1.5},
+{"source":620,"target":880,"value":10.88},
+{"source":83,"target":952,"value":8.725},
+{"source":7,"target":785,"value":2.7},
+{"source":100,"target":606,"value":14.8},
+{"source":251,"target":667,"value":5.74},
+{"source":609,"target":905,"value":6.8},
+{"source":247,"target":675,"value":1.5},
+{"source":422,"target":637,"value":1.5},
+{"source":8,"target":939,"value":8.85},
+{"source":280,"target":292,"value":6.8},
+{"source":149,"target":756,"value":1.5},
+{"source":123,"target":894,"value":9.833},
+{"source":137,"target":276,"value":3.767},
+{"source":93,"target":941,"value":1.5},
+{"source":123,"target":813,"value":16.8},
+{"source":824,"target":924,"value":7.786},
+{"source":737,"target":901,"value":9.767},
+{"source":757,"target":917,"value":1.7},
+{"source":59,"target":720,"value":2.9},
+{"source":735,"target":867,"value":3.7},
+{"source":379,"target":836,"value":3.9},
+{"source":273,"target":903,"value":6.733},
+{"source":773,"target":955,"value":4.9},
+{"source":126,"target":462,"value":1.5},
+{"source":167,"target":426,"value":1.9},
+{"source":135,"target":593,"value":3.9},
+{"source":314,"target":689,"value":3.9},
+{"source":899,"target":928,"value":1.9},
+{"source":583,"target":707,"value":8.75},
+{"source":369,"target":672,"value":5.82},
+{"source":496,"target":618,"value":1.7},
+{"source":215,"target":718,"value":3.833},
+{"source":217,"target":314,"value":2.8},
+{"source":485,"target":488,"value":1.9},
+{"source":423,"target":655,"value":2.7},
+{"source":52,"target":675,"value":2.9},
+{"source":374,"target":607,"value":2.7},
+{"source":379,"target":431,"value":3.7},
+{"source":274,"target":755,"value":3.833},
+{"source":595,"target":771,"value":4.75},
+{"source":34,"target":747,"value":3.7},
+{"source":18,"target":967,"value":2.5},
+{"source":27,"target":257,"value":10.8},
+{"source":66,"target":444,"value":1.9},
+{"source":646,"target":691,"value":3.833},
+{"source":0,"target":908,"value":8.725},
+{"source":232,"target":813,"value":17.759},
+{"source":242,"target":808,"value":4.65},
+{"source":325,"target":829,"value":6.767},
+{"source":33,"target":60,"value":1.7},
+{"source":190,"target":316,"value":7.671},
+{"source":276,"target":678,"value":7.814},
+{"source":341,"target":625,"value":2.8},
+{"source":152,"target":805,"value":1.1},
+{"source":803,"target":888,"value":3.9},
+{"source":44,"target":597,"value":4.9},
+{"source":72,"target":598,"value":4.8},
+{"source":369,"target":881,"value":6.633},
+{"source":184,"target":954,"value":3.833},
+{"source":761,"target":961,"value":10.84},
+{"source":715,"target":926,"value":1.9},
+{"source":25,"target":729,"value":6.667},
+{"source":71,"target":840,"value":3.767},
+{"source":883,"target":915,"value":6.767},
+{"source":187,"target":806,"value":2.8},
+{"source":136,"target":721,"value":12.767},
+{"source":48,"target":783,"value":18.711},
+{"source":77,"target":276,"value":5.7},
+{"source":219,"target":274,"value":1.7},
+{"source":592,"target":875,"value":8.8},
+{"source":101,"target":824,"value":4.8},
+{"source":370,"target":598,"value":1.5},
+{"source":269,"target":815,"value":6.8},
+{"source":406,"target":616,"value":10.9},
+{"source":221,"target":633,"value":13.746},
+{"source":615,"target":833,"value":6.733},
+{"source":571,"target":901,"value":3.9},
+{"source":116,"target":609,"value":4.9},
+{"source":901,"target":952,"value":3.7},
+{"source":208,"target":698,"value":5.66},
+{"source":873,"target":933,"value":9.789},
+{"source":620,"target":647,"value":4.75},
+{"source":149,"target":782,"value":1.5},
+{"source":181,"target":933,"value":12.75},
+{"source":388,"target":617,"value":4.8},
+{"source":183,"target":924,"value":6.667},
+{"source":674,"target":682,"value":1.7},
+{"source":363,"target":921,"value":7.643},
+{"source":288,"target":716,"value":1.9},
+{"source":201,"target":421,"value":1.5},
+{"source":257,"target":617,"value":12.667},
+{"source":424,"target":962,"value":3.9},
+{"source":416,"target":892,"value":4.75},
+{"source":326,"target":708,"value":3.567},
+{"source":323,"target":959,"value":1.9},
+{"source":593,"target":859,"value":4.85},
+{"source":801,"target":829,"value":8.875},
+{"source":126,"target":702,"value":2.7},
+{"source":961,"target":970,"value":4.75},
+{"source":32,"target":83,"value":11.755},
+{"source":712,"target":918,"value":17.806},
+{"source":700,"target":893,"value":4.7},
+{"source":319,"target":629,"value":1.7},
+{"source":797,"target":851,"value":2.9},
+{"source":316,"target":801,"value":1.7},
+{"source":358,"target":460,"value":1.9},
+{"source":505,"target":582,"value":4.85},
+{"source":79,"target":881,"value":4.55},
+{"source":260,"target":960,"value":7.7},
+{"source":181,"target":598,"value":10.76},
+{"source":271,"target":401,"value":2.7},
+{"source":448,"target":892,"value":7.786},
+{"source":141,"target":657,"value":3.833},
+{"source":82,"target":195,"value":3.5},
+{"source":575,"target":899,"value":4.7},
+{"source":185,"target":641,"value":2.9},
+{"source":234,"target":693,"value":6.733},
+{"source":582,"target":669,"value":5.7},
+{"source":364,"target":692,"value":5.9},
+{"source":449,"target":603,"value":1.7},
+{"source":582,"target":590,"value":4.75},
+{"source":46,"target":885,"value":5.78},
+{"source":66,"target":213,"value":2.9},
+{"source":41,"target":294,"value":9.789},
+{"source":132,"target":411,"value":3.9},
+{"source":455,"target":478,"value":3.767},
+{"source":233,"target":288,"value":11.827},
+{"source":27,"target":778,"value":10.74},
+{"source":377,"target":815,"value":1.7},
+{"source":242,"target":274,"value":5.7},
+{"source":28,"target":428,"value":2.8},
+{"source":792,"target":797,"value":4.85},
+{"source":693,"target":955,"value":4.9},
+{"source":189,"target":742,"value":1.9},
+{"source":585,"target":873,"value":15.74},
+{"source":574,"target":960,"value":3.767},
+{"source":188,"target":852,"value":2.9},
+{"source":166,"target":486,"value":7.7},
+{"source":655,"target":862,"value":9.811},
+{"source":231,"target":246,"value":1.7},
+{"source":679,"target":937,"value":1.7},
+{"source":395,"target":845,"value":1.9},
+{"source":668,"target":879,"value":6.9},
+{"source":42,"target":784,"value":9.767},
+{"source":461,"target":927,"value":1.9},
+{"source":449,"target":668,"value":1.7},
+{"source":744,"target":787,"value":1.9},
+{"source":222,"target":653,"value":9.811},
+{"source":45,"target":129,"value":1.9},
+{"source":412,"target":873,"value":9.678},
+{"source":6,"target":611,"value":5.74},
+{"source":449,"target":598,"value":2.8},
+{"source":810,"target":850,"value":1.9},
+{"source":223,"target":844,"value":2.9},
+{"source":388,"target":596,"value":4.65},
+{"source":240,"target":465,"value":2.8},
+{"source":270,"target":688,"value":4.9},
+{"source":851,"target":937,"value":1.7},
+{"source":800,"target":878,"value":3.7},
+{"source":141,"target":915,"value":1.9},
+{"source":310,"target":592,"value":1.9},
+{"source":134,"target":425,"value":1.7},
+{"source":166,"target":807,"value":10.66},
+{"source":478,"target":714,"value":2.7},
+{"source":34,"target":61,"value":3.767},
+{"source":809,"target":937,"value":3.767},
+{"source":13,"target":455,"value":2.9},
+{"source":188,"target":735,"value":4.8},
+{"source":852,"target":863,"value":4.9},
+{"source":895,"target":945,"value":2.9},
+{"source":356,"target":619,"value":1.9},
+{"source":131,"target":389,"value":2.7},
+{"source":60,"target":903,"value":6.767},
+{"source":190,"target":967,"value":1.9},
+{"source":303,"target":890,"value":3.833},
+{"source":248,"target":826,"value":5.78},
+{"source":61,"target":682,"value":10.7},
+{"source":286,"target":889,"value":6.767},
+{"source":668,"target":914,"value":2.9},
+{"source":815,"target":957,"value":6.733},
+{"source":55,"target":617,"value":2.7},
+{"source":284,"target":796,"value":3.9},
+{"source":1,"target":75,"value":16.775},
+{"source":7,"target":389,"value":1.7},
+{"source":101,"target":319,"value":1.9},
+{"source":415,"target":837,"value":1.9},
+{"source":29,"target":858,"value":1.9},
+{"source":134,"target":875,"value":7.786},
+{"source":15,"target":704,"value":1.9},
+{"source":139,"target":284,"value":2.9},
+{"source":210,"target":767,"value":6.833},
+{"source":31,"target":250,"value":11.827},
+{"source":718,"target":739,"value":5.7},
+{"source":351,"target":951,"value":3.7},
+{"source":29,"target":381,"value":4.85},
+{"source":676,"target":815,"value":8.775},
+{"source":160,"target":967,"value":5.86},
+{"source":41,"target":260,"value":6.667},
+{"source":214,"target":613,"value":17.806},
+{"source":175,"target":748,"value":4.85},
+{"source":5,"target":896,"value":18.767},
+{"source":123,"target":800,"value":7.786},
+{"source":565,"target":787,"value":1.7},
+{"source":660,"target":678,"value":13.838},
+{"source":447,"target":572,"value":8.875},
+{"source":74,"target":431,"value":3.9},
+{"source":30,"target":668,"value":4.85},
+{"source":175,"target":442,"value":1.7},
+{"source":93,"target":969,"value":3.767},
+{"source":98,"target":899,"value":6.9},
+{"source":97,"target":823,"value":2.9},
+{"source":131,"target":175,"value":3.9},
+{"source":228,"target":293,"value":4.9},
+{"source":193,"target":762,"value":2.7},
+{"source":769,"target":836,"value":5.78},
+{"source":55,"target":572,"value":4.65},
+{"source":431,"target":785,"value":2.9},
+{"source":23,"target":633,"value":7.7},
+{"source":177,"target":483,"value":8.725},
+{"source":866,"target":966,"value":14.771},
+{"source":45,"target":184,"value":1.9},
+{"source":40,"target":824,"value":6.867},
+{"source":60,"target":83,"value":3.9},
+{"source":301,"target":810,"value":1.7},
+{"source":174,"target":867,"value":1.5},
+{"source":52,"target":624,"value":1.9},
+{"source":394,"target":572,"value":11.773},
+{"source":118,"target":480,"value":1.9},
+{"source":399,"target":420,"value":14.857},
+{"source":45,"target":141,"value":2.8},
+{"source":193,"target":288,"value":1.9},
+{"source":390,"target":790,"value":5.86},
+{"source":299,"target":948,"value":6.867},
+{"source":356,"target":633,"value":1.9},
+{"source":703,"target":899,"value":6.8},
+{"source":2,"target":134,"value":3.767},
+{"source":739,"target":783,"value":11.627},
+{"source":606,"target":886,"value":3.833},
+{"source":162,"target":807,"value":3.767},
+{"source":463,"target":600,"value":1.9},
+{"source":650,"target":834,"value":1.7},
+{"source":780,"target":827,"value":11.809},
+{"source":65,"target":239,"value":1.9},
+{"source":602,"target":645,"value":6.8},
+{"source":25,"target":280,"value":2.7},
+{"source":14,"target":816,"value":4.85},
+{"source":129,"target":653,"value":3.7},
+{"source":173,"target":326,"value":6.767},
+{"source":279,"target":713,"value":2.9},
+{"source":716,"target":850,"value":4.75},
+{"source":68,"target":119,"value":5.74},
+{"source":285,"target":884,"value":4.75},
+{"source":95,"target":758,"value":9.744},
+{"source":416,"target":493,"value":1.9},
+{"source":243,"target":390,"value":2.7},
+{"source":302,"target":455,"value":1.9},
+{"source":605,"target":817,"value":1.9},
+{"source":734,"target":805,"value":17.782},
+{"source":406,"target":531,"value":1.7},
+{"source":645,"target":737,"value":1.5},
+{"source":354,"target":962,"value":14.757},
+{"source":124,"target":593,"value":9.811},
+{"source":108,"target":883,"value":3.767},
+{"source":62,"target":334,"value":1.9},
+{"source":38,"target":342,"value":3.767},
+{"source":644,"target":826,"value":10.88},
+{"source":101,"target":927,"value":4.7},
+{"source":858,"target":873,"value":4.65},
+{"source":70,"target":723,"value":1.5},
+{"source":162,"target":564,"value":4.75},
+{"source":785,"target":922,"value":9.722},
+{"source":247,"target":910,"value":2.9},
+{"source":256,"target":361,"value":2.9},
+{"source":4,"target":20,"value":10.8},
+{"source":114,"target":639,"value":6.767},
+{"source":112,"target":789,"value":1.9},
+{"source":733,"target":799,"value":6.833},
+{"source":122,"target":504,"value":4.8},
+{"source":4,"target":838,"value":4.9},
+{"source":276,"target":921,"value":3.7},
+{"source":29,"target":902,"value":4.75},
+{"source":358,"target":966,"value":2.8},
+{"source":668,"target":953,"value":4.7},
+{"source":600,"target":829,"value":3.767},
+{"source":193,"target":933,"value":3.767},
+{"source":486,"target":619,"value":9.7},
+{"source":279,"target":758,"value":2.9},
+{"source":586,"target":603,"value":4.8},
+{"source":179,"target":316,"value":4.6},
+{"source":91,"target":946,"value":2.6},
+{"source":859,"target":871,"value":2.7},
+{"source":95,"target":303,"value":3.833},
+{"source":154,"target":177,"value":4.85},
+{"source":200,"target":941,"value":4.7},
+{"source":428,"target":570,"value":1.7},
+{"source":446,"target":908,"value":9.767},
+{"source":451,"target":969,"value":1.9},
+{"source":147,"target":375,"value":1.9},
+{"source":484,"target":737,"value":1.9},
+{"source":341,"target":667,"value":2.7},
+{"source":280,"target":301,"value":5.78},
+{"source":231,"target":595,"value":3.7}
+];
+
+var nodes = {};
+var lines = links;
+
+links.forEach(function(link, i) {
+  link.id = i;
+  link.source = nodes[link.source] || (nodes[link.source] = findNodeInfo(link.source));
+  link.target = nodes[link.target] || (nodes[link.target] = findNodeInfo(link.target));
+});
+
+console.log(links);
+
+var fromToHtml = "";
+node_info.forEach(function(variable, i){
+  fromToHtml += "<option value='" + variable.id + "'>" + variable.id + "</option>";
+});
+$("#fromOptions").html(fromToHtml);
+$("#toOptions").html(fromToHtml);
+
+//记录当前被点中的点的信息
+var clickedNode = nodes[0];
+
+var width = 1560,
+    height = 800;
+
+var force = d3.layout.force()//layout将json格式转化为力学图可用的格式
+    .nodes(d3.values(nodes))//设定节点数组
+    .links(links)//设定连线数组
+    .size([width, height])//作用域的大小
+    .linkDistance(2)//连接线长度
+    .charge(-30)//顶点的电荷数。该参数决定是排斥还是吸引，数值越小越互相排斥
+    .on("tick", tick)//指时间间隔，隔一段时间刷新一次画面
+    .start();//开始转换
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+//箭头
+/*var marker=
+    svg.append("marker")
+    //.attr("id", function(d) { return d; })
+    .attr("id", "resolved")
+    //.attr("markerUnits","strokeWidth")//设置为strokeWidth箭头会随着线的粗细发生变化
+    .attr("markerUnits","userSpaceOnUse")
+    .attr("viewBox", "0 -5 10 10")//坐标系的区域
+    .attr("refX",32)//箭头坐标
+    .attr("refY", -1)
+    .attr("markerWidth", 12)//标识的大小
+    .attr("markerHeight", 12)
+    .attr("orient", "auto")//绘制方向，可设定为：auto（自动确认方向）和 角度值
+    .attr("stroke-width",2)//箭头宽度
+    .append("path")
+    .attr("d", "M0,-5L10,0L0,5")//箭头的路径
+    .attr('fill','#000000');//箭头颜色*/
+
+// 将连接线设置为曲线
+/*var path = svg.append("g").selectAll("path")
+    .data(force.links())
+    .enter().append("path")
+    .attr("class", function(d) { return "link " + d.type; })
+    .style("stroke",function(d){
+        //console.log(d);
+       return "#A254A2";//连接线的颜色
+    })
+    .attr("marker-end", function(d) { return "url(#" + d.type + ")"; });*/
+
+//设置连接线    
+var edges_line = svg.selectAll(".edgepath")
+    .data(force.links())
+    .enter()
+    .append("path")
+    .attr({
+          'd': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
+          'class':'edgepath',
+          //'fill-opacity':0,
+          //'stroke-opacity':0,
+          //'fill':'blue',
+          //'stroke':'red',
+          'id':function(d,i) {return 'edgepath'+i;}})
+    .style("stroke", "#A254A2")
+    .style("pointer-events", "none")
+    .style("stroke-width",0.5)//线条粗细
+    //.attr("marker-end", "url(#resolved)" );//根据箭头标记的id号标记箭头
+
+
+var edges_text = svg.append("g").selectAll(".edgelabel")
+.data(force.links())
+.enter()
+.append("text")
+.style("pointer-events", "none")
+//.attr("class","linetext")
+.attr({  'class':'edgelabel',
+               'id':function(d,i){return 'edgepath'+i;},
+               'dx':80,
+               'dy':0
+               //'font-size':10,
+               //'fill':'#aaa'
+               });
+
+//设置线条上的文字
+edges_text.append('textPath')
+.attr('xlink:href',function(d,i) {return '#edgepath'+i})
+.style("pointer-events", "none")
+.text(function(d){return d.value;});
+
+//圆圈
+var circle = svg.append("g").selectAll("circle")
+    .data(force.nodes())//表示使用force.nodes数据
+    .enter().append("circle")
+    .attr("id", function(d, i){
+      return "node" + i;
+    })
+    .style("fill","#B43232")
+    /*function(node){
+        var color;//圆圈背景色
+        var link=links[node.index];
+        if(node.name==link.source.name && link.rela=="主营产品"){
+            color="#F6E8E9";
+        }else{
+            color="#F9EBF9";
+        }
+        return color;
+    })*/
+    .style('stroke',"#B43232")
+    /*function(node){ 
+        var color;//圆圈线条的颜色
+        var link=links[node.index];
+        if(node.name==link.source.name && link.rela=="主营产品"){
+            color="#B43232";
+        }else{
+            color="#A254A2";
+        }
+        return color;
+    })*/
+    .attr("r", 5)//设置圆圈半径
+    .on("click",function(node){
+        //记录当前被点中的点的信息
+        clickedNode = node;
+        //单击时让连接线加粗
+        edges_line.style("stroke-width",function(line){
+            //console.log(line);
+            if(line.source.name==node.name || line.target.name==node.name){
+                return 4;
+            }else{
+                return 0.5;
+            }
+        });
+
+        var html = "";
+        html = getClickedNodeInfo(node);
+        $('#node_info').html(html);
+        //d3.select(this).style('stroke-width',2);
+    })
+    .call(force.drag);//将当前选中的元素传到drag函数中，使顶点可以被拖动
+    /*
+     circle.append("text")  
+    .attr("dy", ".35em")  
+    .attr("text-anchor", "middle")//在圆圈内添加文字  
+    .text(function(d) { 
+        //console.log(d);
+        return d.name; 
+    }); */ 
+
+  //圆圈的提示文字
+  circle.append("svg:title")  
+        .text(function(node) { 
+            var link=links[node.index];
+            if(node.name==link.source.name){
+                return "双击可查看详情"
+            }
+         });  
+/* 矩形
+var rect=svg.append("rect")
+         .attr({"x":100,"y":100,
+                "width":100,"height":50,
+                "rx":5,//水平圆角
+                "ry":10//竖直圆角
+             })
+          .style({
+             "stroke":"red",
+             "stroke-width":1,
+             "fill":"yellow"
+});*/
+var text = svg.append("g").selectAll("text")
+    .data(force.nodes())
+    //返回缺失元素的占位对象（placeholder），指向绑定的数据中比选定元素集多出的一部分元素。
+    .enter()
+    .append("text")
+    .attr("dx", 8)
+    .attr("dy", ".35em")  
+    //.attr("text-anchor", "middle")//在圆圈中加上数据  
+    .style('fill',"#B43232")
+    .text(function(d) { 
+        return d.name; 
+    });
+
+/*  将文字显示在圆圈的外面 
+var text2 = svg.append("g").selectAll("text")
+     .data(force.links())
+    //返回缺失元素的占位对象（placeholder），指向绑定的数据中比选定元素集多出的一部分元素。
+    .enter()
+    .append("text")
+    .attr("x", 150)//设置文字坐标
+    .attr("y", ".50em")
+    .text(function(d) { 
+        //console.log(d);
+        //return d.name; 
+        //return d.rela;
+        console.log(d);
+        return  '1111';
+    });*/
+
+function tick() {
+  //path.attr("d", linkArc);//连接线
+  circle.attr("transform", transform1);//圆圈
+  text.attr("transform", transform2);//顶点文字
+  //edges_text.attr("transform", transform3);
+  //text2.attr("d", linkArc);//连接线文字
+  //console.log("text2...................");
+  //console.log(text2);
+  //edges_line.attr("x1",function(d){ return d.source.x; });
+  //edges_line.attr("y1",function(d){ return d.source.y; });
+  //edges_line.attr("x2",function(d){ return d.target.x; });
+  //edges_line.attr("y2",function(d){ return d.target.y; });
+    
+  //edges_line.attr("x",function(d){ return (d.source.x + d.target.x) / 2 ; });
+  //edges_line.attr("y",function(d){ return (d.source.y + d.target.y) / 2 ; });
+
+
+  edges_line.attr('d', function(d) { 
+      var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
+      return path;
+  });  
+    
+  edges_text.attr('transform',function(d,i){
+        if (d.target.x<d.source.x){
+            bbox = this.getBBox();
+            rx = bbox.x+bbox.width/2;
+            ry = bbox.y+bbox.height/2;
+            return 'rotate(180 '+rx+' '+ry+')';
+        }
+        else {
+            return 'rotate(0)';
+        }
+   });
+}
+
+//设置连接线的坐标,使用椭圆弧路径段双向编码
+function linkArc(d) {
+    //var dx = d.target.x - d.source.x,
+  // dy = d.target.y - d.source.y,
+     // dr = Math.sqrt(dx * dx + dy * dy);
+  //return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
+  //打点path格式是：Msource.x,source.yArr00,1target.x,target.y  
+  
+  return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y
+}
+//设置圆圈和文字的坐标
+function transform1(d) {
+  return "translate(" + d.x + "," + d.y + ")";
+}
+function transform2(d) {
+      return "translate(" + (d.x) + "," + d.y + ")";
+}
+
+function findNodeInfo(node){
+  var result = {};
+  node_info.forEach(function(d){
+    if (node == d.id){
+      result = {name: node, group: d.group};
+    }
+  });
+  return result;
+}
+
+function getClickedNodeInfo(node){
+  var result = "";
+  result += "<p>node id:" + node.name + "</p>";
+  result += "<p>node group" + node.group + "</p>";
+  return result;
+}
+
+function changeScale(){
+  var scale = $( "#slider" ).slider( "value" );
+  console.log(scale);
+  circle
+    .transition()
+    .duration(500)
+    .attr("r", 2 + (scale - 30) * 0.06);
+  force
+  .charge(-(30 + (scale - 30)))
+  .linkDistance(2 + (scale - 30) * 0.06)
+  .start();
+ // update();
+}
+
+function minimumSpannningTree(list)
+{
+  var now = 0;
+  var path = [];
+  var used = [];
+  var lenOfList = Object.keys(list).length;
+  var queue = new PriorityQueue(function(a, b) {
+    return a.weight - b.weight;
+  })
+  for (var i = 0; i < lenOfList; ++i) {
+    path[i] = -1;
+    used[i] = false;
+  }
+
+  used[now] = true;
+  while (true) {
+    var numOfSuccessor = list[now].length;
+    for(var i = 0; i < numOfSuccessor; ++i) {
+      queue.addNode(list[now][i]);      
+    }
+    var smallest = queue.popNode();
+    while (!queue.isEmpty() && used[smallest.ID] && used[smallest.next]) {
+      smallest = queue.popNode();
+    }
+    if (queue.isEmpty()) {
+      break;
+    }
+    used[smallest.ID] = true;
+    used[smallest.next] = true;
+    path[smallest.next] = smallest.ID;      
+    now = smallest.next;
+  }
+
+  var edge = [];
+  for (var i = 0; i < lenOfList; ++i) {
+    if (path[i] != -1 && i != start) {
+      edge.push({"node1": path[i], "node2": i});
+    }
+  }
+  return edge;
+}
+
+function draw(){
+  var selection = $("#calculator").val();
+  switch(selection)
+  {
+    case "MinimumSpanningTree":
+      //最小生成树数据，下面是接口例子,函数需要返回的是边的id的列表，如[1, 2, 4, 50, ...]
+      var spanningTreeLinks = [23, 29, 46, 52, 349, 527];
+      /*spanningTreeLinks = MST(links, clickedNode);
+      console.log(spanningTreeLinks);*/
+
+      //显示最小生成树
+      var resNodes = [];
+      spanningTreeLinks.forEach(function(variable){
+        if (resNodes.indexOf(links[variable].source) < 0){
+          resNodes.push(links[variable].source); 
+        }
+        if (resNodes.indexOf(links[variable].target) < 0){
+          resNodes.push(links[variable].target); 
+        }
+      });
+      console.log(resNodes);
+
+      //给边填色加粗
+      edges_line
+        .style("stroke", function(line){
+          var notChanged = true;
+          var color = "#A254A2";
+          spanningTreeLinks.forEach(function(variable){
+            if (notChanged){
+              if (line.id == variable)
+              {
+                color = "#FF8000";
+              }
+            }
+          });
+          return color;
+        })
+        .style("stroke-width", function(line){
+          var notChanged = true;
+          var width = 0.5;
+          spanningTreeLinks.forEach(function(variable){
+            if (notChanged){
+              if (line.id == variable)
+              {
+                width = 4;
+              }
+            }
+          });
+          return width;
+        });
+
+      //给圆圈填色加粗
+      circle
+        .style("fill", function(d){
+          var notChanged = true;
+          var color = "#B43232";
+          resNodes.forEach(function(variable){
+            if (notChanged){
+              if (d.name == variable.name)
+              {
+                color = "#FF8000";
+              }
+            }
+          });
+          return color;
+        })
+        .style("stoke", function(d){
+          var notChanged = true;
+          var color = "#B43232";
+          resNodes.forEach(function(variable){
+            if (notChanged){
+              if (d.name == variable.name)
+              {
+                color = "#FF8000";
+              }
+            }
+          });
+          return color;
+        });
+      break;
+
+    case "PointCloseness":
+      //PointCloseness数据，下面是接口例子，函数需要返回的是对应每个node的中心度的按比例尺缩放归一化列表，如[0.01，0.2，0.05，0.6，1，...
+      var pointCloseness = [0.01, 0.2, 0.05, 0.6, 1];
+      /*pointCloseness = pointCloseness(links,);
+      console.log(pointCloseness);*/
+      //再看看，总觉得算法接口不太对
+
+      //显示结束中心度
+      var a = d3.rgb(255,0,0);    //红色  
+      var b = d3.rgb(0,255,0);    //绿色  
+
+      var compute = d3.interpolate(a,b);  
+
+      edges_line
+        .style("stroke", "#A254A2")
+        .style("stroke-width", 0.5)
+
+      circle
+        .transition()
+        .style("fill", function(d){
+          console.log(compute(pointCloseness[d.name]));
+          return compute(pointCloseness[d.name]); 
+        })
+        .style('stroke', function(d){
+          return compute(PointCloseness[d.name]); 
+        });
+      break;
+
+    case "PointBetweeness":
+      //PointBetweeness数据，下面是接口例子，函数需要返回的是对应每个node的中心度的按比例尺缩放归一化列表，如[0.01，0.2，0.05，0.6，1，...]
+      var pointBetweeness = [0.4, 0.07, 0.33, 0.25, 0.87];
+      /*pointBetweeness = pointBetweeness(links, clickedNode);
+      console.log(pointBetweeness);*/
+
+      //显示紧密中心度
+      var a = d3.rgb(255,0,0);    //红色  
+      var b = d3.rgb(0,255,0);    //绿色  
+
+      var compute = d3.interpolate(a,b);  
+
+      edges_line
+        .style("stroke", "#A254A2")
+        .style("stroke-width", 0.5)
+
+      circle
+        .transition()
+        .style("fill", function(d){
+          console.log(compute(pointBetweeness[d.name]));
+          return compute(pointBetweeness[d.name]); 
+        })
+        .style('stroke', function(d){
+          return compute(pointBetweeness[d.name]); 
+        });
+      break;
+
+    /*case "StrongConnectedComponent":
+      //强连通分量数据，下面是接口例子
+      var strongConnectedComponent;
+      /*strongConnectedComponent = strongConnectedComponent(links, clickedNode);
+      console.log(strongConnectedComponent);
+      break;*/
+
+    case "ConnectedComponent":
+      //对于无向图，强连通分量=连通分量，所以只考虑一个，下面是接口例子，函数需要返回的是边的id的列表，如[1, 2, 4, 50, ...]，其实最小生成树就是一个强连通分量
+      var connectedComponent = [230, 290, 460, 452, 349, 527];
+      /*connectedComponent = connectedComponent(links, clickedNode);
+      console.log(connectedComponent);*/
+
+      //显示连通分量
+      var resNodes = [];
+      connectedComponent.forEach(function(variable){
+        if (resNodes.indexOf(links[variable].source) < 0){
+          resNodes.push(links[variable].source); 
+        }
+        if (resNodes.indexOf(links[variable].target) < 0){
+          resNodes.push(links[variable].target); 
+        }
+      });
+      console.log(resNodes);
+
+      //给边填色加粗
+      edges_line
+        .style("stroke", function(line){
+          var notChanged = true;
+          var color = "#A254A2";
+          connectedComponent.forEach(function(variable){
+            if (notChanged){
+              if (line.id == variable)
+              {
+                color = "#FF8000";
+              }
+            }
+          });
+          return color;
+        })
+        .style("stroke-width", function(line){
+          var notChanged = true;
+          var width = 0.5;
+          connectedComponent.forEach(function(variable){
+            if (notChanged){
+              if (line.id == variable)
+              {
+                width = 4;
+              }
+            }
+          });
+          return width;
+        });
+
+      //给圆圈填色加粗
+      circle
+        .style("fill", function(d){
+          var notChanged = true;
+          var color = "#B43232";
+          resNodes.forEach(function(variable){
+            if (notChanged){
+              if (d.name == variable.name)
+              {
+                color = "#FF8000";
+              }
+            }
+          });
+          return color;
+        })
+        .style("stoke", function(d){
+          var notChanged = true;
+          var color = "#B43232";
+          resNodes.forEach(function(variable){
+            if (notChanged){
+              if (d.name == variable.name)
+              {
+                color = "#FF8000";
+              }
+            }
+          });
+          return color;
+        });
+      break;
+  }
+}
+
+function drawShortestPath(){
+  //最短路径数据，下面是接口例子,函数需要返回的是边的id的列表，如[1, 2, 4, 50, ...]
+  var shortestPath = [1, 2, 4, 50, 300, 301];
+  var start = $("#fromOptions").val();
+  var end = $("#toOptions").val();
+  console.log(start);
+  console.log(end);
+  /*shortestPath = shortestPath(links, start, end);
+  console.log(shortestPath);*/
+
+  //显示最短路径
+  //
+  var resNodes = [];
+  shortestPath.forEach(function(variable){
+    if (resNodes.indexOf(links[variable].source) < 0){
+      resNodes.push(links[variable].source); 
+    }
+    if (resNodes.indexOf(links[variable].target) < 0){
+      resNodes.push(links[variable].target); 
+    }
+  });
+  console.log(resNodes);
+
+  //给边填色加粗
+  edges_line
+    .style("stroke", function(line){
+      var notChanged = true;
+      var color = "#A254A2";
+      shortestPath.forEach(function(variable){
+        if (notChanged){
+          if (line.id == variable)
+          {
+            color = "#FF8000";
+          }
+        }
+      });
+      return color;
+    })
+    .style("stroke-width", function(line){
+      var notChanged = true;
+      var width = 0.5;
+      shortestPath.forEach(function(variable){
+        if (notChanged){
+          if (line.id == variable)
+          {
+            width = 4;
+          }
+        }
+      });
+      return width;
+    });
+
+  //给圆圈填色加粗
+  circle
+    .style("fill", function(d){
+      var notChanged = true;
+      var color = "#B43232";
+      resNodes.forEach(function(variable){
+        if (notChanged){
+          if (d.name == variable.name)
+          {
+            color = "#FF8000";
+          }
+        }
+      });
+      return color;
+    })
+    .style("stoke", function(d){
+      var notChanged = true;
+      var color = "#B43232";
+      resNodes.forEach(function(variable){
+        if (notChanged){
+          if (d.name == variable.name)
+          {
+            color = "#FF8000";
+          }
+        }
+      });
+      return color;
+    });
+}
+</script>
+<script src="static/js/priority.js"></script>
+<script src="static/js/algorithm.js"></script>
