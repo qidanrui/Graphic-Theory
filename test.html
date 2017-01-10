@@ -2064,6 +2064,25 @@ var links = [
 var nodes = {};
 var lines = links;
 
+var numOfVertex = node_info.length;
+var numOfLinks = links.length;
+//此处的t用于设置可以显示的边的最小权值,list其实相当于一个邻接链表
+function ThresholdList(t)
+{
+	var list = {};
+	for (var i = 0; i < numOfVertex; ++i) {
+		list[node_info[i].id] = [];
+	}
+
+	for (var i = 0; i < numOfLinks; ++i) {
+		if (links[i].value > t) {
+			list[links[i].source].push({"ID": links[i].source, "next": links[i].target, "value": links[i].value, "IDOfLink": i});
+		}
+	}
+	return list;
+}
+var list = ThreholdList(0); //初步设置为0
+
 links.forEach(function(link, i) {
   link.id = i;
   link.source = nodes[link.source] || (nodes[link.source] = findNodeInfo(link.source));
@@ -2357,48 +2376,6 @@ function changeScale(){
  // update();
 }
 
-function minimumSpannningTree(list)
-{
-  var now = 0;
-  var path = [];
-  var used = [];
-  var lenOfList = Object.keys(list).length;
-  var queue = new PriorityQueue(function(a, b) {
-    return a.weight - b.weight;
-  })
-  for (var i = 0; i < lenOfList; ++i) {
-    path[i] = -1;
-    used[i] = false;
-  }
-
-  used[now] = true;
-  while (true) {
-    var numOfSuccessor = list[now].length;
-    for(var i = 0; i < numOfSuccessor; ++i) {
-      queue.addNode(list[now][i]);      
-    }
-    var smallest = queue.popNode();
-    while (!queue.isEmpty() && used[smallest.ID] && used[smallest.next]) {
-      smallest = queue.popNode();
-    }
-    if (queue.isEmpty()) {
-      break;
-    }
-    used[smallest.ID] = true;
-    used[smallest.next] = true;
-    path[smallest.next] = smallest.ID;      
-    now = smallest.next;
-  }
-
-  var edge = [];
-  for (var i = 0; i < lenOfList; ++i) {
-    if (path[i] != -1 && i != start) {
-      edge.push({"node1": path[i], "node2": i});
-    }
-  }
-  return edge;
-}
-
 function draw(){
   var selection = $("#calculator").val();
   switch(selection)
@@ -2406,7 +2383,7 @@ function draw(){
     case "MinimumSpanningTree":
       //最小生成树数据，下面是接口例子,函数需要返回的是边的id的列表，如[1, 2, 4, 50, ...]
       var spanningTreeLinks = [23, 29, 46, 52, 349, 527];
-      /*spanningTreeLinks = MST(links, clickedNode);
+      /*spanningTreeLinks = MST(list, clickedNode);
       console.log(spanningTreeLinks);*/
 
       //显示最小生成树
@@ -2483,7 +2460,7 @@ function draw(){
     case "PointCloseness":
       //PointCloseness数据，下面是接口例子，函数需要返回的是对应每个node的中心度的按比例尺缩放归一化列表，如[0.01，0.2，0.05，0.6，1，...
       var pointCloseness = [0.01, 0.2, 0.05, 0.6, 1];
-      /*pointCloseness = pointCloseness(links,);
+      /*pointCloseness = pointCloseness(list, node_info, links);
       console.log(pointCloseness);*/
       //再看看，总觉得算法接口不太对
 
@@ -2511,7 +2488,7 @@ function draw(){
     case "PointBetweeness":
       //PointBetweeness数据，下面是接口例子，函数需要返回的是对应每个node的中心度的按比例尺缩放归一化列表，如[0.01，0.2，0.05，0.6，1，...]
       var pointBetweeness = [0.4, 0.07, 0.33, 0.25, 0.87];
-      /*pointBetweeness = pointBetweeness(links, clickedNode);
+      /*pointBetweeness = pointBetweeness(list, node_info);
       console.log(pointBetweeness);*/
 
       //显示紧密中心度
@@ -2538,14 +2515,14 @@ function draw(){
     /*case "StrongConnectedComponent":
       //强连通分量数据，下面是接口例子
       var strongConnectedComponent;
-      /*strongConnectedComponent = strongConnectedComponent(links, clickedNode);
+      /*strongConnectedComponent = strongConnectedComponent(links, node_info);
       console.log(strongConnectedComponent);
       break;*/
 
     case "ConnectedComponent":
       //对于无向图，强连通分量=连通分量，所以只考虑一个，下面是接口例子，函数需要返回的是边的id的列表，如[1, 2, 4, 50, ...]，其实最小生成树就是一个强连通分量
       var connectedComponent = [230, 290, 460, 452, 349, 527];
-      /*connectedComponent = connectedComponent(links, clickedNode);
+      /*connectedComponent = connectedComponent(list, clickedNode);
       console.log(connectedComponent);*/
 
       //显示连通分量
@@ -2628,7 +2605,7 @@ function drawShortestPath(){
   var end = $("#toOptions").val();
   console.log(start);
   console.log(end);
-  /*shortestPath = shortestPath(links, start, end);
+  /*shortestPath = shortestPath(list, start, end);
   console.log(shortestPath);*/
 
   //显示最短路径
