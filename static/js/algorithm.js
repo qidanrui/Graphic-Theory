@@ -1,15 +1,15 @@
 
-/*function shortestPath(list, start, end)
+function shortestPath(list, start, end)
 {
 	var now = start;
 	var path = [];
 	var used = [];
 	var lenOfList = Object.keys(list).length;
 	var queue = new PriorityQueue(function(a, b) {
-		return a.weight - b.weight;
+		return a.value - b.value;
 	})
 	for (var i = 0; i < lenOfList; ++i) {
-		path[i] = {"weight": 0, "pre": -1};
+		path[i] = {"value": 0, "pre": -1, "IDOfLink": -1};
 		used[i] = false;
 	}
 
@@ -28,7 +28,7 @@
 		}
 		used[smallest.ID] = true;
 		used[smallest.next] = true;
-		path[smallest.next] = {"weight": smallest.weight, "pre": smallest.ID};
+		path[smallest.next] = {"value": smallest.value, "pre": smallest.ID, "ID": smallest.IDOfLink};
 		now = smallest.next;
 	}
 	if (now != end) {
@@ -36,9 +36,8 @@
 	}
 
 	var result = [];
-	result.push(end);
 	while (end != start) {
-		result.push(path[end].pre);
+		result.push(path[end].ID);
 		end = path[end].pre;
 	}
 
@@ -48,19 +47,19 @@
 		handledResult.push(result[i]);
 	}
 	return handledResult;
-}*/
+}
 
-function MST(list, vertex)
+function MST(list, start)
 {
-	var now = vertex;
+	var now = start;
 	var path = [];
 	var used = [];
 	var lenOfList = list.length;
 	var queue = new PriorityQueue(function(a, b) {
-		return a.weight - b.weight;
+		return a.value - b.value;
 	})
 	for (var i = 0; i < lenOfList; ++i) {
-		path[i] = -1;
+		path[i] = {"value": 0, "pre": -1, "ID": -1};
 		used[i] = false;
 	}
 
@@ -79,35 +78,34 @@ function MST(list, vertex)
 		}
 		used[smallest.ID] = true;
 		used[smallest.next] = true;
-		path[smallest.next] = smallest.ID;			
+		path[smallest.next] = {"value": smallest.value, "pre": smallest.ID, "ID": smallest.IDOfLink};			
 		now = smallest.next;
 	}
 
 	var edge = [];
 	for (var i = 0; i < lenOfList; ++i) {
-		if (path[i] != -1 && i != start) {
-			edge.push({"node1": path[i], "node2": i});
+		if (path[i].pre != -1) {
+			edge.push(path[i].ID);
 		}
 	}
 	return edge;
-	//return 1;
 }
 
-/*function pointCloseness(list, vertex, edge, start)
+function pointCloseness(list, node_info, links)
 {
 	var arr = {};
-	var numOfVertex = vertex.length;
-	var numOfEdge = edge.length;
+	var numOfVertex = node_info.length;
+	var numOfLink = links.length;
 	for (var i = 0; i < numOfVertex; ++i) {
 		arr[i] = [];
 		for (var j = 0; j < numOfVertex; ++j) {
 			arr[i].push(10000);
 		}
 	}
-	for (var i = 0; i < numOfEdge; ++i) {
-		var m = data[i].node1;
-		var n = data[i].node2;
-		var w = data[i].weight;
+	for (var i = 0; i < numOfLink; ++i) {
+		var m = links[i].source;
+		var n = links[i].target;
+		var w = links[i].value;
 		arr[m][n] = arr[n][m] = w;
 	}
 	for (var i = 0; i < numOfVertex; ++i) {
@@ -121,22 +119,27 @@ function MST(list, vertex)
 				}
 			}
 
+	var sum = 0;
 	var total = [];
 	var temp = 0;
 	for (var i = 0; i < numOfVertex; ++i) {
 		for (var j = 0; j < numOfVertex; ++j) {
 			temp += arr[i][j];
 		}
+		sum += temp;
 		total.push(temp);
 		temp = 0;
+	}
+	for (var i = 0; i < numOfVertex; ++i) {
+		total[i] /= sum;	
 	}
 	return total;
 }
 
-function pointBetweeness(list, vertex)
+function pointBetweeness(list, node_info)
 {
 	var betweeness = [];
-	var numOfVertex = vertex.length;
+	var numOfVertex = node_info.length;
 	for (var i = 0; i < numOfVertex; ++i) {
 		betweeness[i] = 0;
 	}
@@ -157,13 +160,13 @@ function pointBetweeness(list, vertex)
 		sigema[s] = 1;
 		d[s] = 0;
 
-		queue.push(vertex[s]);
+		queue.push(node_info[s]);
 		while (queue.length > 0) {
 			var v = queue.shift();
 			stack.push(v);
 			var numOfSuccessor = list[v.ID].length;
 			for (var k = 0; k < numOfSuccessor; ++k) {
-				var w = vertex[list[v.ID][k].next];
+				var w = node_info[list[v.ID][k].next];
 				if (d[w.ID] < 0) {
 					queue.push(w);
 					d[w.ID] = d[v.ID] + 1;
@@ -191,21 +194,21 @@ function pointBetweeness(list, vertex)
 	return betweeness;
 }
 
-function strongConnectedComponent(list, vertex)
+/*function strongConnectedComponent(list, node_info)
 {
 	var index = 0;
 	var connected = [];
 	var stack = [];
 	var map = [];
-	var numOfVertex = vertex.length;
+	var numOfVertex = node_info.length;
 	for (var i = 0; i < numOfVertex; ++i) {
-		vertex[i]["index"] = undefined;
-		vertex[i]["lowlink"] = undefined;
+		node_info[i]["index"] = undefined;
+		node_info[i]["lowlink"] = undefined;
 		map[i] = false;
 	}
 	for (var i = 0; i < numOfVertex; ++i) {
-		if (vertex[i]["index"] == undefined) {
-			strongConnect(vertex[i]);
+		if (node_info[i]["index"] == undefined) {
+			strongConnect(node_info[i]);
 		}
 	}
 
@@ -219,7 +222,7 @@ function strongConnectedComponent(list, vertex)
 
 		var len = list[v.ID].length;
 		for (var i = 0; i < len; ++i) {
-			var w = vertex[list[v.ID][i].next];
+			var w = node_info[list[v.ID][i].next];
 			if (w.index == undefined) {
 				strongConnect(w);
 				v.lowlink = (v.lowlink < w.lowlink) ? v.lowlink : w.lowlink;
@@ -251,40 +254,41 @@ function strongConnectedComponent(list, vertex)
 
 		return connected;
 	}
-}
+}*/ //未修改
 
-function connectedComponent(list, vertex) {
+function connectedComponent(list, node_info) {
 	var connected = [];
 	var stack = [];
 	var componentId;
-	var numOfVertex = vertex.length;
+	var numOfVertex = node_info.length;
 	for (var i = 0; i < numOfVertex; ++i) {
-		vertex[i]["index"] = undefined;
+		node_info[i]["index"] = undefined;
 	}
+	
+	function connectC(v)
+	{
+		v.index = 1;
+
+		var len = list[v.ID].length;
+		for (var i = 0; i < len; ++i) {
+			var w = node_info[list[v.ID][i].next];
+			if (w.index == undefined) {
+				stack.push(list[v.ID][i].IDOfLink);
+				connectC(w);
+			}
+		}
+	}
+	
 	for (var i = 0; i < numOfVertex; ++i) {
-		if (vertex[i]["index"] == undefined) {
-			connectC(vertex[i]);
-			connected.push([]);
+		if (node_info[i]["index"] == undefined) {
+			connectC(node_info[i]);
 			componentId = connected.length - 1;
-			for (val in stack){
-				connected[componentId].push(val);
+			for (var val in stack){
+				connected.push(val);
 			}		
 			stack = [];			
 		}
 	}
 
-	function connectC(v)
-	{
-		v.index = 1;
-		stack.push(v);
-
-		var len = list[v.ID].length;
-		for (var i = 0; i < len; ++i) {
-			var w = vertex[list[v.ID][i].next];
-			if (w.index == undefined) {
-				connectC(w);
-			}
-		}
-	}
 	return connected;
-}*/
+}
