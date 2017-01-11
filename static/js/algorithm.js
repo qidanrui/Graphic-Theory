@@ -1,5 +1,5 @@
 
-function shortestPath(list, start, end)
+function shortestPath111(list, start, end)
 {
 	var now = start;
 	var path = [];
@@ -51,10 +51,10 @@ function shortestPath(list, start, end)
 
 function MST(list, start)
 {
-	var now = start;
+	var now = start.name;
 	var path = [];
 	var used = [];
-	var lenOfList = list.length;
+	var lenOfList = Object.keys(list).length;
 	var queue = new PriorityQueue(function(a, b) {
 		return a.value - b.value;
 	})
@@ -66,6 +66,7 @@ function MST(list, start)
 	used[now] = true;
 	while (true) {
 		var numOfSuccessor = list[now].length;
+
 		for(var i = 0; i < numOfSuccessor; ++i) {
 			queue.addNode(list[now][i]);			
 		}
@@ -91,7 +92,7 @@ function MST(list, start)
 	return edge;
 }
 
-function pointCloseness(list, node_info, links)
+function pointCloseness1(list, node_info, links)
 {
 	var arr = {};
 	var numOfVertex = node_info.length;
@@ -102,9 +103,10 @@ function pointCloseness(list, node_info, links)
 			arr[i].push(10000);
 		}
 	}
+	console.log(arr);
 	for (var i = 0; i < numOfLink; ++i) {
-		var m = links[i].source;
-		var n = links[i].target;
+		var m = links[i].source.name;
+		var n = links[i].target.name;
 		var w = links[i].value;
 		arr[m][n] = arr[n][m] = w;
 	}
@@ -136,7 +138,7 @@ function pointCloseness(list, node_info, links)
 	return total;
 }
 
-function pointBetweeness(list, node_info)
+function pointBetweeness1(list, node_info)
 {
 	var betweeness = [];
 	var numOfVertex = node_info.length;
@@ -164,33 +166,46 @@ function pointBetweeness(list, node_info)
 		while (queue.length > 0) {
 			var v = queue.shift();
 			stack.push(v);
-			var numOfSuccessor = list[v.ID].length;
+			//console.log(v);
+			var numOfSuccessor = list[v.id].length;
 			for (var k = 0; k < numOfSuccessor; ++k) {
-				var w = node_info[list[v.ID][k].next];
-				if (d[w.ID] < 0) {
+				var w = node_info[list[v.id][k].next];
+				if (d[w.id] < 0) {
 					queue.push(w);
-					d[w.ID] = d[v.ID] + 1;
+					d[w.id] = d[v.id] + 1;
 				}
 
-				if (d[w.ID] == d[v.ID] + 1) {
-					sigema[w.ID] = sigema[w.ID] + sigema[v.ID];
-					P[w.ID].push(v);
+				if (d[w.id] == d[v.id] + 1) {
+					sigema[w.id] = sigema[w.id] + sigema[v.id];
+					P[w.id].push(v);
 				}
 			}
 		}
 
 		while (stack.length > 0) {
 			var w = stack.pop();
-			var len = P[w.ID].length;
+			var len = P[w.id].length;
 			for (var i = 0; i < len; ++i) {
-				var v = P[w.ID][i];
-				delta[v.ID] = delta[v.ID] + (sigema[v.ID] / sigema[w.ID]) * (1 + delta[w.ID]);
-				if (w.ID != s) {
-					betweeness[w.ID] = betweeness[w.ID] + delta[w.ID];
+				var v = P[w.id][i];
+				delta[v.id] = delta[v.id] + (sigema[v.id] / sigema[w.id]) * (1 + delta[w.id]);
+				if (w.id != s) {
+					betweeness[w.id] = betweeness[w.id] + delta[w.id];
 				}
 			}
 		}
 	}
+
+	var blength = betweeness.length;
+	var maxValue = 0;
+	for (var i = 0; i < blength; i++){
+		if (betweeness[i] > maxValue){
+			maxValue = betweeness[i];
+		}
+	}
+	for (var i = 0; i < blength; i++){
+		betweeness[i] /= maxValue;
+	}
+	console.log(betweeness);
 	return betweeness;
 }
 
@@ -256,7 +271,7 @@ function pointBetweeness(list, node_info)
 	}
 }*/ //未修改
 
-function connectedComponent(list, node_info) {
+function connectedComponent1(list, node_info) {
 	var connected = [];
 	var stack = [];
 	var componentId;
@@ -269,11 +284,11 @@ function connectedComponent(list, node_info) {
 	{
 		v.index = 1;
 
-		var len = list[v.ID].length;
+		var len = list[v.id].length;
 		for (var i = 0; i < len; ++i) {
-			var w = node_info[list[v.ID][i].next];
+			var w = node_info[list[v.id][i].next];
 			if (w.index == undefined) {
-				stack.push(list[v.ID][i].IDOfLink);
+				stack.push(list[v.id][i].IDOfLink);
 				connectC(w);
 			}
 		}
