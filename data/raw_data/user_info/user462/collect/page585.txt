@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-ff43">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <title>
+    小晨看过的电影(1707)
+</title>
+    
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+    <link rel="apple-touch-icon" href="https://img3.doubanio.com/f/movie/d59b2715fdea4968a450ee5f6c95c7d7a2030065/pics/movie/apple-touch-icon.png">
+    <link href="https://img3.doubanio.com/f/shire/82d7c82f084d5157d7b87a17c76af984dd23dbbf/css/douban.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/shire/ae3f5a3e3085968370b1fc63afcecb22d3284848/css/separation/_all.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/movie/e9d9543ebc06f2964039a2e94898f84ce77fc070/js/movie/lib/jquery.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/cab60df0d9dacb82770e6a25d4481a538fdaadad/js/douban.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/0a62663763aed4fe860029f99d1755b8caa524e7/js/separation/_all.js"></script>
+    
+    <link href="https://img3.doubanio.com/f/shire/3592eb08e13581b921a3de5be3e1ee1859700e20/css/ui/mypage.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/29449d396dacb28fd9949c709ccf02a46b910156/js/do.js" data-cfg-autoload="false"></script>
+
+    <style type="text/css">
+    .item .title {background:none #f2f4f6;}
+    .list-view .highlight, .list-view .expanded{background:#f2f4f6 none;}
+</style>
+    <style type="text/css">img { max-width: 100%; }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/47d38f0bdbe5a67b.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+    
+   
+
+
+
+
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+
+
+
+
+
+<div class="top-nav-info">
+      
+      <a href="https://www.douban.com/accounts/login?source=movie" class="nav-login" rel="nofollow">登录</a>
+      <a href="https://www.douban.com/accounts/register?source=movie" class="nav-register" rel="nofollow">注册</a>
+</div>
+
+
+    <div class="top-nav-doubanapp">
+        
+        <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+        <div id="top-nav-appintro" class="more-items">
+            <p class="appintro-title">豆瓣</p>
+            <p class="slogan">我们的精神角落</p>
+            <p class="qrcode">
+                扫码直接下载
+            </p>
+            <div class="download">
+                <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=iOS">iPhone</a>
+                <span>·</span>
+                <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=Android" class="download-android">Android</a>
+            </div>
+        </div>
+        <div id="doubanapp-tip">
+            <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 4.0 全新发布</a>
+            <a href="javascript: void 0;" class="tip-close">×</a>
+        </div>
+    </div>
+
+    <div class="global-nav-items">
+      <ul>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-main&#34;,&#34;uid&#34;:&#34;0&#34;}">豆瓣</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://book.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-book&#34;,&#34;uid&#34;:&#34;0&#34;}">读书</a>
+            </li>
+          
+            
+            <li class="on">
+            <a href="https://movie.douban.com/" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-movie&#34;,&#34;uid&#34;:&#34;0&#34;}">电影</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://music.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-music&#34;,&#34;uid&#34;:&#34;0&#34;}">音乐</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/location/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-location&#34;,&#34;uid&#34;:&#34;0&#34;}">同城</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/group/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-group&#34;,&#34;uid&#34;:&#34;0&#34;}">小组</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://read.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-read&#34;,&#34;uid&#34;:&#34;0&#34;}">阅读</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://douban.fm/?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-fm&#34;,&#34;uid&#34;:&#34;0&#34;}">FM</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://dongxi.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-commodity&#34;,&#34;uid&#34;:&#34;0&#34;}">东西</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://market.douban.com/?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-market&#34;,&#34;uid&#34;:&#34;0&#34;}">市集</a>
+            </li>
+          
+            <li>
+              <a href="#more" class="bn-more"><span>更多</span></a>
+              <div class="more-items">
+                <table cellpadding="0" cellspacing="0">
+                    
+                    <tr><td><a href="https://moment.douban.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-moment&#34;,&#34;uid&#34;:&#34;0&#34;}">一刻</a></td></tr>
+                    
+                    <tr><td><a href="https://ypy.douban.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-ypy&#34;,&#34;uid&#34;:&#34;0&#34;}">豆瓣摄影</a></td></tr>
+                </table>
+              </div>
+            </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+   
+
+
+
+
+
+
+
+
+<div id="db-nav-movie" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="https://movie.douban.com">豆瓣电影</a>
+    </div>
+    <div class="nav-search">
+      <form action="https://movie.douban.com/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">电影、影人、影院、电视剧</label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1002" />
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- header ad begin -->
+    
+
+
+
+
+
+
+
+
+    <!-- header ad end -->
+
+  </div>
+  </div>
+  <div class="nav-secondary">
+      
+      <div class="nav-items nav-anon">
+          <ul>
+                                  
+                     <li><a href="https://movie.douban.com/nowplaying/">影讯&amp;购票</a></li>
+                 
+                     <li><a href="https://movie.douban.com/explore">选电影</a></li>
+                 
+                    <li class="site-nav-bt">
+                        <a href="https://movie.douban.com/tv/">电视剧</a>
+                    </li>
+                 
+                     <li><a href="https://movie.douban.com/chart">排行榜</a></li>
+                 
+                     <li><a href="https://movie.douban.com/tag/">分类</a></li>
+                 
+                     <li><a href="https://movie.douban.com/review/best/">影评</a></li>
+                 
+                     <li><a href="https://movie.douban.com/annual2015/">2015年度榜单</a></li>
+                 
+                     <li><a href="https://movie.douban.com/standbyme/?source=navigation">豆瓣观影报告</a></li>
+          
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+  
+  <script id="suggResult" type="text/x-jquery-tmpl">
+      <li data-link="{{= url}}">
+          <a href="{{= url}}" onclick="moreurl(this, {from:'movie_search_sugg'})">
+              <img src="{{= img}}" width="40" />
+              <p>
+                  <em>{{= title}}</em>
+                  {{if year}}
+                      <span>{{= year}}</span>
+                  {{/if}}
+                  {{if sub_title}}
+                      <br /><span>{{= sub_title}}</span>
+                  {{/if}}
+                  {{if address}}
+                      <br /><span>{{= address}}</span>
+                  {{/if}}
+                  {{if episode}}
+                      {{if episode=="unknow"}}
+                          <br /><span>集数未知</span>
+                      {{else}}
+                          <br /><span>共{{= episode}}集</span>
+                      {{/if}}
+                  {{/if}}
+              </p>
+          </a>
+      </li>
+  </script>
+  
+
+
+
+
+
+    
+    <div id="wrapper">
+        
+
+        
+    <div id="content">
+        
+    
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div id="db-usr-profile">
+        <div class="pic">
+            <a href="https://movie.douban.com/people/shapesofdreams/">
+                <img height="48" width="48" alt="小晨" src="https://img1.doubanio.com/icon/u1522921-128.jpg" />
+            </a>
+        </div>
+        <div class="info">
+            <h1>小晨看过的电影(1707)</h1>
+            <ul>
+                    
+        <li><a href="https://movie.douban.com/people/shapesofdreams/">电影主页</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/shapesofdreams/reviews">影评</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/shapesofdreams/question">问答</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/shapesofdreams/do">在看</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/shapesofdreams/wish">想看</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/shapesofdreams/collect">看过</a></li>
+    
+                    
+        <li><a href="https://www.douban.com/people/shapesofdreams/doulists">豆列</a></li>
+    
+                    
+        <li class="sep">|</li>
+    
+                    
+        <li><a href="https://www.douban.com/people/shapesofdreams/">豆瓣主页</a></li>
+    
+            </ul>
+        </div>
+    </div>
+
+
+        <div class="grid-16-8 clearfix">
+            
+            
+            <div class="article">
+                
+    
+
+    <div class="opt-bar mb30 clearfix">
+        <div class="sort">
+            
+                按时间排序<span class="gray-dot">·</span><a href="https://movie.douban.com/people/shapesofdreams/collect?sort=rating&amp;start=0&amp;mode=grid&amp;tags_sort=count" class="ck-option" target="_self">按评价排序</a><span class="gray-dot">·</span><a href="https://movie.douban.com/people/shapesofdreams/collect?sort=title&amp;start=0&amp;mode=grid&amp;tags_sort=count" class="ck-option" target="_self">按标题排序</a>
+        </div>
+        <style>
+            .tabs-more {zoom:1; float:left; margin-left:38px; position: relative; top:3px}
+            .tabs-more .gray {color:#999}
+            .tabs-more .lnk-tab-more{padding-right:5px;background:#fff;}
+            .tabs-more .lnk-tab-more:hover{background:#369;}
+            .tabs-more .lnk-tab-more span{background: url("/pics/icon/tongcheng_tab_down.gif") no-repeat right 3px;padding-right:10px;display:inline-block}
+            .tabs-more .lnk-tab-more span.up{background: url("/pics/icon/tongcheng_tab_up.gif") no-repeat right 3px;padding-right:10px;}
+            .tabs-more .lnk-tab-more:hover span{color:#fff;background: url("/pics/icon/tongcheng_tab_down.gif") no-repeat right -8px;}
+            .tabs-more .lnk-tab-more:hover span.up{background: url("/pics/icon/tongcheng_tab_up.gif") no-repeat right -8px;}
+            .tabs-more ul {display:none;position:absolute; background:#fff; border:1px solid #aaa; padding:5px 0; left:55px;_left:53px;_top:19px; top:18px; width:70px}
+            .tabs-more ul li a {display:block;text-align:center; padding:3px 5px;margin:0}
+            .tabs-more ul li{margin:0; zoom:1}
+            .tabs-more ul li a:hover {background:#369; color:#fff; }
+
+            .item .info li {clear: both;}
+            .item .title .playable {font-size: 13px; padding-left: 3px; color: #00A65F;}
+
+            .grid-view .item {overflow:auto; display:table; zoom:1}
+            .grid-view .item .tabs-more {margin-left:0;}
+            .grid-view .item .tabs-more span {color:#369;}
+            .grid-view .item .lnk-tab-more:hover span {color:#fff;}
+            .grid-view .item .clearDiv {clear:both}
+            .grid-view .item .tabs-more ul{left:0;margin-left:0}
+            .grid-view .item .comment {color:#000;}
+
+            .list-view .item {overflow:auto;display:table;width:100%; zoom:1}
+            .list-view .item .tabs-more{margin-left:0; margin-top:4px}
+            .list-view .item .tags{display:block;clear:both}
+            .list-view .item .tabs-more ul{left:0}
+            .list-view .item-show{height:17px;overflow:hidden}
+            .list-view .opt-ln {clear:both;margin-left:3px}
+            .list-view .comment {clear:both;}
+            .list-view .movieInfo {margin-top:4px;*margin-top:3px}
+
+        </style>
+        <script>
+            $(function(){
+                $(".lnk-tab-more").click(function(){
+                    $(this).next(".tabs-more-list").show();
+                    $("span",this).addClass("up");
+                    return false;
+                })
+                $(document.body).click(function(e){
+                    if($(e.target).parent().attr("class")!=="lnk-tab-more"){
+                        $(".tabs-more-list").hide();
+                        $("span.up").removeClass("up");
+                    }
+                })
+            })
+        </script>
+        <div class="tabs-more">
+            
+            <span class="gray">筛选影片:</span>
+            <a class="lnk-tab-more" href="#">
+                <span>全部</span>
+            </a>
+            <ul class="tabs-more-list">
+                <li><a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;amp;start=0&amp;amp;filter=schedule&amp;amp;mode=grid&amp;amp;tags_sort=count">正在热映</a></li>
+                <li><a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;amp;start=0&amp;amp;filter=video&amp;amp;mode=grid&amp;amp;tags_sort=count">在线观看</a></li>
+            </ul>
+        </div>
+        <div class="mode">
+            <span class="subject-num">
+                586-600&nbsp;/&nbsp;1707
+            </span>
+            <ul class="grid-list-bar">
+                
+                    <li class="grid-on">grid</li>
+                    <li class="list">
+                        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;amp;start=585&amp;amp;filter=all&amp;amp;mode=list&amp;amp;tags_sort=count">list</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+        
+
+<script type="text/javascript">
+$(function() {
+    $('.d_link').click(function() {
+        $(this).parents("div.item").hide();
+        var url = "/j/mine/j_cat_ui";
+        if (/\/location\//.test(location.href)) {
+            url = "/location" + url;
+        }
+        $.post_withck(url, {sid: this.rel},
+            function(sjson) {
+                var ret = eval("(" + sjson + ")");
+                if (!ret.result) {
+                    alert("出错了，请稍后重试!");
+                }
+        });
+    });
+})
+</script>
+
+
+<div class="grid-view">
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Why Are Thin People Not Fat?" href="https://movie.douban.com/subject/4032399/" class="nbg">
+                    <img alt="Why Are Thin People Not Fat?" src="https://img1.doubanio.com/spic/s3976768.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/4032399/" class="">
+                            <em>瘦人不胖 / Why Are Thin People Not Fat?</em>
+                             / 怎么长胖？ / 瘦人为什么不发胖？
+                        </a>
+                    </li>
+                        <li class="intro">2009-01-26(英国) / Peter Capaldi / David Allison / Nikhil Dhurandhar / 英国 / Emma Sutton / 60分钟 / 瘦人不胖 / 纪录片 / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2011-04-16</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">哈大家不要看了，对胖人的绝对打击。意思是你胖你就一辈子胖，瘦下来了你身体都会偷偷要胖回去。如果你天生小瘦子，被强迫搞胖了都能不用费劲的再瘦回来。丫的真是不让人活啊。不过里面提到一个400多磅的大胖子在一次医学实验中只喝水吃维生素，居然一年多没吃饭！瘦了200多磅。你胃不疼么！</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Inside Job" href="https://movie.douban.com/subject/4843480/" class="nbg">
+                    <img alt="Inside Job" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p872094092.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/4843480/" class="">
+                            <em>监守自盗 / Inside Job</em>
+                             / 呃钱帝国(港) / 幕后黑手(台)
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2010-10-08(美国) / 马特·达蒙 / William Ackman / Daniel Alpert / Jonathan Alpert / Sigridur Benediktsdottir / Willem Buiter / 美国 / www.sonyclassics.com/insidejob / 查尔斯·弗格森 / 120分钟 / 监守自盗 / 犯罪 / 纪录片 / Gina Beck / Adam Bolt / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-04-16</span>
+                        
+                            <span class="tags">标签: 纪录片 Documentary 美国 冰岛</span>
+                    </li>
+                    <li>
+                        <span class="comment">冰岛人民最近的投票反对icesave，不是耍赖不赔钱，他们只是觉得不应该让身为平民的自己去赔偿几个金融家的错误。这个行业的巨大利益，靠的是毫无道德的小聪明，不能不说这是一种对人性的侮辱。下一次金融危机只是时间问题。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Mildred Pierce" href="https://movie.douban.com/subject/3986125/" class="nbg">
+                    <img alt="Mildred Pierce" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p874531700.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3986125/" class="">
+                            <em>幻世浮生 / Mildred Pierce</em>
+                             / 欲海情魔 / 米尔德丽德·皮尔斯
+                        </a>
+                    </li>
+                        <li class="intro">2011-03-27(美国) / 凯特·温丝莱特 / 盖·皮尔斯 / 埃文·蕾切尔·伍德 / 梅尔·温宁汉姆 / 摩根·特纳 / Quinn McColgan / Annette Arnold / Maitely Weismann / 美国 / www.hbo.com/mildred-pierce / 托德·海因斯 / 60分钟 / 幻世浮生 / 剧情 / 托德·海因斯 Todd Haynes / Jon Raymond / 詹姆斯·M·凯恩 James M. Cain / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2011-04-16</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">碎你说对了！太不该看了！真看不得这种母亲被女儿精神折磨成这样的。结局就该安排她掐死她算了。看的过程中多少次想咆哮啊！！！！给三星，臭编剧折磨死我了。我这么爱我妈，你给我看这种，我想抽那个死婆娘Veda！！！！</span>
+                        
+                            <span class="pl">(44 有用)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Emma" href="https://movie.douban.com/subject/3610967/" class="nbg">
+                    <img alt="Emma" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p789473326.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3610967/" class="">
+                            <em>艾玛 / Emma</em>
+                             / 爱玛
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2009-10-04(英国) / 萝玛拉·嘉瑞 / 迈克尔·刚本 / 约翰尼·李·米勒 / 乔迪·梅 / 罗伯特·巴瑟斯特 / 露易丝·迪伦 / 布莱克·瑞特森 / 塔姆辛·格雷格 / 瓦莱丽·利莉 / 丹·弗雷登堡 / 波比米勒 / 劳拉·派普 / 鲁珀特·伊文斯 / 约书亚琼斯 / 杰佛逊·豪尔 / 维洛妮卡罗伯茨 / 克里斯蒂娜·科尔 / 杰米格洛弗 / 爱琳·奥伊金斯 / 莎拉欧文斯 / 丽莎萨多维 / 苏茜·崔灵 / 弗兰克杜迪 / 艾米劳顿 / 英国 / www.bbc.co.uk/programmes/b00n8s6x / 吉姆·奥汉龙 / 60分钟 / 艾玛 / 喜剧 / 剧情 / 爱情 / Sandy Welch / 简·奥斯汀 Jane Austen / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-04-11</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">明亮愉悦的那种英剧，依然好几个熟面孔。但是看过后第二天回想一下，就会觉得这部拍的就如它的年龄，太过稚嫩。一贯的精致考究，但是情感方面，应该可以做到更好。不论是剧本还是表演，几个重要的感情点没有得以突出，如果脱离了对于原著的认识，就使结局有点不够顺理成章。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Sherlock " href="https://movie.douban.com/subject/3986493/" class="nbg">
+                    <img alt="Sherlock " src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p760534033.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3986493/" class="">
+                            <em>神探夏洛克 第一季 / Sherlock Season 1</em>
+                             / 新世纪福尔摩斯(港) / 新福尔摩斯(港)
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2010-07-25(英国) / 本尼迪克特·康伯巴奇 / 马丁·弗瑞曼 / 鲁珀特·格雷夫斯 / 安德鲁·斯科特 / 马克·加蒂斯 / 尤娜·斯塔布斯 / 露·布瑞丽 / 菲尔·戴维斯 / 英国 / www.bbc.co.uk/programmes/b018ttws / 保罗·麦奎根 / 尤洛斯·林 / 神探夏洛克 / 90分钟 / 神探夏洛克 / 剧情 / 悬疑 / 犯罪 / 阿瑟·柯南·道尔 Arthur Conan Doyle / 马克·加蒂斯 Mark Gatiss / 史蒂文·莫法特 Steven Moffat / 史蒂夫·汤普森 Steve Thompson / 英语</li>
+                    <li>
+                                    <span class="rating5-t"></span>
+                        <span class="date">2011-04-07</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">恩，果然好看。BBC各种强大。英国人各种可爱。原来国外也流行腐。一季才3集，真有你们的也。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="The Vampire Diaries" href="https://movie.douban.com/subject/3646523/" class="nbg">
+                    <img alt="The Vampire Diaries" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1255986302.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3646523/" class="">
+                            <em>吸血鬼日记 第一季 / The Vampire Diaries Season 1</em>
+                             / 吸血新世代(港) 第一季 / 血色日记 第一季
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2009-09-10(美国) / 妮娜·杜波夫 / 保罗·韦斯利 / 伊恩·萨默海尔德 / 史蒂夫·R·麦奎因 / 卡特琳娜·格兰厄姆 / 坎迪丝·阿科拉 / 扎齐·罗伊瑞格 / 迈克尔·特瑞威诺 / 莎拉·坎宁 / 美国 / www.cwtv.com/shows/the-vampire-diaries / 马科斯·西恩加 / 吸血鬼日记 / 45分钟 / 吸血鬼日记 / 剧情 / 奇幻 / 恐怖 / 爱情 / Julie Plec / 凯文·威廉姆森 Kevin Williamson / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2011-03-28</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">美国吸血鬼的题材拍的太多了。也不是不好看，但属于看不看都无所谓。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="おとうと" href="https://movie.douban.com/subject/3395437/" class="nbg">
+                    <img alt="おとうと" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p544551472.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3395437/" class="">
+                            <em>弟弟 / おとうと</em>
+                             / 给弟弟的安眠曲(港) / 春之樱：吟子和她的弟弟(台)
+                        </a>
+                    </li>
+                        <li class="intro">2010-01-30 / 吉永小百合 / 笑福亭鹤瓶 / 苍井优 / 加濑亮 / 小林稔侍 / 小日向文世 / 石田百合子 / 笹野高史 / 佐藤蛾次郎 / 森本治行 / 中居正广 / 日本 / 山田洋次 / 126分钟 / 弟弟 / 剧情 / 平松惠美子 Emiko Hiramatsu / 山田洋次 / 日语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-03-12</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">吉永小百合演的真好呀。小优同学胖点了。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Black Swan" href="https://movie.douban.com/subject/1978709/" class="nbg">
+                    <img alt="Black Swan" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p719282906.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/1978709/" class="">
+                            <em>黑天鹅 / Black Swan</em>
+                             / 夺命黑天鹅 / 霸王别鹅(豆友译名)
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2010-12-17(美国) / 2010-09-01(威尼斯电影节) / 娜塔莉·波特曼 / 米拉·库尼斯 / 薇诺娜·瑞德 / 文森特·卡索 / 芭芭拉·赫希 / 本杰明·米派德 / 克塞尼亚·索罗 / 克里斯汀娜·安娜波 / 詹妮特·蒙哥马利 / 塞巴斯蒂安·斯坦 / 托比·海明威 / 塞尔吉奥·托拉多 / 马克·马戈利斯 / 美国 / 达伦·阿伦诺夫斯基 / 108分钟 / 103分钟(威尼斯电影节) / 黑天鹅 / 剧情 / 惊悚 / 安德雷斯·海因斯 Andres Heinz / 马克·海曼 Mark Heyman / 约翰·J·麦克劳克林 John J. McLaughlin / 英语 / 法语 / 意大利语</li>
+                    <li>
+                                    <span class="rating5-t"></span>
+                        <span class="date">2011-03-12</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">what you live for, what you die for. 其实真的很虐心，这种自己毁灭自己的委屈，看的实在太难受。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="The King&#39;s Speech" href="https://movie.douban.com/subject/4023638/" class="nbg">
+                    <img alt="The King&#39;s Speech" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p768879237.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/4023638/" class="">
+                            <em>国王的演讲 / The King&#39;s Speech</em>
+                             / 皇上无话儿(港) / 王者之声：宣战时刻(台)
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2010-09-06(特柳赖德电影节) / 2010-12-25(美国) / 2011-01-07(英国) / 2012-02-24(中国大陆) / 科林·费尔斯 / 杰弗里·拉什 / 海伦娜·伯翰·卡特 / 盖·皮尔斯 / 迈克尔·刚本 / 蒂莫西·斯波 / 詹妮弗·艾莉 / 德里克·雅各比 / 安东尼·安德鲁斯 / 克莱尔·布鲁姆 / 英国 / 澳大利亚 / 美国 / 汤姆·霍珀 / 118分钟 / 国王的演讲 / 剧情 / 传记 / 历史 / David Seidler / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-03-06</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">倔强的外表，骄傲和不屈的心，还有朋友。a nice piece of work，但是奥斯卡还是太偏心了。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="백야행 : 하얀 어둠 속을 걷다" href="https://movie.douban.com/subject/3822842/" class="nbg">
+                    <img alt="백야행 : 하얀 어둠 속을 걷다" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p465542953.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3822842/" class="">
+                            <em>白夜行 / 백야행 : 하얀 어둠 속을 걷다</em>
+                             / 白夜行：走进白色的黑夜 / Into The White Night
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2009-11-19(韩国) / 孙艺珍 / 韩石圭 / 高修 / 李珉廷 / 朱多英 / 朴圣雄 / 崔秦豪 / 韩国 / 朴信宇 / 135分钟 / 白夜行 / 悬疑 / 爱情 / 东野圭吾 Keigo Higashino / 朴妍善 / 朴信宇 Shin-woo Park / 韩语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2011-03-02</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">看书时就知道电影难拍，作者设的环太多，所以电影的大幅改编是早有准备的。人物少了近三分之二，但还是把最最最重要的地方留了下来，首尾回归。书里很喜欢老警官，电影里这个韩国警察却很窝囊，儿子的情节也有点莫名其妙的多余。而我对于韩国影视的偏见，这部没能成为少有的例外。另，他长的很像彭坦。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="人魚傳說" href="https://movie.douban.com/subject/1302673/" class="nbg">
+                    <img alt="人魚傳說" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1117483592.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/1302673/" class="">
+                            <em>人鱼传说 / 人魚傳說</em>
+                             / Mermaid Got Married / 第六感奇缘之人鱼传说
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">1994-11-10 / 郑伊健 / 钟丽缇 / 金城武 / 麦家琪 / 郑则仕 / 陈国新 / 苑琼丹 / 刘兆铭 / 香港 / 罗文 / 92 分钟 / 人鱼传说 / 喜剧 / 奇幻 / 爱情 / 张祖儿 / 粤语</li>
+                    <li>
+                        <span class="date">2011-02-28</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">已经是多久以前了</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Love &amp; Other Drugs" href="https://movie.douban.com/subject/3078609/" class="nbg">
+                    <img alt="Love &amp; Other Drugs" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p640274667.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3078609/" class="">
+                            <em>爱情与灵药 / Love &amp; Other Drugs</em>
+                             / 爱情药不药(台) / 爱情恋上瘾(港)
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2010-11-24(美国) / 安妮·海瑟薇 / 杰克·吉伦哈尔 / 朱迪·格雷尔 / 汉克·阿扎利亚 / 乔什·加德 / 奥利弗·普莱特 / 盖布瑞·马赫特 / 乔治·席格 / 吉尔·克雷伯格 / 凯特·詹宁斯·格兰特 / 凯瑟琳·温妮克 / 美国 / video.foxjapan.com/movies/love-drugs/index.html / 爱德华·兹威克 / 113分钟 / 爱情与灵药 / 剧情 / 喜剧 / 爱情 / 查尔斯·伦道夫 Charles Randolph / 爱德华·兹威克 Edward Zwick / Jamie Reidy / 马歇尔·赫斯科维兹 Marshall Herskovitz / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2011-02-22</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">煽情是个功夫活。安妮海瑟薇在用力过度的道路上越走越远，这个时期已露出苗头。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Rabbit Hole" href="https://movie.douban.com/subject/3641108/" class="nbg">
+                    <img alt="Rabbit Hole" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p1762809157.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3641108/" class="">
+                            <em>兔子洞 / Rabbit Hole</em>
+                             / 心灵触洞(港) / 爱，让悲伤终结(台)
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2010-09-13(多伦多电影节) / 2010-12-17(美国) / 妮可·基德曼 / 艾伦·艾克哈特 / 黛安·韦斯特 / 迈尔斯·特勒 / 坦米·布兰查德 / 吴珊卓 / 吉安卡罗·埃斯波西托 / 乔恩·坦尼 / 斯蒂芬·梅尔勒 / 麦克·道尔 / 罗伯塔·瓦拉赫 / 帕特丽夏·考莱姆伯 / 美国 / 约翰·卡梅隆·米切尔 / 91分钟 / 兔子洞 / 剧情 / 家庭 / 大卫·林赛-阿贝尔 David Lindsay-Abaire / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-02-22</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">everyone needs their own way and time to grief</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="The Big Bang Theory " href="https://movie.douban.com/subject/3990470/" class="nbg">
+                    <img alt="The Big Bang Theory " src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1864616471.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3990470/" class="">
+                            <em>生活大爆炸  第三季 / The Big Bang Theory Season 3</em>
+                             / 天才也性感 第三季 / 天才理论传 第三季
+                        </a>
+                    </li>
+                        <li class="intro">2009-09-21(美国) / 约翰尼·盖尔克奇 / 吉姆·帕森斯 / 凯莉·库柯 / 西蒙·赫尔伯格 / 昆瑙·内亚 / 梅丽莎·劳奇 / 凯文·苏斯曼 / 克里斯汀·芭伦斯基 / 朱迪·格雷尔 / 约书亚·马林纳 / 威尔·惠顿 / 翠西亚·希弗 / 美国 / www.cbs.com/shows/big_bang_theory/ / Mark Cendrowski / 生活大爆炸 / 21分钟 / 生活大爆炸  / 喜剧 / 查克·罗瑞 Chuck Lorre / 比尔·布拉迪 Bill Prady / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-02-19</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">总是难比第一季更惊喜。看到后来，虽然也好玩，但是并不是那种让你大笑出来的笑料。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="のだめカンタービレ 最終楽章 後編" href="https://movie.douban.com/subject/3335464/" class="nbg">
+                    <img alt="のだめカンタービレ 最終楽章 後編" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p612362291.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3335464/" class="">
+                            <em>交响情人梦 最终乐章 后篇 / のだめカンタービレ 最終楽章 後編</em>
+                             / 交响情人梦 电影版2 / Nodame Cantabile: The Movie II
+                        </a>
+                    </li>
+                        <li class="intro">2010-04-17(日本) / 上野樹里 / 玉木 宏 / 日本 / 武内英樹 / 123分钟 / 交响情人梦 最终乐章 后篇 / 剧情 / 衛藤凛 / 日语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-02-19</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">前篇绝对的垃圾，后篇则绝对像模像样的精彩。难道只是想多赚一笔才搞个前篇出来滥竽充数么。这样完结，应该就足够了。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+    
+    
+    
+
+    
+        <div class="paginator">
+        <span class="prev">
+            <link rel="prev" href="https://movie.douban.com/people/shapesofdreams/collect?start=570&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid"/>
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=570&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >&lt;前页</a>
+        </span>
+        
+        
+            
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=0&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >1</a>
+        
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=15&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >2</a>
+        <span class="break">...</span>
+
+                
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=525&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >36</a>
+        
+                
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=540&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >37</a>
+        
+                
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=555&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >38</a>
+        
+                
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=570&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >39</a>
+        
+                <span class="thispage" data-total-page="114">40</span>
+                
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=600&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >41</a>
+        
+                
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=615&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >42</a>
+        
+                
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=630&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >43</a>
+        
+                
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=645&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >44</a>
+        
+            <span class="break">...</span>
+                
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=1680&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >113</a>
+        
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=1695&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >114</a>
+        
+        <span class="next">
+            <link rel="next" href="https://movie.douban.com/people/shapesofdreams/collect?start=600&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid"/>
+            <a href="https://movie.douban.com/people/shapesofdreams/collect?start=600&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >后页&gt;</a>
+        </span>
+
+        </div>
+
+
+
+            </div>
+            <div class="aside">
+                
+    
+    
+
+
+<div class="side-info">
+    <a href="https://www.douban.com/people/shapesofdreams/" class="side-info-avatar"><img height="48" width="48" alt="小晨" src="https://img1.doubanio.com/icon/u1522921-128.jpg" /></a>
+    <div class="side-info-txt">
+        <h3>小晨</h3>
+        &gt;&nbsp;<a href="https://www.douban.com/people/shapesofdreams/">豆瓣主页</a>
+    </div>
+    <div class="user-content">
+    </div>
+</div>
+
+    <div class="mod">
+        <p class="pl2 m0">
+            &gt; <a href="https://movie.douban.com/people/shapesofdreams/">小晨的电影主页</a>
+        </p>
+    </div>
+        
+    <h2>
+        看过的标签
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+    </h2>
+
+    
+    
+<div class="opt-bar mb15 clearfix">
+    <div class="sort">
+        
+        按标签量排序<span class="gray-dot">·</span><a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;start=585&amp;filter=all&amp;mode=grid&amp;tags_sort=name">按首字母排序</a>
+    </div>
+</div>
+<ul class="tag-list mb10">
+
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BE%8E%E5%9B%BD&amp;mode=grid" title="美国">美国</a>
+        <span>340</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8A%A8%E7%94%BB&amp;mode=grid" title="动画">动画</a>
+        <span>181</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%9B%BD%E4%BA%A7&amp;mode=grid" title="国产">国产</a>
+        <span>141</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%88%B1%E6%83%85&amp;mode=grid" title="爱情">爱情</a>
+        <span>109</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%AB%A5%E5%B9%B4&amp;mode=grid" title="童年">童年</a>
+        <span>106</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E6%9C%AC&amp;mode=grid" title="日本">日本</a>
+        <span>91</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=TV&amp;mode=grid" title="TV">TV</a>
+        <span>78</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%9D%92%E6%98%A5&amp;mode=grid" title="青春">青春</a>
+        <span>71</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%96%9C%E5%89%A7&amp;mode=grid" title="喜剧">喜剧</a>
+        <span>70</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%9F%AD%E7%89%87&amp;mode=grid" title="短片">短片</a>
+        <span>67</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%8B%B1%E5%9B%BD&amp;mode=grid" title="英国">英国</a>
+        <span>61</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%A6%99%E6%B8%AF&amp;mode=grid" title="香港">香港</a>
+        <span>56</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%A7%91%E5%B9%BB&amp;mode=grid" title="科幻">科幻</a>
+        <span>38</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8A%A8%E4%BD%9C&amp;mode=grid" title="动作">动作</a>
+        <span>36</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8F%B0%E6%B9%BE&amp;mode=grid" title="台湾">台湾</a>
+        <span>30</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%B3%95%E5%9B%BD&amp;mode=grid" title="法国">法国</a>
+        <span>30</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BE%8E%E5%89%A7&amp;mode=grid" title="美剧">美剧</a>
+        <span>29</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%AD%A9%E5%AD%90&amp;mode=grid" title="孩子">孩子</a>
+        <span>25</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%AC%A7%E6%B4%B2&amp;mode=grid" title="欧洲">欧洲</a>
+        <span>19</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%B8%AF%E5%89%A7&amp;mode=grid" title="港剧">港剧</a>
+        <span>18</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%A0%A1%E5%9B%AD&amp;mode=grid" title="校园">校园</a>
+        <span>17</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%9F%B3%E4%B9%90&amp;mode=grid" title="音乐">音乐</a>
+        <span>16</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%88%90%E9%95%BF&amp;mode=grid" title="成长">成长</a>
+        <span>15</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BA%AA%E5%BD%95%E7%89%87&amp;mode=grid" title="纪录片">纪录片</a>
+        <span>14</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%86%B0%E5%B2%9B&amp;mode=grid" title="冰岛">冰岛</a>
+        <span>14</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8A%B1%E5%BF%97&amp;mode=grid" title="励志">励志</a>
+        <span>13</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%87%91%E5%9F%8E%E6%AD%A6&amp;mode=grid" title="金城武">金城武</a>
+        <span>13</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%AE%B6%E5%BA%AD&amp;mode=grid" title="家庭">家庭</a>
+        <span>12</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%9F%AF%E5%8D%97&amp;mode=grid" title="柯南">柯南</a>
+        <span>12</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%A5%B3%E6%80%A7&amp;mode=grid" title="女性">女性</a>
+        <span>12</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%89%A7%E5%9C%BA%E7%89%88&amp;mode=grid" title="剧场版">剧场版</a>
+        <span>11</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E4%BA%B2%E6%83%85&amp;mode=grid" title="亲情">亲情</a>
+        <span>11</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E4%BC%A0%E8%AE%B0&amp;mode=grid" title="传记">传记</a>
+        <span>11</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%AE%B0%E5%BD%95%E7%89%87&amp;mode=grid" title="记录片">记录片</a>
+        <span>11</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%8A%97%E6%97%A5&amp;mode=grid" title="抗日">抗日</a>
+        <span>10</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%9F%A9%E5%9B%BD&amp;mode=grid" title="韩国">韩国</a>
+        <span>10</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%B0%8F%E5%BF%8D&amp;mode=grid" title="小忍">小忍</a>
+        <span>10</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=Documentary&amp;mode=grid" title="Documentary">Documentary</a>
+        <span>10</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%88%98%E4%BA%89&amp;mode=grid" title="战争">战争</a>
+        <span>9</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=KirstenDunst&amp;mode=grid" title="KirstenDunst">KirstenDunst</a>
+        <span>9</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%AD%A3%E5%A4%A7%E5%89%A7%E5%9C%BA&amp;mode=grid" title="正大剧场">正大剧场</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%90%8C%E6%80%A7&amp;mode=grid" title="同性">同性</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%83%8A%E6%82%9A&amp;mode=grid" title="惊悚">惊悚</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%9A%B4%E5%8A%9B&amp;mode=grid" title="暴力">暴力</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%82%AC%E7%96%91&amp;mode=grid" title="悬疑">悬疑</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%B2%A9%E4%BA%95%E4%BF%8A%E4%BA%8C&amp;mode=grid" title="岩井俊二">岩井俊二</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%96%B0%E6%B5%B7%E8%AF%9A&amp;mode=grid" title="新海诚">新海诚</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%BC%AB%E7%94%BB&amp;mode=grid" title="漫画">漫画</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=JohnnyDepp&amp;mode=grid" title="JohnnyDepp">JohnnyDepp</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%93%88%E5%88%A9%E6%B3%A2%E7%89%B9&amp;mode=grid" title="哈利波特">哈利波特</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E5%89%A7&amp;mode=grid" title="日剧">日剧</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=les&amp;mode=grid" title="les">les</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8E%86%E5%8F%B2&amp;mode=grid" title="历史">历史</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%A5%87%E5%B9%BB&amp;mode=grid" title="奇幻">奇幻</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%A1%80%E8%85%A5&amp;mode=grid" title="血腥">血腥</a>
+        <span>3</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%9F%AD%E7%89%87%E9%9B%86&amp;mode=grid" title="短片集">短片集</a>
+        <span>3</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%94%BF%E6%B2%BB&amp;mode=grid" title="政治">政治</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%BE%B7%E5%9B%BD&amp;mode=grid" title="德国">德国</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%B0%8F%E5%86%89&amp;mode=grid" title="小冉">小冉</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%8B%B1%E5%89%A7&amp;mode=grid" title="英剧">英剧</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=CharlieKaufman&amp;mode=grid" title="CharlieKaufman">CharlieKaufman</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8A%A0%E6%8B%BF%E5%A4%A7&amp;mode=grid" title="加拿大">加拿大</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=EdwardNorton&amp;mode=grid" title="EdwardNorton">EdwardNorton</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%A4%BE%E4%BC%9A&amp;mode=grid" title="社会">社会</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%90%8C%E5%BF%97&amp;mode=grid" title="同志">同志</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%A7%91%E6%99%AE&amp;mode=grid" title="科普">科普</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%A5%BF%E7%8F%AD%E7%89%99&amp;mode=grid" title="西班牙">西班牙</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=.%E6%8E%A2%E7%B4%A2%E9%A2%91%E9%81%93&amp;mode=grid" title=".探索频道">.探索频道</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%87%AA%E7%84%B6&amp;mode=grid" title="自然">自然</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%AD%94%E5%B9%BB&amp;mode=grid" title="魔幻">魔幻</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%B3%A2%E5%85%B0&amp;mode=grid" title="波兰">波兰</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%B3%B0%E5%9B%BD&amp;mode=grid" title="泰国">泰国</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%9E%81%E5%85%89&amp;mode=grid" title="极光">极光</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%8E%A2%E7%B4%A2%E9%A2%91%E9%81%93&amp;mode=grid" title="探索频道">探索频道</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8C%97%E6%9E%81&amp;mode=grid" title="北极">北极</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%8B%8D%E4%BA%95%E4%BC%98&amp;mode=grid" title="苍井优">苍井优</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%B7%B4%E8%A5%BF&amp;mode=grid" title="巴西">巴西</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/shapesofdreams/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%84%8F%E5%A4%A7%E5%88%A9&amp;mode=grid" title="意大利">意大利</a>
+        <span>1</span>
+    </li>
+</ul>
+
+
+<script>
+$(function () {
+    var TAG_URL_PARAMS = {"sort":"time","tags_sort":"count","filter":"all","tag":"意大利","mode":"grid"};
+    $('#open_tags').click(function() {
+        var $btn = $(this);
+        var $container = $("ul.tag-list");
+        var $tmpl = $container.find("li").first();
+
+        $.get("/j/people/shapesofdreams/get_collection_tags", {
+            offset: 90,
+            tags_sort: "count",
+            cat_id: "1002",
+            action: "collect"
+        }, function (res) {
+            var tagUrl, newEl;
+
+            $(res).each(function (i, tagInfo) {
+                TAG_URL_PARAMS["tag"] = tagInfo.tag;
+                tagUrl = "https://movie.douban.com/people/shapesofdreams/collect?" + $.param(TAG_URL_PARAMS);
+                newEl = $tmpl.clone();
+                if (tagInfo.tag === "None") {
+                    newEl.addClass("on");
+                }
+                newEl.find('a').attr("href", tagUrl)
+                                .attr("title", tagInfo.tag)
+                                .html(tagInfo.tag)
+                     .end()
+                     .find("span").html(tagInfo.count)
+                     .end().appendTo($container);
+            });
+            $btn.remove();
+        }, "json");
+    });
+});
+</script>
+
+
+            </div>
+            <div class="extra">
+                
+            </div>
+        </div>
+    </div>
+
+        
+    <div id="footer">
+            <div class="footer-extra"></div>
+        
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2016 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about?policy=disclaimer">免责声明</a>
+    
+    · <a href="https://help.douban.com/?app=movie" target="_blank">帮助中心</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+    </div>
+
+    </div>
+    <script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/fd8032bc82407e0.js"></script>
+        
+        
+    <link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css" />
+    <link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/movie/7345d4b259505f1a074773ce6b54f0253df2bb88/css/movie/mod/reg_login_pop.css" />
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/29449d396dacb28fd9949c709ccf02a46b910156/js/do.js" data-cfg-autoload="false"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/4b3bad5e25de78678d700dd5353570dce3e6bbcc/js/ui/dialog.js"></script>
+    <script type="text/javascript">
+        var HTTPS_DB='https://www.douban.com';
+var account_pop={open:function(e,b){if(b){referrer="?referrer="+encodeURIComponent(b)}else{referrer="?referrer="+window.location.href}var f="",a="",i=382;if(e==="reg"){f="用户注册";a="https://accounts.douban.com/popup/login?source=movie#popup_register";i=480}else{if(e==="login"){f="用户登录";a="https://accounts.douban.com/popup/login?source=movie"}}var h=document.location.protocol+"//"+document.location.hostname;var d=dui.Dialog({width:478,title:f,height:i,cls:"account_pop",isHideTitle:true,modal:true,content:"<iframe scrolling='no' frameborder='0' width='478' height='"+i+"' src='"+a+"' name='"+h+"'></iframe>"},true),c=d.node;c.undelegate();c.delegate(".dui-dialog-close","click",function(){var j=$("body");j.find("#login_msk").hide();j.find(".account_pop").remove()});if($(window).width()<478){var g="";if(e==="reg"){g=HTTPS_DB+"/accounts/register"+referrer}else{if(e==="login"){g=HTTPS_DB+"/accounts/login"+referrer}}window.location.href=g}else{d.open()}$(window).bind("message",function(j){if(j.originalEvent.origin==="https://accounts.douban.com"){c.find("iframe").css("height",j.originalEvent.data);c.height(j.originalEvent.data);d.update()}})}};if(Douban&&Douban.init_show_login){Douban.init_show_login=function(b){var a=$(b);a.click(function(){var c=a.data("ref")||"";account_pop.open("login",c);return false})}}Do(function(){$("body").delegate(".pop_register","click",function(b){b.preventDefault();var a=$(this).data("ref")||"";account_pop.open("reg",a);return false});$("body").delegate(".pop_login","click",function(b){b.preventDefault();var a=$(this).data("ref")||"";account_pop.open("login",a);return false})});
+    </script>
+
+    
+    
+  
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript';
+    g.defer=true;
+    g.async=true;
+    g.src=p+'://img3.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-19', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id]);
+      _gaq.push([method('_setSampleRate'), '5']);
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '0', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+    <!-- sindar20b-docker-->
+
+  <script>_SPLITTEST=''</script>
+</body>
+
+</html>
+

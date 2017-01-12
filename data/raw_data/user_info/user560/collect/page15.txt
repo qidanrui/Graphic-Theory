@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-ff43">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <title>
+    Liam看过的电影(1138)
+</title>
+    
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+    <link rel="apple-touch-icon" href="https://img3.doubanio.com/f/movie/d59b2715fdea4968a450ee5f6c95c7d7a2030065/pics/movie/apple-touch-icon.png">
+    <link href="https://img3.doubanio.com/f/shire/82d7c82f084d5157d7b87a17c76af984dd23dbbf/css/douban.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/shire/ae3f5a3e3085968370b1fc63afcecb22d3284848/css/separation/_all.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/movie/e9d9543ebc06f2964039a2e94898f84ce77fc070/js/movie/lib/jquery.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/cab60df0d9dacb82770e6a25d4481a538fdaadad/js/douban.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/0a62663763aed4fe860029f99d1755b8caa524e7/js/separation/_all.js"></script>
+    
+    <link href="https://img3.doubanio.com/f/shire/3592eb08e13581b921a3de5be3e1ee1859700e20/css/ui/mypage.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/29449d396dacb28fd9949c709ccf02a46b910156/js/do.js" data-cfg-autoload="false"></script>
+
+    <style type="text/css">
+    .item .title {background:none #f2f4f6;}
+    .list-view .highlight, .list-view .expanded{background:#f2f4f6 none;}
+</style>
+    <style type="text/css">img { max-width: 100%; }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/47d38f0bdbe5a67b.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+    
+   
+
+
+
+
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+
+
+
+
+
+<div class="top-nav-info">
+      
+      <a href="https://www.douban.com/accounts/login?source=movie" class="nav-login" rel="nofollow">登录</a>
+      <a href="https://www.douban.com/accounts/register?source=movie" class="nav-register" rel="nofollow">注册</a>
+</div>
+
+
+    <div class="top-nav-doubanapp">
+        
+        <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+        <div id="top-nav-appintro" class="more-items">
+            <p class="appintro-title">豆瓣</p>
+            <p class="slogan">我们的精神角落</p>
+            <p class="qrcode">
+                扫码直接下载
+            </p>
+            <div class="download">
+                <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=iOS">iPhone</a>
+                <span>·</span>
+                <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=Android" class="download-android">Android</a>
+            </div>
+        </div>
+        <div id="doubanapp-tip">
+            <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 4.0 全新发布</a>
+            <a href="javascript: void 0;" class="tip-close">×</a>
+        </div>
+    </div>
+
+    <div class="global-nav-items">
+      <ul>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-main&#34;,&#34;uid&#34;:&#34;0&#34;}">豆瓣</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://book.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-book&#34;,&#34;uid&#34;:&#34;0&#34;}">读书</a>
+            </li>
+          
+            
+            <li class="on">
+            <a href="https://movie.douban.com/" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-movie&#34;,&#34;uid&#34;:&#34;0&#34;}">电影</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://music.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-music&#34;,&#34;uid&#34;:&#34;0&#34;}">音乐</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/location/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-location&#34;,&#34;uid&#34;:&#34;0&#34;}">同城</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/group/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-group&#34;,&#34;uid&#34;:&#34;0&#34;}">小组</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://read.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-read&#34;,&#34;uid&#34;:&#34;0&#34;}">阅读</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://douban.fm/?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-fm&#34;,&#34;uid&#34;:&#34;0&#34;}">FM</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://dongxi.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-commodity&#34;,&#34;uid&#34;:&#34;0&#34;}">东西</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://market.douban.com/?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-market&#34;,&#34;uid&#34;:&#34;0&#34;}">市集</a>
+            </li>
+          
+            <li>
+              <a href="#more" class="bn-more"><span>更多</span></a>
+              <div class="more-items">
+                <table cellpadding="0" cellspacing="0">
+                    
+                    <tr><td><a href="https://moment.douban.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-moment&#34;,&#34;uid&#34;:&#34;0&#34;}">一刻</a></td></tr>
+                    
+                    <tr><td><a href="https://ypy.douban.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-ypy&#34;,&#34;uid&#34;:&#34;0&#34;}">豆瓣摄影</a></td></tr>
+                </table>
+              </div>
+            </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+   
+
+
+
+
+
+
+
+
+<div id="db-nav-movie" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="https://movie.douban.com">豆瓣电影</a>
+    </div>
+    <div class="nav-search">
+      <form action="https://movie.douban.com/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">电影、影人、影院、电视剧</label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1002" />
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- header ad begin -->
+    
+
+
+
+
+
+
+
+
+    <!-- header ad end -->
+
+  </div>
+  </div>
+  <div class="nav-secondary">
+      
+      <div class="nav-items nav-anon">
+          <ul>
+                                  
+                     <li><a href="https://movie.douban.com/nowplaying/">影讯&amp;购票</a></li>
+                 
+                     <li><a href="https://movie.douban.com/explore">选电影</a></li>
+                 
+                    <li class="site-nav-bt">
+                        <a href="https://movie.douban.com/tv/">电视剧</a>
+                    </li>
+                 
+                     <li><a href="https://movie.douban.com/chart">排行榜</a></li>
+                 
+                     <li><a href="https://movie.douban.com/tag/">分类</a></li>
+                 
+                     <li><a href="https://movie.douban.com/review/best/">影评</a></li>
+                 
+                     <li><a href="https://movie.douban.com/annual2015/">2015年度榜单</a></li>
+                 
+                     <li><a href="https://movie.douban.com/standbyme/?source=navigation">豆瓣观影报告</a></li>
+          
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+  
+  <script id="suggResult" type="text/x-jquery-tmpl">
+      <li data-link="{{= url}}">
+          <a href="{{= url}}" onclick="moreurl(this, {from:'movie_search_sugg'})">
+              <img src="{{= img}}" width="40" />
+              <p>
+                  <em>{{= title}}</em>
+                  {{if year}}
+                      <span>{{= year}}</span>
+                  {{/if}}
+                  {{if sub_title}}
+                      <br /><span>{{= sub_title}}</span>
+                  {{/if}}
+                  {{if address}}
+                      <br /><span>{{= address}}</span>
+                  {{/if}}
+                  {{if episode}}
+                      {{if episode=="unknow"}}
+                          <br /><span>集数未知</span>
+                      {{else}}
+                          <br /><span>共{{= episode}}集</span>
+                      {{/if}}
+                  {{/if}}
+              </p>
+          </a>
+      </li>
+  </script>
+  
+
+
+
+
+
+    
+    <div id="wrapper">
+        
+
+        
+    <div id="content">
+        
+    
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div id="db-usr-profile">
+        <div class="pic">
+            <a href="https://movie.douban.com/people/voyagor/">
+                <img height="48" width="48" alt="Liam" src="https://img1.doubanio.com/icon/u17221677-598.jpg" />
+            </a>
+        </div>
+        <div class="info">
+            <h1>Liam看过的电影(1138)</h1>
+            <ul>
+                    
+        <li><a href="https://movie.douban.com/people/voyagor/">电影主页</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/voyagor/reviews">影评</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/voyagor/question">问答</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/voyagor/do">在看</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/voyagor/wish">想看</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/voyagor/collect">看过</a></li>
+    
+                    
+        <li><a href="https://www.douban.com/people/voyagor/doulists">豆列</a></li>
+    
+                    
+        <li class="sep">|</li>
+    
+                    
+        <li><a href="https://www.douban.com/people/voyagor/">豆瓣主页</a></li>
+    
+            </ul>
+        </div>
+    </div>
+
+
+        <div class="grid-16-8 clearfix">
+            
+            
+            <div class="article">
+                
+    
+
+    <div class="opt-bar mb30 clearfix">
+        <div class="sort">
+            
+                按时间排序<span class="gray-dot">·</span><a href="https://movie.douban.com/people/voyagor/collect?sort=rating&amp;start=0&amp;mode=grid&amp;tags_sort=count" class="ck-option" target="_self">按评价排序</a><span class="gray-dot">·</span><a href="https://movie.douban.com/people/voyagor/collect?sort=title&amp;start=0&amp;mode=grid&amp;tags_sort=count" class="ck-option" target="_self">按标题排序</a>
+        </div>
+        <style>
+            .tabs-more {zoom:1; float:left; margin-left:38px; position: relative; top:3px}
+            .tabs-more .gray {color:#999}
+            .tabs-more .lnk-tab-more{padding-right:5px;background:#fff;}
+            .tabs-more .lnk-tab-more:hover{background:#369;}
+            .tabs-more .lnk-tab-more span{background: url("/pics/icon/tongcheng_tab_down.gif") no-repeat right 3px;padding-right:10px;display:inline-block}
+            .tabs-more .lnk-tab-more span.up{background: url("/pics/icon/tongcheng_tab_up.gif") no-repeat right 3px;padding-right:10px;}
+            .tabs-more .lnk-tab-more:hover span{color:#fff;background: url("/pics/icon/tongcheng_tab_down.gif") no-repeat right -8px;}
+            .tabs-more .lnk-tab-more:hover span.up{background: url("/pics/icon/tongcheng_tab_up.gif") no-repeat right -8px;}
+            .tabs-more ul {display:none;position:absolute; background:#fff; border:1px solid #aaa; padding:5px 0; left:55px;_left:53px;_top:19px; top:18px; width:70px}
+            .tabs-more ul li a {display:block;text-align:center; padding:3px 5px;margin:0}
+            .tabs-more ul li{margin:0; zoom:1}
+            .tabs-more ul li a:hover {background:#369; color:#fff; }
+
+            .item .info li {clear: both;}
+            .item .title .playable {font-size: 13px; padding-left: 3px; color: #00A65F;}
+
+            .grid-view .item {overflow:auto; display:table; zoom:1}
+            .grid-view .item .tabs-more {margin-left:0;}
+            .grid-view .item .tabs-more span {color:#369;}
+            .grid-view .item .lnk-tab-more:hover span {color:#fff;}
+            .grid-view .item .clearDiv {clear:both}
+            .grid-view .item .tabs-more ul{left:0;margin-left:0}
+            .grid-view .item .comment {color:#000;}
+
+            .list-view .item {overflow:auto;display:table;width:100%; zoom:1}
+            .list-view .item .tabs-more{margin-left:0; margin-top:4px}
+            .list-view .item .tags{display:block;clear:both}
+            .list-view .item .tabs-more ul{left:0}
+            .list-view .item-show{height:17px;overflow:hidden}
+            .list-view .opt-ln {clear:both;margin-left:3px}
+            .list-view .comment {clear:both;}
+            .list-view .movieInfo {margin-top:4px;*margin-top:3px}
+
+        </style>
+        <script>
+            $(function(){
+                $(".lnk-tab-more").click(function(){
+                    $(this).next(".tabs-more-list").show();
+                    $("span",this).addClass("up");
+                    return false;
+                })
+                $(document.body).click(function(e){
+                    if($(e.target).parent().attr("class")!=="lnk-tab-more"){
+                        $(".tabs-more-list").hide();
+                        $("span.up").removeClass("up");
+                    }
+                })
+            })
+        </script>
+        <div class="tabs-more">
+            
+            <span class="gray">筛选影片:</span>
+            <a class="lnk-tab-more" href="#">
+                <span>全部</span>
+            </a>
+            <ul class="tabs-more-list">
+                <li><a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;amp;start=0&amp;amp;filter=schedule&amp;amp;mode=grid&amp;amp;tags_sort=count">正在热映</a></li>
+                <li><a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;amp;start=0&amp;amp;filter=video&amp;amp;mode=grid&amp;amp;tags_sort=count">在线观看</a></li>
+            </ul>
+        </div>
+        <div class="mode">
+            <span class="subject-num">
+                16-30&nbsp;/&nbsp;1138
+            </span>
+            <ul class="grid-list-bar">
+                
+                    <li class="grid-on">grid</li>
+                    <li class="list">
+                        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;amp;start=15&amp;amp;filter=all&amp;amp;mode=list&amp;amp;tags_sort=count">list</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+        
+
+<script type="text/javascript">
+$(function() {
+    $('.d_link').click(function() {
+        $(this).parents("div.item").hide();
+        var url = "/j/mine/j_cat_ui";
+        if (/\/location\//.test(location.href)) {
+            url = "/location" + url;
+        }
+        $.post_withck(url, {sid: this.rel},
+            function(sjson) {
+                var ret = eval("(" + sjson + ")");
+                if (!ret.result) {
+                    alert("出错了，请稍后重试!");
+                }
+        });
+    });
+})
+</script>
+
+
+<div class="grid-view">
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="The Legend of Tarzan" href="https://movie.douban.com/subject/2131669/" class="nbg">
+                    <img alt="The Legend of Tarzan" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2367559705.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/2131669/" class="">
+                            <em>泰山归来：险战丛林 / The Legend of Tarzan</em>
+                             / 新人猿泰山 / 泰山归来：人猿大战
+                        </a>
+                    </li>
+                        <li class="intro">2016-07-01(美国) / 2016-07-19(中国大陆) / 亚历山大·斯卡斯加德 / 玛格特·罗比 / 塞缪尔·杰克逊 / 克里斯托弗·沃尔兹 / 杰曼·翰苏 / 约翰·赫特 / 艾拉·珀内尔 / 西蒙·拉塞尔·比尔 / 宾利·卡鲁 / 特蕾莎·邱吉尔 / 卡利·内勒 / 美国 / 英国 / 加拿大 / legendoftarzan.com / 大卫·叶茨 / 110分钟 / 泰山归来：险战丛林 / 动作 / 冒险 / 埃德加·赖斯·巴勒斯 Edgar Rice Burroughs / 斯图尔特·贝亚蒂耶 Stuart Beattie / 克雷格·布鲁尔 Craig Brewer / 约翰·科里 John Collee / 亚当·科扎德 Adam Cozad / 英语</li>
+                    <li>
+                                    <span class="rating2-t"></span>
+                        <span class="date">2016-08-04</span>
+                        
+                            <span class="tags">标签: 美国 剧情</span>
+                    </li>
+                    <li>
+                        <span class="comment">故事胡扯，白瞎了北欧金毛的鲜美肉体。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Vicious" href="https://movie.douban.com/subject/24748854/" class="nbg">
+                    <img alt="Vicious" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2255160100.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/24748854/" class="">
+                            <em>极品基老伴 第二季 / Vicious Season 2</em>
+                             / 基阳红
+                        </a>
+                    </li>
+                        <li class="intro">2015-06-01(英国) / 伊恩·麦克莱恩 / 德里克·雅各比 / 弗朗西斯·德·拉·图瓦 / 伊万·瑞恩 / 玛西娅·沃伦 / 英国 / 埃德·拜 / 极品基老伴 / 25分钟 / 极品基老伴 / 喜剧 / 爱情 / 同性 / 加里·詹内蒂 Gary Janetti / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2016-08-04</span>
+                        
+                            <span class="tags">标签: 英剧 喜剧 英国</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Vicious Christmas Special 2013" href="https://movie.douban.com/subject/25758898/" class="nbg">
+                    <img alt="Vicious Christmas Special 2013" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2187166976.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/25758898/" class="">
+                            <em>极品基老伴：2013圣诞特辑 / Vicious Christmas Special 2013</em>
+                             / 基阳红：2013圣诞特别篇
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2013-12-27(英国) / 伊恩·麦克莱恩 / 德里克·雅各比 / 弗朗西斯·德·拉·图瓦 / 伊万·瑞恩 / 玛西娅·沃伦 / 英国 / 埃德·拜 / 30分钟 / 极品基老伴：2013圣诞特辑 / 喜剧 / 加里·詹内蒂 Gary Janetti / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2016-08-04</span>
+                        
+                            <span class="tags">标签: 英剧 喜剧 英国</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Vicious" href="https://movie.douban.com/subject/20278812/" class="nbg">
+                    <img alt="Vicious" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1924286373.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/20278812/" class="">
+                            <em>极品基老伴 第一季 / Vicious Season 1</em>
+                             / 绝世老基 / 邪恶老娘泡
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2013-04-29(英国) / 伊恩·麦克莱恩 / 德里克·雅各比 / 弗朗西斯·德·拉·图瓦 / 伊万·瑞恩 / 玛西娅·沃伦 / 菲利普-沃斯 / 英国 / 埃德·拜 / 极品基老伴 / 22分钟 / 极品基老伴 / 喜剧 / 同性 / 加里·詹内蒂 Gary Janetti / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2016-08-04</span>
+                        
+                            <span class="tags">标签: 英国 英剧 喜剧</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Looking: The Movie" href="https://movie.douban.com/subject/26354587/" class="nbg">
+                    <img alt="Looking: The Movie" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p2362114917.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/26354587/" class="">
+                            <em>寻：电影版 / Looking: The Movie</em>
+                             / 众里寻他 / 寻：特别篇
+                        </a>
+                    </li>
+                        <li class="intro">2016-06-27(旧金山同志影展) / 2016-07-23(美国) / 乔纳森·格罗夫 / 弗兰克·J·阿尔瓦雷斯 / 穆雷·巴特利特 / 劳伦·维德曼 / 拉塞尔·托维 / 劳尔·卡斯提洛 / 美国 / www.hbo.com/movies/looking-the-movie / 安德鲁·海格 / 81分钟 / 寻：电影版 / 剧情 / 同性 / 安德鲁·海格 Andrew Haigh / Michael Lannan / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2016-08-01</span>
+                        
+                            <span class="tags">标签: 美剧 同性 同志 剧情</span>
+                    </li>
+                    <li>
+                        <span class="comment">有些失望。电影版急于给观众一个交代，然而现实却往往不这么中庸，尤其为了让Patrick和Richie再续前缘，不惜把小Ginger莫明写得婊里婊气。ps. 不知道是导演编剧的主意还是演员自行发挥，“搓耳朵”这种虐狗行径简直让我又爱又恨！！！</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Looking" href="https://movie.douban.com/subject/25912858/" class="nbg">
+                    <img alt="Looking" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2217429351.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/25912858/" class="">
+                            <em>寻 第二季 / Looking Season 2</em>
+                             / 众里寻他 第二季
+                        </a>
+                    </li>
+                        <li class="intro">2015-01-11(美国) / 乔纳森·格罗夫 / 弗兰克·J·阿尔瓦雷斯 / 穆雷·巴特利特 / 拉塞尔·托维 / 劳尔·卡斯提洛 / Lauren Weedman / 丹尼尔·弗兰泽兹 / Chris Perfetti / Bashir Salahuddin / 美国 / www.hbo.com/looking#/ / 安德鲁·海格 / 瑞安·弗雷克 / 詹米·巴比特 / 克雷格·约翰逊 / 寻 / 30分钟 / 寻 / 爱情 / 同性 / Michael Lannan / 安德鲁·海格 Andrew Haigh / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2016-08-01</span>
+                        
+                            <span class="tags">标签: 美剧 同志</span>
+                    </li>
+                    <li>
+                        <span class="comment">掷地有声，剧情比让我翻白眼的第一季好很多。心疼Richie，简直是贫民版的Patrick。不同的是，P作为出身中产良好家庭、不需要有什么责任心的乖孩子向前可以跟仰慕对象耳鬓厮磨，稍遇挫折又能大方地后退一步找备胎叙旧度日，而Richie这种边缘族群中的边缘群体无论在阶级还是感情上只有仰望。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Stranger Things" href="https://movie.douban.com/subject/26359270/" class="nbg">
+                    <img alt="Stranger Things" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2364206200.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/26359270/" class="">
+                            <em>怪奇物语 第一季 / Stranger Things Season 1</em>
+                             / Montauk
+                        </a>
+                    </li>
+                        <li class="intro">2016-07-15(美国) / 薇诺娜·瑞德 / 大卫·哈伯 / 菲恩·伍法德 / 米莉·波比·布朗 / 伽塔·马塔拉佐 / 凯莱布·麦克劳克林 / 娜塔莉·戴尔 / 查理·希顿 / 卡拉·布欧诺 / 马修·莫迪恩 / 乔·基瑞 / 罗布·摩根 / 约翰·雷诺兹 / 乔·克里斯特 / 诺亚·施纳普 / 马克·斯达格 / 兰德尔·P·海文斯 / 托比亚斯·耶利内克 / 苏珊·沙尔霍布·拉金 / 凯萨琳·戴尔 / 安妮斯顿·普莱斯 / 婷斯莉·普莱斯 / 佩顿·威奇 / 罗斯·帕特里奇 / 艾米·穆林斯 / 克里斯·沙利文 / 朗·罗格 / 休·B·赫鲁伯 / 罗伯特·沃克·布兰乔德 / 香农·珀瑟 / 斯特凡妮·巴特勒 / 美国 / 肖恩·利维 / 马特·达菲 / 罗斯·达菲 / 怪奇物语 / 50分钟 / 怪奇物语 / 剧情 / 科幻 / 悬疑 / 惊悚 / 马特·达菲 Matt Duffer / 罗斯·达菲 Ross Duffer / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2016-07-24</span>
+                        
+                            <span class="tags">标签: 科幻 惊悚 悬疑</span>
+                    </li>
+                    <li>
+                        <span class="comment">其实故事也算一般，不过各种糅合到位的80年代复古悬疑元素赢得了好口碑。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Teenage Mutant Ninja Turtles: Out of the Shadows" href="https://movie.douban.com/subject/25955779/" class="nbg">
+                    <img alt="Teenage Mutant Ninja Turtles: Out of the Shadows" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2357111716.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/25955779/" class="">
+                            <em>忍者神龟2：破影而出 / Teenage Mutant Ninja Turtles: Out of the Shadows</em>
+                             / 忍者龟：魅影突击(港) / 忍者龟：破影而出(台)
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2016-06-03(美国) / 2016-07-02(中国大陆) / 梅根·福克斯 / 斯蒂芬·阿梅尔 / 威尔·阿奈特 / 皮特·普劳泽克 / 阿兰·里奇森 / 杰瑞米·霍华德 / 诺尔·费舍 / 布莱恩·泰 / 泰勒·派瑞 / 约翰尼·诺克斯维尔 / 托尼·夏尔赫布 / 弗莱德·阿米森 / 劳拉·琳妮 / 亚历桑德拉·安布罗休 / 威廉·菲德内尔 / 丹尼·伍德伯恩 / 茱蒂斯·哈格 / 加里·安东尼·威廉斯 / 美国 / 中国大陆 / 香港 / 加拿大 / www.teenagemutantninjaturtlesmovie.com / 戴夫·格林 / 113分钟 / 忍者神龟2：破影而出 / 喜剧 / 动作 / 科幻 / 奇幻 / 冒险 / 乔什·阿佩尔鲍姆 Josh Appelbaum / 安德烈·内梅克 André Nemec / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2016-07-02</span>
+                        
+                            <span class="tags">标签: 美国 科幻 漫画改编</span>
+                    </li>
+                    <li>
+                        <span class="comment">比第一部好点，熟悉的动画角色悉数回归，而且有糖哥的加盟终于有脸可看。不过如果不是送的票肯定不会去电影院看绿油油的巴西龟。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Teenage Mutant Ninja Turtles" href="https://movie.douban.com/subject/3217149/" class="nbg">
+                    <img alt="Teenage Mutant Ninja Turtles" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2204991581.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3217149/" class="">
+                            <em>忍者神龟：变种时代 / Teenage Mutant Ninja Turtles</em>
+                             / 真人版忍者神龟 / 忍者龟：变种世代(台)
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2014-08-03(纽约首映) / 2014-08-08(美国) / 2014-10-31(中国大陆) / 梅根·福克斯 / 威尔·阿奈特 / 威廉·菲德内尔 / 阿兰·里奇森 / 诺尔·费舍 / 皮特·普劳泽克 / 约翰尼·诺克斯维尔 / 杰瑞米·霍华德 / 丹尼·伍德伯恩 / 托尼·夏尔赫布 / 水源士郎 / 乌比·戈德堡 / 野路美苗 / 艾比·艾略特 / 麦迪逊·梅森 / 美国 / 乔纳森·里贝斯曼 / 101分钟 / 忍者神龟：变种时代 / 喜剧 / 动作 / 科幻 / 冒险 / 乔什·阿佩尔鲍姆 Josh Appelbaum / 安德烈·内梅克 André Nemec / 埃文·达赫迪 Evan Daughterty / 彼得·拉尔德 Peter Laird / 凯文·伊斯特曼 Kevin Eastman / 英语 / 日语</li>
+                    <li>
+                                    <span class="rating1-t"></span>
+                        <span class="date">2016-07-02</span>
+                        
+                            <span class="tags">标签: 美国 漫画改编 科幻</span>
+                    </li>
+                    <li>
+                        <span class="comment">糟！烂！</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Game of Thrones" href="https://movie.douban.com/subject/25862357/" class="nbg">
+                    <img alt="Game of Thrones" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p2321971908.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/25862357/" class="">
+                            <em>权力的游戏 第六季 / Game of Thrones Season 6</em>
+                             / 冰与火之歌：权力的游戏 第六季 / 王座游戏 第六季
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2016-04-24(美国) / 麦茜·威廉姆斯 / 艾米莉亚·克拉克 / 伊萨克·亨普斯特德-怀特 / 斯蒂芬·迪兰 / 彼特·丁克拉奇 / 苏菲·特纳 / 克里斯蒂安·奈恩 / 阿尔菲·艾伦 / 琳娜·海蒂 / 尼古拉·科斯特-瓦尔道 / 利亚姆·坎宁安 / 娜塔莉·多默尔 / 艾丹·吉伦 / 马克斯·冯·叙多 / 伊恩·麦柯肖恩 / 皮鲁·埃斯贝克 / 弗雷迪·史卓玛 / 雅各布·安德森 / 伊万·瑞恩 / 罗杰·阿什顿-格里菲斯 / 瑞贝卡·本森 / 大卫·布拉德利 / 约翰·C·布莱德利 / 阿特·帕金森 / 迈克尔·麦克埃尔哈顿 / 米契尔·哈思曼 / 凯莎·卡斯特-休伊斯 / 丹尼尔·波特曼 / 迪恩·查尔斯·查普曼 / 格温多兰·克里斯蒂 / 乔纳森·普雷斯 / 恩佐·科伦蒂 / 艾斯·戴维斯 / 利诺·法希奥利 / 詹姆斯·福克纳 / 杰罗姆·弗林 / 伊恩·格雷 / 朱利安·格洛弗 / 杰西卡·亨维克 / 康勒斯·希尔 / 克里斯托弗·海维尤 / 菲恩·琼斯 / 艾丽·肯德里克 / 罗莎贝尔·劳伦蒂·塞勒斯 / 安东·莱瑟 / 菲伊·马赛 / 托比亚斯·门基斯 / 汉娜·穆雷 / 道比·欧帕瑞 / 黛安娜·里格 / 安德烈·克劳德 / 托比·塞巴斯蒂安 / 亚历山大·希迪格 / 尤金·西蒙 / 欧文·蒂尔 / 娜塔丽·特纳 / 卡里斯·范·侯登 / 鲁珀特·范西塔特 / 因迪拉·瓦玛 / 杰玛·韦兰 / 伊恩·怀特 / 汤姆·拉斯齐哈 / 基特·哈灵顿 / 哈弗波·朱利尔斯·比昂森 / 瑞奇·查普 / 本·克朗普顿 / 凯文·埃尔登 / 伊恩·盖尔德 / 迪恩·S·贾格尔 / Ian Gelder / 美国 / 英国 / www.hbo.com/game-of-thrones / 杰雷米·波德斯瓦 / 杰克·本德 / 马克·米罗 / 丹尼尔·沙克海姆 / 米格尔·萨普什尼克 / 权力的游戏 / 60分钟 / 权力的游戏 / 剧情 / 战争 / 奇幻 / 冒险 / 戴维·贝尼奥夫 David Benioff / D·B·威斯 D.B. Weiss / 乔治·马丁 George R.R. Martin / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2016-06-28</span>
+                        
+                            <span class="tags">标签: 美剧 奇幻</span>
+                    </li>
+                    <li>
+                        <span class="comment">最后一集大提琴和画面结合得太棒了，可惜小玫瑰过早死在前面，否则下一季会是十足的妇联大战。All MEN must die！</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Independence Day: Resurgence" href="https://movie.douban.com/subject/4811813/" class="nbg">
+                    <img alt="Independence Day: Resurgence" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p2362976267.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/4811813/" class="">
+                            <em>独立日：卷土重来 / Independence Day: Resurgence</em>
+                             / 独立日2 / 天煞-地球反击战2(港)
+                        </a>
+                    </li>
+                        <li class="intro">2016-06-24(中国大陆/美国) / 利亚姆·海姆斯沃斯 / 杰夫·高布伦 / 比尔·普尔曼 / 麦卡·梦露 / 杰西·厄舍 / 特拉维斯·托普 / 威廉·菲德内尔 / 夏洛特·甘斯布 / 贾德·赫希 / 雪拉·渥德 / 布伦特·斯皮内 / 杨颖 / 薇薇卡·福克斯 / 乔伊·金 / 麦肯娜·格瑞丝 / 道比·欧帕瑞 / 罗恩·袁 / 史蒂芬·布莱克史密斯 / 美国 / 罗兰·艾默里奇 / 120分钟 / 独立日：卷土重来 / 动作 / 科幻 / 冒险 / 灾难 / 罗兰·艾默里奇 Roland Emmerich / 迪安·德夫林 Dean Devlin / 尼古拉斯·莱特 Nicolas Wright / 詹姆斯·A·伍兹 James A. Woods / 詹姆斯·范德比尔特 James Vanderbilt / 卡特·布兰查德 Carter Blanchard / 英语 / 汉语普通话 / 阿拉伯语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2016-06-27</span>
+                        
+                            <span class="tags">标签: 美国 科幻</span>
+                    </li>
+                    <li>
+                        <span class="comment">勉强及格的娱乐片。题外话：电影中的QQ、蒙牛广告植入和杨颖的戏份无非是片方深挖市场多赚钱而已，怎么一群国内观众丧权辱国一样又是尴尬又是丢人呢？况且科幻界早已有“未来社会是英语和汉语言文化圈的大融合”这样的潜在共识（如剧集《萤火虫》和电影《云图》）。希望中国人摆正心态别再瞎自卑。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Finding Dory" href="https://movie.douban.com/subject/11524967/" class="nbg">
+                    <img alt="Finding Dory" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2356015154.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/11524967/" class="">
+                            <em>海底总动员2：多莉去哪儿 / Finding Dory</em>
+                             / 海底总动员2：寻找多莉 / 寻找多莉
+                        </a>
+                    </li>
+                        <li class="intro">2016-06-17(中国大陆/美国) / 艾伦·德杰尼勒斯 / 艾伯特·布鲁克斯 / 艾德·奥尼尔 / 凯特琳·奥尔森 / 海登·罗兰斯 / 泰·布利尔 / 黛安·基顿 / 尤金·列维 / 斯隆·穆雷 / 伊德里斯·艾尔巴 / 多米尼克·威斯特 / 鲍勃·彼德森 / 凯特·麦克金农 / 比尔·哈德尔 / 西格妮·韦弗 / 美国 / www.pixar.com/features_films/Finding-Dory / 安德鲁·斯坦顿 / 安格斯·麦克莱恩 / 97分钟 / 海底总动员2：多莉去哪儿 / 喜剧 / 动画 / 冒险 / 家庭 / 安德鲁·斯坦顿 Andrew Stanton / 维多利亚·斯特劳斯 Victoria Strouse / 鲍勃·彼德森 Bob Peterson / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2016-06-26</span>
+                        
+                            <span class="tags">标签: 迪士尼 动画 皮克斯 美国</span>
+                    </li>
+                    <li>
+                        <span class="comment">算不上好看，不适合我这种“老”朋友。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Orphan Black" href="https://movie.douban.com/subject/20471761/" class="nbg">
+                    <img alt="Orphan Black" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2233675281.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/20471761/" class="">
+                            <em>黑色孤儿 第一季 / Orphan Black Season 1</em>
+                            
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2013-03-30 / 塔提阿娜·玛斯拉尼 / 乔丹·加文瑞斯 / 迪兰·布鲁斯 / Skyler Wexler / 玛利亚·多耶·肯尼迪 / Kevin Hanchard / 加拿大 / 美国 / www.bbcamerica.com/orphan-black/ / 黑色孤儿 / 44分钟 / 黑色孤儿 / 剧情 / 动作 / 科幻 / John Fawcett / Graeme Manson / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2016-06-20</span>
+                        
+                            <span class="tags">标签: 美剧 科幻 英剧</span>
+                    </li>
+                    <li>
+                        <span class="comment">女主一人多角真棒</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="The X-Files" href="https://movie.douban.com/subject/26352610/" class="nbg">
+                    <img alt="The X-Files" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2290724180.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/26352610/" class="">
+                            <em>X档案 第十季 / The X-Files Season 10</em>
+                            
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2016-01-24(美国) / 吉莲·安德森 / 大卫·杜楚尼 / 安娜贝丝·吉什 / 罗伯特·帕特里克 / 米彻·佩勒吉 / 威廉·B·戴维斯 / 阿兰·戴尔 / 杰夫·高尓克 / 达寇塔·豪斯 / 莫里斯·潘迟 / 乔尔·麦克哈尔 / 美国 / www.fox.com/the-x-files / 克里斯·卡特 / 黄毅瑜 / 达林·摩根 / 格伦·摩根 / X档案 / 42分钟 / X档案 / 科幻 / 克里斯·卡特 Chris Carter / 黄毅瑜 James Wong / Darin Morgan / Glen Morgan / 英语</li>
+                    <li>
+                                    <span class="rating2-t"></span>
+                        <span class="date">2016-06-15</span>
+                        
+                            <span class="tags">标签: 美剧 科幻</span>
+                    </li>
+                    <li>
+                        <span class="comment">没有好故事就不要随便瞎凑数拍续集好不好</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="How to Get Away with Murder" href="https://movie.douban.com/subject/26113881/" class="nbg">
+                    <img alt="How to Get Away with Murder" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2263203395.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/26113881/" class="">
+                            <em>逍遥法外 第二季 / How to Get Away with Murder Season 2</em>
+                             / 天才刑法班
+                        </a>
+                    </li>
+                        <li class="intro">2015-09-24(美国) / 维奥拉·戴维斯 / 阿尔弗雷德·伊诺奇 / 杰克·法拉赫 / 阿雅·娜奥米·金 / 卡拉·苏扎 / 查理·韦伯 / 凯蒂·芬德莱 / 法米克·詹森 / 莉莎·维尔 / 美国 / abc.go.com/shows/how-to-get-away-with-murder/ / 比尔·德埃利亚 / 劳拉·伊内斯 / 迈克尔·奥佛尔 / 迈克尔·卡特曼 / Mike Listo / 逍遥法外 / 43分钟 / 逍遥法外 / 剧情 / 犯罪 / 悬疑 / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2016-06-11</span>
+                        
+                            <span class="tags">标签: 美剧 悬疑 犯罪</span>
+                    </li>
+                    <li>
+                        <span class="comment">大家开始互相睡，一查是《实习医生格蕾》的编剧就都释然了。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+    
+    
+    
+
+    
+        <div class="paginator">
+        <span class="prev">
+            <link rel="prev" href="https://movie.douban.com/people/voyagor/collect?start=0&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid"/>
+            <a href="https://movie.douban.com/people/voyagor/collect?start=0&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >&lt;前页</a>
+        </span>
+        
+        
+
+                
+            <a href="https://movie.douban.com/people/voyagor/collect?start=0&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >1</a>
+        
+                <span class="thispage" data-total-page="76">2</span>
+                
+            <a href="https://movie.douban.com/people/voyagor/collect?start=30&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >3</a>
+        
+                
+            <a href="https://movie.douban.com/people/voyagor/collect?start=45&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >4</a>
+        
+                
+            <a href="https://movie.douban.com/people/voyagor/collect?start=60&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >5</a>
+        
+                
+            <a href="https://movie.douban.com/people/voyagor/collect?start=75&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >6</a>
+        
+                
+            <a href="https://movie.douban.com/people/voyagor/collect?start=90&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >7</a>
+        
+                
+            <a href="https://movie.douban.com/people/voyagor/collect?start=105&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >8</a>
+        
+                
+            <a href="https://movie.douban.com/people/voyagor/collect?start=120&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >9</a>
+        
+            <span class="break">...</span>
+                
+            <a href="https://movie.douban.com/people/voyagor/collect?start=1110&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >75</a>
+        
+            <a href="https://movie.douban.com/people/voyagor/collect?start=1125&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >76</a>
+        
+        <span class="next">
+            <link rel="next" href="https://movie.douban.com/people/voyagor/collect?start=30&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid"/>
+            <a href="https://movie.douban.com/people/voyagor/collect?start=30&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >后页&gt;</a>
+        </span>
+
+        </div>
+
+
+
+            </div>
+            <div class="aside">
+                
+    
+    
+
+
+<div class="side-info">
+    <a href="https://www.douban.com/people/voyagor/" class="side-info-avatar"><img height="48" width="48" alt="Liam" src="https://img1.doubanio.com/icon/u17221677-598.jpg" /></a>
+    <div class="side-info-txt">
+        <h3>Liam</h3>
+        &gt;&nbsp;<a href="https://www.douban.com/people/voyagor/">豆瓣主页</a>
+    </div>
+    <div class="user-content">
+    </div>
+</div>
+
+    <div class="mod">
+        <p class="pl2 m0">
+            &gt; <a href="https://movie.douban.com/people/voyagor/">Liam的电影主页</a>
+        </p>
+    </div>
+        
+    <h2>
+        看过的标签
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+    </h2>
+
+    
+    
+<div class="opt-bar mb15 clearfix">
+    <div class="sort">
+        
+        按标签量排序<span class="gray-dot">·</span><a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;start=15&amp;filter=all&amp;mode=grid&amp;tags_sort=name">按首字母排序</a>
+    </div>
+</div>
+<ul class="tag-list mb10">
+
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%A7%91%E5%B9%BB&amp;mode=grid" title="科幻">科幻</a>
+        <span>262</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BE%8E%E5%89%A7&amp;mode=grid" title="美剧">美剧</a>
+        <span>212</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%96%9C%E5%89%A7&amp;mode=grid" title="喜剧">喜剧</a>
+        <span>149</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8A%A8%E7%94%BB&amp;mode=grid" title="动画">动画</a>
+        <span>116</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BE%8E%E5%9B%BD&amp;mode=grid" title="美国">美国</a>
+        <span>88</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%83%8A%E6%82%9A&amp;mode=grid" title="惊悚">惊悚</a>
+        <span>74</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%82%AC%E7%96%91&amp;mode=grid" title="悬疑">悬疑</a>
+        <span>51</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%A5%87%E5%B9%BB&amp;mode=grid" title="奇幻">奇幻</a>
+        <span>49</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8A%A8%E4%BD%9C&amp;mode=grid" title="动作">动作</a>
+        <span>44</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%89%A7%E6%83%85&amp;mode=grid" title="剧情">剧情</a>
+        <span>38</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%81%90%E6%80%96&amp;mode=grid" title="恐怖">恐怖</a>
+        <span>37</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%8A%AF%E7%BD%AA&amp;mode=grid" title="犯罪">犯罪</a>
+        <span>34</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%88%B1%E6%83%85&amp;mode=grid" title="爱情">爱情</a>
+        <span>32</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%90%8C%E5%BF%97&amp;mode=grid" title="同志">同志</a>
+        <span>30</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%AD%94%E5%B9%BB&amp;mode=grid" title="魔幻">魔幻</a>
+        <span>28</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E4%B8%AD%E5%9B%BD&amp;mode=grid" title="中国">中国</a>
+        <span>24</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%9F%AD%E7%89%87&amp;mode=grid" title="短片">短片</a>
+        <span>21</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%BC%AB%E7%94%BB%E6%94%B9%E7%BC%96&amp;mode=grid" title="漫画改编">漫画改编</a>
+        <span>20</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BA%AA%E5%BD%95%E7%89%87&amp;mode=grid" title="纪录片">纪录片</a>
+        <span>20</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E6%9C%AC&amp;mode=grid" title="日本">日本</a>
+        <span>18</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%8B%B1%E5%89%A7&amp;mode=grid" title="英剧">英剧</a>
+        <span>18</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=HBO&amp;mode=grid" title="HBO">HBO</a>
+        <span>18</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%A1%80%E8%85%A5&amp;mode=grid" title="血腥">血腥</a>
+        <span>16</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%94%B5%E8%A7%86%E5%89%A7&amp;mode=grid" title="电视剧">电视剧</a>
+        <span>16</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%9C%9F%E4%BA%BA%E7%A7%80&amp;mode=grid" title="真人秀">真人秀</a>
+        <span>15</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%8B%B1%E5%9B%BD&amp;mode=grid" title="英国">英国</a>
+        <span>15</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=BBC&amp;mode=grid" title="BBC">BBC</a>
+        <span>15</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%BF%AA%E6%96%AF%E5%B0%BC&amp;mode=grid" title="迪斯尼">迪斯尼</a>
+        <span>15</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%A4%A7%E9%99%86&amp;mode=grid" title="大陆">大陆</a>
+        <span>14</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=CBS&amp;mode=grid" title="CBS">CBS</a>
+        <span>13</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=NBC&amp;mode=grid" title="NBC">NBC</a>
+        <span>13</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=ABC&amp;mode=grid" title="ABC">ABC</a>
+        <span>12</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%A5%B3%E6%80%A7&amp;mode=grid" title="女性">女性</a>
+        <span>11</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%A2%A6%E5%B7%A5%E5%8E%82&amp;mode=grid" title="梦工厂">梦工厂</a>
+        <span>10</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%BB%91%E8%89%B2%E5%B9%BD%E9%BB%98&amp;mode=grid" title="黑色幽默">黑色幽默</a>
+        <span>10</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%90%B8%E8%A1%80%E9%AC%BC&amp;mode=grid" title="吸血鬼">吸血鬼</a>
+        <span>10</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=X%E6%A1%A3%E6%A1%88&amp;mode=grid" title="X档案">X档案</a>
+        <span>10</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%83%B5%E5%B0%B8&amp;mode=grid" title="僵尸">僵尸</a>
+        <span>10</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=SNL&amp;mode=grid" title="SNL">SNL</a>
+        <span>9</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%94%B5%E5%BD%B1&amp;mode=grid" title="电影">电影</a>
+        <span>9</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=Syfy&amp;mode=grid" title="Syfy">Syfy</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8E%86%E5%8F%B2&amp;mode=grid" title="历史">历史</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%81%BE%E9%9A%BE&amp;mode=grid" title="灾难">灾难</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%AD%A6%E4%BE%A0&amp;mode=grid" title="武侠">武侠</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%81%B6%E6%90%9E&amp;mode=grid" title="恶搞">恶搞</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%9A%B4%E5%8A%9B&amp;mode=grid" title="暴力">暴力</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%AB%A5%E8%AF%9D&amp;mode=grid" title="童话">童话</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=Disney&amp;mode=grid" title="Disney">Disney</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=Gay&amp;mode=grid" title="Gay">Gay</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%B3%95%E5%9B%BD&amp;mode=grid" title="法国">法国</a>
+        <span>8</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=3D&amp;mode=grid" title="3D">3D</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%94%BF%E6%B2%BB&amp;mode=grid" title="政治">政治</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=Pixar&amp;mode=grid" title="Pixar">Pixar</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%86%AF%E5%B0%8F%E5%88%9A&amp;mode=grid" title="冯小刚">冯小刚</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%90%8C%E6%80%A7&amp;mode=grid" title="同性">同性</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E4%BC%A0%E8%AE%B0&amp;mode=grid" title="传记">传记</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%94%B5%E9%94%AF%E6%83%8A%E9%AD%82&amp;mode=grid" title="电锯惊魂">电锯惊魂</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%AE%AB%E5%B4%8E%E9%AA%8F&amp;mode=grid" title="宫崎骏">宫崎骏</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%A6%99%E6%B8%AF&amp;mode=grid" title="香港">香港</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=Dexter&amp;mode=grid" title="Dexter">Dexter</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%9D%92%E6%98%A5&amp;mode=grid" title="青春">青春</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E4%BA%BA%E6%80%A7&amp;mode=grid" title="人性">人性</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%AE%B6%E5%BA%AD&amp;mode=grid" title="家庭">家庭</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%BE%90%E5%85%8B&amp;mode=grid" title="徐克">徐克</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%9A%AE%E5%85%8B%E6%96%AF&amp;mode=grid" title="皮克斯">皮克斯</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=FOX&amp;mode=grid" title="FOX">FOX</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=JohnnyDepp&amp;mode=grid" title="JohnnyDepp">JohnnyDepp</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%BE%8B%E6%94%BF&amp;mode=grid" title="律政">律政</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E4%BA%B2%E6%83%85&amp;mode=grid" title="亲情">亲情</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%9D%8E%E5%AE%89&amp;mode=grid" title="李安">李安</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=pixar&amp;mode=grid" title="pixar">pixar</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=RyanReynolds&amp;mode=grid" title="RyanReynolds">RyanReynolds</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%88%98%E4%BA%89&amp;mode=grid" title="战争">战争</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8F%B2%E8%AF%97&amp;mode=grid" title="史诗">史诗</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8F%A4%E8%A3%85&amp;mode=grid" title="古装">古装</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BB%8F%E5%85%B8&amp;mode=grid" title="经典">经典</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%98%9F%E9%99%85%E4%B9%8B%E9%97%A8&amp;mode=grid" title="星际之门">星际之门</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%BE%B7%E5%9B%BD&amp;mode=grid" title="德国">德国</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%91%9B%E4%BC%98&amp;mode=grid" title="葛优">葛优</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=AMC&amp;mode=grid" title="AMC">AMC</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%AD%8C%E8%88%9E&amp;mode=grid" title="歌舞">歌舞</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%92%8B%E9%9B%AF%E4%B8%BD&amp;mode=grid" title="蒋雯丽">蒋雯丽</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%86%92%E9%99%A9&amp;mode=grid" title="冒险">冒险</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=BattlestarGalactica&amp;mode=grid" title="BattlestarGalactica">BattlestarGalactica</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%86%A8%E8%B1%86&amp;mode=grid" title="憨豆">憨豆</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=DISNEY&amp;mode=grid" title="DISNEY">DISNEY</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%9D%8E%E8%BF%9E%E6%9D%B0&amp;mode=grid" title="李连杰">李连杰</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%9F%A9%E5%9B%BD&amp;mode=grid" title="韩国">韩国</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%96%87%E8%89%BA&amp;mode=grid" title="文艺">文艺</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/voyagor/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%AE%97%E6%95%99&amp;mode=grid" title="宗教">宗教</a>
+        <span>4</span>
+    </li>
+</ul>
+
+<a id='open_tags' href="javascript:;">&gt;展开全部标签</a>
+
+<script>
+$(function () {
+    var TAG_URL_PARAMS = {"sort":"time","tags_sort":"count","filter":"all","tag":"宗教","mode":"grid"};
+    $('#open_tags').click(function() {
+        var $btn = $(this);
+        var $container = $("ul.tag-list");
+        var $tmpl = $container.find("li").first();
+
+        $.get("/j/people/voyagor/get_collection_tags", {
+            offset: 90,
+            tags_sort: "count",
+            cat_id: "1002",
+            action: "collect"
+        }, function (res) {
+            var tagUrl, newEl;
+
+            $(res).each(function (i, tagInfo) {
+                TAG_URL_PARAMS["tag"] = tagInfo.tag;
+                tagUrl = "https://movie.douban.com/people/voyagor/collect?" + $.param(TAG_URL_PARAMS);
+                newEl = $tmpl.clone();
+                if (tagInfo.tag === "None") {
+                    newEl.addClass("on");
+                }
+                newEl.find('a').attr("href", tagUrl)
+                                .attr("title", tagInfo.tag)
+                                .html(tagInfo.tag)
+                     .end()
+                     .find("span").html(tagInfo.count)
+                     .end().appendTo($container);
+            });
+            $btn.remove();
+        }, "json");
+    });
+});
+</script>
+
+
+            </div>
+            <div class="extra">
+                
+            </div>
+        </div>
+    </div>
+
+        
+    <div id="footer">
+            <div class="footer-extra"></div>
+        
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2016 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about?policy=disclaimer">免责声明</a>
+    
+    · <a href="https://help.douban.com/?app=movie" target="_blank">帮助中心</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+    </div>
+
+    </div>
+    <script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/fd8032bc82407e0.js"></script>
+        
+        
+    <link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css" />
+    <link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/movie/7345d4b259505f1a074773ce6b54f0253df2bb88/css/movie/mod/reg_login_pop.css" />
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/29449d396dacb28fd9949c709ccf02a46b910156/js/do.js" data-cfg-autoload="false"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/4b3bad5e25de78678d700dd5353570dce3e6bbcc/js/ui/dialog.js"></script>
+    <script type="text/javascript">
+        var HTTPS_DB='https://www.douban.com';
+var account_pop={open:function(e,b){if(b){referrer="?referrer="+encodeURIComponent(b)}else{referrer="?referrer="+window.location.href}var f="",a="",i=382;if(e==="reg"){f="用户注册";a="https://accounts.douban.com/popup/login?source=movie#popup_register";i=480}else{if(e==="login"){f="用户登录";a="https://accounts.douban.com/popup/login?source=movie"}}var h=document.location.protocol+"//"+document.location.hostname;var d=dui.Dialog({width:478,title:f,height:i,cls:"account_pop",isHideTitle:true,modal:true,content:"<iframe scrolling='no' frameborder='0' width='478' height='"+i+"' src='"+a+"' name='"+h+"'></iframe>"},true),c=d.node;c.undelegate();c.delegate(".dui-dialog-close","click",function(){var j=$("body");j.find("#login_msk").hide();j.find(".account_pop").remove()});if($(window).width()<478){var g="";if(e==="reg"){g=HTTPS_DB+"/accounts/register"+referrer}else{if(e==="login"){g=HTTPS_DB+"/accounts/login"+referrer}}window.location.href=g}else{d.open()}$(window).bind("message",function(j){if(j.originalEvent.origin==="https://accounts.douban.com"){c.find("iframe").css("height",j.originalEvent.data);c.height(j.originalEvent.data);d.update()}})}};if(Douban&&Douban.init_show_login){Douban.init_show_login=function(b){var a=$(b);a.click(function(){var c=a.data("ref")||"";account_pop.open("login",c);return false})}}Do(function(){$("body").delegate(".pop_register","click",function(b){b.preventDefault();var a=$(this).data("ref")||"";account_pop.open("reg",a);return false});$("body").delegate(".pop_login","click",function(b){b.preventDefault();var a=$(this).data("ref")||"";account_pop.open("login",a);return false})});
+    </script>
+
+    
+    
+  
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript';
+    g.defer=true;
+    g.async=true;
+    g.src=p+'://img3.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-19', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id]);
+      _gaq.push([method('_setSampleRate'), '5']);
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '0', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+    <!-- sindar14c-docker-->
+
+  <script>_SPLITTEST=''</script>
+</body>
+
+</html>
+

@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-ff43">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <title>
+    透明看过的电影(673)
+</title>
+    
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+    <link rel="apple-touch-icon" href="https://img3.doubanio.com/f/movie/d59b2715fdea4968a450ee5f6c95c7d7a2030065/pics/movie/apple-touch-icon.png">
+    <link href="https://img3.doubanio.com/f/shire/82d7c82f084d5157d7b87a17c76af984dd23dbbf/css/douban.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/shire/ae3f5a3e3085968370b1fc63afcecb22d3284848/css/separation/_all.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/movie/e9d9543ebc06f2964039a2e94898f84ce77fc070/js/movie/lib/jquery.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/cab60df0d9dacb82770e6a25d4481a538fdaadad/js/douban.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/0a62663763aed4fe860029f99d1755b8caa524e7/js/separation/_all.js"></script>
+    
+    <link href="https://img3.doubanio.com/f/shire/3592eb08e13581b921a3de5be3e1ee1859700e20/css/ui/mypage.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/29449d396dacb28fd9949c709ccf02a46b910156/js/do.js" data-cfg-autoload="false"></script>
+
+    <style type="text/css">
+    .item .title {background:none #f2f4f6;}
+    .list-view .highlight, .list-view .expanded{background:#f2f4f6 none;}
+</style>
+    <style type="text/css">img { max-width: 100%; }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/47d38f0bdbe5a67b.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+    
+   
+
+
+
+
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+
+
+
+
+
+<div class="top-nav-info">
+      
+      <a href="https://www.douban.com/accounts/login?source=movie" class="nav-login" rel="nofollow">登录</a>
+      <a href="https://www.douban.com/accounts/register?source=movie" class="nav-register" rel="nofollow">注册</a>
+</div>
+
+
+    <div class="top-nav-doubanapp">
+        
+        <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+        <div id="top-nav-appintro" class="more-items">
+            <p class="appintro-title">豆瓣</p>
+            <p class="slogan">我们的精神角落</p>
+            <p class="qrcode">
+                扫码直接下载
+            </p>
+            <div class="download">
+                <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=iOS">iPhone</a>
+                <span>·</span>
+                <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=Android" class="download-android">Android</a>
+            </div>
+        </div>
+        <div id="doubanapp-tip">
+            <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 4.0 全新发布</a>
+            <a href="javascript: void 0;" class="tip-close">×</a>
+        </div>
+    </div>
+
+    <div class="global-nav-items">
+      <ul>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-main&#34;,&#34;uid&#34;:&#34;0&#34;}">豆瓣</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://book.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-book&#34;,&#34;uid&#34;:&#34;0&#34;}">读书</a>
+            </li>
+          
+            
+            <li class="on">
+            <a href="https://movie.douban.com/" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-movie&#34;,&#34;uid&#34;:&#34;0&#34;}">电影</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://music.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-music&#34;,&#34;uid&#34;:&#34;0&#34;}">音乐</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/location/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-location&#34;,&#34;uid&#34;:&#34;0&#34;}">同城</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/group/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-group&#34;,&#34;uid&#34;:&#34;0&#34;}">小组</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://read.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-read&#34;,&#34;uid&#34;:&#34;0&#34;}">阅读</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://douban.fm/?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-fm&#34;,&#34;uid&#34;:&#34;0&#34;}">FM</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://dongxi.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-commodity&#34;,&#34;uid&#34;:&#34;0&#34;}">东西</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://market.douban.com/?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-market&#34;,&#34;uid&#34;:&#34;0&#34;}">市集</a>
+            </li>
+          
+            <li>
+              <a href="#more" class="bn-more"><span>更多</span></a>
+              <div class="more-items">
+                <table cellpadding="0" cellspacing="0">
+                    
+                    <tr><td><a href="https://moment.douban.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-moment&#34;,&#34;uid&#34;:&#34;0&#34;}">一刻</a></td></tr>
+                    
+                    <tr><td><a href="https://ypy.douban.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-ypy&#34;,&#34;uid&#34;:&#34;0&#34;}">豆瓣摄影</a></td></tr>
+                </table>
+              </div>
+            </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+   
+
+
+
+
+
+
+
+
+<div id="db-nav-movie" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="https://movie.douban.com">豆瓣电影</a>
+    </div>
+    <div class="nav-search">
+      <form action="https://movie.douban.com/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">电影、影人、影院、电视剧</label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1002" />
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- header ad begin -->
+    
+
+
+
+
+
+
+
+
+    <!-- header ad end -->
+
+  </div>
+  </div>
+  <div class="nav-secondary">
+      
+      <div class="nav-items nav-anon">
+          <ul>
+                                  
+                     <li><a href="https://movie.douban.com/nowplaying/">影讯&amp;购票</a></li>
+                 
+                     <li><a href="https://movie.douban.com/explore">选电影</a></li>
+                 
+                    <li class="site-nav-bt">
+                        <a href="https://movie.douban.com/tv/">电视剧</a>
+                    </li>
+                 
+                     <li><a href="https://movie.douban.com/chart">排行榜</a></li>
+                 
+                     <li><a href="https://movie.douban.com/tag/">分类</a></li>
+                 
+                     <li><a href="https://movie.douban.com/review/best/">影评</a></li>
+                 
+                     <li><a href="https://movie.douban.com/annual2015/">2015年度榜单</a></li>
+                 
+                     <li><a href="https://movie.douban.com/standbyme/?source=navigation">豆瓣观影报告</a></li>
+          
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+  
+  <script id="suggResult" type="text/x-jquery-tmpl">
+      <li data-link="{{= url}}">
+          <a href="{{= url}}" onclick="moreurl(this, {from:'movie_search_sugg'})">
+              <img src="{{= img}}" width="40" />
+              <p>
+                  <em>{{= title}}</em>
+                  {{if year}}
+                      <span>{{= year}}</span>
+                  {{/if}}
+                  {{if sub_title}}
+                      <br /><span>{{= sub_title}}</span>
+                  {{/if}}
+                  {{if address}}
+                      <br /><span>{{= address}}</span>
+                  {{/if}}
+                  {{if episode}}
+                      {{if episode=="unknow"}}
+                          <br /><span>集数未知</span>
+                      {{else}}
+                          <br /><span>共{{= episode}}集</span>
+                      {{/if}}
+                  {{/if}}
+              </p>
+          </a>
+      </li>
+  </script>
+  
+
+
+
+
+
+    
+    <div id="wrapper">
+        
+
+        
+    <div id="content">
+        
+    
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div id="db-usr-profile">
+        <div class="pic">
+            <a href="https://movie.douban.com/people/2196059/">
+                <img height="48" width="48" alt="透明" src="https://img3.doubanio.com/icon/u2196059-1.jpg" />
+            </a>
+        </div>
+        <div class="info">
+            <h1>透明看过的电影(673)</h1>
+            <ul>
+                    
+        <li><a href="https://movie.douban.com/people/2196059/">电影主页</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/2196059/reviews">影评</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/2196059/question">问答</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/2196059/do">在看</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/2196059/wish">想看</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/2196059/collect">看过</a></li>
+    
+                    
+        <li><a href="https://www.douban.com/people/2196059/doulists">豆列</a></li>
+    
+                    
+        <li class="sep">|</li>
+    
+                    
+        <li><a href="https://www.douban.com/people/2196059/">豆瓣主页</a></li>
+    
+            </ul>
+        </div>
+    </div>
+
+
+        <div class="grid-16-8 clearfix">
+            
+            
+            <div class="article">
+                
+    
+
+    <div class="opt-bar mb30 clearfix">
+        <div class="sort">
+            
+                按时间排序<span class="gray-dot">·</span><a href="https://movie.douban.com/people/2196059/collect?sort=rating&amp;start=0&amp;mode=grid&amp;tags_sort=count" class="ck-option" target="_self">按评价排序</a><span class="gray-dot">·</span><a href="https://movie.douban.com/people/2196059/collect?sort=title&amp;start=0&amp;mode=grid&amp;tags_sort=count" class="ck-option" target="_self">按标题排序</a>
+        </div>
+        <style>
+            .tabs-more {zoom:1; float:left; margin-left:38px; position: relative; top:3px}
+            .tabs-more .gray {color:#999}
+            .tabs-more .lnk-tab-more{padding-right:5px;background:#fff;}
+            .tabs-more .lnk-tab-more:hover{background:#369;}
+            .tabs-more .lnk-tab-more span{background: url("/pics/icon/tongcheng_tab_down.gif") no-repeat right 3px;padding-right:10px;display:inline-block}
+            .tabs-more .lnk-tab-more span.up{background: url("/pics/icon/tongcheng_tab_up.gif") no-repeat right 3px;padding-right:10px;}
+            .tabs-more .lnk-tab-more:hover span{color:#fff;background: url("/pics/icon/tongcheng_tab_down.gif") no-repeat right -8px;}
+            .tabs-more .lnk-tab-more:hover span.up{background: url("/pics/icon/tongcheng_tab_up.gif") no-repeat right -8px;}
+            .tabs-more ul {display:none;position:absolute; background:#fff; border:1px solid #aaa; padding:5px 0; left:55px;_left:53px;_top:19px; top:18px; width:70px}
+            .tabs-more ul li a {display:block;text-align:center; padding:3px 5px;margin:0}
+            .tabs-more ul li{margin:0; zoom:1}
+            .tabs-more ul li a:hover {background:#369; color:#fff; }
+
+            .item .info li {clear: both;}
+            .item .title .playable {font-size: 13px; padding-left: 3px; color: #00A65F;}
+
+            .grid-view .item {overflow:auto; display:table; zoom:1}
+            .grid-view .item .tabs-more {margin-left:0;}
+            .grid-view .item .tabs-more span {color:#369;}
+            .grid-view .item .lnk-tab-more:hover span {color:#fff;}
+            .grid-view .item .clearDiv {clear:both}
+            .grid-view .item .tabs-more ul{left:0;margin-left:0}
+            .grid-view .item .comment {color:#000;}
+
+            .list-view .item {overflow:auto;display:table;width:100%; zoom:1}
+            .list-view .item .tabs-more{margin-left:0; margin-top:4px}
+            .list-view .item .tags{display:block;clear:both}
+            .list-view .item .tabs-more ul{left:0}
+            .list-view .item-show{height:17px;overflow:hidden}
+            .list-view .opt-ln {clear:both;margin-left:3px}
+            .list-view .comment {clear:both;}
+            .list-view .movieInfo {margin-top:4px;*margin-top:3px}
+
+        </style>
+        <script>
+            $(function(){
+                $(".lnk-tab-more").click(function(){
+                    $(this).next(".tabs-more-list").show();
+                    $("span",this).addClass("up");
+                    return false;
+                })
+                $(document.body).click(function(e){
+                    if($(e.target).parent().attr("class")!=="lnk-tab-more"){
+                        $(".tabs-more-list").hide();
+                        $("span.up").removeClass("up");
+                    }
+                })
+            })
+        </script>
+        <div class="tabs-more">
+            
+            <span class="gray">筛选影片:</span>
+            <a class="lnk-tab-more" href="#">
+                <span>全部</span>
+            </a>
+            <ul class="tabs-more-list">
+                <li><a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;amp;start=0&amp;amp;filter=schedule&amp;amp;mode=grid&amp;amp;tags_sort=count">正在热映</a></li>
+                <li><a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;amp;start=0&amp;amp;filter=video&amp;amp;mode=grid&amp;amp;tags_sort=count">在线观看</a></li>
+            </ul>
+        </div>
+        <div class="mode">
+            <span class="subject-num">
+                151-165&nbsp;/&nbsp;673
+            </span>
+            <ul class="grid-list-bar">
+                
+                    <li class="grid-on">grid</li>
+                    <li class="list">
+                        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;amp;start=150&amp;amp;filter=all&amp;amp;mode=list&amp;amp;tags_sort=count">list</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+        
+
+<script type="text/javascript">
+$(function() {
+    $('.d_link').click(function() {
+        $(this).parents("div.item").hide();
+        var url = "/j/mine/j_cat_ui";
+        if (/\/location\//.test(location.href)) {
+            url = "/location" + url;
+        }
+        $.post_withck(url, {sid: this.rel},
+            function(sjson) {
+                var ret = eval("(" + sjson + ")");
+                if (!ret.result) {
+                    alert("出错了，请稍后重试!");
+                }
+        });
+    });
+})
+</script>
+
+
+<div class="grid-view">
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Valley of Flowers" href="https://movie.douban.com/subject/1865289/" class="nbg">
+                    <img alt="Valley of Flowers" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2170446954.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/1865289/" class="">
+                            <em>花之谷 / Valley of Flowers</em>
+                             / 花之谷 / 花の谷
+                        </a>
+                    </li>
+                        <li class="intro">2006-07-15 / 米兰妮·让帕诺米 / 纳萨鲁丁·沙 / 米林德·索曼 / 印度 / 法国 / 日本 / 德国 / 宾·纳伦 / 155 分钟 / Germany: 120 分钟 / 花之谷 / 冒险 / 剧情 / 爱情 / 宾·纳伦 Pan Nalin / 阿努拉格·卡施亚普 Anurag Kashyap / Sarah Besan Shennib / 北印度语 / 日语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2011-04-14</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">一些对白很有特色：「真实感是酒精给人体带来的副作用。」「他的肺里头是空的，就好像有人偷走他的呼吸。」花之谷很美，当风吹过，那里的花就会盛开得像海一样。可惜苦情的男女主决定先去静寂谷获得长生不老药，再去花之谷，于是永世相隔。深情一拥挚爱万年，几度轮回恋恋不灭。最玄妙莫过于人生呐。</span>
+                        
+                            <span class="pl">(2 有用)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="保持愛你" href="https://movie.douban.com/subject/3447591/" class="nbg">
+                    <img alt="保持愛你" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p933936290.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3447591/" class="">
+                            <em>保持爱你 / 保持愛你</em>
+                             / Love Connected
+                        </a>
+                    </li>
+                        <li class="intro">2009-02-19(香港) / 2009-07-28(中国大陆) / 邓丽欣 / 侧田 / 森美 / 杨爱瑾 / 胡清蓝 / 谢安琪 / 唐素琪 / 梁祖尧 / 诸葛梓岐 / 龚嘉欣 / 香港 / 叶念琛 / Hong Kong: 96 分钟 / 保持爱你 / 爱情 / 叶念琛 Patrick Kong / 粤语</li>
+                    <li>
+                                    <span class="rating5-t"></span>
+                        <span class="date">2011-04-13</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">个人最喜欢花店弱听女和驻唱歌手的故事。邓丽欣在叶念琛的爱情电影里真是很出彩的，内心没有外表那么硬朗的女孩子在爱情中总是辛苦一点吧，叹气。歌声、画面跟情节浑然在一起的表现手法很立体，让观众充满了代入感。片尾字幕说“愿时光保持不变，让我爱你依然”但我觉得，导演想要说的其实是“沟通”。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="我的最愛" href="https://movie.douban.com/subject/3015835/" class="nbg">
+                    <img alt="我的最愛" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1015596190.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3015835/" class="">
+                            <em>我的最爱 / 我的最愛</em>
+                             / L for Love, L for Lies
+                        </a>
+                    </li>
+                        <li class="intro">2008-03-13 / 邓丽欣 / 方力申 / 曾恺玹 / 胡清蓝 / 唐宁 / 杨爱瑾 / 黄嘉乐 / 香港 / 叶念琛 / Hong Kong: 101 分钟 / 我的最爱 / 爱情 / 叶念琛 / 粤语 / 普通话</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-04-13</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">爱人讲Timing，做正选是时机，做后备是命运。受伤=无意识的成长。女人说的永远和心里想的不一样，男人未必不懂，不过不想懂而已。一次不忠，百次不用。爱情就像烟盒上的“有害健康”，谁都看到知道，但谁会因为这几个字就弃烟呢。恋爱因为高估自己，但你仍然去爱，只是经过TA可否让你更懂爱？</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Gamer" href="https://movie.douban.com/subject/2301706/" class="nbg">
+                    <img alt="Gamer" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p1453892559.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/2301706/" class="">
+                            <em>天地逃生 / Gamer</em>
+                             / 真人游戏 / 公民游戏
+                        </a>
+                    </li>
+                        <li class="intro">2009-09-04(美国) / 2010-03-17(中国大陆) / 杰拉德·巴特勒 / 迈克尔·C·豪尔 / 卢达克里斯 / 安贝·瓦莱塔 / 凯拉·塞吉维克 / 罗根·勒曼 / 艾莉森·洛曼 / 艾伦·余 / 泰瑞·克鲁斯 / 美国 / 马克·耐沃尔代 / 布莱恩·泰勒 / 95 分钟 / 天地逃生 / 动作 / 科幻 / 惊悚 / 马克·耐沃尔代 Mark Neveldine / 布莱恩·泰勒 Brian Taylor / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-04-12</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">情节、镜头剪切、画面色彩&amp;背景音乐都很有力量。支撑肌肉男主闯过30关最后打败现实生活里的邪恶大BOSS的到底还是对妻子和女儿的爱嗯。“意识操控”的主题已不新鲜，但植入纳米皮层后接收、发送讯号以及传送延迟的想法还蛮有意思。人类区别于动物最宝贵的莫过于自由意志呐，别天真到去滥用它吧。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="The Other Man" href="https://movie.douban.com/subject/2259761/" class="nbg">
+                    <img alt="The Other Man" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p942787326.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/2259761/" class="">
+                            <em>另一个人 / The Other Man</em>
+                             / 外欲杀机 / 另一个男人
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2008-09-07 / 连姆·尼森 / 安东尼奥·班德拉斯 / 劳拉·琳妮 / 萝玛拉·嘉瑞 / Abigail Canton / 美国 / 英国 / 理查德·艾尔 / 88 分钟 / 另一个人 / 剧情 / 悬疑 / 惊悚 / Richard Eyre / Charles Wood / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2011-04-12</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">不得不吐糟下这部电影的剧情和叙事手法很差劲，大家都以为女主离家出走去寻“另一个男人”的时候，男主却告诉我们他妻子其实得癌症死了- -至于那徒有外表的“另一个男人”让局外人看得简直有些滑稽了。不过，没有人规定一个成熟的人心里面不可以同时装下两个人对不对，一个用来怀念，一个用来守望。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="十分愛" href="https://movie.douban.com/subject/2043465/" class="nbg">
+                    <img alt="十分愛" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2175061766.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/2043465/" class="">
+                            <em>十分爱 / 十分愛</em>
+                             / Love Is Not All Around
+                        </a>
+                    </li>
+                        <li class="intro">2007-04-19(香港) / 邓丽欣 / 方力申 / 钟嘉欣 / 森美 / 杨爱瑾 / 张敬轩 / 胡清蓝 / 陈淑兰 / 卢惠光 / 王一冰 / 香港 / 叶念琛 / 101 分钟 / 十分爱 / 爱情 / 叶念琛 Patrick Kong / 粤语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-04-11</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">这世上到处都是障眼法，看见的未必是真，而真的未必能幸运地看见。爱是必须存在最终极的相信，是尽管所爱非人也仍然要信下去。小武的暗恋说明，只有一个人的爱，才能从生到死。珍惜身边的人也好，锲而不舍寻找也好，即便用过许多试用装，真正碰到合心水的付账买单时，仍旧只有倾囊而出，没有包退包换。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Hotel Meina" href="https://movie.douban.com/subject/2225433/" class="nbg">
+                    <img alt="Hotel Meina" src="https://img3.doubanio.com/spic/s3732113.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/2225433/" class="">
+                            <em>梅娜旅馆 / Hotel Meina</em>
+                             / 美娜旅馆 / 梅娜旅馆
+                        </a>
+                    </li>
+                        <li class="intro">2007-09-02 / Majlinda Agaj / Eugenio Allegri / Marta Bifano / 意大利 / 法国 / 塞尔维亚 / 卡罗·里査尼 / 110分钟 / 梅娜旅馆 / 剧情 / 历史 / Pasquale Squitieri / Dino Gentili / Filippo Gentili / Carlo Lizzani / 意大利语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-04-10</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">意大利投靠盟军并于1943年9月停战后，德国人占据了湖上一家由土耳其犹太人经营的美娜宾馆，这里住着16位意大利裔和希腊裔的犹太人，来往的交通工具只有小船。他们在德国人“还算有礼貌”的囚禁下提心吊胆、战战兢兢地生活，然最后仍惨遭屠杀。结束的字幕让人感觉沉重，那些侩子手并未受到严惩。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Gone in 60 Seconds" href="https://movie.douban.com/subject/1298189/" class="nbg">
+                    <img alt="Gone in 60 Seconds" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p952878894.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/1298189/" class="">
+                            <em>极速60秒 / Gone in 60 Seconds</em>
+                             / 惊天动地60秒 / 极速60秒
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2000-06-08(美国) / 尼古拉斯·凯奇 / 乔瓦尼·瑞比西 / 安吉丽娜·朱莉 / T.J. Cross / 威廉姆·李·斯科特 / 斯科特·凯恩 / 詹姆斯·杜瓦尔 / 威尔·帕顿 / 戴尔里·林多 / 蒂莫西·奥利芬特 / 齐·麦克布赖德 / 罗伯特·杜瓦尔 / 克里斯托弗·埃克莱斯顿 / 维尼·琼斯 / 格蕾丝·扎布里斯基 / 美国 / 多米尼克·塞纳 / 118 分钟 / 127分钟(导演剪辑版) / 极速60秒 / 动作 / 犯罪 / 惊悚 / 斯科特·罗森伯格 Scott Rosenberg / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-04-10</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">即便是对汽车毫无偏执的我看完也不得不感叹视觉体验激烈。尼古拉斯·凯奇的气场同男主的设定还是蛮符合的，感情戏恰当好处，点缀一部汽车电影刚刚好。话说那辆帮男主脱离险境的福特野马实在可爱，有着女性般的吸引&amp;男性般的狂躁，在摆脱警察追击时还耍起了小脾气“熄火”。爱车的人会懂车也有感情嗯。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="花田囍事2010" href="https://movie.douban.com/subject/3804746/" class="nbg">
+                    <img alt="花田囍事2010" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p815404632.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3804746/" class="">
+                            <em>花田喜事2010 / 花田囍事2010</em>
+                             / All&#39;s Well Ends Well 2010
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2010-02-10(中国大陆) / 黄百鸣 / 吴君如 / 古天乐 / 郑中基 / 潘粤明 / 熊黛林 / 杨颖 / 李香琴 / 田蕊妮 / 中国大陆 / 香港 / 黄百鸣 / 邱礼涛 / 93分钟 / 花田喜事2010 / 喜剧 / 黄子桓 Edmond Wong / 粤语 / 汉语普通话</li>
+                    <li>
+                                    <span class="rating2-t"></span>
+                        <span class="date">2011-04-09</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">给了和《大内密探零零狗》一样的低分。再感叹一遍喜剧电影弄成这样一锅粥实在太令人失望了&gt;&lt;如此疯天疯地完全没有笑点可言啊。深深觉得这样的电影如果不是春节档沾全国人民的好心情上映恐怕要被番茄丢四。看来看去，还是最喜欢吴君如在《岁月神偷》里的表演了，那是真正笑中带泪的好。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="大內密探靈靈狗" href="https://movie.douban.com/subject/3670447/" class="nbg">
+                    <img alt="大內密探靈靈狗" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p2374045339.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3670447/" class="">
+                            <em>大内密探灵灵狗 / 大內密探靈靈狗</em>
+                             / On His Majesty&#39;s Secret Service
+                        </a>
+                    </li>
+                        <li class="intro">2009-07-30(中国大陆) / 古天乐 / 徐熙媛 / 佟大为 / 吴君如 / 宋佳 / 刘洋 / 樊少皇 / 林子聪 / 刘仪伟 / 罗家英 / 香港 / 中国大陆 / 台湾 / 王晶 / 98分钟 / 大内密探灵灵狗 / 喜剧 / 王晶 Jing Wong / 粤语 / 汉语普通话</li>
+                    <li>
+                                    <span class="rating2-t"></span>
+                        <span class="date">2011-04-09</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">喜剧电影的情节弱到这个程度真是不得不膜拜了- -电影从一群龙套刺客刺杀皇上开始，武打戏乱七八糟，古仔饰演灵灵狗和大S饰演其未婚妻的合作也并无觉得有亮点。吴君如在这部电影中似乎没有得到展现演技的机会，不见她在以往电影中的那种光芒。坏人罪有应得，好人欢乐祥和，如此理想也只应电影有吧。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Kinta" href="https://movie.douban.com/subject/3747344/" class="nbg">
+                    <img alt="Kinta" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2263525284.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3747344/" class="">
+                            <em>近打1881 / Kinta</em>
+                             / Kinta 1881
+                        </a>
+                    </li>
+                        <li class="intro">2008-12-04 / 何诺槟 / 关伊彤 / 李绍杰 / Malaysia / 何志良 / 近打1881 / 动作 / Kam Chow / 何志良 / 粤语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2011-04-08</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">尽管剧情和逻辑上稍微有些拖沓和不完美，个人觉得它格斗画面的表现还是蛮特别的，喷溅在屏幕上的红血液+执行任务的黑灰色处理，男子汉们格斗的招式颇有点李连杰的感觉哈哈。看过后对矿工的悲惨生活好同情，在那样一片异域的土地上，曾经有那样一群男人，用血汗为改善生活几乎拼命，让我更想珍惜现在。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="L&#39;héritage" href="https://movie.douban.com/subject/5361463/" class="nbg">
+                    <img alt="L&#39;héritage" src="https://img3.doubanio.com/spic/s4535923.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/5361463/" class="">
+                            <em>遗产 / L&#39;héritage</em>
+                             / 莫泊桑作品集之遗产 / 遗产
+                        </a>
+                    </li>
+                        <li class="intro">2007-03-13 / 埃迪·米切尔 / 克洛伊·兰贝特 / Sébastien Thiery / 法国 / 劳伦特·海纳曼 / 60分钟 / 遗产 / 剧情 / 家庭 / 让·卡斯莫 Jean Cosmos / 劳伦特·海纳曼 Laurent Heynemann / 法语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-04-06</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">勒萨伯尔为得到巨额遗产而迅速结婚，谁知遗嘱却是把财产留给他妻子的后代，若三年后仍无子女遗产就会捐给慈善机构。可勒萨伯尔夫妇偏偏一直无法生育后代。最后在岳父怂恿和他本人的默许下，靠妻子和别人通奸怀孕一家人才终于得到遗产。他们的爱情、婚姻、家庭关系都被金钱所支配，堕落为寡廉鲜耻的人。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="獨家試愛" href="https://movie.douban.com/subject/3012257/" class="nbg">
+                    <img alt="獨家試愛" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p486588678.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3012257/" class="">
+                            <em>独家试爱 / 獨家試愛</em>
+                             / Marriage with a Fool
+                        </a>
+                    </li>
+                        <li class="intro">2006-03-23 / 方力申 / 邓丽欣 / 吴佩慈 / 陈秀珠 / 傅颖 / 侯莎莎 / 关之彤 / 魏骏杰 / 谭俊彦 / 唐宁 / 王祖蓝 / 香港 / 叶念琛 / 96 分钟 / 独家试爱 / 喜剧 / 爱情 / 叶念琛 Patrick Kong / 粤语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-04-06</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">现在的人就是这样，拍拖、生日、追男生、追女生、被甩……哪样不是在卡拉OK里发生？所有人都以为自己有首主题曲摆在这里，拍拖来唱，分手来唱，复合了再来唱，其实唱来唱去还不就是那几首。所以你说在这边（KTV）工作久了，还有什么想不开的？</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="11度青春之《拳击手的秘密》" href="https://movie.douban.com/subject/5273302/" class="nbg">
+                    <img alt="11度青春之《拳击手的秘密》" src="https://img3.doubanio.com/spic/s24930973.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/5273302/" class="">
+                            <em>11度青春之《拳击手的秘密》</em>
+                             / 拳击手的秘密 / The bright eleven - Le Secret D&#39;un Boxeur
+                        </a>
+                    </li>
+                        <li class="intro">2010-08-20 / 余皑磊 / 中国大陆 / 张亚光 / 谢智勇 / 汉语普通话</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2011-04-05</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">眼睛看不见的人通常听觉和嗅觉比看得见的人灵敏。感觉情节还是缺乏新意了。“有时候听到的比看到的更真实。”只怕听到的看到的也未必都是真相啊。如果这部短片是想要表现超越自我的意义的话好像又不太切题，总之怪怪的，观感非常一般。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="11度青春之《哎》" href="https://movie.douban.com/subject/5265166/" class="nbg">
+                    <img alt="11度青春之《哎》" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1550536735.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/5265166/" class="">
+                            <em>11度青春之《哎》</em>
+                             / 两个龙套的爱情 / 哎
+                        </a>
+                    </li>
+                        <li class="intro">2010-08-26 / 徐韬 / 冯丹滢 / 中国大陆 / 尹丽川  / 短片 / 尹丽川  Lichuan Yin / 汉语普通话</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2011-04-05</span>
+                        
+                    </li>
+                    <li>
+                        <span class="comment">觉得一些原则还是要抵住才不会在追逐梦想的路上走叉道。We may have missed each other,then unexpectedly,our dream brings us together at some crossroad. Let&#39;s say ai.</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+    
+    
+    
+
+    
+        <div class="paginator">
+        <span class="prev">
+            <link rel="prev" href="https://movie.douban.com/people/2196059/collect?start=135&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid"/>
+            <a href="https://movie.douban.com/people/2196059/collect?start=135&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >&lt;前页</a>
+        </span>
+        
+        
+            
+            <a href="https://movie.douban.com/people/2196059/collect?start=0&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >1</a>
+        
+            <a href="https://movie.douban.com/people/2196059/collect?start=15&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >2</a>
+        <span class="break">...</span>
+
+                
+            <a href="https://movie.douban.com/people/2196059/collect?start=90&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >7</a>
+        
+                
+            <a href="https://movie.douban.com/people/2196059/collect?start=105&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >8</a>
+        
+                
+            <a href="https://movie.douban.com/people/2196059/collect?start=120&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >9</a>
+        
+                
+            <a href="https://movie.douban.com/people/2196059/collect?start=135&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >10</a>
+        
+                <span class="thispage" data-total-page="45">11</span>
+                
+            <a href="https://movie.douban.com/people/2196059/collect?start=165&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >12</a>
+        
+                
+            <a href="https://movie.douban.com/people/2196059/collect?start=180&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >13</a>
+        
+                
+            <a href="https://movie.douban.com/people/2196059/collect?start=195&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >14</a>
+        
+                
+            <a href="https://movie.douban.com/people/2196059/collect?start=210&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >15</a>
+        
+            <span class="break">...</span>
+                
+            <a href="https://movie.douban.com/people/2196059/collect?start=645&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >44</a>
+        
+            <a href="https://movie.douban.com/people/2196059/collect?start=660&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >45</a>
+        
+        <span class="next">
+            <link rel="next" href="https://movie.douban.com/people/2196059/collect?start=165&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid"/>
+            <a href="https://movie.douban.com/people/2196059/collect?start=165&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >后页&gt;</a>
+        </span>
+
+        </div>
+
+
+
+            </div>
+            <div class="aside">
+                
+    
+    
+
+
+<div class="side-info">
+    <a href="https://www.douban.com/people/2196059/" class="side-info-avatar"><img height="48" width="48" alt="透明" src="https://img3.doubanio.com/icon/u2196059-1.jpg" /></a>
+    <div class="side-info-txt">
+        <h3>透明</h3>
+        &gt;&nbsp;<a href="https://www.douban.com/people/2196059/">豆瓣主页</a>
+    </div>
+    <div class="user-content">
+    </div>
+</div>
+
+    <div class="mod">
+        <p class="pl2 m0">
+            &gt; <a href="https://movie.douban.com/people/2196059/">透明的电影主页</a>
+        </p>
+    </div>
+        
+    <h2>
+        看过的标签
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+    </h2>
+
+    
+    
+<div class="opt-bar mb15 clearfix">
+    <div class="sort">
+        
+        按标签量排序<span class="gray-dot">·</span><a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;start=150&amp;filter=all&amp;mode=grid&amp;tags_sort=name">按首字母排序</a>
+    </div>
+</div>
+<ul class="tag-list mb10">
+
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BE%8E%E5%9B%BD%E7%94%B5%E5%BD%B1%E3%80%80%E8%82%96%E7%94%B3%E5%85%8B%E7%9A%84%E6%95%91%E8%B5%8E%E3%80%80%E5%8A%B1%E5%BF%97%E3%80%80%E4%BF%A1%E5%BF%B5%E3%80%80%E8%87%AA%E7%94%B1%E3%80%80%E4%BA%BA%E6%80%A7&amp;mode=grid" title="美国电影　肖申克的救赎　励志　信念　自由　人性">美国电影　肖申克的救赎　励志　信念　自由　人性</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8A%A8%E6%BC%AB&amp;mode=grid" title="动漫">动漫</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E6%9C%AC%E3%80%80%E5%8A%A8%E7%94%BB%E7%89%87%E3%80%80%E5%9B%B4%E6%A3%8B%E3%80%80%E5%8A%B1%E5%BF%97%E3%80%802006.01%E3%80%80&amp;mode=grid" title="日本　动画片　围棋　励志　2006.01　">日本　动画片　围棋　励志　2006.01　</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E5%89%A7%E3%80%80%E6%B3%BD%E5%B0%BB%E6%83%A0%E7%90%86%E9%A6%99%E3%80%80%E9%94%A6%E6%88%B7%E4%BA%AE%E3%80%80%E6%88%90%E6%B5%B7%E7%92%83%E5%AD%90%E3%80%80%E9%9D%92%E6%98%A5&amp;mode=grid" title="日剧　泽尻惠理香　锦户亮　成海璃子　青春">日剧　泽尻惠理香　锦户亮　成海璃子　青春</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%84%8F%E5%A4%A7%E5%88%A9%E7%94%B5%E5%BD%B1%E3%80%80%E6%B5%B7%E4%B8%8A%E9%92%A2%E7%90%B4%E5%B8%88%E3%80%80%E9%9F%B3%E4%B9%90%E3%80%80%E4%BA%BA%E7%94%9F&amp;mode=grid" title="意大利电影　海上钢琴师　音乐　人生">意大利电影　海上钢琴师　音乐　人生</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%9F%AF%E5%8D%97&amp;mode=grid" title="柯南">柯南</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%9F%A9%E5%89%A7%E3%80%80%E9%9F%A9%E5%BD%A9%E8%8B%B1%E3%80%80%E5%AE%B0%E7%86%99%E3%80%80%E5%96%9C%E5%89%A7%E3%80%80&amp;mode=grid" title="韩剧　韩彩英　宰熙　喜剧　">韩剧　韩彩英　宰熙　喜剧　</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%9F%A9%E5%89%A7%E3%80%80%E3%80%80&amp;mode=grid" title="韩剧　　">韩剧　　</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E5%89%A7%E3%80%80%E7%AB%B9%E9%87%8E%E5%86%85%E4%B8%B0%E3%80%80%E4%BA%BA%E7%94%9F%E3%80%80%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E3%80%80&amp;mode=grid" title="日剧　竹野内丰　人生　心理医生　">日剧　竹野内丰　人生　心理医生　</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%9F%A9%E5%89%A7%E3%80%802008.01%E3%80%80%E6%9D%83%E7%9B%B8%E5%AE%87%E3%80%80%E9%87%91%E5%96%9C%E5%96%84%E3%80%80%E7%88%B1%E6%83%85&amp;mode=grid" title="韩剧　2008.01　权相宇　金喜善　爱情">韩剧　2008.01　权相宇　金喜善　爱情</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E6%9C%AC%E7%94%B5%E5%BD%B1%E3%80%80%E5%B0%8F%E7%94%B0%E5%88%87%E8%AE%A9%E3%80%80%E4%BB%B2%E9%97%B4%E7%94%B1%E7%BA%AA%E6%83%A0%E3%80%80%E5%BF%8D%E8%80%85%E3%80%80%E7%88%B1%E6%83%85&amp;mode=grid" title="日本电影　小田切让　仲间由纪惠　忍者　爱情">日本电影　小田切让　仲间由纪惠　忍者　爱情</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%BC%86%E9%BB%92%E3%81%AE%E8%BF%BD%E8%B7%A1%E8%80%85&amp;mode=grid" title="漆黒の追跡者">漆黒の追跡者</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%84%8F%E5%A4%A7%E5%88%A9%E7%94%B5%E5%BD%B1%E3%80%80%E7%BE%8E%E4%B8%BD%E4%BA%BA%E7%94%9F%E3%80%80%E4%BA%8C%E6%88%98%E3%80%80%E4%BA%B2%E6%83%85&amp;mode=grid" title="意大利电影　美丽人生　二战　亲情">意大利电影　美丽人生　二战　亲情</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E5%89%A7%E3%80%80%E6%B3%B7%E6%B3%BD%E7%A7%80%E6%98%8E%E3%80%80%E6%9D%BE%E5%B2%9B%E8%8F%9C%E8%8F%9C%E5%AD%90%E3%80%80%E7%88%B1%E6%83%85%E3%80%80%E9%9D%92%E6%98%A5&amp;mode=grid" title="日剧　泷泽秀明　松岛菜菜子　爱情　青春">日剧　泷泽秀明　松岛菜菜子　爱情　青春</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%89%A7%E5%9C%BA%E7%89%88&amp;mode=grid" title="剧场版">剧场版</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BE%8E%E5%9B%BD%E7%94%B5%E5%BD%B1%E3%80%80%E9%98%BF%E7%94%98%E6%AD%A3%E4%BC%A0%E3%80%80%E5%8A%B1%E5%BF%97%E3%80%80TomHanks%E3%80%80%E4%BA%BA%E7%94%9F%E3%80%80&amp;mode=grid" title="美国电影　阿甘正传　励志　TomHanks　人生　">美国电影　阿甘正传　励志　TomHanks　人生　</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%90%8D%E4%BE%A6%E6%8E%A2%E6%9F%AF%E5%8D%97&amp;mode=grid" title="名侦探柯南">名侦探柯南</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E5%89%A7%E3%80%80%E6%88%90%E6%B5%B7%E7%92%83%E5%AD%90%E3%80%80%E7%AB%B9%E9%87%8E%E5%86%85%E4%B8%B0%E3%80%80%E4%BA%BA%E7%94%9F%E3%80%80&amp;mode=grid" title="日剧　成海璃子　竹野内丰　人生　">日剧　成海璃子　竹野内丰　人生　</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E6%9C%AC%E7%94%B5%E5%BD%B1%E3%80%80%E6%BC%AB%E7%94%BB%E6%94%B9%E7%BC%96%E3%80%80%E6%82%AC%E7%96%91%E3%80%80%E6%8E%A8%E7%90%86&amp;mode=grid" title="日本电影　漫画改编　悬疑　推理">日本电影　漫画改编　悬疑　推理</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E6%9C%AC%E3%80%80%E5%8A%A8%E7%94%BB%E7%89%87%E3%80%80%E5%9C%A3%E6%9E%AA%E4%BF%AE%E5%A5%B3%E3%80%802006.01%E3%80%80&amp;mode=grid" title="日本　动画片　圣枪修女　2006.01　">日本　动画片　圣枪修女　2006.01　</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BE%8E%E5%89%A7%E3%80%802008.01%E3%80%80%E6%82%AC%E7%96%91&amp;mode=grid" title="美剧　2008.01　悬疑">美剧　2008.01　悬疑</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E6%9C%AC%E3%80%80%E5%8A%A8%E7%94%BB%E7%89%87%E3%80%80%E9%92%A2%E7%82%BC%E3%80%802006.01%E3%80%80&amp;mode=grid" title="日本　动画片　钢炼　2006.01　">日本　动画片　钢炼　2006.01　</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%B3%95%E5%9B%BD%E7%94%B5%E5%BD%B1%E3%80%80%E9%9F%B3%E4%B9%90%E3%80%80%E6%95%99%E8%82%B2%E3%80%80%E6%88%90%E9%95%BF%E3%80%80%E7%BB%8F%E5%85%B8%E3%80%80&amp;mode=grid" title="法国电影　音乐　教育　成长　经典　">法国电影　音乐　教育　成长　经典　</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E6%9C%AC&amp;mode=grid" title="日本">日本</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8A%A8%E7%94%BB&amp;mode=grid" title="动画">动画</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/2196059/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E6%9C%AC%E3%80%80%E5%8A%A8%E7%94%BB%E7%89%87%E3%80%802008.01%E3%80%80&amp;mode=grid" title="日本　动画片　2008.01　">日本　动画片　2008.01　</a>
+        <span>1</span>
+    </li>
+</ul>
+
+
+<script>
+$(function () {
+    var TAG_URL_PARAMS = {"sort":"time","tags_sort":"count","filter":"all","tag":"日本　动画片　2008.01　","mode":"grid"};
+    $('#open_tags').click(function() {
+        var $btn = $(this);
+        var $container = $("ul.tag-list");
+        var $tmpl = $container.find("li").first();
+
+        $.get("/j/people/2196059/get_collection_tags", {
+            offset: 90,
+            tags_sort: "count",
+            cat_id: "1002",
+            action: "collect"
+        }, function (res) {
+            var tagUrl, newEl;
+
+            $(res).each(function (i, tagInfo) {
+                TAG_URL_PARAMS["tag"] = tagInfo.tag;
+                tagUrl = "https://movie.douban.com/people/2196059/collect?" + $.param(TAG_URL_PARAMS);
+                newEl = $tmpl.clone();
+                if (tagInfo.tag === "None") {
+                    newEl.addClass("on");
+                }
+                newEl.find('a').attr("href", tagUrl)
+                                .attr("title", tagInfo.tag)
+                                .html(tagInfo.tag)
+                     .end()
+                     .find("span").html(tagInfo.count)
+                     .end().appendTo($container);
+            });
+            $btn.remove();
+        }, "json");
+    });
+});
+</script>
+
+
+            </div>
+            <div class="extra">
+                
+            </div>
+        </div>
+    </div>
+
+        
+    <div id="footer">
+            <div class="footer-extra"></div>
+        
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2016 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about?policy=disclaimer">免责声明</a>
+    
+    · <a href="https://help.douban.com/?app=movie" target="_blank">帮助中心</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+    </div>
+
+    </div>
+    <script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/fd8032bc82407e0.js"></script>
+        
+        
+    <link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css" />
+    <link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/movie/7345d4b259505f1a074773ce6b54f0253df2bb88/css/movie/mod/reg_login_pop.css" />
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/29449d396dacb28fd9949c709ccf02a46b910156/js/do.js" data-cfg-autoload="false"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/4b3bad5e25de78678d700dd5353570dce3e6bbcc/js/ui/dialog.js"></script>
+    <script type="text/javascript">
+        var HTTPS_DB='https://www.douban.com';
+var account_pop={open:function(e,b){if(b){referrer="?referrer="+encodeURIComponent(b)}else{referrer="?referrer="+window.location.href}var f="",a="",i=382;if(e==="reg"){f="用户注册";a="https://accounts.douban.com/popup/login?source=movie#popup_register";i=480}else{if(e==="login"){f="用户登录";a="https://accounts.douban.com/popup/login?source=movie"}}var h=document.location.protocol+"//"+document.location.hostname;var d=dui.Dialog({width:478,title:f,height:i,cls:"account_pop",isHideTitle:true,modal:true,content:"<iframe scrolling='no' frameborder='0' width='478' height='"+i+"' src='"+a+"' name='"+h+"'></iframe>"},true),c=d.node;c.undelegate();c.delegate(".dui-dialog-close","click",function(){var j=$("body");j.find("#login_msk").hide();j.find(".account_pop").remove()});if($(window).width()<478){var g="";if(e==="reg"){g=HTTPS_DB+"/accounts/register"+referrer}else{if(e==="login"){g=HTTPS_DB+"/accounts/login"+referrer}}window.location.href=g}else{d.open()}$(window).bind("message",function(j){if(j.originalEvent.origin==="https://accounts.douban.com"){c.find("iframe").css("height",j.originalEvent.data);c.height(j.originalEvent.data);d.update()}})}};if(Douban&&Douban.init_show_login){Douban.init_show_login=function(b){var a=$(b);a.click(function(){var c=a.data("ref")||"";account_pop.open("login",c);return false})}}Do(function(){$("body").delegate(".pop_register","click",function(b){b.preventDefault();var a=$(this).data("ref")||"";account_pop.open("reg",a);return false});$("body").delegate(".pop_login","click",function(b){b.preventDefault();var a=$(this).data("ref")||"";account_pop.open("login",a);return false})});
+    </script>
+
+    
+    
+  
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript';
+    g.defer=true;
+    g.async=true;
+    g.src=p+'://img3.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-19', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id]);
+      _gaq.push([method('_setSampleRate'), '5']);
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '0', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+    <!-- dis2-docker-->
+
+  <script>_SPLITTEST=''</script>
+</body>
+
+</html>
+

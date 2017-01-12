@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-ff43">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <title>
+    阿七看过的电影(4246)
+</title>
+    
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+    <link rel="apple-touch-icon" href="https://img3.doubanio.com/f/movie/d59b2715fdea4968a450ee5f6c95c7d7a2030065/pics/movie/apple-touch-icon.png">
+    <link href="https://img3.doubanio.com/f/shire/82d7c82f084d5157d7b87a17c76af984dd23dbbf/css/douban.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/shire/ae3f5a3e3085968370b1fc63afcecb22d3284848/css/separation/_all.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/movie/e9d9543ebc06f2964039a2e94898f84ce77fc070/js/movie/lib/jquery.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/cab60df0d9dacb82770e6a25d4481a538fdaadad/js/douban.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/0a62663763aed4fe860029f99d1755b8caa524e7/js/separation/_all.js"></script>
+    
+    <link href="https://img3.doubanio.com/f/shire/3592eb08e13581b921a3de5be3e1ee1859700e20/css/ui/mypage.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/29449d396dacb28fd9949c709ccf02a46b910156/js/do.js" data-cfg-autoload="false"></script>
+
+    <style type="text/css">
+    .item .title {background:none #f2f4f6;}
+    .list-view .highlight, .list-view .expanded{background:#f2f4f6 none;}
+</style>
+    <style type="text/css">img { max-width: 100%; }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/47d38f0bdbe5a67b.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+    
+   
+
+
+
+
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+
+
+
+
+
+<div class="top-nav-info">
+      
+      <a href="https://www.douban.com/accounts/login?source=movie" class="nav-login" rel="nofollow">登录</a>
+      <a href="https://www.douban.com/accounts/register?source=movie" class="nav-register" rel="nofollow">注册</a>
+</div>
+
+
+    <div class="top-nav-doubanapp">
+        
+        <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+        <div id="top-nav-appintro" class="more-items">
+            <p class="appintro-title">豆瓣</p>
+            <p class="slogan">我们的精神角落</p>
+            <p class="qrcode">
+                扫码直接下载
+            </p>
+            <div class="download">
+                <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=iOS">iPhone</a>
+                <span>·</span>
+                <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=Android" class="download-android">Android</a>
+            </div>
+        </div>
+        <div id="doubanapp-tip">
+            <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 4.0 全新发布</a>
+            <a href="javascript: void 0;" class="tip-close">×</a>
+        </div>
+    </div>
+
+    <div class="global-nav-items">
+      <ul>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-main&#34;,&#34;uid&#34;:&#34;0&#34;}">豆瓣</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://book.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-book&#34;,&#34;uid&#34;:&#34;0&#34;}">读书</a>
+            </li>
+          
+            
+            <li class="on">
+            <a href="https://movie.douban.com/" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-movie&#34;,&#34;uid&#34;:&#34;0&#34;}">电影</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://music.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-music&#34;,&#34;uid&#34;:&#34;0&#34;}">音乐</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/location/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-location&#34;,&#34;uid&#34;:&#34;0&#34;}">同城</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://www.douban.com/group/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-group&#34;,&#34;uid&#34;:&#34;0&#34;}">小组</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://read.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-read&#34;,&#34;uid&#34;:&#34;0&#34;}">阅读</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://douban.fm/?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-fm&#34;,&#34;uid&#34;:&#34;0&#34;}">FM</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://dongxi.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-commodity&#34;,&#34;uid&#34;:&#34;0&#34;}">东西</a>
+            </li>
+          
+            
+            <li class="">
+            <a href="https://market.douban.com/?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-market&#34;,&#34;uid&#34;:&#34;0&#34;}">市集</a>
+            </li>
+          
+            <li>
+              <a href="#more" class="bn-more"><span>更多</span></a>
+              <div class="more-items">
+                <table cellpadding="0" cellspacing="0">
+                    
+                    <tr><td><a href="https://moment.douban.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-moment&#34;,&#34;uid&#34;:&#34;0&#34;}">一刻</a></td></tr>
+                    
+                    <tr><td><a href="https://ypy.douban.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-ypy&#34;,&#34;uid&#34;:&#34;0&#34;}">豆瓣摄影</a></td></tr>
+                </table>
+              </div>
+            </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+   
+
+
+
+
+
+
+
+
+<div id="db-nav-movie" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="https://movie.douban.com">豆瓣电影</a>
+    </div>
+    <div class="nav-search">
+      <form action="https://movie.douban.com/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">电影、影人、影院、电视剧</label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1002" />
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- header ad begin -->
+    
+
+
+
+
+
+
+
+
+    <!-- header ad end -->
+
+  </div>
+  </div>
+  <div class="nav-secondary">
+      
+      <div class="nav-items nav-anon">
+          <ul>
+                                  
+                     <li><a href="https://movie.douban.com/nowplaying/">影讯&amp;购票</a></li>
+                 
+                     <li><a href="https://movie.douban.com/explore">选电影</a></li>
+                 
+                    <li class="site-nav-bt">
+                        <a href="https://movie.douban.com/tv/">电视剧</a>
+                    </li>
+                 
+                     <li><a href="https://movie.douban.com/chart">排行榜</a></li>
+                 
+                     <li><a href="https://movie.douban.com/tag/">分类</a></li>
+                 
+                     <li><a href="https://movie.douban.com/review/best/">影评</a></li>
+                 
+                     <li><a href="https://movie.douban.com/annual2015/">2015年度榜单</a></li>
+                 
+                     <li><a href="https://movie.douban.com/standbyme/?source=navigation">豆瓣观影报告</a></li>
+          
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+  
+  <script id="suggResult" type="text/x-jquery-tmpl">
+      <li data-link="{{= url}}">
+          <a href="{{= url}}" onclick="moreurl(this, {from:'movie_search_sugg'})">
+              <img src="{{= img}}" width="40" />
+              <p>
+                  <em>{{= title}}</em>
+                  {{if year}}
+                      <span>{{= year}}</span>
+                  {{/if}}
+                  {{if sub_title}}
+                      <br /><span>{{= sub_title}}</span>
+                  {{/if}}
+                  {{if address}}
+                      <br /><span>{{= address}}</span>
+                  {{/if}}
+                  {{if episode}}
+                      {{if episode=="unknow"}}
+                          <br /><span>集数未知</span>
+                      {{else}}
+                          <br /><span>共{{= episode}}集</span>
+                      {{/if}}
+                  {{/if}}
+              </p>
+          </a>
+      </li>
+  </script>
+  
+
+
+
+
+
+    
+    <div id="wrapper">
+        
+
+        
+    <div id="content">
+        
+    
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div id="db-usr-profile">
+        <div class="pic">
+            <a href="https://movie.douban.com/people/wildboy/">
+                <img height="48" width="48" alt="阿七" src="https://img1.doubanio.com/icon/u1018267-29.jpg" />
+            </a>
+        </div>
+        <div class="info">
+            <h1>阿七看过的电影(4246)</h1>
+            <ul>
+                    
+        <li><a href="https://movie.douban.com/people/wildboy/">电影主页</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/wildboy/reviews">影评</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/wildboy/question">问答</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/wildboy/do">在看</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/wildboy/wish">想看</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/people/wildboy/collect">看过</a></li>
+    
+                    
+        <li><a href="https://www.douban.com/people/wildboy/doulists">豆列</a></li>
+    
+                    
+        <li class="sep">|</li>
+    
+                    
+        <li><a href="https://www.douban.com/people/wildboy/">豆瓣主页</a></li>
+    
+            </ul>
+        </div>
+    </div>
+
+
+        <div class="grid-16-8 clearfix">
+            
+            
+            <div class="article">
+                
+    
+
+    <div class="opt-bar mb30 clearfix">
+        <div class="sort">
+            
+                按时间排序<span class="gray-dot">·</span><a href="https://movie.douban.com/people/wildboy/collect?sort=rating&amp;start=0&amp;mode=grid&amp;tags_sort=count" class="ck-option" target="_self">按评价排序</a><span class="gray-dot">·</span><a href="https://movie.douban.com/people/wildboy/collect?sort=title&amp;start=0&amp;mode=grid&amp;tags_sort=count" class="ck-option" target="_self">按标题排序</a>
+        </div>
+        <style>
+            .tabs-more {zoom:1; float:left; margin-left:38px; position: relative; top:3px}
+            .tabs-more .gray {color:#999}
+            .tabs-more .lnk-tab-more{padding-right:5px;background:#fff;}
+            .tabs-more .lnk-tab-more:hover{background:#369;}
+            .tabs-more .lnk-tab-more span{background: url("/pics/icon/tongcheng_tab_down.gif") no-repeat right 3px;padding-right:10px;display:inline-block}
+            .tabs-more .lnk-tab-more span.up{background: url("/pics/icon/tongcheng_tab_up.gif") no-repeat right 3px;padding-right:10px;}
+            .tabs-more .lnk-tab-more:hover span{color:#fff;background: url("/pics/icon/tongcheng_tab_down.gif") no-repeat right -8px;}
+            .tabs-more .lnk-tab-more:hover span.up{background: url("/pics/icon/tongcheng_tab_up.gif") no-repeat right -8px;}
+            .tabs-more ul {display:none;position:absolute; background:#fff; border:1px solid #aaa; padding:5px 0; left:55px;_left:53px;_top:19px; top:18px; width:70px}
+            .tabs-more ul li a {display:block;text-align:center; padding:3px 5px;margin:0}
+            .tabs-more ul li{margin:0; zoom:1}
+            .tabs-more ul li a:hover {background:#369; color:#fff; }
+
+            .item .info li {clear: both;}
+            .item .title .playable {font-size: 13px; padding-left: 3px; color: #00A65F;}
+
+            .grid-view .item {overflow:auto; display:table; zoom:1}
+            .grid-view .item .tabs-more {margin-left:0;}
+            .grid-view .item .tabs-more span {color:#369;}
+            .grid-view .item .lnk-tab-more:hover span {color:#fff;}
+            .grid-view .item .clearDiv {clear:both}
+            .grid-view .item .tabs-more ul{left:0;margin-left:0}
+            .grid-view .item .comment {color:#000;}
+
+            .list-view .item {overflow:auto;display:table;width:100%; zoom:1}
+            .list-view .item .tabs-more{margin-left:0; margin-top:4px}
+            .list-view .item .tags{display:block;clear:both}
+            .list-view .item .tabs-more ul{left:0}
+            .list-view .item-show{height:17px;overflow:hidden}
+            .list-view .opt-ln {clear:both;margin-left:3px}
+            .list-view .comment {clear:both;}
+            .list-view .movieInfo {margin-top:4px;*margin-top:3px}
+
+        </style>
+        <script>
+            $(function(){
+                $(".lnk-tab-more").click(function(){
+                    $(this).next(".tabs-more-list").show();
+                    $("span",this).addClass("up");
+                    return false;
+                })
+                $(document.body).click(function(e){
+                    if($(e.target).parent().attr("class")!=="lnk-tab-more"){
+                        $(".tabs-more-list").hide();
+                        $("span.up").removeClass("up");
+                    }
+                })
+            })
+        </script>
+        <div class="tabs-more">
+            
+            <span class="gray">筛选影片:</span>
+            <a class="lnk-tab-more" href="#">
+                <span>全部</span>
+            </a>
+            <ul class="tabs-more-list">
+                <li><a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;amp;start=0&amp;amp;filter=schedule&amp;amp;mode=grid&amp;amp;tags_sort=count">正在热映</a></li>
+                <li><a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;amp;start=0&amp;amp;filter=video&amp;amp;mode=grid&amp;amp;tags_sort=count">在线观看</a></li>
+            </ul>
+        </div>
+        <div class="mode">
+            <span class="subject-num">
+                736-750&nbsp;/&nbsp;4246
+            </span>
+            <ul class="grid-list-bar">
+                
+                    <li class="grid-on">grid</li>
+                    <li class="list">
+                        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;amp;start=735&amp;amp;filter=all&amp;amp;mode=list&amp;amp;tags_sort=count">list</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+        
+
+<script type="text/javascript">
+$(function() {
+    $('.d_link').click(function() {
+        $(this).parents("div.item").hide();
+        var url = "/j/mine/j_cat_ui";
+        if (/\/location\//.test(location.href)) {
+            url = "/location" + url;
+        }
+        $.post_withck(url, {sid: this.rel},
+            function(sjson) {
+                var ret = eval("(" + sjson + ")");
+                if (!ret.result) {
+                    alert("出错了，请稍后重试!");
+                }
+        });
+    });
+})
+</script>
+
+
+<div class="grid-view">
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="言の葉の庭" href="https://movie.douban.com/subject/20470074/" class="nbg">
+                    <img alt="言の葉の庭" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1958733032.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/20470074/" class="">
+                            <em>言叶之庭 / 言の葉の庭</em>
+                             / 言语之庭 / 语言之庭
+                        </a>
+                    </li>
+                        <li class="intro">2013-05-31(日本) / 入野自由 / 花泽香菜 / 日本 / www.kotonohanoniwa.jp / 新海诚 / 46分钟(日本) / 言叶之庭 / 爱情 / 动画 / 新海诚 Makoto Shinkai / 日语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2013-07-08</span>
+                        
+                            <span class="tags">标签: 日本 动画 2013</span>
+                    </li>
+                    <li>
+                        <span class="comment">花泽香菜的声音太有特色了，有点点出戏。说实话站在成人的角度对这种师生情愫不是很能接受，不免想到这种情感摔碎在现实的地板上。好在结尾巧妙的独白突然想到，这是多好的励志片！喜欢上老师的男生都应该看看。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="カラスの親指" href="https://movie.douban.com/subject/6889533/" class="nbg">
+                    <img alt="カラスの親指" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1795123431.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/6889533/" class="">
+                            <em>乌鸦的拇指 / カラスの親指</em>
+                             / Karasu no oyayubi / Crow&#39;s Thumb
+                        </a>
+                    </li>
+                        <li class="intro">2012-11-23(日本) / 阿部宽 / 石原里美 / 村上昭二 / 能年玲奈 / 小柳友 / 日本 / movies.foxjapan.com/crow/index.html / 伊藤匡史 / 160分钟 / 乌鸦的拇指 / 剧情 / 悬疑 / 伊藤匡史 Tadafumi Ito / 道尾秀介 Shusuke Michio / 日语</li>
+                    <li>
+                        <span class="date">2013-07-08</span>
+                        
+                            <span class="tags">标签: 2013 日本</span>
+                    </li>
+                    <li>
+                        <span class="comment">原封不动的照搬原著，舍不得删减抒情段落过多，导致诡计、复仇的张力减弱，原著最得意的最后翻转还是缓缓的抒情，伊藤高志真把自己当是枝裕和了，心目中如果中村义洋改编，内田贤治导演会好看许多。太长了……</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="The Croods" href="https://movie.douban.com/subject/1907966/" class="nbg">
+                    <img alt="The Croods" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p1867084027.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/1907966/" class="">
+                            <em>疯狂原始人 / The Croods</em>
+                             / 古鲁家族(港/台) / 克鲁德一家
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2013-02-15(柏林电影节) / 2013-03-22(美国) / 2013-04-20(中国大陆) / 尼古拉斯·凯奇 / 瑞恩·雷诺兹 / 艾玛·斯通 / 凯瑟琳·基纳 / 克拉克·杜克 / 克劳斯·利特曼 / 克里斯·桑德斯 / 兰迪·汤姆 / 美国 / 柯克·德·米科 / 克里斯·桑德斯 / 98分钟 / 疯狂原始人 / 喜剧 / 动画 / 冒险 / 克里斯·桑德斯 Chris Sanders / 科克·德·米科 Kirk De Micco / 英语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2013-07-08</span>
+                        
+                            <span class="tags">标签: 2013 美国 动画</span>
+                    </li>
+                    <li>
+                        <span class="comment">看的是国语版，梁家辉的国语配音带着口音所以很有味道。蓝光出街再看一遍原声版。电影上映时没有时间去看，真是一件遗憾的事情。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="父後七日" href="https://movie.douban.com/subject/4307349/" class="nbg">
+                    <img alt="父後七日" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2118496474.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/4307349/" class="">
+                            <em>父后七日 / 父後七日</em>
+                             / Seven Days in Heaven / 7 Days in Heaven
+                        </a>
+                    </li>
+                        <li class="intro">2010-08-27 / 王莉雯 / 吴朋奉 / 陈家祥 / 陈泰桦 / 张嘉年 / 张诗盈 / 台湾 / 刘梓洁 / 王育麟 / 91分钟 / 父后七日 / 家庭 / 刘梓洁 / 汉语普通话 / 闽南语</li>
+                    <li>
+                                    <span class="rating4-t"></span>
+                        <span class="date">2013-07-08</span>
+                        
+                            <span class="tags">标签: 2013 台湾</span>
+                    </li>
+                    <li>
+                        <span class="comment">一直觉得亲人逝去后繁复的流程是一种追思也是一种让自己忙起来的方法，不让自己有时间沉浸在悲伤之中。轻松的一部影片淡淡的微笑、浅浅的思念，待时间静静流淌，留下的是泪水的痕迹。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Evil Dead" href="https://movie.douban.com/subject/3212400/" class="nbg">
+                    <img alt="Evil Dead" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1815021256.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/3212400/" class="">
+                            <em>鬼玩人 / Evil Dead</em>
+                             / 尸变(台) / 鬼玩人4
+                        </a>
+                    </li>
+                        <li class="intro">2013-04-05(美国) / 简·拉维 / 希罗·弗南德兹 / 杰西卡·卢卡斯 / 卢·泰勒·普奇 / 伊丽莎白·布莱克摩尔 / Rupert Degas / 布鲁斯·坎贝尔  / 美国 / 费德·阿尔瓦雷兹 / 91分钟 / 鬼玩人 / 惊悚 / 恐怖 / 费德·阿尔瓦雷兹 Fede Alvarez / 迪亚波罗·科蒂 Diablo Cody / Rodo Sayagues / 英语</li>
+                    <li>
+                                    <span class="rating2-t"></span>
+                        <span class="date">2013-07-05</span>
+                        
+                            <span class="tags">标签: 2013 美国</span>
+                    </li>
+                    <li>
+                        <span class="comment">血浆片，仅此而已。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="盲探" href="https://movie.douban.com/subject/6872273/" class="nbg">
+                    <img alt="盲探" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2003777772.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/6872273/" class="">
+                            <em>盲探</em>
+                             / Blind Detective
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2013-05-19(戛纳电影节) / 2013-07-04(中国大陆/香港) / 刘德华 / 郑秀文 / 郭涛 / 高圆圆 / 王紫逸 / 郎月婷 / 卢海鹏 / 黄文慧 / 林雪 / 姜皓文 / 中国大陆 / 香港 / 杜琪峰 / 129分钟 / 喜剧 / 爱情 / 悬疑 / 惊悚 / 犯罪 / 韦家辉 Ka-Fai Wai / 游乃海 Nai-Hoi Yau / 陈伟斌 Ryker Chan / 余曦 Xi Yu / 粤语 / 汉语普通话</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2013-07-05</span>
+                        
+                            <span class="tags">标签: 2013 香港 电影院</span>
+                    </li>
+                    <li>
+                        <span class="comment">嬉笑间尽是癫狂，吵闹中仿有真意。不过，真的不喜欢！</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="不二神探" href="https://movie.douban.com/subject/10604486/" class="nbg">
+                    <img alt="不二神探" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2006870496.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/10604486/" class="">
+                            <em>不二神探</em>
+                             / Badges of Fury
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2013-06-21(中国大陆) / 文章 / 李连杰 / 刘诗诗 / 陈妍希 / 柳岩 / 马伊琍 / 黄晓明 / 佟大为 / 冯德伦 / 吴京 / 邹兆龙 / 郑嘉颖 / 梁小龙 / 谢天华 / 张梓琳 / 邓丽欣 / 田亮 / 方力申 / 梁家仁 / 林雪 / 何超仪 / 林峰 / 中国大陆 / 王子鸣 / 98分钟 / 喜剧 / 动作 / 犯罪 / 张炭 Cheung Tan / 汉语普通话 / 粤语 / 英语</li>
+                    <li>
+                                    <span class="rating3-t"></span>
+                        <span class="date">2013-07-05</span>
+                        
+                            <span class="tags">标签: 2013 大陆</span>
+                    </li>
+                    <li>
+                        <span class="comment">群星云集的喜剧片，不要太纠结剧情，光看演员的表演甚至只是看看脸还是值得一看，至少吸引我看完了。动作部分倒是快进了。三位女演员各有千秋，还都蛮吸引人的。李连杰老了但喜剧效果达到了，文章大有成为喜剧小生的可能。最大的缺点反倒是动作CG过多。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="La promesse" href="https://movie.douban.com/subject/1299067/" class="nbg">
+                    <img alt="La promesse" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p2210784679.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/1299067/" class="">
+                            <em>一诺千金 / La promesse</em>
+                             / The Promise / 一诺千金
+                        </a>
+                    </li>
+                        <li class="intro">1996-10-16 / 杰瑞米·雷尼耶 / 奥利弗·古尔迈 / Assita Ouedraogo / 比利时 / 法国 / 卢森堡 / 让-皮埃尔·达内 / 吕克·达内 / Argentina: 92 分钟 / Belgium: 90 分钟 / Sweden: 94 分钟 / 一诺千金 / 剧情 / Jean-Pierre Dardenne / Luc Dardenne / 法语 / 罗马尼亚语</li>
+                    <li>
+                        <span class="date">2013-07-04</span>
+                        
+                            <span class="tags">标签: 比利时 2013</span>
+                    </li>
+                    <li>
+                        <span class="comment">达内兄弟自认风格形成的处女作，冷静、观察不介入。少年在模仿成人世界的同时产生了自己的是非观，而这似乎来自于异性的吸引，是一种不自觉的善。想知道他长大以后会不会变成父亲一样的人。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="宮本武蔵 完結篇 決闘巌流島" href="https://movie.douban.com/subject/1304859/" class="nbg">
+                    <img alt="宮本武蔵 完結篇 決闘巌流島" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2167858646.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/1304859/" class="">
+                            <em>宫本武藏 完结篇 决斗岩流岛 / 宮本武蔵 完結篇 決闘巌流島</em>
+                             / 宫本武藏:岸流岛的决斗 / Duel on Ganryu Island
+                        </a>
+                    </li>
+                        <li class="intro">1956-01-01 / 三船敏郎 / 鹤田浩二 / 八千草薰 / 冈田茉莉子 / 志村乔 / 日本 / 稻垣浩 / 105 分钟 / Spain: 115 分钟 / 宫本武藏 完结篇 决斗岩流岛 / 动作 / 冒险 / 传记 / 剧情 / 历史 / 稻垣浩 / 若尾德平 / 日语</li>
+                    <li>
+                        <span class="date">2013-07-03</span>
+                        
+                            <span class="tags">标签: 日本 2013</span>
+                    </li>
+                    <li>
+                        <span class="comment">“抱紧我直到我窒息！”这么煽情的台词也难怪宫本武藏要为难。最后一部渐入佳境，也点到为止。侠诞生了，平凡人也少了一个。在做侠还是做人上，宫本武藏很清楚，但阿通还是朱实，他永远被动的接受命运，两位女性对爱的追求远比他对武之道的追求要坚定。</span>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="続宮本武蔵 一乗寺の決闘" href="https://movie.douban.com/subject/1304858/" class="nbg">
+                    <img alt="続宮本武蔵 一乗寺の決闘" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2167858840.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/1304858/" class="">
+                            <em>宫本武藏续 一乘寺之决斗 / 続宮本武蔵 一乗寺の決闘</em>
+                             / 续宫本武藏:一乘寺的决斗 / Samurai 2: Duel at Ichijoji Temple
+                        </a>
+                    </li>
+                        <li class="intro">1955-07-12 / 三船敏郎 / 八千草薰 / 鹤田浩二 / 堺左千夫 / 冈田茉莉子 / 木暮实千代 / 日本 / 稻垣浩 / 104 分钟 / 宫本武藏续 一乘寺之决斗 / 动作 / 冒险 / 传记 / 剧情 / 历史 / 稻垣浩 / 若尾德平 / 日语</li>
+                    <li>
+                        <span class="date">2013-07-02</span>
+                        
+                            <span class="tags">标签: 日本 2013</span>
+                    </li>
+                    <li>
+                        <span class="comment">忽然发现三船敏郎和古天乐何止是神似！被他七武士等片里的搞怪形象给蒙骗了，大帅哥一枚！冈田茉莉子的古装并不惊艳，还是小津把她调教得比较好。</span>
+                        
+                            <span class="pl">(1 有用)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="La poison" href="https://movie.douban.com/subject/2225022/" class="nbg">
+                    <img alt="La poison" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2204553710.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/2225022/" class="">
+                            <em>毒药 / La poison</em>
+                             / 毒药
+                        </a>
+                    </li>
+                        <li class="intro">1951-11-30 / 米切尔·西芒 / 让·德比古 / 雅克·瓦雷纳 / 让娜·菲西耶-吉尔 / 热尔梅娜·勒弗尔 / 波利娜·卡尔东 / 阿尔贝·迪瓦莱 / 亨利·拉韦尔纳 / 雅克·德·费罗迪 / 雅克·德里夫斯 / 路易·德·菲耐斯 / 吕斯·法比奥 / 伊冯娜·埃贝尔 / Roger Poirier / 安德烈·达利贝尔 / 法国 / 萨卡·圭特瑞 / 85分钟 / 毒药 / 喜剧 / 萨卡·圭特瑞 Sacha Guitry / 法语</li>
+                    <li>
+                        <span class="date">2013-07-01</span>
+                        
+                            <span class="tags">标签: 法国 2013</span>
+                    </li>
+                    <li>
+                        <span class="comment">别轻易看轻胖子，他们早就在计划他们的复仇计划，而你，只是他的一颗棋子而已。不错的讽刺喜剧，简单、直接。</span>
+                        
+                            <span class="pl">(1 有用)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Olympus Has Fallen" href="https://movie.douban.com/subject/10743974/" class="nbg">
+                    <img alt="Olympus Has Fallen" src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p2162364777.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/10743974/" class="">
+                            <em>奥林匹斯的陷落 / Olympus Has Fallen</em>
+                             / 全面攻占：倒数救援(台) / 白宫沦陷(港)
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2013-03-22(美国) / 2013-12-29(中国大陆) / 杰拉德·巴特勒 / 艾伦·艾克哈特 / 芬利·雅克布森 / 迪伦·麦克德莫特 / 尹成植 / 摩根·弗里曼 / 安吉拉·贝塞特 / 梅丽莎·里奥 / 拉妲·米契尔 / 科尔·豪瑟 / 艾什莉·贾德 / 美国 / 安东尼·福奎阿 / 114分钟(中国大陆) / 119分钟(美国) / 奥林匹斯的陷落 / 动作 / Creighton Rothenberger / Katrin Benedikt / 英语 / 韩语</li>
+                    <li>
+                        <span class="date">2013-06-30</span>
+                        
+                            <span class="tags">标签: 2013 美国</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="幽浮目击者" href="https://movie.douban.com/subject/23406462/" class="nbg">
+                    <img alt="幽浮目击者" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2366731073.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/23406462/" class="">
+                            <em>幽浮目击者</em>
+                             / 嘻哈三部曲之幽浮目击者
+                        </a>
+                    </li>
+                        <li class="intro">2013-04-12 / 卢正雨 / 吴健 / 庄宇琳 / 陈婧 / 魏震 / 中国大陆 / 卢正雨 / 26分钟 / 喜剧 / 科幻 / 悬疑 / 短片 / 卢正雨 Zhengyu Lu / 汉语普通话</li>
+                    <li>
+                        <span class="date">2013-06-30</span>
+                        
+                            <span class="tags">标签: 2013 大陆 短片</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="Das weiße Band – Eine deutsche Kindergeschichte" href="https://movie.douban.com/subject/2464346/" class="nbg">
+                    <img alt="Das weiße Band – Eine deutsche Kindergeschichte" src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2196608840.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/2464346/" class="">
+                            <em>白丝带 / Das weiße Band – Eine deutsche Kindergeschichte</em>
+                             / 白色缎带 / 白色丝带
+                        </a>
+                            <span class="playable">[可播放]</span>
+                    </li>
+                        <li class="intro">2009-09-17(德国) / Christian Friedel / Ernst Jacobi / Leonie Benesch / 乌尔里奇·图克尔 / Ursina Lardi / Michael Kranz / 伯格哈特·克莱斯纳 / 德国 / 奥地利 / 法国 / 意大利 / 迈克尔·哈内克 / 144分钟 / 白丝带 / 剧情 / 悬疑 / 迈克尔·哈内克 Michael Haneke / 德语 / 意大利语 / 波兰语 / 拉丁语</li>
+                    <li>
+                        <span class="date">2013-06-28</span>
+                        
+                            <span class="tags">标签: 2013 德国</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item" >
+            <div class="pic">
+                <a title="ラブソング" href="https://movie.douban.com/subject/20253789/" class="nbg">
+                    <img alt="ラブソング" src="https://img3.doubanio.com/spic/s23131186.jpg" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a href="https://movie.douban.com/subject/20253789/" class="">
+                            <em>情歌 / ラブソング</em>
+                             / 爱之歌 / Love Song
+                        </a>
+                    </li>
+                        <li class="intro">1984(日本) / 日本 / 园子温 / 9分钟 / 情歌 / 短片 / 园子温 Shion Sono / 日语</li>
+                    <li>
+                        <span class="date">2013-06-27</span>
+                        
+                            <span class="tags">标签: 日本 2013 短片</span>
+                    </li>
+                    <li>
+                        <span class="comment">园子温处女作，贯穿始终的闹钟铃声极度考验观众忍受力，用以代表恋爱中的焦虑、急迫？</span>
+                        
+                            <span class="pl">(2 有用)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+    
+    
+    
+
+    
+        <div class="paginator">
+        <span class="prev">
+            <link rel="prev" href="https://movie.douban.com/people/wildboy/collect?start=720&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid"/>
+            <a href="https://movie.douban.com/people/wildboy/collect?start=720&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >&lt;前页</a>
+        </span>
+        
+        
+            
+            <a href="https://movie.douban.com/people/wildboy/collect?start=0&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >1</a>
+        
+            <a href="https://movie.douban.com/people/wildboy/collect?start=15&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >2</a>
+        <span class="break">...</span>
+
+                
+            <a href="https://movie.douban.com/people/wildboy/collect?start=675&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >46</a>
+        
+                
+            <a href="https://movie.douban.com/people/wildboy/collect?start=690&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >47</a>
+        
+                
+            <a href="https://movie.douban.com/people/wildboy/collect?start=705&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >48</a>
+        
+                
+            <a href="https://movie.douban.com/people/wildboy/collect?start=720&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >49</a>
+        
+                <span class="thispage" data-total-page="284">50</span>
+                
+            <a href="https://movie.douban.com/people/wildboy/collect?start=750&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >51</a>
+        
+                
+            <a href="https://movie.douban.com/people/wildboy/collect?start=765&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >52</a>
+        
+                
+            <a href="https://movie.douban.com/people/wildboy/collect?start=780&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >53</a>
+        
+                
+            <a href="https://movie.douban.com/people/wildboy/collect?start=795&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >54</a>
+        
+            <span class="break">...</span>
+                
+            <a href="https://movie.douban.com/people/wildboy/collect?start=4230&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >283</a>
+        
+            <a href="https://movie.douban.com/people/wildboy/collect?start=4245&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >284</a>
+        
+        <span class="next">
+            <link rel="next" href="https://movie.douban.com/people/wildboy/collect?start=750&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid"/>
+            <a href="https://movie.douban.com/people/wildboy/collect?start=750&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid" >后页&gt;</a>
+        </span>
+
+        </div>
+
+
+
+            </div>
+            <div class="aside">
+                
+    
+    
+
+
+<div class="side-info">
+    <a href="https://www.douban.com/people/wildboy/" class="side-info-avatar"><img height="48" width="48" alt="阿七" src="https://img1.doubanio.com/icon/u1018267-29.jpg" /></a>
+    <div class="side-info-txt">
+        <h3>阿七</h3>
+        &gt;&nbsp;<a href="https://www.douban.com/people/wildboy/">豆瓣主页</a>
+    </div>
+    <div class="user-content">
+    </div>
+</div>
+
+    <div class="mod">
+        <p class="pl2 m0">
+            &gt; <a href="https://movie.douban.com/people/wildboy/">阿七的电影主页</a>
+        </p>
+    </div>
+        
+    <h2>
+        看过的标签
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+    </h2>
+
+    
+    
+<div class="opt-bar mb15 clearfix">
+    <div class="sort">
+        
+        按标签量排序<span class="gray-dot">·</span><a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;start=735&amp;filter=all&amp;mode=grid&amp;tags_sort=name">按首字母排序</a>
+    </div>
+</div>
+<ul class="tag-list mb10">
+
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BE%8E%E5%9B%BD&amp;mode=grid" title="美国">美国</a>
+        <span>1603</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%A6%99%E6%B8%AF&amp;mode=grid" title="香港">香港</a>
+        <span>667</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E6%9C%AC&amp;mode=grid" title="日本">日本</a>
+        <span>433</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%A4%A7%E9%99%86&amp;mode=grid" title="大陆">大陆</a>
+        <span>414</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%9F%AD%E7%89%87&amp;mode=grid" title="短片">短片</a>
+        <span>296</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=2010&amp;mode=grid" title="2010">2010</a>
+        <span>295</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=2011&amp;mode=grid" title="2011">2011</a>
+        <span>265</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=2014&amp;mode=grid" title="2014">2014</a>
+        <span>255</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=2013&amp;mode=grid" title="2013">2013</a>
+        <span>241</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%94%B5%E5%BD%B1%E9%99%A2&amp;mode=grid" title="电影院">电影院</a>
+        <span>222</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%B3%95%E5%9B%BD&amp;mode=grid" title="法国">法国</a>
+        <span>205</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=2009&amp;mode=grid" title="2009">2009</a>
+        <span>203</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=2015&amp;mode=grid" title="2015">2015</a>
+        <span>186</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%8B%B1%E5%9B%BD&amp;mode=grid" title="英国">英国</a>
+        <span>173</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=2012&amp;mode=grid" title="2012">2012</a>
+        <span>168</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BA%AA%E5%BD%95%E7%89%87&amp;mode=grid" title="纪录片">纪录片</a>
+        <span>164</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=2016&amp;mode=grid" title="2016">2016</a>
+        <span>155</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8A%A8%E7%94%BB&amp;mode=grid" title="动画">动画</a>
+        <span>150</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%9F%A9%E5%9B%BD&amp;mode=grid" title="韩国">韩国</a>
+        <span>109</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BE%8E%E5%89%A7&amp;mode=grid" title="美剧">美剧</a>
+        <span>107</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%84%8F%E5%A4%A7%E5%88%A9&amp;mode=grid" title="意大利">意大利</a>
+        <span>79</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%97%A5%E5%89%A7&amp;mode=grid" title="日剧">日剧</a>
+        <span>58</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8F%B0%E6%B9%BE&amp;mode=grid" title="台湾">台湾</a>
+        <span>58</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%BE%B7%E5%9B%BD&amp;mode=grid" title="德国">德国</a>
+        <span>48</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%A5%BF%E7%8F%AD%E7%89%99&amp;mode=grid" title="西班牙">西班牙</a>
+        <span>33</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8A%A0%E6%8B%BF%E5%A4%A7&amp;mode=grid" title="加拿大">加拿大</a>
+        <span>24</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A&amp;mode=grid" title="澳大利亚">澳大利亚</a>
+        <span>19</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%A4%A7%E9%99%86%E5%89%A7&amp;mode=grid" title="大陆剧">大陆剧</a>
+        <span>18</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%B3%B0%E5%9B%BD&amp;mode=grid" title="泰国">泰国</a>
+        <span>17</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%8F%B2%E5%A7%90&amp;mode=grid" title="菲姐">菲姐</a>
+        <span>15</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E4%BF%84%E7%BD%97%E6%96%AF&amp;mode=grid" title="俄罗斯">俄罗斯</a>
+        <span>14</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%91%9E%E5%85%B8&amp;mode=grid" title="瑞典">瑞典</a>
+        <span>12</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8A%A8%E6%BC%AB&amp;mode=grid" title="动漫">动漫</a>
+        <span>11</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%B3%A2%E5%85%B0&amp;mode=grid" title="波兰">波兰</a>
+        <span>10</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E4%B8%B9%E9%BA%A6&amp;mode=grid" title="丹麦">丹麦</a>
+        <span>9</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%96%B0%E8%A5%BF%E5%85%B0&amp;mode=grid" title="新西兰">新西兰</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%8B%B1%E5%89%A7&amp;mode=grid" title="英剧">英剧</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%B8%AF%E5%89%A7&amp;mode=grid" title="港剧">港剧</a>
+        <span>7</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8F%B0%E5%89%A7&amp;mode=grid" title="台剧">台剧</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8D%97%E6%96%AF%E6%8B%89%E5%A4%AB&amp;mode=grid" title="南斯拉夫">南斯拉夫</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8D%B0%E5%BA%A6&amp;mode=grid" title="印度">印度</a>
+        <span>6</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=2010s&amp;mode=grid" title="2010s">2010s</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%AF%94%E5%88%A9%E6%97%B6&amp;mode=grid" title="比利时">比利时</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=1950s&amp;mode=grid" title="1950s">1950s</a>
+        <span>5</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%8D%B7%E5%85%B0&amp;mode=grid" title="荷兰">荷兰</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%88%B1%E5%B0%94%E5%85%B0&amp;mode=grid" title="爱尔兰">爱尔兰</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%8C%AA%E5%A8%81&amp;mode=grid" title="挪威">挪威</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=1960s&amp;mode=grid" title="1960s">1960s</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=2000s&amp;mode=grid" title="2000s">2000s</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%98%BF%E6%A0%B9%E5%BB%B7&amp;mode=grid" title="阿根廷">阿根廷</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%A2%A8%E8%A5%BF%E5%93%A5&amp;mode=grid" title="墨西哥">墨西哥</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%B7%B4%E8%A5%BF&amp;mode=grid" title="巴西">巴西</a>
+        <span>4</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%9F%A9%E5%89%A7&amp;mode=grid" title="韩剧">韩剧</a>
+        <span>3</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8C%88%E7%89%99%E5%88%A9&amp;mode=grid" title="匈牙利">匈牙利</a>
+        <span>3</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%A5%A5%E5%9C%B0%E5%88%A9&amp;mode=grid" title="奥地利">奥地利</a>
+        <span>3</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E4%BB%A5%E8%89%B2%E5%88%97&amp;mode=grid" title="以色列">以色列</a>
+        <span>3</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%96%B0%E5%8A%A0%E5%9D%A1&amp;mode=grid" title="新加坡">新加坡</a>
+        <span>3</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%B8%8C%E8%85%8A&amp;mode=grid" title="希腊">希腊</a>
+        <span>3</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E4%BC%8A%E6%9C%97&amp;mode=grid" title="伊朗">伊朗</a>
+        <span>3</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=1970s&amp;mode=grid" title="1970s">1970s</a>
+        <span>3</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E4%BF%9D%E5%8A%A0%E5%88%A9%E4%BA%9A&amp;mode=grid" title="保加利亚">保加利亚</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=1980s&amp;mode=grid" title="1980s">1980s</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%91%9E%E5%A3%AB&amp;mode=grid" title="瑞士">瑞士</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=1990s&amp;mode=grid" title="1990s">1990s</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%A1%9E%E5%B0%94%E7%BB%B4%E4%BA%9A&amp;mode=grid" title="塞尔维亚">塞尔维亚</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%98%BF%E5%B0%94%E5%8F%8A%E5%88%A9%E4%BA%9A&amp;mode=grid" title="阿尔及利亚">阿尔及利亚</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8D%97%E9%9D%9E&amp;mode=grid" title="南非">南非</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=BBC&amp;mode=grid" title="BBC">BBC</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%8A%AC%E5%85%B0&amp;mode=grid" title="芬兰">芬兰</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%BD%97%E9%A9%AC%E5%B0%BC%E4%BA%9A&amp;mode=grid" title="罗马尼亚">罗马尼亚</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%8D%B0%E5%B0%BC&amp;mode=grid" title="印尼">印尼</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=1940s&amp;mode=grid" title="1940s">1940s</a>
+        <span>2</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%8E%BB%E5%88%A9%E7%BB%B4%E4%BA%9A&amp;mode=grid" title="玻利维亚">玻利维亚</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E7%A7%98%E9%B2%81&amp;mode=grid" title="秘鲁">秘鲁</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%96%AF%E9%87%8C%E5%85%B0%E5%8D%A1&amp;mode=grid" title="斯里兰卡">斯里兰卡</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%96%B0%E5%8A%A0%E5%9D%A1%E5%89%A7&amp;mode=grid" title="新加坡剧">新加坡剧</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E9%A9%AC%E5%85%B6%E9%A1%BF&amp;mode=grid" title="马其顿">马其顿</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=1930s&amp;mode=grid" title="1930s">1930s</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%96%AF%E6%B4%9B%E4%BC%90%E5%85%8B&amp;mode=grid" title="斯洛伐克">斯洛伐克</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%B7%B4%E5%8B%92%E6%96%AF%E5%9D%A6&amp;mode=grid" title="巴勒斯坦">巴勒斯坦</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E6%8D%B7%E5%85%8B&amp;mode=grid" title="捷克">捷克</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=2007&amp;mode=grid" title="2007">2007</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%9C%9F%E8%80%B3%E5%85%B6&amp;mode=grid" title="土耳其">土耳其</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E5%86%B0%E5%B2%9B&amp;mode=grid" title="冰岛">冰岛</a>
+        <span>1</span>
+    </li>
+
+    <li class=" clearfix">
+        <a href="https://movie.douban.com/people/wildboy/collect?sort=time&amp;tags_sort=count&amp;filter=all&amp;tag=%E8%8F%B2%E5%BE%8B%E5%AE%BE&amp;mode=grid" title="菲律宾">菲律宾</a>
+        <span>1</span>
+    </li>
+</ul>
+
+
+<script>
+$(function () {
+    var TAG_URL_PARAMS = {"sort":"time","tags_sort":"count","filter":"all","tag":"菲律宾","mode":"grid"};
+    $('#open_tags').click(function() {
+        var $btn = $(this);
+        var $container = $("ul.tag-list");
+        var $tmpl = $container.find("li").first();
+
+        $.get("/j/people/wildboy/get_collection_tags", {
+            offset: 90,
+            tags_sort: "count",
+            cat_id: "1002",
+            action: "collect"
+        }, function (res) {
+            var tagUrl, newEl;
+
+            $(res).each(function (i, tagInfo) {
+                TAG_URL_PARAMS["tag"] = tagInfo.tag;
+                tagUrl = "https://movie.douban.com/people/wildboy/collect?" + $.param(TAG_URL_PARAMS);
+                newEl = $tmpl.clone();
+                if (tagInfo.tag === "None") {
+                    newEl.addClass("on");
+                }
+                newEl.find('a').attr("href", tagUrl)
+                                .attr("title", tagInfo.tag)
+                                .html(tagInfo.tag)
+                     .end()
+                     .find("span").html(tagInfo.count)
+                     .end().appendTo($container);
+            });
+            $btn.remove();
+        }, "json");
+    });
+});
+</script>
+
+
+            </div>
+            <div class="extra">
+                
+            </div>
+        </div>
+    </div>
+
+        
+    <div id="footer">
+            <div class="footer-extra"></div>
+        
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2016 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about?policy=disclaimer">免责声明</a>
+    
+    · <a href="https://help.douban.com/?app=movie" target="_blank">帮助中心</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+    </div>
+
+    </div>
+    <script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/fd8032bc82407e0.js"></script>
+        
+        
+    <link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css" />
+    <link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/movie/7345d4b259505f1a074773ce6b54f0253df2bb88/css/movie/mod/reg_login_pop.css" />
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/29449d396dacb28fd9949c709ccf02a46b910156/js/do.js" data-cfg-autoload="false"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/4b3bad5e25de78678d700dd5353570dce3e6bbcc/js/ui/dialog.js"></script>
+    <script type="text/javascript">
+        var HTTPS_DB='https://www.douban.com';
+var account_pop={open:function(e,b){if(b){referrer="?referrer="+encodeURIComponent(b)}else{referrer="?referrer="+window.location.href}var f="",a="",i=382;if(e==="reg"){f="用户注册";a="https://accounts.douban.com/popup/login?source=movie#popup_register";i=480}else{if(e==="login"){f="用户登录";a="https://accounts.douban.com/popup/login?source=movie"}}var h=document.location.protocol+"//"+document.location.hostname;var d=dui.Dialog({width:478,title:f,height:i,cls:"account_pop",isHideTitle:true,modal:true,content:"<iframe scrolling='no' frameborder='0' width='478' height='"+i+"' src='"+a+"' name='"+h+"'></iframe>"},true),c=d.node;c.undelegate();c.delegate(".dui-dialog-close","click",function(){var j=$("body");j.find("#login_msk").hide();j.find(".account_pop").remove()});if($(window).width()<478){var g="";if(e==="reg"){g=HTTPS_DB+"/accounts/register"+referrer}else{if(e==="login"){g=HTTPS_DB+"/accounts/login"+referrer}}window.location.href=g}else{d.open()}$(window).bind("message",function(j){if(j.originalEvent.origin==="https://accounts.douban.com"){c.find("iframe").css("height",j.originalEvent.data);c.height(j.originalEvent.data);d.update()}})}};if(Douban&&Douban.init_show_login){Douban.init_show_login=function(b){var a=$(b);a.click(function(){var c=a.data("ref")||"";account_pop.open("login",c);return false})}}Do(function(){$("body").delegate(".pop_register","click",function(b){b.preventDefault();var a=$(this).data("ref")||"";account_pop.open("reg",a);return false});$("body").delegate(".pop_login","click",function(b){b.preventDefault();var a=$(this).data("ref")||"";account_pop.open("login",a);return false})});
+    </script>
+
+    
+    
+  
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript';
+    g.defer=true;
+    g.async=true;
+    g.src=p+'://img3.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-19', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id]);
+      _gaq.push([method('_setSampleRate'), '5']);
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '0', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+    <!-- sindar19c-docker-->
+
+  <script>_SPLITTEST=''</script>
+</body>
+
+</html>
+
