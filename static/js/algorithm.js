@@ -293,6 +293,7 @@ function pointCloseness1(list, node_info, links)
 			arr[i].push(100000);
 		}
 	}
+	console.log(arr);
 	for (var i = 0; i < numOfLink; ++i) {
 		var m = links[i].source.name;
 		var n = links[i].target.name;
@@ -402,7 +403,6 @@ function pointBetweeness1(list, node_info)
 			}
 		}
 	}
-
 	var blength = betweeness.length;
 	var maxValue = 0;
 	for (var i = 0; i < blength; i++){
