@@ -36,6 +36,10 @@ text {
     font-size: 12px Microsoft YaHei;
 }
 
+.font-class{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 html,
 body {
   background-color: #333;
@@ -45,2276 +49,61 @@ body {
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-<script>
-  $(function() {
-    $("#slider").slider({
-      orientation: "horizontal",
-      range: "min",
-      max: 100,
-      min: 10,
-      value: 30,
-      slide: changeScale,
-      change: changeScale
-    });
-  });
-</script>
+
 <body>
 <div id='slider'></div>
+<div id='weightSliderInt'></div>
+<div id='weightSliderFloat'></div>
 <div id='node_info' style="width:100; height:100;"></div>
 <div id='selector'>
   <select id='calculator'>
-  <option value="MinimumSpanningTree">Minimum Spanning Tree</option>
+  <option value="MinimumSpanningTree(prim)">Minimum Spanning Tree (prim)</option>
+  <option value="MinimumSpanningTree(kruskal)">Minimum Spanning Tree (kruskal)</option>
   <option value="PointCloseness">Point Closeness</option>
   <option value="PointBetweeness">Point Betweeness</option>
   <option value="ConnectedComponent">Connected Component</option>
+  <option value="Floyd">Floyd Shortest Path</option>
+  <option value="Ford">Ford Shortest Path</option>
+  <option value="Dijkstra">Dijkstra Shortest Path</option>
+  <option value="SLPA">SLPA Algorithm</option>
+  <option value="Flow">Information Flow</option>
   </select>
   <button onclick="draw()">Draw</button>
 </div>
 <div id='gotoSelector'>
-  From
+  <font color="#FFFF00" class="font-class">From</font>
   <select id='fromOptions'>    
   </select>
-  To
+  <font color="#FFFF00" class="font-class">To</font>
   <select id='toOptions'>
   </select>
   <button onclick="drawShortestPath()">Goto</button>
 </div>
+<div id="clearButton"><button onclick="ClearCanvas()">Clear</button></div>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="static/js/npm.js"></script>
 <script>
 
-// http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
-var node_info =[
-{"id" : 0, "group" : 1},
-{"id" : 1, "group" : 1},
-{"id" : 2, "group" : 1},
-{"id" : 3, "group" : 1},
-{"id" : 4, "group" : 1},
-{"id" : 5, "group" : 1},
-{"id" : 6, "group" : 1},
-{"id" : 7, "group" : 1},
-{"id" : 8, "group" : 1},
-{"id" : 9, "group" : 1},
-{"id" : 10, "group" : 1},
-{"id" : 11, "group" : 1},
-{"id" : 12, "group" : 1},
-{"id" : 13, "group" : 1},
-{"id" : 14, "group" : 1},
-{"id" : 15, "group" : 1},
-{"id" : 16, "group" : 1},
-{"id" : 17, "group" : 1},
-{"id" : 18, "group" : 1},
-{"id" : 19, "group" : 1},
-{"id" : 20, "group" : 1},
-{"id" : 21, "group" : 1},
-{"id" : 22, "group" : 1},
-{"id" : 23, "group" : 1},
-{"id" : 24, "group" : 1},
-{"id" : 25, "group" : 1},
-{"id" : 26, "group" : 1},
-{"id" : 27, "group" : 1},
-{"id" : 28, "group" : 1},
-{"id" : 29, "group" : 1},
-{"id" : 30, "group" : 1},
-{"id" : 31, "group" : 1},
-{"id" : 32, "group" : 1},
-{"id" : 33, "group" : 1},
-{"id" : 34, "group" : 1},
-{"id" : 35, "group" : 1},
-{"id" : 36, "group" : 1},
-{"id" : 37, "group" : 1},
-{"id" : 38, "group" : 1},
-{"id" : 39, "group" : 1},
-{"id" : 40, "group" : 1},
-{"id" : 41, "group" : 1},
-{"id" : 42, "group" : 1},
-{"id" : 43, "group" : 1},
-{"id" : 44, "group" : 1},
-{"id" : 45, "group" : 1},
-{"id" : 46, "group" : 1},
-{"id" : 47, "group" : 1},
-{"id" : 48, "group" : 1},
-{"id" : 49, "group" : 1},
-{"id" : 50, "group" : 1},
-{"id" : 51, "group" : 1},
-{"id" : 52, "group" : 1},
-{"id" : 53, "group" : 1},
-{"id" : 54, "group" : 1},
-{"id" : 55, "group" : 1},
-{"id" : 56, "group" : 1},
-{"id" : 57, "group" : 1},
-{"id" : 58, "group" : 1},
-{"id" : 59, "group" : 1},
-{"id" : 60, "group" : 1},
-{"id" : 61, "group" : 1},
-{"id" : 62, "group" : 1},
-{"id" : 63, "group" : 1},
-{"id" : 64, "group" : 1},
-{"id" : 65, "group" : 1},
-{"id" : 66, "group" : 1},
-{"id" : 67, "group" : 1},
-{"id" : 68, "group" : 1},
-{"id" : 69, "group" : 1},
-{"id" : 70, "group" : 1},
-{"id" : 71, "group" : 1},
-{"id" : 72, "group" : 1},
-{"id" : 73, "group" : 1},
-{"id" : 74, "group" : 1},
-{"id" : 75, "group" : 1},
-{"id" : 76, "group" : 1},
-{"id" : 77, "group" : 1},
-{"id" : 78, "group" : 1},
-{"id" : 79, "group" : 1},
-{"id" : 80, "group" : 1},
-{"id" : 81, "group" : 1},
-{"id" : 82, "group" : 1},
-{"id" : 83, "group" : 1},
-{"id" : 84, "group" : 1},
-{"id" : 85, "group" : 1},
-{"id" : 86, "group" : 1},
-{"id" : 87, "group" : 1},
-{"id" : 88, "group" : 1},
-{"id" : 89, "group" : 1},
-{"id" : 90, "group" : 1},
-{"id" : 91, "group" : 1},
-{"id" : 92, "group" : 1},
-{"id" : 93, "group" : 1},
-{"id" : 94, "group" : 1},
-{"id" : 95, "group" : 1},
-{"id" : 96, "group" : 1},
-{"id" : 97, "group" : 1},
-{"id" : 98, "group" : 1},
-{"id" : 99, "group" : 1},
-{"id" : 100, "group" : 1},
-{"id" : 101, "group" : 1},
-{"id" : 102, "group" : 1},
-{"id" : 103, "group" : 1},
-{"id" : 104, "group" : 1},
-{"id" : 105, "group" : 1},
-{"id" : 106, "group" : 1},
-{"id" : 107, "group" : 1},
-{"id" : 108, "group" : 1},
-{"id" : 109, "group" : 1},
-{"id" : 110, "group" : 1},
-{"id" : 111, "group" : 1},
-{"id" : 112, "group" : 1},
-{"id" : 113, "group" : 1},
-{"id" : 114, "group" : 1},
-{"id" : 115, "group" : 1},
-{"id" : 116, "group" : 1},
-{"id" : 117, "group" : 1},
-{"id" : 118, "group" : 1},
-{"id" : 119, "group" : 1},
-{"id" : 120, "group" : 1},
-{"id" : 121, "group" : 1},
-{"id" : 122, "group" : 1},
-{"id" : 123, "group" : 1},
-{"id" : 124, "group" : 1},
-{"id" : 125, "group" : 1},
-{"id" : 126, "group" : 1},
-{"id" : 127, "group" : 1},
-{"id" : 128, "group" : 1},
-{"id" : 129, "group" : 1},
-{"id" : 130, "group" : 1},
-{"id" : 131, "group" : 1},
-{"id" : 132, "group" : 1},
-{"id" : 133, "group" : 1},
-{"id" : 134, "group" : 1},
-{"id" : 135, "group" : 1},
-{"id" : 136, "group" : 1},
-{"id" : 137, "group" : 1},
-{"id" : 138, "group" : 1},
-{"id" : 139, "group" : 1},
-{"id" : 140, "group" : 1},
-{"id" : 141, "group" : 1},
-{"id" : 142, "group" : 1},
-{"id" : 143, "group" : 1},
-{"id" : 144, "group" : 1},
-{"id" : 145, "group" : 1},
-{"id" : 146, "group" : 1},
-{"id" : 147, "group" : 1},
-{"id" : 148, "group" : 1},
-{"id" : 149, "group" : 1},
-{"id" : 150, "group" : 1},
-{"id" : 151, "group" : 1},
-{"id" : 152, "group" : 1},
-{"id" : 153, "group" : 1},
-{"id" : 154, "group" : 1},
-{"id" : 155, "group" : 1},
-{"id" : 156, "group" : 1},
-{"id" : 157, "group" : 1},
-{"id" : 158, "group" : 1},
-{"id" : 159, "group" : 1},
-{"id" : 160, "group" : 1},
-{"id" : 161, "group" : 1},
-{"id" : 162, "group" : 1},
-{"id" : 163, "group" : 1},
-{"id" : 164, "group" : 1},
-{"id" : 165, "group" : 1},
-{"id" : 166, "group" : 1},
-{"id" : 167, "group" : 1},
-{"id" : 168, "group" : 1},
-{"id" : 169, "group" : 1},
-{"id" : 170, "group" : 1},
-{"id" : 171, "group" : 1},
-{"id" : 172, "group" : 1},
-{"id" : 173, "group" : 1},
-{"id" : 174, "group" : 1},
-{"id" : 175, "group" : 1},
-{"id" : 176, "group" : 1},
-{"id" : 177, "group" : 1},
-{"id" : 178, "group" : 1},
-{"id" : 179, "group" : 1},
-{"id" : 180, "group" : 1},
-{"id" : 181, "group" : 1},
-{"id" : 182, "group" : 1},
-{"id" : 183, "group" : 1},
-{"id" : 184, "group" : 1},
-{"id" : 185, "group" : 1},
-{"id" : 186, "group" : 1},
-{"id" : 187, "group" : 1},
-{"id" : 188, "group" : 1},
-{"id" : 189, "group" : 1},
-{"id" : 190, "group" : 1},
-{"id" : 191, "group" : 1},
-{"id" : 192, "group" : 1},
-{"id" : 193, "group" : 1},
-{"id" : 194, "group" : 1},
-{"id" : 195, "group" : 1},
-{"id" : 196, "group" : 1},
-{"id" : 197, "group" : 1},
-{"id" : 198, "group" : 1},
-{"id" : 199, "group" : 1},
-{"id" : 200, "group" : 1},
-{"id" : 201, "group" : 1},
-{"id" : 202, "group" : 1},
-{"id" : 203, "group" : 1},
-{"id" : 204, "group" : 1},
-{"id" : 205, "group" : 1},
-{"id" : 206, "group" : 1},
-{"id" : 207, "group" : 1},
-{"id" : 208, "group" : 1},
-{"id" : 209, "group" : 1},
-{"id" : 210, "group" : 1},
-{"id" : 211, "group" : 1},
-{"id" : 212, "group" : 1},
-{"id" : 213, "group" : 1},
-{"id" : 214, "group" : 1},
-{"id" : 215, "group" : 1},
-{"id" : 216, "group" : 1},
-{"id" : 217, "group" : 1},
-{"id" : 218, "group" : 1},
-{"id" : 219, "group" : 1},
-{"id" : 220, "group" : 1},
-{"id" : 221, "group" : 1},
-{"id" : 222, "group" : 1},
-{"id" : 223, "group" : 1},
-{"id" : 224, "group" : 1},
-{"id" : 225, "group" : 1},
-{"id" : 226, "group" : 1},
-{"id" : 227, "group" : 1},
-{"id" : 228, "group" : 1},
-{"id" : 229, "group" : 1},
-{"id" : 230, "group" : 1},
-{"id" : 231, "group" : 1},
-{"id" : 232, "group" : 1},
-{"id" : 233, "group" : 1},
-{"id" : 234, "group" : 1},
-{"id" : 235, "group" : 1},
-{"id" : 236, "group" : 1},
-{"id" : 237, "group" : 1},
-{"id" : 238, "group" : 1},
-{"id" : 239, "group" : 1},
-{"id" : 240, "group" : 1},
-{"id" : 241, "group" : 1},
-{"id" : 242, "group" : 1},
-{"id" : 243, "group" : 1},
-{"id" : 244, "group" : 1},
-{"id" : 245, "group" : 1},
-{"id" : 246, "group" : 1},
-{"id" : 247, "group" : 1},
-{"id" : 248, "group" : 1},
-{"id" : 249, "group" : 1},
-{"id" : 250, "group" : 1},
-{"id" : 251, "group" : 1},
-{"id" : 252, "group" : 1},
-{"id" : 253, "group" : 1},
-{"id" : 254, "group" : 1},
-{"id" : 255, "group" : 1},
-{"id" : 256, "group" : 1},
-{"id" : 257, "group" : 1},
-{"id" : 258, "group" : 1},
-{"id" : 259, "group" : 1},
-{"id" : 260, "group" : 1},
-{"id" : 261, "group" : 1},
-{"id" : 262, "group" : 1},
-{"id" : 263, "group" : 1},
-{"id" : 264, "group" : 1},
-{"id" : 265, "group" : 1},
-{"id" : 266, "group" : 1},
-{"id" : 267, "group" : 1},
-{"id" : 268, "group" : 1},
-{"id" : 269, "group" : 1},
-{"id" : 270, "group" : 1},
-{"id" : 271, "group" : 1},
-{"id" : 272, "group" : 1},
-{"id" : 273, "group" : 1},
-{"id" : 274, "group" : 1},
-{"id" : 275, "group" : 1},
-{"id" : 276, "group" : 1},
-{"id" : 277, "group" : 1},
-{"id" : 278, "group" : 1},
-{"id" : 279, "group" : 1},
-{"id" : 280, "group" : 1},
-{"id" : 281, "group" : 1},
-{"id" : 282, "group" : 1},
-{"id" : 283, "group" : 1},
-{"id" : 284, "group" : 1},
-{"id" : 285, "group" : 1},
-{"id" : 286, "group" : 1},
-{"id" : 287, "group" : 1},
-{"id" : 288, "group" : 1},
-{"id" : 289, "group" : 1},
-{"id" : 290, "group" : 1},
-{"id" : 291, "group" : 1},
-{"id" : 292, "group" : 1},
-{"id" : 293, "group" : 1},
-{"id" : 294, "group" : 1},
-{"id" : 295, "group" : 1},
-{"id" : 296, "group" : 1},
-{"id" : 297, "group" : 1},
-{"id" : 298, "group" : 1},
-{"id" : 299, "group" : 1},
-{"id" : 300, "group" : 1},
-{"id" : 301, "group" : 1},
-{"id" : 302, "group" : 1},
-{"id" : 303, "group" : 1},
-{"id" : 304, "group" : 1},
-{"id" : 305, "group" : 1},
-{"id" : 306, "group" : 1},
-{"id" : 307, "group" : 1},
-{"id" : 308, "group" : 1},
-{"id" : 309, "group" : 1},
-{"id" : 310, "group" : 1},
-{"id" : 311, "group" : 1},
-{"id" : 312, "group" : 1},
-{"id" : 313, "group" : 1},
-{"id" : 314, "group" : 1},
-{"id" : 315, "group" : 1},
-{"id" : 316, "group" : 1},
-{"id" : 317, "group" : 1},
-{"id" : 318, "group" : 1},
-{"id" : 319, "group" : 1},
-{"id" : 320, "group" : 1},
-{"id" : 321, "group" : 1},
-{"id" : 322, "group" : 1},
-{"id" : 323, "group" : 1},
-{"id" : 324, "group" : 1},
-{"id" : 325, "group" : 1},
-{"id" : 326, "group" : 1},
-{"id" : 327, "group" : 1},
-{"id" : 328, "group" : 1},
-{"id" : 329, "group" : 1},
-{"id" : 330, "group" : 1},
-{"id" : 331, "group" : 1},
-{"id" : 332, "group" : 1},
-{"id" : 333, "group" : 1},
-{"id" : 334, "group" : 1},
-{"id" : 335, "group" : 1},
-{"id" : 336, "group" : 1},
-{"id" : 337, "group" : 1},
-{"id" : 338, "group" : 1},
-{"id" : 339, "group" : 1},
-{"id" : 340, "group" : 1},
-{"id" : 341, "group" : 1},
-{"id" : 342, "group" : 1},
-{"id" : 343, "group" : 1},
-{"id" : 344, "group" : 1},
-{"id" : 345, "group" : 1},
-{"id" : 346, "group" : 1},
-{"id" : 347, "group" : 1},
-{"id" : 348, "group" : 1},
-{"id" : 349, "group" : 1},
-{"id" : 350, "group" : 1},
-{"id" : 351, "group" : 1},
-{"id" : 352, "group" : 1},
-{"id" : 353, "group" : 1},
-{"id" : 354, "group" : 1},
-{"id" : 355, "group" : 1},
-{"id" : 356, "group" : 1},
-{"id" : 357, "group" : 1},
-{"id" : 358, "group" : 1},
-{"id" : 359, "group" : 1},
-{"id" : 360, "group" : 1},
-{"id" : 361, "group" : 1},
-{"id" : 362, "group" : 1},
-{"id" : 363, "group" : 1},
-{"id" : 364, "group" : 1},
-{"id" : 365, "group" : 1},
-{"id" : 366, "group" : 1},
-{"id" : 367, "group" : 1},
-{"id" : 368, "group" : 1},
-{"id" : 369, "group" : 1},
-{"id" : 370, "group" : 1},
-{"id" : 371, "group" : 1},
-{"id" : 372, "group" : 1},
-{"id" : 373, "group" : 1},
-{"id" : 374, "group" : 1},
-{"id" : 375, "group" : 1},
-{"id" : 376, "group" : 1},
-{"id" : 377, "group" : 1},
-{"id" : 378, "group" : 1},
-{"id" : 379, "group" : 1},
-{"id" : 380, "group" : 1},
-{"id" : 381, "group" : 1},
-{"id" : 382, "group" : 1},
-{"id" : 383, "group" : 1},
-{"id" : 384, "group" : 1},
-{"id" : 385, "group" : 1},
-{"id" : 386, "group" : 1},
-{"id" : 387, "group" : 1},
-{"id" : 388, "group" : 1},
-{"id" : 389, "group" : 1},
-{"id" : 390, "group" : 1},
-{"id" : 391, "group" : 1},
-{"id" : 392, "group" : 1},
-{"id" : 393, "group" : 1},
-{"id" : 394, "group" : 1},
-{"id" : 395, "group" : 1},
-{"id" : 396, "group" : 1},
-{"id" : 397, "group" : 1},
-{"id" : 398, "group" : 1},
-{"id" : 399, "group" : 1},
-{"id" : 400, "group" : 1},
-{"id" : 401, "group" : 1},
-{"id" : 402, "group" : 1},
-{"id" : 403, "group" : 1},
-{"id" : 404, "group" : 1},
-{"id" : 405, "group" : 1},
-{"id" : 406, "group" : 1},
-{"id" : 407, "group" : 1},
-{"id" : 408, "group" : 1},
-{"id" : 409, "group" : 1},
-{"id" : 410, "group" : 1},
-{"id" : 411, "group" : 1},
-{"id" : 412, "group" : 1},
-{"id" : 413, "group" : 1},
-{"id" : 414, "group" : 1},
-{"id" : 415, "group" : 1},
-{"id" : 416, "group" : 1},
-{"id" : 417, "group" : 1},
-{"id" : 418, "group" : 1},
-{"id" : 419, "group" : 1},
-{"id" : 420, "group" : 1},
-{"id" : 421, "group" : 1},
-{"id" : 422, "group" : 1},
-{"id" : 423, "group" : 1},
-{"id" : 424, "group" : 1},
-{"id" : 425, "group" : 1},
-{"id" : 426, "group" : 1},
-{"id" : 427, "group" : 1},
-{"id" : 428, "group" : 1},
-{"id" : 429, "group" : 1},
-{"id" : 430, "group" : 1},
-{"id" : 431, "group" : 1},
-{"id" : 432, "group" : 1},
-{"id" : 433, "group" : 1},
-{"id" : 434, "group" : 1},
-{"id" : 435, "group" : 1},
-{"id" : 436, "group" : 1},
-{"id" : 437, "group" : 1},
-{"id" : 438, "group" : 1},
-{"id" : 439, "group" : 1},
-{"id" : 440, "group" : 1},
-{"id" : 441, "group" : 1},
-{"id" : 442, "group" : 1},
-{"id" : 443, "group" : 1},
-{"id" : 444, "group" : 1},
-{"id" : 445, "group" : 1},
-{"id" : 446, "group" : 1},
-{"id" : 447, "group" : 1},
-{"id" : 448, "group" : 1},
-{"id" : 449, "group" : 1},
-{"id" : 450, "group" : 1},
-{"id" : 451, "group" : 1},
-{"id" : 452, "group" : 1},
-{"id" : 453, "group" : 1},
-{"id" : 454, "group" : 1},
-{"id" : 455, "group" : 1},
-{"id" : 456, "group" : 1},
-{"id" : 457, "group" : 1},
-{"id" : 458, "group" : 1},
-{"id" : 459, "group" : 1},
-{"id" : 460, "group" : 1},
-{"id" : 461, "group" : 1},
-{"id" : 462, "group" : 1},
-{"id" : 463, "group" : 1},
-{"id" : 464, "group" : 1},
-{"id" : 465, "group" : 1},
-{"id" : 466, "group" : 1},
-{"id" : 467, "group" : 1},
-{"id" : 468, "group" : 1},
-{"id" : 469, "group" : 1},
-{"id" : 470, "group" : 1},
-{"id" : 471, "group" : 1},
-{"id" : 472, "group" : 1},
-{"id" : 473, "group" : 1},
-{"id" : 474, "group" : 1},
-{"id" : 475, "group" : 1},
-{"id" : 476, "group" : 1},
-{"id" : 477, "group" : 1},
-{"id" : 478, "group" : 1},
-{"id" : 479, "group" : 1},
-{"id" : 480, "group" : 1},
-{"id" : 481, "group" : 1},
-{"id" : 482, "group" : 1},
-{"id" : 483, "group" : 1},
-{"id" : 484, "group" : 1},
-{"id" : 485, "group" : 1},
-{"id" : 486, "group" : 1},
-{"id" : 487, "group" : 1},
-{"id" : 488, "group" : 1},
-{"id" : 489, "group" : 1},
-{"id" : 490, "group" : 1},
-{"id" : 491, "group" : 1},
-{"id" : 492, "group" : 1},
-{"id" : 493, "group" : 1},
-{"id" : 494, "group" : 1},
-{"id" : 495, "group" : 1},
-{"id" : 496, "group" : 1},
-{"id" : 497, "group" : 1},
-{"id" : 498, "group" : 1},
-{"id" : 499, "group" : 1},
-{"id" : 500, "group" : 1},
-{"id" : 501, "group" : 1},
-{"id" : 502, "group" : 1},
-{"id" : 503, "group" : 1},
-{"id" : 504, "group" : 1},
-{"id" : 505, "group" : 1},
-{"id" : 506, "group" : 1},
-{"id" : 507, "group" : 1},
-{"id" : 508, "group" : 1},
-{"id" : 509, "group" : 1},
-{"id" : 510, "group" : 1},
-{"id" : 511, "group" : 1},
-{"id" : 512, "group" : 1},
-{"id" : 513, "group" : 1},
-{"id" : 514, "group" : 1},
-{"id" : 515, "group" : 1},
-{"id" : 516, "group" : 1},
-{"id" : 517, "group" : 1},
-{"id" : 518, "group" : 1},
-{"id" : 519, "group" : 1},
-{"id" : 520, "group" : 1},
-{"id" : 521, "group" : 1},
-{"id" : 522, "group" : 1},
-{"id" : 523, "group" : 1},
-{"id" : 524, "group" : 1},
-{"id" : 525, "group" : 1},
-{"id" : 526, "group" : 1},
-{"id" : 527, "group" : 1},
-{"id" : 528, "group" : 1},
-{"id" : 529, "group" : 1},
-{"id" : 530, "group" : 1},
-{"id" : 531, "group" : 1},
-{"id" : 532, "group" : 1},
-{"id" : 533, "group" : 1},
-{"id" : 534, "group" : 1},
-{"id" : 535, "group" : 1},
-{"id" : 536, "group" : 1},
-{"id" : 537, "group" : 1},
-{"id" : 538, "group" : 1},
-{"id" : 539, "group" : 1},
-{"id" : 540, "group" : 1},
-{"id" : 541, "group" : 1},
-{"id" : 542, "group" : 1},
-{"id" : 543, "group" : 1},
-{"id" : 544, "group" : 1},
-{"id" : 545, "group" : 1},
-{"id" : 546, "group" : 1},
-{"id" : 547, "group" : 1},
-{"id" : 548, "group" : 1},
-{"id" : 549, "group" : 1},
-{"id" : 550, "group" : 1},
-{"id" : 551, "group" : 1},
-{"id" : 552, "group" : 1},
-{"id" : 553, "group" : 1},
-{"id" : 554, "group" : 1},
-{"id" : 555, "group" : 1},
-{"id" : 556, "group" : 1},
-{"id" : 557, "group" : 1},
-{"id" : 558, "group" : 1},
-{"id" : 559, "group" : 1},
-{"id" : 560, "group" : 1},
-{"id" : 561, "group" : 1},
-{"id" : 562, "group" : 1},
-{"id" : 563, "group" : 1},
-{"id" : 564, "group" : 1},
-{"id" : 565, "group" : 1},
-{"id" : 566, "group" : 1},
-{"id" : 567, "group" : 1},
-{"id" : 568, "group" : 1},
-{"id" : 569, "group" : 1},
-{"id" : 570, "group" : 1},
-{"id" : 571, "group" : 1},
-{"id" : 572, "group" : 1},
-{"id" : 573, "group" : 1},
-{"id" : 574, "group" : 1},
-{"id" : 575, "group" : 1},
-{"id" : 576, "group" : 1},
-{"id" : 577, "group" : 1},
-{"id" : 578, "group" : 1},
-{"id" : 579, "group" : 1},
-{"id" : 580, "group" : 1},
-{"id" : 581, "group" : 1},
-{"id" : 582, "group" : 1},
-{"id" : 583, "group" : 1},
-{"id" : 584, "group" : 1},
-{"id" : 585, "group" : 1},
-{"id" : 586, "group" : 1},
-{"id" : 587, "group" : 1},
-{"id" : 588, "group" : 1},
-{"id" : 589, "group" : 1},
-{"id" : 590, "group" : 1},
-{"id" : 591, "group" : 1},
-{"id" : 592, "group" : 1},
-{"id" : 593, "group" : 1},
-{"id" : 594, "group" : 1},
-{"id" : 595, "group" : 1},
-{"id" : 596, "group" : 1},
-{"id" : 597, "group" : 1},
-{"id" : 598, "group" : 1},
-{"id" : 599, "group" : 1},
-{"id" : 600, "group" : 1},
-{"id" : 601, "group" : 1},
-{"id" : 602, "group" : 1},
-{"id" : 603, "group" : 1},
-{"id" : 604, "group" : 1},
-{"id" : 605, "group" : 1},
-{"id" : 606, "group" : 1},
-{"id" : 607, "group" : 1},
-{"id" : 608, "group" : 1},
-{"id" : 609, "group" : 1},
-{"id" : 610, "group" : 1},
-{"id" : 611, "group" : 1},
-{"id" : 612, "group" : 1},
-{"id" : 613, "group" : 1},
-{"id" : 614, "group" : 1},
-{"id" : 615, "group" : 1},
-{"id" : 616, "group" : 1},
-{"id" : 617, "group" : 1},
-{"id" : 618, "group" : 1},
-{"id" : 619, "group" : 1},
-{"id" : 620, "group" : 1},
-{"id" : 621, "group" : 1},
-{"id" : 622, "group" : 1},
-{"id" : 623, "group" : 1},
-{"id" : 624, "group" : 1},
-{"id" : 625, "group" : 1},
-{"id" : 626, "group" : 1},
-{"id" : 627, "group" : 1},
-{"id" : 628, "group" : 1},
-{"id" : 629, "group" : 1},
-{"id" : 630, "group" : 1},
-{"id" : 631, "group" : 1},
-{"id" : 632, "group" : 1},
-{"id" : 633, "group" : 1},
-{"id" : 634, "group" : 1},
-{"id" : 635, "group" : 1},
-{"id" : 636, "group" : 1},
-{"id" : 637, "group" : 1},
-{"id" : 638, "group" : 1},
-{"id" : 639, "group" : 1},
-{"id" : 640, "group" : 1},
-{"id" : 641, "group" : 1},
-{"id" : 642, "group" : 1},
-{"id" : 643, "group" : 1},
-{"id" : 644, "group" : 1},
-{"id" : 645, "group" : 1},
-{"id" : 646, "group" : 1},
-{"id" : 647, "group" : 1},
-{"id" : 648, "group" : 1},
-{"id" : 649, "group" : 1},
-{"id" : 650, "group" : 1},
-{"id" : 651, "group" : 1},
-{"id" : 652, "group" : 1},
-{"id" : 653, "group" : 1},
-{"id" : 654, "group" : 1},
-{"id" : 655, "group" : 1},
-{"id" : 656, "group" : 1},
-{"id" : 657, "group" : 1},
-{"id" : 658, "group" : 1},
-{"id" : 659, "group" : 1},
-{"id" : 660, "group" : 1},
-{"id" : 661, "group" : 1},
-{"id" : 662, "group" : 1},
-{"id" : 663, "group" : 1},
-{"id" : 664, "group" : 1},
-{"id" : 665, "group" : 1},
-{"id" : 666, "group" : 1},
-{"id" : 667, "group" : 1},
-{"id" : 668, "group" : 1},
-{"id" : 669, "group" : 1},
-{"id" : 670, "group" : 1},
-{"id" : 671, "group" : 1},
-{"id" : 672, "group" : 1},
-{"id" : 673, "group" : 1},
-{"id" : 674, "group" : 1},
-{"id" : 675, "group" : 1},
-{"id" : 676, "group" : 1},
-{"id" : 677, "group" : 1},
-{"id" : 678, "group" : 1},
-{"id" : 679, "group" : 1},
-{"id" : 680, "group" : 1},
-{"id" : 681, "group" : 1},
-{"id" : 682, "group" : 1},
-{"id" : 683, "group" : 1},
-{"id" : 684, "group" : 1},
-{"id" : 685, "group" : 1},
-{"id" : 686, "group" : 1},
-{"id" : 687, "group" : 1},
-{"id" : 688, "group" : 1},
-{"id" : 689, "group" : 1},
-{"id" : 690, "group" : 1},
-{"id" : 691, "group" : 1},
-{"id" : 692, "group" : 1},
-{"id" : 693, "group" : 1},
-{"id" : 694, "group" : 1},
-{"id" : 695, "group" : 1},
-{"id" : 696, "group" : 1},
-{"id" : 697, "group" : 1},
-{"id" : 698, "group" : 1},
-{"id" : 699, "group" : 1},
-{"id" : 700, "group" : 1},
-{"id" : 701, "group" : 1},
-{"id" : 702, "group" : 1},
-{"id" : 703, "group" : 1},
-{"id" : 704, "group" : 1},
-{"id" : 705, "group" : 1},
-{"id" : 706, "group" : 1},
-{"id" : 707, "group" : 1},
-{"id" : 708, "group" : 1},
-{"id" : 709, "group" : 1},
-{"id" : 710, "group" : 1},
-{"id" : 711, "group" : 1},
-{"id" : 712, "group" : 1},
-{"id" : 713, "group" : 1},
-{"id" : 714, "group" : 1},
-{"id" : 715, "group" : 1},
-{"id" : 716, "group" : 1},
-{"id" : 717, "group" : 1},
-{"id" : 718, "group" : 1},
-{"id" : 719, "group" : 1},
-{"id" : 720, "group" : 1},
-{"id" : 721, "group" : 1},
-{"id" : 722, "group" : 1},
-{"id" : 723, "group" : 1},
-{"id" : 724, "group" : 1},
-{"id" : 725, "group" : 1},
-{"id" : 726, "group" : 1},
-{"id" : 727, "group" : 1},
-{"id" : 728, "group" : 1},
-{"id" : 729, "group" : 1},
-{"id" : 730, "group" : 1},
-{"id" : 731, "group" : 1},
-{"id" : 732, "group" : 1},
-{"id" : 733, "group" : 1},
-{"id" : 734, "group" : 1},
-{"id" : 735, "group" : 1},
-{"id" : 736, "group" : 1},
-{"id" : 737, "group" : 1},
-{"id" : 738, "group" : 1},
-{"id" : 739, "group" : 1},
-{"id" : 740, "group" : 1},
-{"id" : 741, "group" : 1},
-{"id" : 742, "group" : 1},
-{"id" : 743, "group" : 1},
-{"id" : 744, "group" : 1},
-{"id" : 745, "group" : 1},
-{"id" : 746, "group" : 1},
-{"id" : 747, "group" : 1},
-{"id" : 748, "group" : 1},
-{"id" : 749, "group" : 1},
-{"id" : 750, "group" : 1},
-{"id" : 751, "group" : 1},
-{"id" : 752, "group" : 1},
-{"id" : 753, "group" : 1},
-{"id" : 754, "group" : 1},
-{"id" : 755, "group" : 1},
-{"id" : 756, "group" : 1},
-{"id" : 757, "group" : 1},
-{"id" : 758, "group" : 1},
-{"id" : 759, "group" : 1},
-{"id" : 760, "group" : 1},
-{"id" : 761, "group" : 1},
-{"id" : 762, "group" : 1},
-{"id" : 763, "group" : 1},
-{"id" : 764, "group" : 1},
-{"id" : 765, "group" : 1},
-{"id" : 766, "group" : 1},
-{"id" : 767, "group" : 1},
-{"id" : 768, "group" : 1},
-{"id" : 769, "group" : 1},
-{"id" : 770, "group" : 1},
-{"id" : 771, "group" : 1},
-{"id" : 772, "group" : 1},
-{"id" : 773, "group" : 1},
-{"id" : 774, "group" : 1},
-{"id" : 775, "group" : 1},
-{"id" : 776, "group" : 1},
-{"id" : 777, "group" : 1},
-{"id" : 778, "group" : 1},
-{"id" : 779, "group" : 1},
-{"id" : 780, "group" : 1},
-{"id" : 781, "group" : 1},
-{"id" : 782, "group" : 1},
-{"id" : 783, "group" : 1},
-{"id" : 784, "group" : 1},
-{"id" : 785, "group" : 1},
-{"id" : 786, "group" : 1},
-{"id" : 787, "group" : 1},
-{"id" : 788, "group" : 1},
-{"id" : 789, "group" : 1},
-{"id" : 790, "group" : 1},
-{"id" : 791, "group" : 1},
-{"id" : 792, "group" : 1},
-{"id" : 793, "group" : 1},
-{"id" : 794, "group" : 1},
-{"id" : 795, "group" : 1},
-{"id" : 796, "group" : 1},
-{"id" : 797, "group" : 1},
-{"id" : 798, "group" : 1},
-{"id" : 799, "group" : 1},
-{"id" : 800, "group" : 1},
-{"id" : 801, "group" : 1},
-{"id" : 802, "group" : 1},
-{"id" : 803, "group" : 1},
-{"id" : 804, "group" : 1},
-{"id" : 805, "group" : 1},
-{"id" : 806, "group" : 1},
-{"id" : 807, "group" : 1},
-{"id" : 808, "group" : 1},
-{"id" : 809, "group" : 1},
-{"id" : 810, "group" : 1},
-{"id" : 811, "group" : 1},
-{"id" : 812, "group" : 1},
-{"id" : 813, "group" : 1},
-{"id" : 814, "group" : 1},
-{"id" : 815, "group" : 1},
-{"id" : 816, "group" : 1},
-{"id" : 817, "group" : 1},
-{"id" : 818, "group" : 1},
-{"id" : 819, "group" : 1},
-{"id" : 820, "group" : 1},
-{"id" : 821, "group" : 1},
-{"id" : 822, "group" : 1},
-{"id" : 823, "group" : 1},
-{"id" : 824, "group" : 1},
-{"id" : 825, "group" : 1},
-{"id" : 826, "group" : 1},
-{"id" : 827, "group" : 1},
-{"id" : 828, "group" : 1},
-{"id" : 829, "group" : 1},
-{"id" : 830, "group" : 1},
-{"id" : 831, "group" : 1},
-{"id" : 832, "group" : 1},
-{"id" : 833, "group" : 1},
-{"id" : 834, "group" : 1},
-{"id" : 835, "group" : 1},
-{"id" : 836, "group" : 1},
-{"id" : 837, "group" : 1},
-{"id" : 838, "group" : 1},
-{"id" : 839, "group" : 1},
-{"id" : 840, "group" : 1},
-{"id" : 841, "group" : 1},
-{"id" : 842, "group" : 1},
-{"id" : 843, "group" : 1},
-{"id" : 844, "group" : 1},
-{"id" : 845, "group" : 1},
-{"id" : 846, "group" : 1},
-{"id" : 847, "group" : 1},
-{"id" : 848, "group" : 1},
-{"id" : 849, "group" : 1},
-{"id" : 850, "group" : 1},
-{"id" : 851, "group" : 1},
-{"id" : 852, "group" : 1},
-{"id" : 853, "group" : 1},
-{"id" : 854, "group" : 1},
-{"id" : 855, "group" : 1},
-{"id" : 856, "group" : 1},
-{"id" : 857, "group" : 1},
-{"id" : 858, "group" : 1},
-{"id" : 859, "group" : 1},
-{"id" : 860, "group" : 1},
-{"id" : 861, "group" : 1},
-{"id" : 862, "group" : 1},
-{"id" : 863, "group" : 1},
-{"id" : 864, "group" : 1},
-{"id" : 865, "group" : 1},
-{"id" : 866, "group" : 1},
-{"id" : 867, "group" : 1},
-{"id" : 868, "group" : 1},
-{"id" : 869, "group" : 1},
-{"id" : 870, "group" : 1},
-{"id" : 871, "group" : 1},
-{"id" : 872, "group" : 1},
-{"id" : 873, "group" : 1},
-{"id" : 874, "group" : 1},
-{"id" : 875, "group" : 1},
-{"id" : 876, "group" : 1},
-{"id" : 877, "group" : 1},
-{"id" : 878, "group" : 1},
-{"id" : 879, "group" : 1},
-{"id" : 880, "group" : 1},
-{"id" : 881, "group" : 1},
-{"id" : 882, "group" : 1},
-{"id" : 883, "group" : 1},
-{"id" : 884, "group" : 1},
-{"id" : 885, "group" : 1},
-{"id" : 886, "group" : 1},
-{"id" : 887, "group" : 1},
-{"id" : 888, "group" : 1},
-{"id" : 889, "group" : 1},
-{"id" : 890, "group" : 1},
-{"id" : 891, "group" : 1},
-{"id" : 892, "group" : 1},
-{"id" : 893, "group" : 1},
-{"id" : 894, "group" : 1},
-{"id" : 895, "group" : 1},
-{"id" : 896, "group" : 1},
-{"id" : 897, "group" : 1},
-{"id" : 898, "group" : 1},
-{"id" : 899, "group" : 1},
-{"id" : 900, "group" : 1},
-{"id" : 901, "group" : 1},
-{"id" : 902, "group" : 1},
-{"id" : 903, "group" : 1},
-{"id" : 904, "group" : 1},
-{"id" : 905, "group" : 1},
-{"id" : 906, "group" : 1},
-{"id" : 907, "group" : 1},
-{"id" : 908, "group" : 1},
-{"id" : 909, "group" : 1},
-{"id" : 910, "group" : 1},
-{"id" : 911, "group" : 1},
-{"id" : 912, "group" : 1},
-{"id" : 913, "group" : 1},
-{"id" : 914, "group" : 1},
-{"id" : 915, "group" : 1},
-{"id" : 916, "group" : 1},
-{"id" : 917, "group" : 1},
-{"id" : 918, "group" : 1},
-{"id" : 919, "group" : 1},
-{"id" : 920, "group" : 1},
-{"id" : 921, "group" : 1},
-{"id" : 922, "group" : 1},
-{"id" : 923, "group" : 1},
-{"id" : 924, "group" : 1},
-{"id" : 925, "group" : 1},
-{"id" : 926, "group" : 1},
-{"id" : 927, "group" : 1},
-{"id" : 928, "group" : 1},
-{"id" : 929, "group" : 1},
-{"id" : 930, "group" : 1},
-{"id" : 931, "group" : 1},
-{"id" : 932, "group" : 1},
-{"id" : 933, "group" : 1},
-{"id" : 934, "group" : 1},
-{"id" : 935, "group" : 1},
-{"id" : 936, "group" : 1},
-{"id" : 937, "group" : 1},
-{"id" : 938, "group" : 1},
-{"id" : 939, "group" : 1},
-{"id" : 940, "group" : 1},
-{"id" : 941, "group" : 1},
-{"id" : 942, "group" : 1},
-{"id" : 943, "group" : 1},
-{"id" : 944, "group" : 1},
-{"id" : 945, "group" : 1},
-{"id" : 946, "group" : 1},
-{"id" : 947, "group" : 1},
-{"id" : 948, "group" : 1},
-{"id" : 949, "group" : 1},
-{"id" : 950, "group" : 1},
-{"id" : 951, "group" : 1},
-{"id" : 952, "group" : 1},
-{"id" : 953, "group" : 1},
-{"id" : 954, "group" : 1},
-{"id" : 955, "group" : 1},
-{"id" : 956, "group" : 1},
-{"id" : 957, "group" : 1},
-{"id" : 958, "group" : 1},
-{"id" : 959, "group" : 1},
-{"id" : 960, "group" : 1},
-{"id" : 961, "group" : 1},
-{"id" : 962, "group" : 1},
-{"id" : 963, "group" : 1},
-{"id" : 964, "group" : 1},
-{"id" : 965, "group" : 1},
-{"id" : 966, "group" : 1},
-{"id" : 967, "group" : 1},
-{"id" : 968, "group" : 1},
-{"id" : 969, "group" : 1},
-{"id" : 970, "group" : 1}
-];
+var links, node_info, list, edges, clickedNode, width, height, force, svg, edges_line, edges_text, circle, text;
+var nodes = {}, name_to_id = {}, color_list = [];
+var floyd_changed = true, ford_point = undefined, select_ford;
+var floyd_matrix;
+var node_info_pos;
+var screenw = document.documentElement.clientWidth || document.body.clientWidth;
+var screenh = document.documentElement.clientHeight || document.body.clientHeight;
+var scrollleft, scrolltop;
 
-var links = [
-{"source":382,"target":412,"value":5.58},
-{"source":730,"target":904,"value":8.9},
-{"source":18,"target":642,"value":5.74},
-{"source":781,"target":963,"value":4.75},
-{"source":6,"target":411,"value":2.9},
-{"source":700,"target":889,"value":3.833},
-{"source":703,"target":910,"value":15.78},
-{"source":587,"target":790,"value":5.82},
-{"source":52,"target":959,"value":8.8},
-{"source":610,"target":810,"value":5.86},
-{"source":192,"target":273,"value":1.9},
-{"source":234,"target":910,"value":7.871},
-{"source":697,"target":789,"value":3.9},
-{"source":262,"target":811,"value":4.8},
-{"source":627,"target":707,"value":4.85},
-{"source":676,"target":954,"value":1.9},
-{"source":238,"target":664,"value":4.8},
-{"source":528,"target":573,"value":7.843},
-{"source":268,"target":319,"value":1.9},
-{"source":42,"target":954,"value":6.867},
-{"source":242,"target":301,"value":8.8},
-{"source":678,"target":887,"value":8.775},
-{"source":764,"target":807,"value":3.633},
-{"source":672,"target":920,"value":3.767},
-{"source":88,"target":963,"value":2.7},
-{"source":857,"target":958,"value":2.9},
-{"source":750,"target":964,"value":3.9},
-{"source":114,"target":319,"value":15.873},
-{"source":760,"target":935,"value":1.9},
-{"source":179,"target":790,"value":4.6},
-{"source":815,"target":925,"value":11.845},
-{"source":150,"target":816,"value":1.9},
-{"source":760,"target":879,"value":11.9},
-{"source":708,"target":775,"value":5.74},
-{"source":616,"target":636,"value":2.9},
-{"source":276,"target":940,"value":4.8},
-{"source":905,"target":947,"value":2.9},
-{"source":240,"target":895,"value":3.9},
-{"source":276,"target":704,"value":13.854},
-{"source":655,"target":719,"value":12.733},
-{"source":55,"target":255,"value":1.9},
-{"source":66,"target":643,"value":11.9},
-{"source":844,"target":968,"value":2.7},
-{"source":667,"target":940,"value":13.808},
-{"source":96,"target":206,"value":6.867},
-{"source":7,"target":294,"value":3.7},
-{"source":211,"target":786,"value":11.9},
-{"source":156,"target":649,"value":3.767},
-{"source":405,"target":421,"value":1.9},
-{"source":434,"target":960,"value":1.7},
-{"source":766,"target":865,"value":4.75},
-{"source":344,"target":576,"value":7.729},
-{"source":297,"target":579,"value":5.78},
-{"source":890,"target":898,"value":5.74},
-{"source":67,"target":320,"value":9.789},
-{"source":108,"target":811,"value":3.833},
-{"source":28,"target":962,"value":16.7},
-{"source":206,"target":632,"value":7.843},
-{"source":475,"target":689,"value":6.9},
-{"source":344,"target":681,"value":7.7},
-{"source":112,"target":754,"value":4.85},
-{"source":109,"target":629,"value":1.7},
-{"source":218,"target":900,"value":8.775},
-{"source":769,"target":947,"value":3.633},
-{"source":911,"target":965,"value":1.7},
-{"source":240,"target":756,"value":4.8},
-{"source":735,"target":862,"value":16.788},
-{"source":467,"target":794,"value":1.5},
-{"source":233,"target":685,"value":1.7},
-{"source":40,"target":728,"value":1.9},
-{"source":49,"target":746,"value":1.5},
-{"source":374,"target":918,"value":2.8},
-{"source":62,"target":226,"value":3.9},
-{"source":240,"target":737,"value":5.78},
-{"source":41,"target":784,"value":13.808},
-{"source":619,"target":709,"value":22.645},
-{"source":246,"target":336,"value":1.9},
-{"source":211,"target":860,"value":6.7},
-{"source":712,"target":761,"value":8.825},
-{"source":385,"target":718,"value":3.833},
-{"source":647,"target":938,"value":15.82},
-{"source":235,"target":799,"value":2.7},
-{"source":81,"target":901,"value":10.84},
-{"source":187,"target":891,"value":6.633},
-{"source":647,"target":699,"value":9.833},
-{"source":270,"target":946,"value":7.843},
-{"source":16,"target":743,"value":11.718},
-{"source":613,"target":903,"value":3.7},
-{"source":708,"target":841,"value":1.7},
-{"source":382,"target":676,"value":3.767},
-{"source":819,"target":841,"value":4.8},
-{"source":258,"target":764,"value":1.9},
-{"source":420,"target":456,"value":10.74},
-{"source":180,"target":360,"value":1.5},
-{"source":736,"target":897,"value":4.85},
-{"source":347,"target":761,"value":1.9},
-{"source":12,"target":960,"value":8.7},
-{"source":29,"target":886,"value":1.9},
-{"source":781,"target":815,"value":15.78},
-{"source":579,"target":943,"value":2.7},
-{"source":102,"target":245,"value":11.827},
-{"source":201,"target":789,"value":5.82},
-{"source":758,"target":787,"value":12.717},
-{"source":744,"target":845,"value":8.825},
-{"source":114,"target":245,"value":9.767},
-{"source":54,"target":593,"value":6.733},
-{"source":128,"target":393,"value":3.9},
-{"source":911,"target":967,"value":1.9},
-{"source":441,"target":958,"value":1.9},
-{"source":100,"target":929,"value":8.725},
-{"source":796,"target":869,"value":1.9},
-{"source":325,"target":949,"value":2.8},
-{"source":20,"target":281,"value":1.9},
-{"source":710,"target":841,"value":2.9},
-{"source":483,"target":604,"value":5.86},
-{"source":412,"target":749,"value":4.7},
-{"source":16,"target":901,"value":8.65},
-{"source":335,"target":564,"value":5.78},
-{"source":694,"target":716,"value":7.843},
-{"source":107,"target":385,"value":1.9},
-{"source":730,"target":959,"value":9.789},
-{"source":678,"target":770,"value":1.9},
-{"source":621,"target":944,"value":14.786},
-{"source":521,"target":703,"value":1.9},
-{"source":781,"target":859,"value":9.722},
-{"source":28,"target":717,"value":11.7},
-{"source":126,"target":389,"value":2.6},
-{"source":687,"target":747,"value":1.5},
-{"source":23,"target":659,"value":3.767},
-{"source":159,"target":220,"value":7.643},
-{"source":160,"target":889,"value":4.8},
-{"source":764,"target":863,"value":2.8},
-{"source":338,"target":760,"value":2.9},
-{"source":180,"target":294,"value":11.809},
-{"source":695,"target":866,"value":11.827},
-{"source":58,"target":213,"value":2.9},
-{"source":123,"target":845,"value":4.85},
-{"source":272,"target":941,"value":2.6},
-{"source":720,"target":742,"value":8.75},
-{"source":431,"target":632,"value":2.8},
-{"source":186,"target":724,"value":1.7},
-{"source":220,"target":807,"value":4.75},
-{"source":180,"target":796,"value":5.78},
-{"source":653,"target":737,"value":18.722},
-{"source":1,"target":479,"value":1.9},
-{"source":783,"target":833,"value":8.775},
-{"source":187,"target":674,"value":1.7},
-{"source":649,"target":741,"value":1.9},
-{"source":396,"target":760,"value":6.733},
-{"source":173,"target":853,"value":5.58},
-{"source":188,"target":764,"value":2.9},
-{"source":788,"target":821,"value":10.74},
-{"source":424,"target":836,"value":1.9},
-{"source":111,"target":598,"value":6.833},
-{"source":8,"target":711,"value":1.7},
-{"source":28,"target":424,"value":3.567},
-{"source":246,"target":731,"value":1.9},
-{"source":667,"target":744,"value":15.753},
-{"source":297,"target":404,"value":6.633},
-{"source":61,"target":378,"value":1.7},
-{"source":100,"target":614,"value":11.755},
-{"source":388,"target":643,"value":2.9},
-{"source":824,"target":829,"value":3.7},
-{"source":158,"target":318,"value":1.5},
-{"source":658,"target":946,"value":2.9},
-{"source":93,"target":622,"value":6.8},
-{"source":158,"target":292,"value":2.9},
-{"source":63,"target":556,"value":2.8},
-{"source":34,"target":929,"value":1.9},
-{"source":637,"target":680,"value":8.675},
-{"source":107,"target":153,"value":1.5},
-{"source":158,"target":613,"value":3.833},
-{"source":6,"target":162,"value":1.9},
-{"source":162,"target":680,"value":14.729},
-{"source":75,"target":875,"value":1.5},
-{"source":888,"target":906,"value":13.715},
-{"source":720,"target":786,"value":10.86},
-{"source":88,"target":610,"value":5.82},
-{"source":482,"target":775,"value":8.7},
-{"source":243,"target":405,"value":1.5},
-{"source":412,"target":725,"value":10.86},
-{"source":490,"target":705,"value":1.9},
-{"source":656,"target":763,"value":2.9},
-{"source":268,"target":729,"value":1.9},
-{"source":123,"target":320,"value":9.767},
-{"source":484,"target":791,"value":2.9},
-{"source":81,"target":144,"value":1.9},
-{"source":150,"target":699,"value":3.833},
-{"source":633,"target":694,"value":16.775},
-{"source":412,"target":696,"value":8.65},
-{"source":72,"target":251,"value":3.7},
-{"source":927,"target":939,"value":19.668},
-{"source":936,"target":968,"value":3.767},
-{"source":513,"target":939,"value":7.843},
-{"source":766,"target":925,"value":5.86},
-{"source":55,"target":647,"value":5.74},
-{"source":363,"target":872,"value":17.747},
-{"source":89,"target":227,"value":6.833},
-{"source":401,"target":752,"value":4.8},
-{"source":384,"target":565,"value":2.8},
-{"source":189,"target":758,"value":1.9},
-{"source":585,"target":799,"value":18.8},
-{"source":404,"target":748,"value":3.833},
-{"source":86,"target":463,"value":1.9},
-{"source":688,"target":800,"value":1.9},
-{"source":393,"target":573,"value":11.755},
-{"source":669,"target":934,"value":2.8},
-{"source":354,"target":446,"value":10.74},
-{"source":181,"target":904,"value":7.9},
-{"source":202,"target":860,"value":6.767},
-{"source":49,"target":965,"value":6.7},
-{"source":7,"target":308,"value":3.767},
-{"source":776,"target":915,"value":3.767},
-{"source":719,"target":954,"value":3.767},
-{"source":413,"target":965,"value":1.9},
-{"source":37,"target":159,"value":5.74},
-{"source":9,"target":782,"value":8.725},
-{"source":178,"target":688,"value":1.9},
-{"source":106,"target":808,"value":6.733},
-{"source":251,"target":743,"value":4.6},
-{"source":838,"target":859,"value":3.833},
-{"source":64,"target":353,"value":3.9},
-{"source":224,"target":248,"value":6.6},
-{"source":66,"target":932,"value":1.9},
-{"source":147,"target":214,"value":10.8},
-{"source":216,"target":763,"value":1.9},
-{"source":320,"target":672,"value":5.78},
-{"source":788,"target":861,"value":5.78},
-{"source":575,"target":670,"value":1.9},
-{"source":579,"target":623,"value":5.74},
-{"source":18,"target":141,"value":1.5},
-{"source":234,"target":946,"value":3.9},
-{"source":699,"target":790,"value":3.833},
-{"source":263,"target":651,"value":1.9},
-{"source":584,"target":721,"value":1.9},
-{"source":314,"target":424,"value":2.9},
-{"source":412,"target":566,"value":1.9},
-{"source":199,"target":647,"value":1.9},
-{"source":686,"target":805,"value":8.775},
-{"source":376,"target":745,"value":1.9},
-{"source":576,"target":676,"value":7.814},
-{"source":100,"target":761,"value":3.767},
-{"source":571,"target":700,"value":3.767},
-{"source":80,"target":360,"value":1.5},
-{"source":720,"target":902,"value":7.786},
-{"source":789,"target":798,"value":1.9},
-{"source":25,"target":245,"value":5.82},
-{"source":363,"target":381,"value":10.74},
-{"source":394,"target":783,"value":18.756},
-{"source":6,"target":190,"value":1.9},
-{"source":96,"target":862,"value":1.7},
-{"source":224,"target":824,"value":4.75},
-{"source":303,"target":585,"value":5.78},
-{"source":25,"target":843,"value":4.7},
-{"source":167,"target":897,"value":8.8},
-{"source":23,"target":693,"value":4.75},
-{"source":457,"target":866,"value":1.5},
-{"source":614,"target":862,"value":6.633},
-{"source":153,"target":669,"value":2.8},
-{"source":758,"target":938,"value":13.869},
-{"source":625,"target":645,"value":11.845},
-{"source":619,"target":833,"value":9.722},
-{"source":263,"target":750,"value":1.9},
-{"source":200,"target":581,"value":6.8},
-{"source":585,"target":871,"value":7.757},
-{"source":157,"target":884,"value":2.9},
-{"source":574,"target":862,"value":3.9},
-{"source":323,"target":658,"value":2.7},
-{"source":246,"target":612,"value":3.633},
-{"source":218,"target":656,"value":2.6},
-{"source":220,"target":783,"value":18.7},
-{"source":224,"target":908,"value":11.736},
-{"source":305,"target":895,"value":18.822},
-{"source":37,"target":250,"value":10.8},
-{"source":625,"target":936,"value":6.767},
-{"source":696,"target":967,"value":3.767},
-{"source":195,"target":679,"value":5.74},
-{"source":146,"target":262,"value":1.9},
-{"source":678,"target":936,"value":10.8},
-{"source":465,"target":778,"value":2.9},
-{"source":0,"target":612,"value":7.757},
-{"source":1,"target":686,"value":15.78},
-{"source":125,"target":201,"value":2.8},
-{"source":773,"target":960,"value":3.833},
-{"source":267,"target":412,"value":8.75},
-{"source":657,"target":789,"value":14.857},
-{"source":162,"target":180,"value":13.792},
-{"source":448,"target":705,"value":3.833},
-{"source":166,"target":279,"value":1.9},
-{"source":159,"target":773,"value":5.7},
-{"source":244,"target":258,"value":2.9},
-{"source":106,"target":180,"value":9.833},
-{"source":153,"target":293,"value":1.7},
-{"source":93,"target":873,"value":4.85},
-{"source":202,"target":589,"value":5.82},
-{"source":578,"target":809,"value":3.833},
-{"source":211,"target":662,"value":4.8},
-{"source":781,"target":820,"value":4.75},
-{"source":109,"target":754,"value":4.9},
-{"source":148,"target":231,"value":3.767},
-{"source":200,"target":876,"value":1.9},
-{"source":280,"target":458,"value":3.833},
-{"source":683,"target":950,"value":1.9},
-{"source":394,"target":421,"value":9.656},
-{"source":201,"target":216,"value":1.9},
-{"source":128,"target":664,"value":4.9},
-{"source":344,"target":795,"value":1.9},
-{"source":292,"target":920,"value":4.7},
-{"source":200,"target":735,"value":5.82},
-{"source":570,"target":632,"value":3.833},
-{"source":19,"target":647,"value":3.833},
-{"source":153,"target":814,"value":1.9},
-{"source":72,"target":274,"value":3.7},
-{"source":289,"target":567,"value":12.75},
-{"source":657,"target":692,"value":7.729},
-{"source":348,"target":454,"value":1.7},
-{"source":389,"target":827,"value":3.833},
-{"source":614,"target":838,"value":2.9},
-{"source":58,"target":323,"value":1.9},
-{"source":316,"target":564,"value":4.55},
-{"source":2,"target":625,"value":2.5},
-{"source":110,"target":458,"value":1.9},
-{"source":160,"target":600,"value":12.733},
-{"source":185,"target":411,"value":4.9},
-{"source":449,"target":688,"value":1.9},
-{"source":247,"target":630,"value":1.9},
-{"source":949,"target":967,"value":2.6},
-{"source":177,"target":179,"value":3.9},
-{"source":185,"target":596,"value":7.786},
-{"source":811,"target":830,"value":6.733},
-{"source":390,"target":706,"value":1.9},
-{"source":699,"target":946,"value":2.6},
-{"source":244,"target":589,"value":2.8},
-{"source":330,"target":592,"value":11.827},
-{"source":2,"target":852,"value":3.9},
-{"source":67,"target":336,"value":1.7},
-{"source":200,"target":460,"value":4.75},
-{"source":173,"target":841,"value":7.9},
-{"source":360,"target":390,"value":1.9},
-{"source":455,"target":924,"value":1.7},
-{"source":251,"target":687,"value":7.729},
-{"source":118,"target":757,"value":4.9},
-{"source":193,"target":841,"value":1.9},
-{"source":204,"target":663,"value":4.8},
-{"source":768,"target":882,"value":15.767},
-{"source":72,"target":178,"value":4.75},
-{"source":109,"target":642,"value":3.833},
-{"source":590,"target":621,"value":10.82},
-{"source":761,"target":916,"value":15.833},
-{"source":28,"target":696,"value":10.72},
-{"source":108,"target":674,"value":2.9},
-{"source":294,"target":909,"value":4.9},
-{"source":55,"target":783,"value":4.75},
-{"source":199,"target":687,"value":3.433},
-{"source":616,"target":708,"value":1.5},
-{"source":88,"target":889,"value":2.7},
-{"source":652,"target":809,"value":13.792},
-{"source":667,"target":786,"value":11.864},
-{"source":742,"target":810,"value":4.65},
-{"source":895,"target":943,"value":5.86},
-{"source":379,"target":434,"value":1.7},
-{"source":518,"target":829,"value":1.9},
-{"source":118,"target":601,"value":2.9},
-{"source":150,"target":773,"value":3.833},
-{"source":64,"target":361,"value":4.9},
-{"source":11,"target":597,"value":12.9},
-{"source":230,"target":712,"value":10.76},
-{"source":269,"target":458,"value":2.8},
-{"source":233,"target":801,"value":4.8},
-{"source":152,"target":443,"value":1.1},
-{"source":227,"target":813,"value":3.833},
-{"source":329,"target":772,"value":2.7},
-{"source":44,"target":738,"value":4.75},
-{"source":255,"target":848,"value":1.9},
-{"source":713,"target":940,"value":11.827},
-{"source":412,"target":468,"value":2.9},
-{"source":625,"target":779,"value":11.736},
-{"source":707,"target":781,"value":11.827},
-{"source":105,"target":667,"value":4.85},
-{"source":216,"target":224,"value":1.7},
-{"source":23,"target":245,"value":7.614},
-{"source":693,"target":698,"value":1.7},
-{"source":105,"target":923,"value":1.7},
-{"source":103,"target":226,"value":2.9},
-{"source":257,"target":416,"value":3.767},
-{"source":166,"target":186,"value":2.8},
-{"source":305,"target":717,"value":11.755},
-{"source":33,"target":319,"value":4.75},
-{"source":178,"target":288,"value":6.7},
-{"source":305,"target":410,"value":1.9},
-{"source":232,"target":259,"value":3.833},
-{"source":385,"target":838,"value":3.767},
-{"source":884,"target":903,"value":2.6},
-{"source":637,"target":709,"value":4.8},
-{"source":245,"target":904,"value":1.9},
-{"source":676,"target":823,"value":2.6},
-{"source":439,"target":649,"value":9.722},
-{"source":72,"target":422,"value":1.7},
-{"source":363,"target":806,"value":7.786},
-{"source":119,"target":172,"value":8.725},
-{"source":440,"target":602,"value":3.767},
-{"source":218,"target":868,"value":6.733},
-{"source":59,"target":950,"value":1.9},
-{"source":531,"target":676,"value":2.6},
-{"source":730,"target":832,"value":7.671},
-{"source":617,"target":899,"value":4.8},
-{"source":215,"target":486,"value":8.85},
-{"source":436,"target":651,"value":1.7},
-{"source":692,"target":852,"value":13.885},
-{"source":484,"target":762,"value":1.9},
-{"source":236,"target":266,"value":2.8},
-{"source":35,"target":97,"value":1.9},
-{"source":810,"target":866,"value":1.7},
-{"source":150,"target":704,"value":9.722},
-{"source":269,"target":412,"value":1.7},
-{"source":230,"target":663,"value":3.9},
-{"source":857,"target":916,"value":13.731},
-{"source":655,"target":908,"value":12.817},
-{"source":335,"target":442,"value":1.9},
-{"source":441,"target":494,"value":1.9},
-{"source":68,"target":353,"value":5.7},
-{"source":338,"target":597,"value":3.9},
-{"source":92,"target":117,"value":1.7},
-{"source":146,"target":162,"value":1.5},
-{"source":100,"target":233,"value":6.833},
-{"source":195,"target":714,"value":23.778},
-{"source":128,"target":942,"value":6.9},
-{"source":724,"target":943,"value":8.85},
-{"source":97,"target":674,"value":1.7},
-{"source":198,"target":615,"value":7.729},
-{"source":449,"target":736,"value":1.9},
-{"source":581,"target":696,"value":9.567},
-{"source":449,"target":601,"value":2.8},
-{"source":61,"target":170,"value":1.9},
-{"source":52,"target":936,"value":2.8},
-{"source":425,"target":594,"value":1.9},
-{"source":412,"target":970,"value":6.733},
-{"source":258,"target":783,"value":1.9},
-{"source":62,"target":658,"value":3.833},
-{"source":361,"target":680,"value":4.85},
-{"source":42,"target":688,"value":1.9},
-{"source":791,"target":822,"value":2.7},
-{"source":93,"target":663,"value":4.9},
-{"source":26,"target":904,"value":1.9},
-{"source":633,"target":797,"value":2.9},
-{"source":98,"target":578,"value":16.838},
-{"source":717,"target":757,"value":4.9},
-{"source":478,"target":841,"value":1.9},
-{"source":1,"target":153,"value":2.9},
-{"source":136,"target":959,"value":10.8},
-{"source":388,"target":694,"value":4.7},
-{"source":317,"target":426,"value":1.9},
-{"source":816,"target":937,"value":2.8},
-{"source":211,"target":644,"value":13.762},
-{"source":316,"target":790,"value":7.757},
-{"source":185,"target":313,"value":1.9},
-{"source":243,"target":634,"value":6.833},
-{"source":557,"target":921,"value":1.7},
-{"source":238,"target":637,"value":6.733},
-{"source":665,"target":830,"value":11.718},
-{"source":237,"target":238,"value":1.9},
-{"source":98,"target":589,"value":8.775},
-{"source":153,"target":230,"value":4.55},
-{"source":248,"target":359,"value":3.633},
-{"source":8,"target":911,"value":2.6},
-{"source":628,"target":899,"value":7.757},
-{"source":164,"target":932,"value":3.767},
-{"source":400,"target":936,"value":5.82},
-{"source":390,"target":413,"value":3.833},
-{"source":126,"target":177,"value":3.767},
-{"source":837,"target":906,"value":13.808},
-{"source":89,"target":714,"value":6.8},
-{"source":697,"target":860,"value":3.833},
-{"source":88,"target":329,"value":4.8},
-{"source":601,"target":842,"value":1.7},
-{"source":406,"target":932,"value":8.9},
-{"source":11,"target":743,"value":15.74},
-{"source":289,"target":823,"value":13.746},
-{"source":467,"target":781,"value":1.5},
-{"source":678,"target":680,"value":11.7},
-{"source":244,"target":375,"value":3.833},
-{"source":234,"target":675,"value":9.833},
-{"source":352,"target":606,"value":2.8},
-{"source":772,"target":905,"value":1.9},
-{"source":823,"target":828,"value":5.7},
-{"source":479,"target":483,"value":1.9},
-{"source":86,"target":628,"value":5.78},
-{"source":668,"target":670,"value":1.3},
-{"source":266,"target":648,"value":7.757},
-{"source":25,"target":78,"value":2.7},
-{"source":23,"target":766,"value":2.8},
-{"source":716,"target":867,"value":2.7},
-{"source":399,"target":663,"value":2.9},
-{"source":0,"target":145,"value":7.814},
-{"source":89,"target":934,"value":1.7},
-{"source":42,"target":178,"value":1.9},
-{"source":23,"target":764,"value":10.68},
-{"source":190,"target":828,"value":4.65},
-{"source":227,"target":794,"value":2.7},
-{"source":668,"target":800,"value":3.7},
-{"source":119,"target":962,"value":12.8},
-{"source":672,"target":833,"value":7.814},
-{"source":302,"target":769,"value":2.7},
-{"source":781,"target":913,"value":2.6},
-{"source":2,"target":58,"value":7.729},
-{"source":250,"target":379,"value":7.843},
-{"source":187,"target":768,"value":3.7},
-{"source":605,"target":708,"value":3.633},
-{"source":7,"target":826,"value":3.767},
-{"source":696,"target":923,"value":1.9},
-{"source":48,"target":847,"value":1.7},
-{"source":422,"target":826,"value":1.9},
-{"source":478,"target":848,"value":8.825},
-{"source":316,"target":431,"value":4.75},
-{"source":91,"target":479,"value":1.9},
-{"source":134,"target":969,"value":8.65},
-{"source":45,"target":638,"value":3.7},
-{"source":195,"target":391,"value":4.8},
-{"source":533,"target":845,"value":1.7},
-{"source":52,"target":896,"value":2.9},
-{"source":58,"target":146,"value":2.7},
-{"source":325,"target":813,"value":8.7},
-{"source":381,"target":963,"value":2.9},
-{"source":695,"target":939,"value":7.871},
-{"source":155,"target":163,"value":7.757},
-{"source":652,"target":887,"value":8.725},
-{"source":764,"target":911,"value":5.86},
-{"source":141,"target":160,"value":2.9},
-{"source":235,"target":642,"value":1.9},
-{"source":362,"target":711,"value":1.9},
-{"source":46,"target":873,"value":5.82},
-{"source":21,"target":788,"value":6.733},
-{"source":23,"target":323,"value":2.5},
-{"source":114,"target":663,"value":11.791},
-{"source":4,"target":947,"value":7.786},
-{"source":126,"target":318,"value":2.5},
-{"source":254,"target":329,"value":1.9},
-{"source":404,"target":406,"value":1.9},
-{"source":127,"target":173,"value":1.9},
-{"source":80,"target":93,"value":7.843},
-{"source":160,"target":260,"value":15.833},
-{"source":11,"target":618,"value":13.731},
-{"source":792,"target":879,"value":2.9},
-{"source":591,"target":950,"value":5.9},
-{"source":243,"target":656,"value":8.8},
-{"source":111,"target":634,"value":6.9},
-{"source":211,"target":925,"value":8.85},
-{"source":45,"target":150,"value":4.8},
-{"source":642,"target":786,"value":8.875},
-{"source":641,"target":873,"value":1.9},
-{"source":149,"target":246,"value":1.9},
-{"source":105,"target":687,"value":1.9},
-{"source":19,"target":957,"value":1.5},
-{"source":388,"target":704,"value":6.733},
-{"source":318,"target":575,"value":2.7},
-{"source":463,"target":663,"value":1.9},
-{"source":173,"target":950,"value":2.6},
-{"source":83,"target":204,"value":2.8},
-{"source":68,"target":122,"value":1.9},
-{"source":555,"target":722,"value":1.5},
-{"source":94,"target":484,"value":1.9},
-{"source":248,"target":772,"value":2.6},
-{"source":91,"target":504,"value":5.82},
-{"source":132,"target":771,"value":4.8},
-{"source":126,"target":737,"value":4.9},
-{"source":531,"target":699,"value":2.6},
-{"source":619,"target":879,"value":5.9},
-{"source":24,"target":185,"value":5.86},
-{"source":32,"target":101,"value":14.786},
-{"source":175,"target":940,"value":6.833},
-{"source":172,"target":655,"value":12.75},
-{"source":342,"target":596,"value":3.7},
-{"source":401,"target":959,"value":20.82},
-{"source":5,"target":833,"value":5.9},
-{"source":37,"target":885,"value":13.808},
-{"source":597,"target":909,"value":5.9},
-{"source":245,"target":596,"value":12.8},
-{"source":146,"target":363,"value":3.633},
-{"source":164,"target":404,"value":3.833},
-{"source":196,"target":899,"value":1.9},
-{"source":121,"target":180,"value":10.64},
-{"source":384,"target":692,"value":1.9},
-{"source":166,"target":849,"value":1.9},
-{"source":202,"target":761,"value":3.7},
-{"source":383,"target":967,"value":2.7},
-{"source":23,"target":805,"value":7.729},
-{"source":920,"target":947,"value":4.85},
-{"source":335,"target":854,"value":3.767},
-{"source":233,"target":749,"value":2.8},
-{"source":412,"target":853,"value":3.833},
-{"source":270,"target":446,"value":7.786},
-{"source":313,"target":663,"value":1.9},
-{"source":252,"target":320,"value":1.9},
-{"source":320,"target":555,"value":2.8},
-{"source":601,"target":722,"value":1.7},
-{"source":19,"target":175,"value":1.5},
-{"source":392,"target":878,"value":3.9},
-{"source":576,"target":871,"value":2.8},
-{"source":231,"target":451,"value":1.9},
-{"source":234,"target":359,"value":4.85},
-{"source":567,"target":793,"value":2.8},
-{"source":341,"target":957,"value":2.9},
-{"source":713,"target":950,"value":8.825},
-{"source":337,"target":891,"value":1.5},
-{"source":618,"target":891,"value":7.729},
-{"source":652,"target":701,"value":1.5},
-{"source":15,"target":601,"value":1.5},
-{"source":138,"target":868,"value":3.9},
-{"source":247,"target":901,"value":2.8},
-{"source":698,"target":929,"value":3.833},
-{"source":202,"target":725,"value":6.9},
-{"source":627,"target":776,"value":5.82},
-{"source":387,"target":791,"value":8.8},
-{"source":604,"target":797,"value":4.9},
-{"source":781,"target":947,"value":3.767},
-{"source":108,"target":655,"value":4.7},
-{"source":447,"target":496,"value":1.9},
-{"source":280,"target":600,"value":7.786},
-{"source":226,"target":564,"value":3.9},
-{"source":378,"target":502,"value":1.7},
-{"source":60,"target":596,"value":6.9},
-{"source":687,"target":884,"value":2.8},
-{"source":439,"target":718,"value":6.833},
-{"source":150,"target":598,"value":3.833},
-{"source":41,"target":105,"value":3.767},
-{"source":44,"target":297,"value":9.856},
-{"source":90,"target":946,"value":2.7},
-{"source":48,"target":373,"value":1.9},
-{"source":796,"target":889,"value":5.82},
-{"source":0,"target":400,"value":4.75},
-{"source":495,"target":776,"value":1.7},
-{"source":624,"target":925,"value":8.85},
-{"source":102,"target":648,"value":15.7},
-{"source":111,"target":462,"value":1.9},
-{"source":164,"target":572,"value":12.733},
-{"source":637,"target":661,"value":2.9},
-{"source":14,"target":189,"value":1.9},
-{"source":289,"target":301,"value":5.78},
-{"source":416,"target":600,"value":5.74},
-{"source":478,"target":690,"value":3.833},
-{"source":30,"target":120,"value":2.7},
-{"source":664,"target":855,"value":12.833},
-{"source":116,"target":126,"value":2.8},
-{"source":58,"target":692,"value":5.9},
-{"source":613,"target":736,"value":7.786},
-{"source":313,"target":573,"value":1.5},
-{"source":157,"target":848,"value":4.8},
-{"source":240,"target":823,"value":3.7},
-{"source":728,"target":870,"value":1.7},
-{"source":657,"target":904,"value":5.9},
-{"source":376,"target":490,"value":1.9},
-{"source":71,"target":788,"value":3.767},
-{"source":262,"target":317,"value":11.7},
-{"source":737,"target":836,"value":1.9},
-{"source":375,"target":586,"value":10.82},
-{"source":157,"target":249,"value":2.9},
-{"source":87,"target":118,"value":2.9},
-{"source":351,"target":602,"value":18.833},
-{"source":194,"target":908,"value":5.82},
-{"source":763,"target":861,"value":3.833},
-{"source":15,"target":645,"value":2.9},
-{"source":641,"target":690,"value":6.9},
-{"source":199,"target":840,"value":2.7},
-{"source":181,"target":610,"value":18.867},
-{"source":482,"target":954,"value":5.78},
-{"source":106,"target":838,"value":10.8},
-{"source":103,"target":210,"value":2.8},
-{"source":210,"target":849,"value":8.825},
-{"source":276,"target":862,"value":4.85},
-{"source":689,"target":736,"value":5.9},
-{"source":22,"target":344,"value":6.867},
-{"source":504,"target":803,"value":2.8},
-{"source":108,"target":612,"value":1.7},
-{"source":147,"target":390,"value":4.8},
-{"source":18,"target":234,"value":4.75},
-{"source":136,"target":738,"value":4.8},
-{"source":54,"target":344,"value":7.729},
-{"source":867,"target":919,"value":1.7},
-{"source":362,"target":610,"value":2.9},
-{"source":387,"target":637,"value":2.9},
-{"source":344,"target":943,"value":2.8},
-{"source":703,"target":963,"value":1.7},
-{"source":710,"target":815,"value":6.8},
-{"source":581,"target":768,"value":15.78},
-{"source":709,"target":764,"value":8.775},
-{"source":794,"target":823,"value":7.814},
-{"source":98,"target":576,"value":1.9},
-{"source":60,"target":720,"value":2.9},
-{"source":589,"target":801,"value":3.7},
-{"source":478,"target":573,"value":4.8},
-{"source":396,"target":456,"value":9.767},
-{"source":288,"target":678,"value":12.833},
-{"source":204,"target":729,"value":2.7},
-{"source":169,"target":181,"value":1.9},
-{"source":107,"target":124,"value":3.633},
-{"source":245,"target":678,"value":11.791},
-{"source":125,"target":620,"value":4.75},
-{"source":95,"target":285,"value":1.5},
-{"source":620,"target":880,"value":10.88},
-{"source":83,"target":952,"value":8.725},
-{"source":7,"target":785,"value":2.7},
-{"source":100,"target":606,"value":14.8},
-{"source":251,"target":667,"value":5.74},
-{"source":609,"target":905,"value":6.8},
-{"source":247,"target":675,"value":1.5},
-{"source":422,"target":637,"value":1.5},
-{"source":8,"target":939,"value":8.85},
-{"source":280,"target":292,"value":6.8},
-{"source":149,"target":756,"value":1.5},
-{"source":123,"target":894,"value":9.833},
-{"source":137,"target":276,"value":3.767},
-{"source":93,"target":941,"value":1.5},
-{"source":123,"target":813,"value":16.8},
-{"source":824,"target":924,"value":7.786},
-{"source":737,"target":901,"value":9.767},
-{"source":757,"target":917,"value":1.7},
-{"source":59,"target":720,"value":2.9},
-{"source":735,"target":867,"value":3.7},
-{"source":379,"target":836,"value":3.9},
-{"source":273,"target":903,"value":6.733},
-{"source":773,"target":955,"value":4.9},
-{"source":126,"target":462,"value":1.5},
-{"source":167,"target":426,"value":1.9},
-{"source":135,"target":593,"value":3.9},
-{"source":314,"target":689,"value":3.9},
-{"source":899,"target":928,"value":1.9},
-{"source":583,"target":707,"value":8.75},
-{"source":369,"target":672,"value":5.82},
-{"source":496,"target":618,"value":1.7},
-{"source":215,"target":718,"value":3.833},
-{"source":217,"target":314,"value":2.8},
-{"source":485,"target":488,"value":1.9},
-{"source":423,"target":655,"value":2.7},
-{"source":52,"target":675,"value":2.9},
-{"source":374,"target":607,"value":2.7},
-{"source":379,"target":431,"value":3.7},
-{"source":274,"target":755,"value":3.833},
-{"source":595,"target":771,"value":4.75},
-{"source":34,"target":747,"value":3.7},
-{"source":18,"target":967,"value":2.5},
-{"source":27,"target":257,"value":10.8},
-{"source":66,"target":444,"value":1.9},
-{"source":646,"target":691,"value":3.833},
-{"source":0,"target":908,"value":8.725},
-{"source":232,"target":813,"value":17.759},
-{"source":242,"target":808,"value":4.65},
-{"source":325,"target":829,"value":6.767},
-{"source":33,"target":60,"value":1.7},
-{"source":190,"target":316,"value":7.671},
-{"source":276,"target":678,"value":7.814},
-{"source":341,"target":625,"value":2.8},
-{"source":152,"target":805,"value":1.1},
-{"source":803,"target":888,"value":3.9},
-{"source":44,"target":597,"value":4.9},
-{"source":72,"target":598,"value":4.8},
-{"source":369,"target":881,"value":6.633},
-{"source":184,"target":954,"value":3.833},
-{"source":761,"target":961,"value":10.84},
-{"source":715,"target":926,"value":1.9},
-{"source":25,"target":729,"value":6.667},
-{"source":71,"target":840,"value":3.767},
-{"source":883,"target":915,"value":6.767},
-{"source":187,"target":806,"value":2.8},
-{"source":136,"target":721,"value":12.767},
-{"source":48,"target":783,"value":18.711},
-{"source":77,"target":276,"value":5.7},
-{"source":219,"target":274,"value":1.7},
-{"source":592,"target":875,"value":8.8},
-{"source":101,"target":824,"value":4.8},
-{"source":370,"target":598,"value":1.5},
-{"source":269,"target":815,"value":6.8},
-{"source":406,"target":616,"value":10.9},
-{"source":221,"target":633,"value":13.746},
-{"source":615,"target":833,"value":6.733},
-{"source":571,"target":901,"value":3.9},
-{"source":116,"target":609,"value":4.9},
-{"source":901,"target":952,"value":3.7},
-{"source":208,"target":698,"value":5.66},
-{"source":873,"target":933,"value":9.789},
-{"source":620,"target":647,"value":4.75},
-{"source":149,"target":782,"value":1.5},
-{"source":181,"target":933,"value":12.75},
-{"source":388,"target":617,"value":4.8},
-{"source":183,"target":924,"value":6.667},
-{"source":674,"target":682,"value":1.7},
-{"source":363,"target":921,"value":7.643},
-{"source":288,"target":716,"value":1.9},
-{"source":201,"target":421,"value":1.5},
-{"source":257,"target":617,"value":12.667},
-{"source":424,"target":962,"value":3.9},
-{"source":416,"target":892,"value":4.75},
-{"source":326,"target":708,"value":3.567},
-{"source":323,"target":959,"value":1.9},
-{"source":593,"target":859,"value":4.85},
-{"source":801,"target":829,"value":8.875},
-{"source":126,"target":702,"value":2.7},
-{"source":961,"target":970,"value":4.75},
-{"source":32,"target":83,"value":11.755},
-{"source":712,"target":918,"value":17.806},
-{"source":700,"target":893,"value":4.7},
-{"source":319,"target":629,"value":1.7},
-{"source":797,"target":851,"value":2.9},
-{"source":316,"target":801,"value":1.7},
-{"source":358,"target":460,"value":1.9},
-{"source":505,"target":582,"value":4.85},
-{"source":79,"target":881,"value":4.55},
-{"source":260,"target":960,"value":7.7},
-{"source":181,"target":598,"value":10.76},
-{"source":271,"target":401,"value":2.7},
-{"source":448,"target":892,"value":7.786},
-{"source":141,"target":657,"value":3.833},
-{"source":82,"target":195,"value":3.5},
-{"source":575,"target":899,"value":4.7},
-{"source":185,"target":641,"value":2.9},
-{"source":234,"target":693,"value":6.733},
-{"source":582,"target":669,"value":5.7},
-{"source":364,"target":692,"value":5.9},
-{"source":449,"target":603,"value":1.7},
-{"source":582,"target":590,"value":4.75},
-{"source":46,"target":885,"value":5.78},
-{"source":66,"target":213,"value":2.9},
-{"source":41,"target":294,"value":9.789},
-{"source":132,"target":411,"value":3.9},
-{"source":455,"target":478,"value":3.767},
-{"source":233,"target":288,"value":11.827},
-{"source":27,"target":778,"value":10.74},
-{"source":377,"target":815,"value":1.7},
-{"source":242,"target":274,"value":5.7},
-{"source":28,"target":428,"value":2.8},
-{"source":792,"target":797,"value":4.85},
-{"source":693,"target":955,"value":4.9},
-{"source":189,"target":742,"value":1.9},
-{"source":585,"target":873,"value":15.74},
-{"source":574,"target":960,"value":3.767},
-{"source":188,"target":852,"value":2.9},
-{"source":166,"target":486,"value":7.7},
-{"source":655,"target":862,"value":9.811},
-{"source":231,"target":246,"value":1.7},
-{"source":679,"target":937,"value":1.7},
-{"source":395,"target":845,"value":1.9},
-{"source":668,"target":879,"value":6.9},
-{"source":42,"target":784,"value":9.767},
-{"source":461,"target":927,"value":1.9},
-{"source":449,"target":668,"value":1.7},
-{"source":744,"target":787,"value":1.9},
-{"source":222,"target":653,"value":9.811},
-{"source":45,"target":129,"value":1.9},
-{"source":412,"target":873,"value":9.678},
-{"source":6,"target":611,"value":5.74},
-{"source":449,"target":598,"value":2.8},
-{"source":810,"target":850,"value":1.9},
-{"source":223,"target":844,"value":2.9},
-{"source":388,"target":596,"value":4.65},
-{"source":240,"target":465,"value":2.8},
-{"source":270,"target":688,"value":4.9},
-{"source":851,"target":937,"value":1.7},
-{"source":800,"target":878,"value":3.7},
-{"source":141,"target":915,"value":1.9},
-{"source":310,"target":592,"value":1.9},
-{"source":134,"target":425,"value":1.7},
-{"source":166,"target":807,"value":10.66},
-{"source":478,"target":714,"value":2.7},
-{"source":34,"target":61,"value":3.767},
-{"source":809,"target":937,"value":3.767},
-{"source":13,"target":455,"value":2.9},
-{"source":188,"target":735,"value":4.8},
-{"source":852,"target":863,"value":4.9},
-{"source":895,"target":945,"value":2.9},
-{"source":356,"target":619,"value":1.9},
-{"source":131,"target":389,"value":2.7},
-{"source":60,"target":903,"value":6.767},
-{"source":190,"target":967,"value":1.9},
-{"source":303,"target":890,"value":3.833},
-{"source":248,"target":826,"value":5.78},
-{"source":61,"target":682,"value":10.7},
-{"source":286,"target":889,"value":6.767},
-{"source":668,"target":914,"value":2.9},
-{"source":815,"target":957,"value":6.733},
-{"source":55,"target":617,"value":2.7},
-{"source":284,"target":796,"value":3.9},
-{"source":1,"target":75,"value":16.775},
-{"source":7,"target":389,"value":1.7},
-{"source":101,"target":319,"value":1.9},
-{"source":415,"target":837,"value":1.9},
-{"source":29,"target":858,"value":1.9},
-{"source":134,"target":875,"value":7.786},
-{"source":15,"target":704,"value":1.9},
-{"source":139,"target":284,"value":2.9},
-{"source":210,"target":767,"value":6.833},
-{"source":31,"target":250,"value":11.827},
-{"source":718,"target":739,"value":5.7},
-{"source":351,"target":951,"value":3.7},
-{"source":29,"target":381,"value":4.85},
-{"source":676,"target":815,"value":8.775},
-{"source":160,"target":967,"value":5.86},
-{"source":41,"target":260,"value":6.667},
-{"source":214,"target":613,"value":17.806},
-{"source":175,"target":748,"value":4.85},
-{"source":5,"target":896,"value":18.767},
-{"source":123,"target":800,"value":7.786},
-{"source":565,"target":787,"value":1.7},
-{"source":660,"target":678,"value":13.838},
-{"source":447,"target":572,"value":8.875},
-{"source":74,"target":431,"value":3.9},
-{"source":30,"target":668,"value":4.85},
-{"source":175,"target":442,"value":1.7},
-{"source":93,"target":969,"value":3.767},
-{"source":98,"target":899,"value":6.9},
-{"source":97,"target":823,"value":2.9},
-{"source":131,"target":175,"value":3.9},
-{"source":228,"target":293,"value":4.9},
-{"source":193,"target":762,"value":2.7},
-{"source":769,"target":836,"value":5.78},
-{"source":55,"target":572,"value":4.65},
-{"source":431,"target":785,"value":2.9},
-{"source":23,"target":633,"value":7.7},
-{"source":177,"target":483,"value":8.725},
-{"source":866,"target":966,"value":14.771},
-{"source":45,"target":184,"value":1.9},
-{"source":40,"target":824,"value":6.867},
-{"source":60,"target":83,"value":3.9},
-{"source":301,"target":810,"value":1.7},
-{"source":174,"target":867,"value":1.5},
-{"source":52,"target":624,"value":1.9},
-{"source":394,"target":572,"value":11.773},
-{"source":118,"target":480,"value":1.9},
-{"source":399,"target":420,"value":14.857},
-{"source":45,"target":141,"value":2.8},
-{"source":193,"target":288,"value":1.9},
-{"source":390,"target":790,"value":5.86},
-{"source":299,"target":948,"value":6.867},
-{"source":356,"target":633,"value":1.9},
-{"source":703,"target":899,"value":6.8},
-{"source":2,"target":134,"value":3.767},
-{"source":739,"target":783,"value":11.627},
-{"source":606,"target":886,"value":3.833},
-{"source":162,"target":807,"value":3.767},
-{"source":463,"target":600,"value":1.9},
-{"source":650,"target":834,"value":1.7},
-{"source":780,"target":827,"value":11.809},
-{"source":65,"target":239,"value":1.9},
-{"source":602,"target":645,"value":6.8},
-{"source":25,"target":280,"value":2.7},
-{"source":14,"target":816,"value":4.85},
-{"source":129,"target":653,"value":3.7},
-{"source":173,"target":326,"value":6.767},
-{"source":279,"target":713,"value":2.9},
-{"source":716,"target":850,"value":4.75},
-{"source":68,"target":119,"value":5.74},
-{"source":285,"target":884,"value":4.75},
-{"source":95,"target":758,"value":9.744},
-{"source":416,"target":493,"value":1.9},
-{"source":243,"target":390,"value":2.7},
-{"source":302,"target":455,"value":1.9},
-{"source":605,"target":817,"value":1.9},
-{"source":734,"target":805,"value":17.782},
-{"source":406,"target":531,"value":1.7},
-{"source":645,"target":737,"value":1.5},
-{"source":354,"target":962,"value":14.757},
-{"source":124,"target":593,"value":9.811},
-{"source":108,"target":883,"value":3.767},
-{"source":62,"target":334,"value":1.9},
-{"source":38,"target":342,"value":3.767},
-{"source":644,"target":826,"value":10.88},
-{"source":101,"target":927,"value":4.7},
-{"source":858,"target":873,"value":4.65},
-{"source":70,"target":723,"value":1.5},
-{"source":162,"target":564,"value":4.75},
-{"source":785,"target":922,"value":9.722},
-{"source":247,"target":910,"value":2.9},
-{"source":256,"target":361,"value":2.9},
-{"source":4,"target":20,"value":10.8},
-{"source":114,"target":639,"value":6.767},
-{"source":112,"target":789,"value":1.9},
-{"source":733,"target":799,"value":6.833},
-{"source":122,"target":504,"value":4.8},
-{"source":4,"target":838,"value":4.9},
-{"source":276,"target":921,"value":3.7},
-{"source":29,"target":902,"value":4.75},
-{"source":358,"target":966,"value":2.8},
-{"source":668,"target":953,"value":4.7},
-{"source":600,"target":829,"value":3.767},
-{"source":193,"target":933,"value":3.767},
-{"source":486,"target":619,"value":9.7},
-{"source":279,"target":758,"value":2.9},
-{"source":586,"target":603,"value":4.8},
-{"source":179,"target":316,"value":4.6},
-{"source":91,"target":946,"value":2.6},
-{"source":859,"target":871,"value":2.7},
-{"source":95,"target":303,"value":3.833},
-{"source":154,"target":177,"value":4.85},
-{"source":200,"target":941,"value":4.7},
-{"source":428,"target":570,"value":1.7},
-{"source":446,"target":908,"value":9.767},
-{"source":451,"target":969,"value":1.9},
-{"source":147,"target":375,"value":1.9},
-{"source":484,"target":737,"value":1.9},
-{"source":341,"target":667,"value":2.7},
-{"source":280,"target":301,"value":5.78},
-{"source":231,"target":595,"value":3.7}
-];
-
-var nodes = {};
-var lines = links;
-
-var numOfVertex = node_info.length;
-var numOfLinks = links.length;
-//此处的t用于设置可以显示的边的最小权值,list其实相当于一个邻接链表
-function ThresholdList(t)
-{
-	var list = {};
-	for (var i = 0; i < numOfVertex; ++i) {
-		list[node_info[i].id] = [];
-	}
-
-	for (var i = 0; i < numOfLinks; ++i) {
-		if (links[i].value > t) {
-			list[links[i].source].push({"ID": links[i].source, "next": links[i].target, "value": links[i].value, "IDOfLink": i});
-		}
-	}
-	return list;
-}
-var list = ThreholdList(0); //初步设置为0
-
-links.forEach(function(link, i) {
-  link.id = i;
-  link.source = nodes[link.source] || (nodes[link.source] = findNodeInfo(link.source));
-  link.target = nodes[link.target] || (nodes[link.target] = findNodeInfo(link.target));
-});
-
-console.log(links);
-
-var fromToHtml = "";
-node_info.forEach(function(variable, i){
-  fromToHtml += "<option value='" + variable.id + "'>" + variable.id + "</option>";
-});
-$("#fromOptions").html(fromToHtml);
-$("#toOptions").html(fromToHtml);
-
-//记录当前被点中的点的信息
-var clickedNode = nodes[0];
-
-var width = 1560,
-    height = 800;
-
-var force = d3.layout.force()//layout将json格式转化为力学图可用的格式
-    .nodes(d3.values(nodes))//设定节点数组
-    .links(links)//设定连线数组
-    .size([width, height])//作用域的大小
-    .linkDistance(2)//连接线长度
-    .charge(-30)//顶点的电荷数。该参数决定是排斥还是吸引，数值越小越互相排斥
-    .on("tick", tick)//指时间间隔，隔一段时间刷新一次画面
-    .start();//开始转换
-
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-//箭头
-/*var marker=
-    svg.append("marker")
-    //.attr("id", function(d) { return d; })
-    .attr("id", "resolved")
-    //.attr("markerUnits","strokeWidth")//设置为strokeWidth箭头会随着线的粗细发生变化
-    .attr("markerUnits","userSpaceOnUse")
-    .attr("viewBox", "0 -5 10 10")//坐标系的区域
-    .attr("refX",32)//箭头坐标
-    .attr("refY", -1)
-    .attr("markerWidth", 12)//标识的大小
-    .attr("markerHeight", 12)
-    .attr("orient", "auto")//绘制方向，可设定为：auto（自动确认方向）和 角度值
-    .attr("stroke-width",2)//箭头宽度
-    .append("path")
-    .attr("d", "M0,-5L10,0L0,5")//箭头的路径
-    .attr('fill','#000000');//箭头颜色*/
-
-// 将连接线设置为曲线
-/*var path = svg.append("g").selectAll("path")
-    .data(force.links())
-    .enter().append("path")
-    .attr("class", function(d) { return "link " + d.type; })
-    .style("stroke",function(d){
-        //console.log(d);
-       return "#A254A2";//连接线的颜色
-    })
-    .attr("marker-end", function(d) { return "url(#" + d.type + ")"; });*/
-
-//设置连接线    
-var edges_line = svg.selectAll(".edgepath")
-    .data(force.links())
-    .enter()
-    .append("path")
-    .attr({
-          'd': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
-          'class':'edgepath',
-          //'fill-opacity':0,
-          //'stroke-opacity':0,
-          //'fill':'blue',
-          //'stroke':'red',
-          'id':function(d,i) {return 'edgepath'+i;}})
-    .style("stroke", "#A254A2")
-    .style("pointer-events", "none")
-    .style("stroke-width",0.5)//线条粗细
-    //.attr("marker-end", "url(#resolved)" );//根据箭头标记的id号标记箭头
-
-
-var edges_text = svg.append("g").selectAll(".edgelabel")
-.data(force.links())
-.enter()
-.append("text")
-.style("pointer-events", "none")
-//.attr("class","linetext")
-.attr({  'class':'edgelabel',
-               'id':function(d,i){return 'edgepath'+i;},
-               'dx':80,
-               'dy':0
-               //'font-size':10,
-               //'fill':'#aaa'
-               });
-
-//设置线条上的文字
-edges_text.append('textPath')
-.attr('xlink:href',function(d,i) {return '#edgepath'+i})
-.style("pointer-events", "none")
-.text(function(d){return d.value;});
-
-//圆圈
-var circle = svg.append("g").selectAll("circle")
-    .data(force.nodes())//表示使用force.nodes数据
-    .enter().append("circle")
-    .attr("id", function(d, i){
-      return "node" + i;
-    })
-    .style("fill","#B43232")
-    /*function(node){
-        var color;//圆圈背景色
-        var link=links[node.index];
-        if(node.name==link.source.name && link.rela=="主营产品"){
-            color="#F6E8E9";
-        }else{
-            color="#F9EBF9";
-        }
-        return color;
-    })*/
-    .style('stroke',"#B43232")
-    /*function(node){ 
-        var color;//圆圈线条的颜色
-        var link=links[node.index];
-        if(node.name==link.source.name && link.rela=="主营产品"){
-            color="#B43232";
-        }else{
-            color="#A254A2";
-        }
-        return color;
-    })*/
-    .attr("r", 5)//设置圆圈半径
-    .on("click",function(node){
-        //记录当前被点中的点的信息
-        clickedNode = node;
-        //单击时让连接线加粗
-        edges_line.style("stroke-width",function(line){
-            //console.log(line);
-            if(line.source.name==node.name || line.target.name==node.name){
-                return 4;
-            }else{
-                return 0.5;
-            }
-        });
-
-        var html = "";
-        html = getClickedNodeInfo(node);
-        $('#node_info').html(html);
-        //d3.select(this).style('stroke-width',2);
-    })
-    .call(force.drag);//将当前选中的元素传到drag函数中，使顶点可以被拖动
-    /*
-     circle.append("text")  
-    .attr("dy", ".35em")  
-    .attr("text-anchor", "middle")//在圆圈内添加文字  
-    .text(function(d) { 
-        //console.log(d);
-        return d.name; 
-    }); */ 
-
-  //圆圈的提示文字
-  circle.append("svg:title")  
-        .text(function(node) { 
-            var link=links[node.index];
-            if(node.name==link.source.name){
-                return "双击可查看详情"
-            }
-         });  
-/* 矩形
-var rect=svg.append("rect")
-         .attr({"x":100,"y":100,
-                "width":100,"height":50,
-                "rx":5,//水平圆角
-                "ry":10//竖直圆角
-             })
-          .style({
-             "stroke":"red",
-             "stroke-width":1,
-             "fill":"yellow"
-});*/
-var text = svg.append("g").selectAll("text")
-    .data(force.nodes())
-    //返回缺失元素的占位对象（placeholder），指向绑定的数据中比选定元素集多出的一部分元素。
-    .enter()
-    .append("text")
-    .attr("dx", 8)
-    .attr("dy", ".35em")  
-    //.attr("text-anchor", "middle")//在圆圈中加上数据  
-    .style('fill',"#B43232")
-    .text(function(d) { 
-        return d.name; 
-    });
-
-/*  将文字显示在圆圈的外面 
-var text2 = svg.append("g").selectAll("text")
-     .data(force.links())
-    //返回缺失元素的占位对象（placeholder），指向绑定的数据中比选定元素集多出的一部分元素。
-    .enter()
-    .append("text")
-    .attr("x", 150)//设置文字坐标
-    .attr("y", ".50em")
-    .text(function(d) { 
-        //console.log(d);
-        //return d.name; 
-        //return d.rela;
-        console.log(d);
-        return  '1111';
-    });*/
 
 function tick() {
-  //path.attr("d", linkArc);//连接线
   circle.attr("transform", transform1);//圆圈
   text.attr("transform", transform2);//顶点文字
-  //edges_text.attr("transform", transform3);
-  //text2.attr("d", linkArc);//连接线文字
-  //console.log("text2...................");
-  //console.log(text2);
-  //edges_line.attr("x1",function(d){ return d.source.x; });
-  //edges_line.attr("y1",function(d){ return d.source.y; });
-  //edges_line.attr("x2",function(d){ return d.target.x; });
-  //edges_line.attr("y2",function(d){ return d.target.y; });
-    
-  //edges_line.attr("x",function(d){ return (d.source.x + d.target.x) / 2 ; });
-  //edges_line.attr("y",function(d){ return (d.source.y + d.target.y) / 2 ; });
-
 
   edges_line.attr('d', function(d) { 
       var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
       return path;
   });  
     
-  edges_text.attr('transform',function(d,i){
+  /*edges_text.attr('transform',function(d,i){
         if (d.target.x<d.source.x){
             bbox = this.getBBox();
             rx = bbox.x+bbox.width/2;
@@ -2324,17 +113,11 @@ function tick() {
         else {
             return 'rotate(0)';
         }
-   });
+   });*/
 }
 
 //设置连接线的坐标,使用椭圆弧路径段双向编码
 function linkArc(d) {
-    //var dx = d.target.x - d.source.x,
-  // dy = d.target.y - d.source.y,
-     // dr = Math.sqrt(dx * dx + dy * dy);
-  //return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
-  //打点path格式是：Msource.x,source.yArr00,1target.x,target.y  
-  
   return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y
 }
 //设置圆圈和文字的坐标
@@ -2349,7 +132,7 @@ function findNodeInfo(node){
   var result = {};
   node_info.forEach(function(d){
     if (node == d.id){
-      result = {name: node, group: d.group};
+      result = {name: node, img_url: d.img_url, user_name: d.name};
     }
   });
   return result;
@@ -2357,72 +140,124 @@ function findNodeInfo(node){
 
 function getClickedNodeInfo(node){
   var result = "";
-  result += "<p>node id:" + node.name + "</p>";
-  result += "<p>node group" + node.group + "</p>";
+  result += "<p style=\"color:#FFFF00; word-break:all;\" class=\"font-class\">id:" + node.name + "</p>";
+  result += "<p style=\"color:#FFFF00; word-break:all;\" class=\"font-class\">name:" + node.user_name + "</p>";
+  result += "<img style='width: 150px; height:200px' src='" + node.img_url + "'/>";
+
+  scrollleft = document.documentElement.scrollLeft || document.body.scrollLeft;
+  scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+
+  node_info_pos = document.getElementById("node_info");
+  node_info_pos.style.left = screenw + scrollleft - 150 + "px";
+  node_info_pos.style.top = scrolltop + "px";
+  node_info_pos.style.position = "absolute";
   return result;
 }
 
 function changeScale(){
   var scale = $( "#slider" ).slider( "value" );
-  console.log(scale);
   circle
     .transition()
     .duration(500)
-    .attr("r", 2 + (scale - 30) * 0.06);
+    .attr("r", 5 + (scale - 30) * 0.1);
+
+  force.stop();
+
   force
-  .charge(-(30 + (scale - 30)))
-  .linkDistance(2 + (scale - 30) * 0.06)
+  .charge(-(200 + (scale - 30)))
+  .linkDistance(200 + (scale - 30) * 2)
   .start();
- // update();
+}
+
+function changeThreshold(){
+  var intPart = $("#weightSliderInt").slider("value");
+  var floatPart = $("#weightSliderFloat").slider("value");
+
+  var threshold = intPart + parseFloat(floatPart) / 100;
+  list = ThresholdList(threshold);
+
+  var linksAftetThreshold = [];
+  //var linkCount = -1;
+  links.forEach(function(link){
+    if (link.value > threshold){
+      linksAftetThreshold.push(link);
+    }
+  });
+  edges = linksAftetThreshold;
+
+  floyd_changed = true;
+
+  svg.selectAll(".edgepath").remove();
+  force.stop();
+  force = d3.layout.force()//layout将json格式转化为力学图可用的格式
+    .nodes(d3.values(nodes))//设定节点数组
+    .links(linksAftetThreshold)//设定连线数组
+    .size([width, height])//作用域的大小
+    .linkDistance(200)//连接线长度
+    .charge(-200)//顶点的电荷数。该参数决定是排斥还是吸引，数值越小越互相排斥
+    .on("tick", tick)//指时间间隔，隔一段时间刷新一次画面
+    .start();//开始转换
+
+
+  edges_line = svg.selectAll(".edgepath")
+    .data(linksAftetThreshold)
+    .enter()
+    .append("path")
+    .attr({
+          'd': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
+          'class':'edgepath',
+          'id':function(d,i) {return 'edgepath'+d.id;}})
+    .style("stroke", "#bf8639")
+    .style("pointer-events", "none")
+    .style("stroke-width",0.5)//线条粗细
 }
 
 function draw(){
   var selection = $("#calculator").val();
+  ClearCanvas();
   switch(selection)
   {
-    case "MinimumSpanningTree":
-      //最小生成树数据，下面是接口例子,函数需要返回的是边的id的列表，如[1, 2, 4, 50, ...]
-      var spanningTreeLinks = [23, 29, 46, 52, 349, 527];
-      /*spanningTreeLinks = MST(list, clickedNode);
-      console.log(spanningTreeLinks);*/
+    case "MinimumSpanningTree(prim)":
+      var spanningTreeLinks;
+      spanningTreeLinks = MST(list, clickedNode);
+      console.log(spanningTreeLinks);
 
-      //显示最小生成树
       var resNodes = [];
-      spanningTreeLinks.forEach(function(variable){
-        if (resNodes.indexOf(links[variable].source) < 0){
-          resNodes.push(links[variable].source); 
-        }
-        if (resNodes.indexOf(links[variable].target) < 0){
-          resNodes.push(links[variable].target); 
-        }
+      edges.forEach(function(line){
+          spanningTreeLinks.forEach(function(variable){
+            if(line.id == variable){
+              if (resNodes.indexOf(line.source) < 0){
+                resNodes.push(line.source); 
+              }
+              if (resNodes.indexOf(line.target) < 0){
+                resNodes.push(line.target); 
+              }
+            }
+          })
       });
-      console.log(resNodes);
 
       //给边填色加粗
       edges_line
+        .transition()
+        .ease(circle)
+        .duration(4000)
         .style("stroke", function(line){
-          var notChanged = true;
-          var color = "#A254A2";
+          var color = "#bf8639";
           spanningTreeLinks.forEach(function(variable){
-            if (notChanged){
               if (line.id == variable)
               {
                 color = "#FF8000";
               }
-            }
           });
           return color;
         })
         .style("stroke-width", function(line){
-          var notChanged = true;
           var width = 0.5;
           spanningTreeLinks.forEach(function(variable){
-            if (notChanged){
               if (line.id == variable)
               {
                 width = 4;
               }
-            }
           });
           return width;
         });
@@ -2430,255 +265,745 @@ function draw(){
       //给圆圈填色加粗
       circle
         .style("fill", function(d){
-          var notChanged = true;
           var color = "#B43232";
           resNodes.forEach(function(variable){
-            if (notChanged){
               if (d.name == variable.name)
               {
                 color = "#FF8000";
               }
-            }
           });
           return color;
         })
-        .style("stoke", function(d){
-          var notChanged = true;
+        .style("stroke", function(d){
           var color = "#B43232";
           resNodes.forEach(function(variable){
-            if (notChanged){
               if (d.name == variable.name)
               {
                 color = "#FF8000";
               }
-            }
           });
           return color;
         });
       break;
 
+    case "MinimumSpanningTree(kruskal)":
+      var spanningTreeLinks;
+      console.log(edges);
+      spanningTreeLinks = KruskalMST(edges, clickedNode);
+      console.log(spanningTreeLinks);
+      //显示最小生成树
+      var resNodes = [];
+      edges.forEach(function(line){
+          spanningTreeLinks.forEach(function(variable){
+            if(line.id == variable){
+              if (resNodes.indexOf(line.source) < 0){
+                resNodes.push(line.source); 
+              }
+              if (resNodes.indexOf(line.target) < 0){
+                resNodes.push(line.target); 
+              }
+            }
+          })
+      });
+
+      //给边填色加粗
+      edges_line
+        .style("stroke", function(line){
+          var color = "#bf8639";
+          spanningTreeLinks.forEach(function(variable){
+              if (line.id == variable)
+              {
+                color = "#FF8000";
+              }
+          });
+          return color;
+        })
+        .style("stroke-width", function(line){
+          var width = 0.5;
+          spanningTreeLinks.forEach(function(variable){
+              if (line.id == variable)
+              {
+                width = 4;
+              }
+          });
+          return width;
+        });
+
+      //给圆圈填色加粗
+      circle
+        .style("fill", function(d){
+          var color = "#B43232";
+          resNodes.forEach(function(variable){
+              if (d.name == variable.name)
+              {
+                color = "#FF8000";
+              }
+          });
+          return color;
+        })
+        .style("stroke", function(d){
+          var color = "#B43232";
+          resNodes.forEach(function(variable){
+              if (d.name == variable.name)
+              {
+                color = "#FF8000";
+              }
+          });
+          return color;
+        });
+      break;    
+
     case "PointCloseness":
-      //PointCloseness数据，下面是接口例子，函数需要返回的是对应每个node的中心度的按比例尺缩放归一化列表，如[0.01，0.2，0.05，0.6，1，...
-      var pointCloseness = [0.01, 0.2, 0.05, 0.6, 1];
-      /*pointCloseness = pointCloseness(list, node_info, links);
-      console.log(pointCloseness);*/
-      //再看看，总觉得算法接口不太对
+      var point_closeness;
+      point_closeness = pointCloseness1(list, node_info, edges);
 
       //显示结束中心度
       var a = d3.rgb(255,0,0);    //红色  
       var b = d3.rgb(0,255,0);    //绿色  
 
-      var compute = d3.interpolate(a,b);  
+      var compute = d3.interpolateRgb(a,b);  
 
       edges_line
-        .style("stroke", "#A254A2")
+        .style("stroke", "#bf8639")
         .style("stroke-width", 0.5)
 
       circle
         .transition()
         .style("fill", function(d){
-          console.log(compute(pointCloseness[d.name]));
-          return compute(pointCloseness[d.name]); 
+          return compute(point_closeness[d.name]); 
         })
         .style('stroke', function(d){
-          return compute(PointCloseness[d.name]); 
+          return compute(point_closeness[d.name]); 
         });
       break;
 
     case "PointBetweeness":
-      //PointBetweeness数据，下面是接口例子，函数需要返回的是对应每个node的中心度的按比例尺缩放归一化列表，如[0.01，0.2，0.05，0.6，1，...]
-      var pointBetweeness = [0.4, 0.07, 0.33, 0.25, 0.87];
-      /*pointBetweeness = pointBetweeness(list, node_info);
-      console.log(pointBetweeness);*/
+      var point_betweeness;
+      point_betweeness = pointBetweeness1(list, node_info);
 
-      //显示紧密中心度
       var a = d3.rgb(255,0,0);    //红色  
       var b = d3.rgb(0,255,0);    //绿色  
 
-      var compute = d3.interpolate(a,b);  
+      var compute = d3.interpolateRgb(a,b);  
 
       edges_line
-        .style("stroke", "#A254A2")
+        .style("stroke", "#bf8639")
         .style("stroke-width", 0.5)
 
       circle
         .transition()
         .style("fill", function(d){
-          console.log(compute(pointBetweeness[d.name]));
-          return compute(pointBetweeness[d.name]); 
+          return compute(point_betweeness[d.name]); 
         })
         .style('stroke', function(d){
-          return compute(pointBetweeness[d.name]); 
+          return compute(point_betweeness[d.name]); 
         });
       break;
 
-    /*case "StrongConnectedComponent":
-      //强连通分量数据，下面是接口例子
-      var strongConnectedComponent;
-      /*strongConnectedComponent = strongConnectedComponent(links, node_info);
-      console.log(strongConnectedComponent);
-      break;*/
-
     case "ConnectedComponent":
-      //对于无向图，强连通分量=连通分量，所以只考虑一个，下面是接口例子，函数需要返回的是边的id的列表，如[1, 2, 4, 50, ...]，其实最小生成树就是一个强连通分量
-      var connectedComponent = [230, 290, 460, 452, 349, 527];
-      /*connectedComponent = connectedComponent(list, clickedNode);
-      console.log(connectedComponent);*/
-
-      //显示连通分量
-      var resNodes = [];
-      connectedComponent.forEach(function(variable){
-        if (resNodes.indexOf(links[variable].source) < 0){
-          resNodes.push(links[variable].source); 
-        }
-        if (resNodes.indexOf(links[variable].target) < 0){
-          resNodes.push(links[variable].target); 
-        }
-      });
-      console.log(resNodes);
-
-      //给边填色加粗
-      edges_line
-        .style("stroke", function(line){
-          var notChanged = true;
-          var color = "#A254A2";
-          connectedComponent.forEach(function(variable){
-            if (notChanged){
-              if (line.id == variable)
-              {
-                color = "#FF8000";
-              }
-            }
-          });
-          return color;
-        })
-        .style("stroke-width", function(line){
-          var notChanged = true;
-          var width = 0.5;
-          connectedComponent.forEach(function(variable){
-            if (notChanged){
-              if (line.id == variable)
-              {
-                width = 4;
-              }
-            }
-          });
-          return width;
-        });
-
-      //给圆圈填色加粗
+      var connectedComponent;
+      connectedComponent = connectedComponent1(list, node_info, clickedNode);
       circle
         .style("fill", function(d){
-          var notChanged = true;
-          var color = "#B43232";
-          resNodes.forEach(function(variable){
-            if (notChanged){
-              if (d.name == variable.name)
-              {
-                color = "#FF8000";
-              }
-            }
-          });
-          return color;
+          return color_list[connectedComponent[d.name]];
         })
-        .style("stoke", function(d){
-          var notChanged = true;
-          var color = "#B43232";
-          resNodes.forEach(function(variable){
-            if (notChanged){
-              if (d.name == variable.name)
-              {
-                color = "#FF8000";
-              }
-            }
-          });
-          return color;
+        .style("stroke", function(d){
+          return color_list[connectedComponent[d.name]];
         });
+        break;
+    case "Floyd":
+      if (floyd_changed){
+        floyd_matrix = FloydAlgorithm(list, node_info, edges);
+        console.log(floyd_matrix);
+        floyd_changed = false;
+      }
+      break;
+    case "Ford":
+      select_ford = true;
+      break;
+    case "Dijkstra":
+      select_ford = false;
+      break;
+    case "SLPA":
+      var cluster_list = SLPA(list, node_info, 20, 0.5);
+      var cluster_num = cluster_list.length;
+      var cluster = {};
+      console.log(cluster_list);
+      for (var i = 0; i < 200; ++i){
+        cluster[i] = -1;
+      }
+      for (var i = 0; i < cluster_num; ++i){
+        var cluster_size = cluster_list[i].length;
+        for (var j = 0; j < cluster_size; ++j){
+          cluster[cluster_list[i][j]] = i;
+        }
+      }
+      circle
+      .style("fill", function(d){
+        return color_list[cluster[d.name]+1];
+      })
+      .style("stroke", function(d){
+        return color_list[cluster[d.name]+1];
+      });
+      break;
+    case "Flow":
+      var flow = FlowAlgorithm(list, clickedNode.name);
+      console.log(flow);
+      var start_node = clickedNode.name;
+      var all_path = [];
+      for (var i = 0; i < node_info.length; i++){
+        if(i == start_node){
+          all_path.push(-1);
+          continue;
+        }
+        if (flow[0][i] > 10000){
+          all_path.push(-2);
+          continue;
+        }
+        if(flow[0][i] != -1){
+          all_path.push(flow[0][i]);
+        }
+      }
+      console.log(all_path);
+      var all_links = {};
+      for(var i = 0; i < links.length; ++i){
+        all_links[i] = -1;
+      }
+      for(var i = 0; i < node_info.length; i++){
+        var len_of_node = list[i].length;
+        if(all_path[i] != -1){
+          if (all_path[i] == -2){
+            continue;
+          }
+          for(var j = 0; j < len_of_node; ++j){
+            if (all_path[i] != list[i][j].next){
+              all_links[list[i][j].IDOfLink] = flow[1][i];
+            }
+          }
+        }
+        else{
+          for(var j = 0; j < len_of_node; ++j){
+            all_links[list[i][j].IDOfLink] = flow[1][i];
+          }
+        }
+      }
+      console.log(all_links);
+
+      edges.forEach(function(line){
+        if(all_links[line.id] != -1){
+          svg.select("#edgepath"+line.id)
+          .transition()
+          .delay(Math.round(all_links[line.id]*200))
+          .style("stroke", "url(#temp_gradient")
+          .style("stroke-width", 5);
+          //.remove();
+        }
+      });
       break;
   }
 }
 
 function drawShortestPath(){
-  //最短路径数据，下面是接口例子,函数需要返回的是边的id的列表，如[1, 2, 4, 50, ...]
-  var shortestPath = [1, 2, 4, 50, 300, 301];
   var start = $("#fromOptions").val();
   var end = $("#toOptions").val();
-  console.log(start);
-  console.log(end);
-  /*shortestPath = shortestPath(list, start, end);
-  console.log(shortestPath);*/
-
-  //显示最短路径
-  //
+  var shortestPath;
   var resNodes = [];
-  shortestPath.forEach(function(variable){
-    if (resNodes.indexOf(links[variable].source) < 0){
-      resNodes.push(links[variable].source); 
-    }
-    if (resNodes.indexOf(links[variable].target) < 0){
-      resNodes.push(links[variable].target); 
-    }
-  });
-  console.log(resNodes);
 
-  //给边填色加粗
-  edges_line
+  if (floyd_changed){
+    if(select_ford){
+      var pre_matrix = FordAlgorithm(list, name_to_id[start]);
+      var temp_node = name_to_id[end];
+      if (pre_matrix[temp_node] > 10000){
+        return;
+      }
+
+      while(temp_node < 10000 && pre_matrix[temp_node] != -1){
+        resNodes.push(pre_matrix[temp_node]);
+        temp_node = pre_matrix[temp_node];
+      }
+      var len_of_resnodes = resNodes.length;
+      shortestPath = [];
+      for (var i = 0; i < len_of_resnodes-1; ++i){
+        shortestPath.push([resNodes[i+1], resNodes[i]]);
+      }
+      //给边填色加粗
+      edges_line
+      .style("stroke", function(line){
+        var notChanged = true;
+        var color = "#bf8639";
+        shortestPath.forEach(function(variable){
+          if (notChanged){
+            if (line.source.name == variable[0] && line.target.name == variable[1])
+            {
+              color = "#FF8000";
+            }
+          }
+        });
+        return color;
+      })
+      .style("stroke-width", function(line){
+        var notChanged = true;
+        var width = 0.5;
+        shortestPath.forEach(function(variable){
+          if (notChanged){
+            if (line.source.name == variable[0] && line.target.name == variable[1])
+            {
+              width = 4;
+            }
+          }
+        });
+        return width;
+      });
+    }
+    else{
+      shortestPath= DijkstraAlgorithm(list, name_to_id[start], name_to_id[end]);
+      
+      if (shortestPath.length == 0){
+        return;
+      }
+      edges.forEach(function(line){
+          shortestPath.forEach(function(variable){
+            if(line.id == variable){
+              if (resNodes.indexOf(line.source) < 0){
+                resNodes.push(line.source); 
+              }
+              if (resNodes.indexOf(line.target) < 0){
+                resNodes.push(line.target); 
+              }
+            }
+          })
+      });
+
+      //给边填色加粗
+      edges_line
+      .style("stroke", function(line){
+        var notChanged = true;
+        var color = "#bf8639";
+        shortestPath.forEach(function(variable){
+          if (notChanged){
+            if (line.id == variable)
+            {
+              color = "#FF8000";
+            }
+          }
+        });
+        return color;
+      })
+      .style("stroke-width", function(line){
+        var notChanged = true;
+        var width = 0.5;
+        shortestPath.forEach(function(variable){
+          if (notChanged){
+            if (line.id == variable)
+            {
+              width = 4;
+            }
+          }
+        });
+        return width;
+      });
+    }
+  }
+  else{
+    var st = name_to_id[start];
+    var ed = name_to_id[end];
+    while (floyd_matrix[st][ed] != -1 && floyd_matrix[st][ed] != st){
+      resNodes.push(ed);
+      ed = floyd_matrix[st][ed];
+    }
+    if (floyd_matrix[st][ed] != st){
+      return;
+    }
+    resNodes.push(ed);
+    resNodes.push(st);
+    var len_of_resnodes = resNodes.length;
+    shortestPath = [];
+    for (var i = 0; i < len_of_resnodes-1; ++i){
+      shortestPath.push([resNodes[i+1], resNodes[i]]);
+    }
+    //给边填色加粗
+    edges_line
     .style("stroke", function(line){
-      var notChanged = true;
-      var color = "#A254A2";
+      var color = "#bf8639";
       shortestPath.forEach(function(variable){
-        if (notChanged){
-          if (line.id == variable)
+          if (line.source.name == variable[0] && line.target.name == variable[1])
           {
             color = "#FF8000";
           }
-        }
       });
       return color;
     })
     .style("stroke-width", function(line){
-      var notChanged = true;
       var width = 0.5;
       shortestPath.forEach(function(variable){
-        if (notChanged){
-          if (line.id == variable)
+          if (line.source.name == variable[0] && line.target.name == variable[1])
           {
             width = 4;
           }
-        }
       });
       return width;
     });
+  }
 
   //给圆圈填色加粗
   circle
     .style("fill", function(d){
-      var notChanged = true;
       var color = "#B43232";
       resNodes.forEach(function(variable){
-        if (notChanged){
-          if (d.name == variable.name)
+          if (d.name == variable)
           {
             color = "#FF8000";
           }
-        }
       });
       return color;
     })
-    .style("stoke", function(d){
-      var notChanged = true;
+    .style("stroke", function(d){
       var color = "#B43232";
       resNodes.forEach(function(variable){
-        if (notChanged){
-          if (d.name == variable.name)
+          if (d.name == variable)
           {
             color = "#FF8000";
           }
-        }
       });
       return color;
     });
 }
+
+//此处的t用于设置可以显示的边的最小权值,list其实相当于一个邻接链表
+function ThresholdList(t)
+{
+  var list = {};
+  var numOfVertex = node_info.length;
+  var numOfLinks = links.length;
+
+  for (var i = 0; i < numOfVertex; ++i) {
+    list[node_info[i].id] = [];
+  }
+
+  for (var i = 0; i < numOfLinks; ++i) {
+    if (links[i].value > t) {
+      list[links[i].source.name].push({"ID": links[i].source.name, "next": links[i].target.name, "value": links[i].value, "IDOfLink": i});
+    }
+  }
+  return list;
+}
+
+function ClearCanvas(){
+  edges_line
+    .style("fill", "#bf8639")
+    .style("stroke", "#bf8639");
+  circle
+    .style("fill", "#B43232")
+    .style("stroke", "#B43232");
+}
+
+
+  $(function() {
+    $("#slider").slider({
+      orientation: "horizontal",
+      range: "min",
+      max: 100,
+      min: 10,
+      value: 30,
+      slide: changeScale,
+      change: changeScale
+    });
+
+    $("#weightSliderInt").slider({
+      orientation: "horizontal",
+      range: "min",
+      max: 50,
+      min: 0,
+      value: 0,
+      slide: changeThreshold,
+      change: changeThreshold
+    });
+
+    $("#weightSliderFloat").slider({
+      orientation: "horizontal",
+      range: "min",
+      max: 99,
+      min: 0,
+      value: 0,
+      slide: changeThreshold,
+      change: changeThreshold
+    });
+  });
+
+// http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
+node_info = [{"image_name": "user0.jpg", "img_url": "https://img3.doubanio.com/icon/ul1892408-5.jpg", "id": 0, "name": "xiaoyaozizai"}, {"image_name": "user1.jpg", "img_url": "https://img3.doubanio.com/icon/ul44135044-2.jpg", "id": 1, "name": "zdm"}, {"image_name": "user2.jpg", "img_url": "https://img3.doubanio.com/icon/u1030837-1.jpg", "id": 2, "name": "wishdan"}, {"image_name": "user3.jpg", "img_url": "https://img1.doubanio.com/icon/ul45660032-37.jpg", "id": 3, "name": "45660032"}, {"image_name": "user4.jpg", "img_url": "https://img3.doubanio.com/icon/ul2328736-41.jpg", "id": 4, "name": "summer11007"}, {"image_name": "user5.jpg", "img_url": "https://img3.doubanio.com/icon/ul2185153-162.jpg", "id": 5, "name": "whiteloveswhite"}, {"image_name": "user6.jpg", "img_url": "https://img1.doubanio.com/icon/ul2228358-17.jpg", "id": 6, "name": "shuang1230"}, {"image_name": "user7.jpg", "img_url": "https://img3.doubanio.com/icon/ul40034406-11.jpg", "id": 7, "name": "dreammakers"}, {"image_name": "user8.jpg", "img_url": "https://img3.doubanio.com/icon/ul2811450-30.jpg", "id": 8, "name": "LunaSnape"}, {"image_name": "user9.jpg", "img_url": "https://img3.doubanio.com/icon/ul55835124-3.jpg", "id": 9, "name": "55835124"}, {"image_name": "user10.jpg", "img_url": "https://img3.doubanio.com/icon/ul1680869-5.jpg", "id": 10, "name": "bupt_shine"}, {"image_name": "user11.jpg", "img_url": "https://img3.doubanio.com/icon/ul1185777-34.jpg", "id": 11, "name": "aloneCAT"}, {"image_name": "user12.jpg", "img_url": "https://img3.doubanio.com/icon/ul84785730-12.jpg", "id": 12, "name": "yeyijane"}, {"image_name": "user13.jpg", "img_url": "https://img3.doubanio.com/icon/ul4034626-4.jpg", "id": 13, "name": "4034626"}, {"image_name": "user14.jpg", "img_url": "https://img1.doubanio.com/icon/ul1305491-19.jpg", "id": 14, "name": "1305491"}, {"image_name": "user15.jpg", "img_url": "https://img3.doubanio.com/icon/ul2048107-4.jpg", "id": 15, "name": "galugalu"}, {"image_name": "user16.jpg", "img_url": "https://img3.doubanio.com/icon/ul3110845-20.jpg", "id": 16, "name": "kid007spy"}, {"image_name": "user17.jpg", "img_url": "https://img3.doubanio.com/icon/ul1534578-23.jpg", "id": 17, "name": "id2001xiaoyu"}, {"image_name": "user18.jpg", "img_url": "https://img3.doubanio.com/icon/ul41863480-54.jpg", "id": 18, "name": "sensitivebastar"}, {"image_name": "user19.jpg", "img_url": "https://img3.doubanio.com/icon/ul3069457-15.jpg", "id": 19, "name": "3069457"}, {"image_name": "user20.jpg", "img_url": "https://img3.doubanio.com/icon/ul4365580-4.jpg", "id": 20, "name": "4365580"}, {"image_name": "user21.jpg", "img_url": "https://img5.doubanio.com/icon/ul1282605-6.jpg", "id": 21, "name": "waking"}, {"image_name": "user22.jpg", "img_url": "https://img3.doubanio.com/icon/ul1427105-73.jpg", "id": 22, "name": "vertusd"}, {"image_name": "user23.jpg", "img_url": "https://img1.doubanio.com/icon/ul1184588-7.jpg", "id": 23, "name": "fish_Ponds315"}, {"image_name": "user24.jpg", "img_url": "https://img3.doubanio.com/icon/ul1537650-65.jpg", "id": 24, "name": "woaijianghu"}, {"image_name": "user25.jpg", "img_url": "https://img5.doubanio.com/icon/ul2618313-6.jpg", "id": 25, "name": "icebefore"}, {"image_name": "user26.jpg", "img_url": "https://img5.doubanio.com/icon/ul1038854-56.jpg", "id": 26, "name": "fancyfree"}, {"image_name": "user27.jpg", "img_url": "https://img3.doubanio.com/icon/ul1314771-11.jpg", "id": 27, "name": "maoxiaomao"}, {"image_name": "user28.jpg", "img_url": "https://img3.doubanio.com/icon/ul3742652-93.jpg", "id": 28, "name": "mumulyl"}, {"image_name": "user29.jpg", "img_url": "https://img1.doubanio.com/icon/ul4125133-118.jpg", "id": 29, "name": "diaoduoxi"}, {"image_name": "user30.jpg", "img_url": "https://img1.doubanio.com/icon/ul2979784-47.jpg", "id": 30, "name": "superalemon"}, {"image_name": "user31.jpg", "img_url": "https://img3.doubanio.com/icon/ul2533629-164.jpg", "id": 31, "name": "ddragon"}, {"image_name": "user32.jpg", "img_url": "https://img1.doubanio.com/icon/ul1522921-128.jpg", "id": 32, "name": "shapesofdreams"}, {"image_name": "user33.jpg", "img_url": "https://img5.doubanio.com/icon/ul3266143-6.jpg", "id": 33, "name": "3266143"}, {"image_name": "user34.jpg", "img_url": "https://img1.doubanio.com/icon/ul1095993-59.jpg", "id": 34, "name": "missshakespeare"}, {"image_name": "user35.jpg", "img_url": "https://img1.doubanio.com/icon/ul1212722-7.jpg", "id": 35, "name": "sosoJean"}, {"image_name": "user36.jpg", "img_url": "https://img1.doubanio.com/icon/ul63031990-7.jpg", "id": 36, "name": "dukeyunz"}, {"image_name": "user37.jpg", "img_url": "https://img1.doubanio.com/icon/ul2243222-27.jpg", "id": 37, "name": "gfameko"}, {"image_name": "user38.jpg", "img_url": "https://img5.doubanio.com/icon/ul4720540-6.jpg", "id": 38, "name": "bloodlove"}, {"image_name": "user39.jpg", "img_url": "https://img3.doubanio.com/icon/ul1049965-44.jpg", "id": 39, "name": "Wanda."}, {"image_name": "user40.jpg", "img_url": "https://img3.doubanio.com/icon/ul2621589-163.jpg", "id": 40, "name": "abc1985"}, {"image_name": "user41.jpg", "img_url": "https://img3.doubanio.com/icon/ul1799889-12.jpg", "id": 41, "name": "skyto77"}, {"image_name": "user42.jpg", "img_url": "https://img1.doubanio.com/icon/ul1554013-37.jpg", "id": 42, "name": "volantisff"}, {"image_name": "user43.jpg", "img_url": "https://img3.doubanio.com/icon/ul3276582-1.jpg", "id": 43, "name": "moguyou"}, {"image_name": "user44.jpg", "img_url": "https://img1.doubanio.com/icon/ul34230910-238.jpg", "id": 44, "name": "zc0306"}, {"image_name": "user45.jpg", "img_url": "https://img5.doubanio.com/icon/ul3242991-16.jpg", "id": 45, "name": "derit"}, {"image_name": "user46.jpg", "img_url": "https://img5.doubanio.com/icon/ul1035406-36.jpg", "id": 46, "name": "dormant"}, {"image_name": "user47.jpg", "img_url": "https://img3.doubanio.com/icon/ul2136303-72.jpg", "id": 47, "name": "citouprince"}, {"image_name": "user48.jpg", "img_url": "https://img5.doubanio.com/icon/ul3106355-156.jpg", "id": 48, "name": "wildold"}, {"image_name": "user49.jpg", "img_url": "https://img3.doubanio.com/icon/ul2275641-2.jpg", "id": 49, "name": "2275641"}, {"image_name": "user50.jpg", "img_url": "https://img5.doubanio.com/icon/ul2220952-6.jpg", "id": 50, "name": "fishchild"}, {"image_name": "user51.jpg", "img_url": "https://img5.doubanio.com/icon/ul124812731-26.jpg", "id": 51, "name": "124812731"}, {"image_name": "user52.jpg", "img_url": "https://img1.doubanio.com/icon/ul1403162-18.jpg", "id": 52, "name": "janice5680"}, {"image_name": "user53.jpg", "img_url": "https://img3.doubanio.com/icon/ul1177563-4.jpg", "id": 53, "name": "youhebi"}, {"image_name": "user54.jpg", "img_url": "https://img3.doubanio.com/icon/ul2653632-943.jpg", "id": 54, "name": "yuwai"}, {"image_name": "user55.jpg", "img_url": "https://img3.doubanio.com/icon/ul1142582-145.jpg", "id": 55, "name": "Jane_1-29"}, {"image_name": "user56.jpg", "img_url": "https://img1.doubanio.com/icon/ul1465807-97.jpg", "id": 56, "name": "yongjian"}, {"image_name": "user57.jpg", "img_url": "https://img1.doubanio.com/icon/ul2217674-69.jpg", "id": 57, "name": "alpha5un"}, {"image_name": "user58.jpg", "img_url": "https://img3.doubanio.com/icon/ul1113821-83.jpg", "id": 58, "name": "chenmodewan"}, {"image_name": "user59.jpg", "img_url": "https://img3.doubanio.com/icon/ul4421536-23.jpg", "id": 59, "name": "BlessForDan"}, {"image_name": "user60.jpg", "img_url": "https://img3.doubanio.com/icon/ul1685871-90.jpg", "id": 60, "name": "seanwangxiao"}, {"image_name": "user61.jpg", "img_url": "https://img1.doubanio.com/icon/ul1248732-9.jpg", "id": 61, "name": "miserwei"}, {"image_name": "user62.jpg", "img_url": "https://img3.doubanio.com/icon/ul1303272-10.jpg", "id": 62, "name": "1303272"}, {"image_name": "user63.jpg", "img_url": "https://img3.doubanio.com/icon/ul1681806-10.jpg", "id": 63, "name": "duchamp"}, {"image_name": "user64.jpg", "img_url": "https://img3.doubanio.com/icon/ul3087252-20.jpg", "id": 64, "name": "3087252"}, {"image_name": "user65.jpg", "img_url": "https://img3.doubanio.com/icon/ul1254355-160.jpg", "id": 65, "name": "treeman"}, {"image_name": "user66.jpg", "img_url": "https://img3.doubanio.com/icon/u1007619-1.jpg", "id": 66, "name": "smart5808"}, {"image_name": "user67.jpg", "img_url": "https://img1.doubanio.com/icon/ul2786629-28.jpg", "id": 67, "name": "rainadore"}, {"image_name": "user68.jpg", "img_url": "https://img3.doubanio.com/icon/u1644505-1.jpg", "id": 68, "name": "librajash"}, {"image_name": "user69.jpg", "img_url": "https://img3.doubanio.com/icon/ul1104319-25.jpg", "id": 69, "name": "shoyan"}, {"image_name": "user70.jpg", "img_url": "https://img3.doubanio.com/icon/ul1835877-65.jpg", "id": 70, "name": "1835877"}, {"image_name": "user71.jpg", "img_url": "https://img3.doubanio.com/icon/ul48236624-2.jpg", "id": 71, "name": "48236624"}, {"image_name": "user72.jpg", "img_url": "https://img3.doubanio.com/icon/ul1365590-51.jpg", "id": 72, "name": "brandz"}, {"image_name": "user73.jpg", "img_url": "https://img1.doubanio.com/icon/ul4164100-9.jpg", "id": 73, "name": "4164100"}, {"image_name": "user74.jpg", "img_url": "https://img1.doubanio.com/icon/ul1289463-28.jpg", "id": 74, "name": "ruxiaoguo"}, {"image_name": "user75.jpg", "img_url": "https://img1.doubanio.com/icon/ul37060615-7.jpg", "id": 75, "name": "liruixian"}, {"image_name": "user76.jpg", "img_url": "https://img3.doubanio.com/icon/u2377790-1.jpg", "id": 76, "name": "slpnm"}, {"image_name": "user77.jpg", "img_url": "https://img3.doubanio.com/icon/ul1346368-92.jpg", "id": 77, "name": "xwxc"}, {"image_name": "user78.jpg", "img_url": "https://img5.doubanio.com/icon/ul2238198-6.jpg", "id": 78, "name": "cayetana"}, {"image_name": "user79.jpg", "img_url": "https://img3.doubanio.com/icon/ul1131750-11.jpg", "id": 79, "name": "Big_Rice"}, {"image_name": "user80.jpg", "img_url": "https://img3.doubanio.com/icon/ul2290548-12.jpg", "id": 80, "name": "2290548"}, {"image_name": "user81.jpg", "img_url": "https://img1.doubanio.com/icon/ul1115516-17.jpg", "id": 81, "name": "Junous"}, {"image_name": "user82.jpg", "img_url": "https://img1.doubanio.com/icon/ul1227178-47.jpg", "id": 82, "name": "liuweicq"}, {"image_name": "user83.jpg", "img_url": "https://img1.doubanio.com/icon/ul2279829-7.jpg", "id": 83, "name": "xzfd"}, {"image_name": "user84.jpg", "img_url": "https://img5.doubanio.com/icon/ul1344131-276.jpg", "id": 84, "name": "deutsch1934"}, {"image_name": "user85.jpg", "img_url": "https://img3.doubanio.com/icon/ul1780725-65.jpg", "id": 85, "name": "hellomartin"}, {"image_name": "user86.jpg", "img_url": "https://img5.doubanio.com/icon/ul1548489-26.jpg", "id": 86, "name": "petitespot"}, {"image_name": "user87.jpg", "img_url": "https://img3.doubanio.com/icon/ul2309125-14.jpg", "id": 87, "name": "lucyblues"}, {"image_name": "user88.jpg", "img_url": "https://img1.doubanio.com/icon/ul1282278-29.jpg", "id": 88, "name": "lidyc"}, {"image_name": "user89.jpg", "img_url": "https://img3.doubanio.com/icon/u1074794-1.jpg", "id": 89, "name": "1074794"}, {"image_name": "user90.jpg", "img_url": "https://img3.doubanio.com/icon/ul1468524-4.jpg", "id": 90, "name": "helisn"}, {"image_name": "user91.jpg", "img_url": "https://img3.doubanio.com/icon/u1174776-1.jpg", "id": 91, "name": "originhuman"}, {"image_name": "user92.jpg", "img_url": "https://img1.doubanio.com/icon/ul1420081-19.jpg", "id": 92, "name": "yangyi136"}, {"image_name": "user93.jpg", "img_url": "https://img3.doubanio.com/icon/ul43933215-2.jpg", "id": 93, "name": "JJSJJ"}, {"image_name": "user94.jpg", "img_url": "https://img3.doubanio.com/icon/ul66195133-14.jpg", "id": 94, "name": "nonofuckoff"}, {"image_name": "user95.jpg", "img_url": "https://img3.doubanio.com/icon/ul1027333-35.jpg", "id": 95, "name": "doublebao"}, {"image_name": "user96.jpg", "img_url": "https://img3.doubanio.com/icon/ul2341356-102.jpg", "id": 96, "name": "wonderfuldance"}, {"image_name": "user97.jpg", "img_url": "https://img3.doubanio.com/icon/ul11225571-43.jpg", "id": 97, "name": "aaronchiao1990"}, {"image_name": "user98.jpg", "img_url": "https://img3.doubanio.com/icon/ul3066741-271.jpg", "id": 98, "name": "lihebo"}, {"image_name": "user99.jpg", "img_url": "https://img5.doubanio.com/icon/ul2994477-6.jpg", "id": 99, "name": "fabulouswhite"}, {"image_name": "user100.jpg", "img_url": "https://img3.doubanio.com/icon/u1182787-1.jpg", "id": 100, "name": "1182787"}, {"image_name": "user101.jpg", "img_url": "https://img3.doubanio.com/icon/ul3956599-15.jpg", "id": 101, "name": "tracyprx"}, {"image_name": "user102.jpg", "img_url": "https://img5.doubanio.com/icon/ul2641721-6.jpg", "id": 102, "name": "2641721"}, {"image_name": "user103.jpg", "img_url": "https://img3.doubanio.com/icon/ul1022218-25.jpg", "id": 103, "name": "sby37"}, {"image_name": "user104.jpg", "img_url": "https://img3.doubanio.com/icon/ul1135056-32.jpg", "id": 104, "name": "FEL_Murasakiiro"}, {"image_name": "user105.jpg", "img_url": "https://img3.doubanio.com/icon/ul2669630-175.jpg", "id": 105, "name": "greenrabbit"}, {"image_name": "user106.jpg", "img_url": "https://img3.doubanio.com/icon/ul3222650-2.jpg", "id": 106, "name": "nerida8013"}, {"image_name": "user107.jpg", "img_url": "https://img1.doubanio.com/icon/ul2636442-7.jpg", "id": 107, "name": "insidejudy"}, {"image_name": "user108.jpg", "img_url": "https://img1.doubanio.com/icon/ul1018267-29.jpg", "id": 108, "name": "wildboy"}, {"image_name": "user109.jpg", "img_url": "https://img1.doubanio.com/icon/ul1326807-457.jpg", "id": 109, "name": "fuxiu"}, {"image_name": "user110.jpg", "img_url": "https://img3.doubanio.com/icon/ul16249062-711.jpg", "id": 110, "name": "ChannaDisco"}, {"image_name": "user111.jpg", "img_url": "https://img3.doubanio.com/icon/ul2458067-3.jpg", "id": 111, "name": "macha"}, {"image_name": "user112.jpg", "img_url": "https://img3.doubanio.com/icon/ul15729576-14.jpg", "id": 112, "name": "15729576"}, {"image_name": "user113.jpg", "img_url": "https://img3.doubanio.com/icon/ul67947401-63.jpg", "id": 113, "name": "GayScript"}, {"image_name": "user114.jpg", "img_url": "https://img3.doubanio.com/icon/ul2274261-235.jpg", "id": 114, "name": "flowertide"}, {"image_name": "user115.jpg", "img_url": "https://img5.doubanio.com/icon/ul2174918-16.jpg", "id": 115, "name": "seancheung"}, {"image_name": "user116.jpg", "img_url": "https://img3.doubanio.com/icon/ul2735218-15.jpg", "id": 116, "name": "luotang"}, {"image_name": "user117.jpg", "img_url": "https://img1.doubanio.com/icon/ul4364601-7.jpg", "id": 117, "name": "iamxiaoqi"}, {"image_name": "user118.jpg", "img_url": "https://img5.doubanio.com/icon/ul33186721-6.jpg", "id": 118, "name": "nvwawa"}, {"image_name": "user119.jpg", "img_url": "https://img3.doubanio.com/icon/ul1296250-20.jpg", "id": 119, "name": "caesarphoenix"}, {"image_name": "user120.jpg", "img_url": "https://img1.doubanio.com/icon/ul29793692-8.jpg", "id": 120, "name": "horsefaCe"}, {"image_name": "user121.jpg", "img_url": "https://img3.doubanio.com/icon/ul3297820-11.jpg", "id": 121, "name": "putengfei"}, {"image_name": "user122.jpg", "img_url": "https://img1.doubanio.com/icon/ul1151060-28.jpg", "id": 122, "name": "so_jiuye"}, {"image_name": "user123.jpg", "img_url": "https://img3.doubanio.com/icon/ul1652881-25.jpg", "id": 123, "name": "zjchinar"}, {"image_name": "user124.jpg", "img_url": "https://img5.doubanio.com/icon/ul2040808-296.jpg", "id": 124, "name": "freedom_puss"}, {"image_name": "user125.jpg", "img_url": "https://img3.doubanio.com/icon/ul2244595-3.jpg", "id": 125, "name": "2244595"}, {"image_name": "user126.jpg", "img_url": "https://img3.doubanio.com/icon/ul1097581-103.jpg", "id": 126, "name": "sabrina.zmy"}, {"image_name": "user127.jpg", "img_url": "https://img3.doubanio.com/icon/ul1561336-42.jpg", "id": 127, "name": "tingconan"}, {"image_name": "user128.jpg", "img_url": "https://img1.doubanio.com/icon/ul15485620-8.jpg", "id": 128, "name": "15485620"}, {"image_name": "user129.jpg", "img_url": "https://img3.doubanio.com/icon/ul34200368-14.jpg", "id": 129, "name": "cect"}, {"image_name": "user130.jpg", "img_url": "https://img3.doubanio.com/icon/u1116609-1.jpg", "id": 130, "name": "ballwen"}, {"image_name": "user131.jpg", "img_url": "https://img1.doubanio.com/icon/ul1909721-17.jpg", "id": 131, "name": "k.s."}, {"image_name": "user132.jpg", "img_url": "https://img5.doubanio.com/icon/ul1332702-86.jpg", "id": 132, "name": "1332702"}, {"image_name": "user133.jpg", "img_url": "https://img3.doubanio.com/icon/ul1117143-3.jpg", "id": 133, "name": "Green_Girl"}, {"image_name": "user134.jpg", "img_url": "https://img3.doubanio.com/icon/ul2138471-4.jpg", "id": 134, "name": "perfectlee"}, {"image_name": "user135.jpg", "img_url": "https://img3.doubanio.com/icon/ul1360612-42.jpg", "id": 135, "name": "never4u"}, {"image_name": "user136.jpg", "img_url": "https://img3.doubanio.com/icon/ul1080491-4.jpg", "id": 136, "name": "mingming21"}, {"image_name": "user137.jpg", "img_url": "https://img3.doubanio.com/icon/ul3151739-31.jpg", "id": 137, "name": "vacual"}, {"image_name": "user138.jpg", "img_url": "https://img1.doubanio.com/icon/ul3305538-9.jpg", "id": 138, "name": "aether55555"}, {"image_name": "user139.jpg", "img_url": "https://img3.doubanio.com/icon/ul1043499-85.jpg", "id": 139, "name": "Len."}, {"image_name": "user140.jpg", "img_url": "https://img1.doubanio.com/icon/ul3500302-48.jpg", "id": 140, "name": "fikirui"}, {"image_name": "user141.jpg", "img_url": "https://img3.doubanio.com/icon/ul1080393-13.jpg", "id": 141, "name": "kingkongofkhan"}, {"image_name": "user142.jpg", "img_url": "https://img3.doubanio.com/icon/ul29995488-102.jpg", "id": 142, "name": "O____O"}, {"image_name": "user143.jpg", "img_url": "https://img5.doubanio.com/icon/ul1003853-196.jpg", "id": 143, "name": "tenkappa"}, {"image_name": "user144.jpg", "img_url": "https://img1.doubanio.com/icon/ul1901885-49.jpg", "id": 144, "name": "catuncle1988"}, {"image_name": "user145.jpg", "img_url": "https://img1.doubanio.com/icon/ul3006833-48.jpg", "id": 145, "name": "3006833"}, {"image_name": "user146.jpg", "img_url": "https://img5.doubanio.com/icon/ul3418378-6.jpg", "id": 146, "name": "3418378"}, {"image_name": "user147.jpg", "img_url": "https://img3.doubanio.com/icon/u2216190-2.jpg", "id": 147, "name": "2216190"}, {"image_name": "user148.jpg", "img_url": "https://img3.doubanio.com/icon/ul2488689-5.jpg", "id": 148, "name": "baleite"}, {"image_name": "user149.jpg", "img_url": "https://img5.doubanio.com/icon/ul1794252-46.jpg", "id": 149, "name": "FRedLaw"}, {"image_name": "user150.jpg", "img_url": "https://img3.doubanio.com/icon/ul1107747-3.jpg", "id": 150, "name": "musichellsing"}, {"image_name": "user151.jpg", "img_url": "https://img5.doubanio.com/icon/ul1299820-26.jpg", "id": 151, "name": "princesspainter"}, {"image_name": "user152.jpg", "img_url": "https://img1.doubanio.com/icon/ul2867845-88.jpg", "id": 152, "name": "2867845"}, {"image_name": "user153.jpg", "img_url": "https://img1.doubanio.com/icon/ul2335488-29.jpg", "id": 153, "name": "2335488"}, {"image_name": "user154.jpg", "img_url": "https://img1.doubanio.com/icon/ul3742596-37.jpg", "id": 154, "name": "3742596"}, {"image_name": "user155.jpg", "img_url": "https://img1.doubanio.com/icon/ul2230594-17.jpg", "id": 155, "name": "feelinsly"}, {"image_name": "user156.jpg", "img_url": "https://img1.doubanio.com/icon/ul3212287-88.jpg", "id": 156, "name": "brandcopy"}, {"image_name": "user157.jpg", "img_url": "https://img3.doubanio.com/icon/u2340579-2.jpg", "id": 157, "name": "AdelleYang"}, {"image_name": "user158.jpg", "img_url": "https://img3.doubanio.com/icon/ul49595588-4.jpg", "id": 158, "name": "49595588"}, {"image_name": "user159.jpg", "img_url": "https://img3.doubanio.com/icon/ul59977768-2.jpg", "id": 159, "name": "59977768"}, {"image_name": "user160.jpg", "img_url": "https://img1.doubanio.com/icon/ul1477695-19.jpg", "id": 160, "name": "magicdragon.why"}, {"image_name": "user161.jpg", "img_url": "https://img3.doubanio.com/icon/ul6770850-5.jpg", "id": 161, "name": "pkbraveheart"}, {"image_name": "user162.jpg", "img_url": "https://img3.doubanio.com/icon/ul4191448-22.jpg", "id": 162, "name": "4191448"}, {"image_name": "user163.jpg", "img_url": "https://img3.doubanio.com/icon/ul2604381-63.jpg", "id": 163, "name": "yolandaziru"}, {"image_name": "user164.jpg", "img_url": "https://img3.doubanio.com/icon/ul3869722-11.jpg", "id": 164, "name": "shanyuping"}, {"image_name": "user165.jpg", "img_url": "https://img3.doubanio.com/icon/ul2195332-14.jpg", "id": 165, "name": "zhanlusword"}, {"image_name": "user166.jpg", "img_url": "https://img3.doubanio.com/icon/ul1266965-31.jpg", "id": 166, "name": "linjunhalida"}, {"image_name": "user167.jpg", "img_url": "https://img3.doubanio.com/icon/ul1891500-4.jpg", "id": 167, "name": "1891500"}, {"image_name": "user168.jpg", "img_url": "https://img3.doubanio.com/icon/ul1105463-51.jpg", "id": 168, "name": "parco"}, {"image_name": "user169.jpg", "img_url": "https://img3.doubanio.com/icon/ul2286532-23.jpg", "id": 169, "name": "zling--HE"}, {"image_name": "user170.jpg", "img_url": "https://img1.doubanio.com/icon/ul1452992-19.jpg", "id": 170, "name": "maoyi0249"}, {"image_name": "user171.jpg", "img_url": "https://img3.doubanio.com/icon/ul46127626-20.jpg", "id": 171, "name": "jinpiankong"}, {"image_name": "user172.jpg", "img_url": "https://img1.doubanio.com/icon/ul1808644-97.jpg", "id": 172, "name": "veracin"}, {"image_name": "user173.jpg", "img_url": "https://img3.doubanio.com/icon/ul1344235-25.jpg", "id": 173, "name": "ISRAFEL"}, {"image_name": "user174.jpg", "img_url": "https://img3.doubanio.com/icon/ul2967929-2.jpg", "id": 174, "name": "denisemasami31"}, {"image_name": "user175.jpg", "img_url": "https://img1.doubanio.com/icon/ul1649395-249.jpg", "id": 175, "name": "mnqn"}, {"image_name": "user176.jpg", "img_url": "https://img5.doubanio.com/icon/ul2056470-36.jpg", "id": 176, "name": "wanger0619"}, {"image_name": "user177.jpg", "img_url": "https://img1.doubanio.com/icon/ul45069249-28.jpg", "id": 177, "name": "nengyinyibeiwu"}, {"image_name": "user178.jpg", "img_url": "https://img3.doubanio.com/icon/ul1766955-2.jpg", "id": 178, "name": "oxolin"}, {"image_name": "user179.jpg", "img_url": "https://img3.doubanio.com/icon/ul50437623-4.jpg", "id": 179, "name": "50437623"}, {"image_name": "user180.jpg", "img_url": "https://img3.doubanio.com/icon/ul2582047-55.jpg", "id": 180, "name": "haeyukitachi"}, {"image_name": "user181.jpg", "img_url": "https://img3.doubanio.com/icon/ul40198953-24.jpg", "id": 181, "name": "darksound"}, {"image_name": "user182.jpg", "img_url": "https://img3.doubanio.com/icon/ul2211100-15.jpg", "id": 182, "name": "mayuane"}, {"image_name": "user183.jpg", "img_url": "https://img3.doubanio.com/icon/ul1130088-3.jpg", "id": 183, "name": "trunksye"}, {"image_name": "user184.jpg", "img_url": "https://img3.doubanio.com/icon/ul2322105-21.jpg", "id": 184, "name": "yoki-club"}, {"image_name": "user185.jpg", "img_url": "https://img1.doubanio.com/icon/ul1350902-349.jpg", "id": 185, "name": "junmin"}, {"image_name": "user186.jpg", "img_url": "https://img1.doubanio.com/icon/ul2866733-8.jpg", "id": 186, "name": "Munhokim"}, {"image_name": "user187.jpg", "img_url": "https://img1.doubanio.com/icon/ul50040621-7.jpg", "id": 187, "name": "50040621"}, {"image_name": "user188.jpg", "img_url": "https://img3.doubanio.com/icon/ul2463095-2.jpg", "id": 188, "name": "waterfront"}, {"image_name": "user189.jpg", "img_url": "https://img1.doubanio.com/icon/ul2521825-67.jpg", "id": 189, "name": "fengjiansun"}, {"image_name": "user190.jpg", "img_url": "https://img3.doubanio.com/icon/ul36011170-12.jpg", "id": 190, "name": "chahuzi"}, {"image_name": "user191.jpg", "img_url": "https://img5.doubanio.com/icon/ul1331730-6.jpg", "id": 191, "name": "xiaoxingxing"}, {"image_name": "user192.jpg", "img_url": "https://img3.doubanio.com/icon/ul1017379-62.jpg", "id": 192, "name": "chenzhuo"}, {"image_name": "user193.jpg", "img_url": "https://img3.doubanio.com/icon/ul2881682-80.jpg", "id": 193, "name": "leebing0327"}, {"image_name": "user194.jpg", "img_url": "https://img3.doubanio.com/icon/ul1843784-4.jpg", "id": 194, "name": "liusashmily"}, {"image_name": "user195.jpg", "img_url": "https://img3.doubanio.com/icon/ul1598011-74.jpg", "id": 195, "name": "isabel1106"}, {"image_name": "user196.jpg", "img_url": "https://img3.doubanio.com/icon/ul1466669-294.jpg", "id": 196, "name": "Luffy_masaomi"}, {"image_name": "user197.jpg", "img_url": "https://img3.doubanio.com/icon/ul7784353-2.jpg", "id": 197, "name": "jingangnumu"}, {"image_name": "user198.jpg", "img_url": "https://img3.doubanio.com/icon/ul3264993-393.jpg", "id": 198, "name": "boboggqueen"}, {"image_name": "user199.jpg", "img_url": "https://img3.doubanio.com/icon/ul63406200-60.jpg", "id": 199, "name": "63406200"}];
+
+links = [{"source": 0, "target": 105, "value": 5.6365}, {"source": 1, "target": 136, "value": 48.9735}, {"source": 1, "target": 147, "value": 49.7735}, {"source": 1, "target": 156, "value": 49.0585}, {"source": 1, "target": 157, "value": 49.463}, {"source": 1, "target": 170, "value": 49.711}, {"source": 1, "target": 174, "value": 49.814499999999995}, {"source": 1, "target": 178, "value": 49.5185}, {"source": 1, "target": 184, "value": 49.3355}, {"source": 1, "target": 185, "value": 49.756}, {"source": 1, "target": 186, "value": 48.5570}, {"source": 2, "target": 186, "value": 5.1260}, {"source": 3, "target": 51, "value": 49.7945}, {"source": 3, "target": 63, "value": 49.6665}, {"source": 3, "target": 67, "value": 49.602500000000006}, {"source": 3, "target": 105, "value": 49.267}, {"source": 3, "target": 132, "value": 49.836}, {"source": 3, "target": 136, "value": 49.473}, {"source": 3, "target": 156, "value": 49.4575}, {"source": 3, "target": 157, "value": 49.992999999999995}, {"source": 3, "target": 184, "value": 49.92}, {"source": 3, "target": 186, "value": 49.1965}, {"source": 4, "target": 105, "value": 5.1105}, {"source": 5, "target": 36, "value": 49.924}, {"source": 5, "target": 142, "value": 49.975500000000004}, {"source": 5, "target": 166, "value": 49.913}, {"source": 5, "target": 171, "value": 49.7295}, {"source": 5, "target": 178, "value": 48.697}, {"source": 5, "target": 184, "value": 48.4915}, {"source": 5, "target": 185, "value": 48.7715}, {"source": 5, "target": 186, "value": 47.4705}, {"source": 5, "target": 188, "value": 49.2715}, {"source": 5, "target": 194, "value": 49.6695}, {"source": 6, "target": 51, "value": 49.736000000000004}, {"source": 6, "target": 63, "value": 49.573499999999996}, {"source": 6, "target": 67, "value": 49.694}, {"source": 6, "target": 105, "value": 49.2595}, {"source": 6, "target": 132, "value": 49.956500000000005}, {"source": 6, "target": 136, "value": 49.389}, {"source": 6, "target": 156, "value": 49.524}, {"source": 6, "target": 157, "value": 49.989}, {"source": 6, "target": 184, "value": 49.9125}, {"source": 6, "target": 186, "value": 49.1095}, {"source": 7, "target": 186, "value": 3.598}, {"source": 8, "target": 186, "value": 5.6805}, {"source": 9, "target": 25, "value": 49.801}, {"source": 9, "target": 51, "value": 49.687}, {"source": 9, "target": 63, "value": 49.618}, {"source": 9, "target": 67, "value": 49.731500000000004}, {"source": 9, "target": 94, "value": 49.982}, {"source": 9, "target": 105, "value": 49.423}, {"source": 9, "target": 132, "value": 49.79599999999999}, {"source": 9, "target": 136, "value": 49.4565}, {"source": 9, "target": 156, "value": 49.488}, {"source": 9, "target": 186, "value": 49.0905}, {"source": 10, "target": 186, "value": 3.4395}, {"source": 11, "target": 186, "value": 8.306000000000001}, {"source": 12, "target": 105, "value": 4.5435}, {"source": 13, "target": 132, "value": 49.7375}, {"source": 119, "target": 176, "value": 41.6225}, {"source": 40, "target": 70, "value": 24.282}, {"source": 70, "target": 40, "value": 24.282}, {"source": 40, "target": 48, "value": 28.369}, {"source": 48, "target": 40, "value": 28.369}, {"source": 46, "target": 70, "value": 33.3715}, {"source": 70, "target": 46, "value": 33.3715}, {"source": 46, "target": 48, "value": 16.523}, {"source": 48, "target": 46, "value": 16.523}, {"source": 17, "target": 46, "value": 12.1725}, {"source": 46, "target": 17, "value": 12.1725}, {"source": 176, "target": 119, "value": 41.6225}, {"source": 119, "target": 121, "value": 39.122499999999995}, {"source": 121, "target": 119, "value": 39.122499999999995}, {"source": 176, "target": 121, "value": 34.122499999999995}, {"source": 121, "target": 176, "value": 34.122499999999995}, {"source": 176, "target": 144, "value": 29.1225}, {"source": 144, "target": 176, "value": 29.1225}, {"source": 13, "target": 136, "value": 48.9995}, {"source": 13, "target": 147, "value": 49.973}, {"source": 13, "target": 156, "value": 49.226}, {"source": 13, "target": 157, "value": 49.694500000000005}, {"source": 13, "target": 170, "value": 49.987500000000004}, {"source": 13, "target": 178, "value": 49.8665}, {"source": 13, "target": 184, "value": 49.4745}, {"source": 13, "target": 185, "value": 49.900000000000006}, {"source": 13, "target": 186, "value": 48.721500000000006}, {"source": 14, "target": 186, "value": 8.499}, {"source": 15, "target": 186, "value": 3.554}, {"source": 19, "target": 186, "value": 7.033}, {"source": 20, "target": 132, "value": 6.5264999999999995}, {"source": 21, "target": 105, "value": 49.937}, {"source": 21, "target": 186, "value": 49.775}, {"source": 22, "target": 67, "value": 49.544}, {"source": 22, "target": 94, "value": 49.774}, {"source": 22, "target": 105, "value": 49.361}, {"source": 22, "target": 132, "value": 49.6415}, {"source": 22, "target": 136, "value": 49.540499999999994}, {"source": 22, "target": 156, "value": 49.57900000000001}, {"source": 22, "target": 157, "value": 49.973}, {"source": 22, "target": 170, "value": 49.939499999999995}, {"source": 22, "target": 184, "value": 49.8565}, {"source": 22, "target": 186, "value": 49.179}, {"source": 23, "target": 142, "value": 49.974999999999994}, {"source": 23, "target": 145, "value": 49.952}, {"source": 23, "target": 159, "value": 49.882999999999996}, {"source": 23, "target": 174, "value": 49.438500000000005}, {"source": 23, "target": 178, "value": 48.8675}, {"source": 23, "target": 184, "value": 48.75149999999999}, {"source": 23, "target": 185, "value": 49.1}, {"source": 23, "target": 186, "value": 47.830000000000005}, {"source": 23, "target": 188, "value": 49.428}, {"source": 23, "target": 194, "value": 49.921499999999995}, {"source": 24, "target": 105, "value": 6.9185}, {"source": 25, "target": 9, "value": 49.801}, {"source": 25, "target": 36, "value": 49.985}, {"source": 25, "target": 88, "value": 49.8675}, {"source": 25, "target": 145, "value": 49.9605}, {"source": 25, "target": 166, "value": 49.9795}, {"source": 25, "target": 171, "value": 49.9445}, {"source": 25, "target": 185, "value": 48.896}, {"source": 25, "target": 186, "value": 47.74549999999999}, {"source": 25, "target": 188, "value": 49.3485}, {"source": 25, "target": 194, "value": 49.635999999999996}, {"source": 26, "target": 63, "value": 49.9915}, {"source": 26, "target": 105, "value": 49.8745}, {"source": 26, "target": 136, "value": 49.9445}, {"source": 26, "target": 186, "value": 49.650999999999996}, {"source": 27, "target": 28, "value": 8.4885}, {"source": 28, "target": 27, "value": 8.4885}, {"source": 28, "target": 160, "value": 49.714}, {"source": 28, "target": 162, "value": 49.5985}, {"source": 28, "target": 170, "value": 49.403}, {"source": 28, "target": 174, "value": 49.851}, {"source": 28, "target": 178, "value": 49.387}, {"source": 28, "target": 184, "value": 49.230000000000004}, {"source": 28, "target": 185, "value": 49.4555}, {"source": 28, "target": 186, "value": 48.3545}, {"source": 28, "target": 188, "value": 49.634}, {"source": 30, "target": 105, "value": 49.9705}, {"source": 30, "target": 186, "value": 49.925}, {"source": 31, "target": 186, "value": 3.8975}, {"source": 32, "target": 186, "value": 5.412}, {"source": 33, "target": 105, "value": 5.084499999999999}, {"source": 34, "target": 186, "value": 4.0785}, {"source": 35, "target": 186, "value": 6.1855}, {"source": 36, "target": 5, "value": 49.924}, {"source": 36, "target": 25, "value": 49.985}, {"source": 36, "target": 51, "value": 49.788500000000006}, {"source": 36, "target": 63, "value": 49.864}, {"source": 36, "target": 67, "value": 49.964000000000006}, {"source": 36, "target": 105, "value": 49.623}, {"source": 36, "target": 132, "value": 49.7335}, {"source": 36, "target": 136, "value": 49.7705}, {"source": 36, "target": 156, "value": 49.794}, {"source": 36, "target": 186, "value": 49.463}, {"source": 37, "target": 95, "value": 49.9605}, {"source": 37, "target": 111, "value": 49.909499999999994}, {"source": 37, "target": 162, "value": 49.908500000000004}, {"source": 37, "target": 170, "value": 49.6595}, {"source": 37, "target": 174, "value": 49.897}, {"source": 37, "target": 178, "value": 49.596000000000004}, {"source": 37, "target": 184, "value": 49.507000000000005}, {"source": 37, "target": 185, "value": 49.8385}, {"source": 37, "target": 186, "value": 48.587999999999994}, {"source": 37, "target": 188, "value": 49.988}, {"source": 38, "target": 186, "value": 5.6895}, {"source": 39, "target": 67, "value": 49.4575}, {"source": 39, "target": 92, "value": 49.8725}, {"source": 39, "target": 94, "value": 49.834500000000006}, {"source": 39, "target": 105, "value": 49.191}, {"source": 39, "target": 132, "value": 49.805}, {"source": 39, "target": 136, "value": 49.235}, {"source": 39, "target": 156, "value": 49.4585}, {"source": 39, "target": 157, "value": 49.709500000000006}, {"source": 39, "target": 184, "value": 49.8055}, {"source": 39, "target": 186, "value": 48.933499999999995}, {"source": 41, "target": 186, "value": 5.8865}, {"source": 42, "target": 179, "value": 6.941000000000001}, {"source": 43, "target": 105, "value": 49.93000000000001}, {"source": 43, "target": 186, "value": 49.848}, {"source": 44, "target": 186, "value": 49.9735}, {"source": 45, "target": 186, "value": 3.966}, {"source": 47, "target": 186, "value": 4.51}, {"source": 50, "target": 105, "value": 8.33}, {"source": 51, "target": 3, "value": 49.7945}, {"source": 51, "target": 6, "value": 49.736000000000004}, {"source": 51, "target": 9, "value": 49.687}, {"source": 51, "target": 36, "value": 49.788500000000006}, {"source": 51, "target": 88, "value": 49.839}, {"source": 51, "target": 90, "value": 49.912}, {"source": 51, "target": 96, "value": 49.910500000000006}, {"source": 51, "target": 142, "value": 49.87650000000001}, {"source": 51, "target": 145, "value": 49.727}, {"source": 51, "target": 153, "value": 49.6995}, {"source": 51, "target": 159, "value": 49.831}, {"source": 51, "target": 166, "value": 49.7935}, {"source": 51, "target": 171, "value": 49.7715}, {"source": 51, "target": 194, "value": 49.8035}, {"source": 52, "target": 186, "value": 5.944500000000001}, {"source": 53, "target": 105, "value": 49.253}, {"source": 53, "target": 128, "value": 49.889}, {"source": 53, "target": 132, "value": 49.7645}, {"source": 53, "target": 136, "value": 49.4255}, {"source": 53, "target": 156, "value": 49.3785}, {"source": 53, "target": 157, "value": 49.874}, {"source": 53, "target": 170, "value": 49.9885}, {"source": 53, "target": 178, "value": 49.842000000000006}, {"source": 53, "target": 184, "value": 49.8125}, {"source": 53, "target": 186, "value": 49.0445}, {"source": 54, "target": 186, "value": 7.523499999999999}, {"source": 55, "target": 186, "value": 6.2195}, {"source": 56, "target": 58, "value": 49.900999999999996}, {"source": 56, "target": 132, "value": 49.71}, {"source": 56, "target": 136, "value": 49.215}, {"source": 56, "target": 147, "value": 49.814}, {"source": 56, "target": 156, "value": 49.157000000000004}, {"source": 56, "target": 157, "value": 49.8565}, {"source": 56, "target": 178, "value": 49.84}, {"source": 56, "target": 184, "value": 49.733999999999995}, {"source": 56, "target": 185, "value": 49.962999999999994}, {"source": 56, "target": 186, "value": 48.830999999999996}, {"source": 57, "target": 132, "value": 6.994}, {"source": 58, "target": 56, "value": 49.900999999999996}, {"source": 58, "target": 147, "value": 49.73}, {"source": 58, "target": 156, "value": 49.0295}, {"source": 58, "target": 157, "value": 49.6495}, {"source": 58, "target": 160, "value": 49.897999999999996}, {"source": 58, "target": 170, "value": 49.6715}, {"source": 58, "target": 178, "value": 49.6845}, {"source": 58, "target": 184, "value": 49.473}, {"source": 58, "target": 185, "value": 49.75749999999999}, {"source": 58, "target": 186, "value": 48.4965}, {"source": 59, "target": 186, "value": 4.138}, {"source": 60, "target": 186, "value": 4.086}, {"source": 61, "target": 105, "value": 49.82300000000001}, {"source": 61, "target": 136, "value": 49.925}, {"source": 61, "target": 186, "value": 49.6335}, {"source": 62, "target": 186, "value": 3.708}, {"source": 63, "target": 3, "value": 49.6665}, {"source": 63, "target": 6, "value": 49.573499999999996}, {"source": 63, "target": 9, "value": 49.618}, {"source": 63, "target": 26, "value": 49.9915}, {"source": 63, "target": 36, "value": 49.864}, {"source": 63, "target": 88, "value": 49.771}, {"source": 63, "target": 90, "value": 49.977000000000004}, {"source": 63, "target": 96, "value": 49.798}, {"source": 63, "target": 103, "value": 8.4755}, {"source": 63, "target": 122, "value": 49.8825}, {"source": 63, "target": 126, "value": 49.49849999999999}, {"source": 63, "target": 130, "value": 49.587500000000006}, {"source": 63, "target": 142, "value": 49.828}, {"source": 63, "target": 145, "value": 49.690000000000005}, {"source": 63, "target": 153, "value": 49.4305}, {"source": 63, "target": 159, "value": 49.793000000000006}, {"source": 63, "target": 166, "value": 49.812000000000005}, {"source": 63, "target": 171, "value": 49.67399999999999}, {"source": 64, "target": 186, "value": 5.819999999999999}, {"source": 65, "target": 186, "value": 6.768999999999999}, {"source": 66, "target": 105, "value": 7.313}, {"source": 67, "target": 3, "value": 49.602500000000006}, {"source": 67, "target": 6, "value": 49.694}, {"source": 67, "target": 9, "value": 49.731500000000004}, {"source": 67, "target": 22, "value": 49.544}, {"source": 67, "target": 36, "value": 49.964000000000006}, {"source": 67, "target": 39, "value": 49.4575}, {"source": 67, "target": 88, "value": 49.824}, {"source": 67, "target": 90, "value": 49.973}, {"source": 67, "target": 122, "value": 49.938}, {"source": 67, "target": 126, "value": 49.521}, {"source": 67, "target": 130, "value": 49.5085}, {"source": 67, "target": 142, "value": 49.892}, {"source": 67, "target": 145, "value": 49.762}, {"source": 67, "target": 153, "value": 49.584}, {"source": 67, "target": 159, "value": 49.739000000000004}, {"source": 67, "target": 171, "value": 49.7705}, {"source": 67, "target": 194, "value": 49.6385}, {"source": 68, "target": 186, "value": 4.82}, {"source": 69, "target": 186, "value": 7.634499999999999}, {"source": 71, "target": 186, "value": 4.286}, {"source": 72, "target": 186, "value": 3.5104999999999995}, {"source": 73, "target": 186, "value": 3.9524999999999997}, {"source": 74, "target": 186, "value": 49.971500000000006}, {"source": 75, "target": 186, "value": 3.5585}, {"source": 76, "target": 105, "value": 49.958999999999996}, {"source": 76, "target": 186, "value": 49.86150000000001}, {"source": 77, "target": 160, "value": 5.5055}, {"source": 78, "target": 186, "value": 3.8455}, {"source": 79, "target": 105, "value": 49.9455}, {"source": 79, "target": 136, "value": 49.968}, {"source": 79, "target": 186, "value": 49.636500000000005}, {"source": 80, "target": 186, "value": 3.524}, {"source": 81, "target": 186, "value": 49.8595}, {"source": 82, "target": 105, "value": 49.921499999999995}, {"source": 82, "target": 186, "value": 49.72749999999999}, {"source": 83, "target": 132, "value": 6.9830000000000005}, {"source": 84, "target": 186, "value": 4.378}, {"source": 85, "target": 186, "value": 4.2145}, {"source": 86, "target": 186, "value": 6.6674999999999995}, {"source": 87, "target": 179, "value": 7.7700000000000005}, {"source": 88, "target": 25, "value": 49.8675}, {"source": 88, "target": 51, "value": 49.839}, {"source": 88, "target": 63, "value": 49.771}, {"source": 88, "target": 67, "value": 49.824}, {"source": 88, "target": 105, "value": 49.486}, {"source": 88, "target": 132, "value": 49.84}, {"source": 88, "target": 136, "value": 49.714}, {"source": 88, "target": 156, "value": 49.660000000000004}, {"source": 88, "target": 184, "value": 49.9455}, {"source": 88, "target": 186, "value": 49.3745}, {"source": 89, "target": 132, "value": 6.8955}, {"source": 90, "target": 51, "value": 49.912}, {"source": 90, "target": 63, "value": 49.977000000000004}, {"source": 90, "target": 67, "value": 49.973}, {"source": 90, "target": 105, "value": 49.672}, {"source": 90, "target": 132, "value": 49.801}, {"source": 90, "target": 136, "value": 49.938}, {"source": 90, "target": 156, "value": 49.81}, {"source": 90, "target": 186, "value": 49.61}, {"source": 91, "target": 186, "value": 3.8455}, {"source": 92, "target": 39, "value": 49.8725}, {"source": 92, "target": 126, "value": 49.947}, {"source": 92, "target": 129, "value": 49.718999999999994}, {"source": 92, "target": 160, "value": 49.5795}, {"source": 92, "target": 174, "value": 49.824}, {"source": 92, "target": 178, "value": 49.465}, {"source": 92, "target": 184, "value": 49.245999999999995}, {"source": 92, "target": 185, "value": 49.488}, {"source": 92, "target": 186, "value": 48.2675}, {"source": 92, "target": 188, "value": 49.8965}, {"source": 93, "target": 186, "value": 4.0325}, {"source": 94, "target": 9, "value": 49.982}, {"source": 94, "target": 22, "value": 49.774}, {"source": 94, "target": 39, "value": 49.834500000000006}, {"source": 94, "target": 129, "value": 49.5915}, {"source": 94, "target": 160, "value": 49.739000000000004}, {"source": 94, "target": 178, "value": 49.132}, {"source": 94, "target": 184, "value": 48.900499999999994}, {"source": 94, "target": 185, "value": 49.25}, {"source": 94, "target": 186, "value": 47.878}, {"source": 94, "target": 188, "value": 49.6985}, {"source": 95, "target": 37, "value": 49.9605}, {"source": 95, "target": 128, "value": 49.9795}, {"source": 95, "target": 132, "value": 49.7065}, {"source": 95, "target": 136, "value": 49.301}, {"source": 95, "target": 147, "value": 49.9735}, {"source": 95, "target": 156, "value": 49.464499999999994}, {"source": 95, "target": 157, "value": 49.925}, {"source": 95, "target": 170, "value": 49.979}, {"source": 95, "target": 184, "value": 49.834500000000006}, {"source": 95, "target": 186, "value": 49.0295}, {"source": 96, "target": 51, "value": 49.910500000000006}, {"source": 96, "target": 63, "value": 49.798}, {"source": 96, "target": 105, "value": 49.72749999999999}, {"source": 96, "target": 136, "value": 49.7975}, {"source": 96, "target": 156, "value": 49.677499999999995}, {"source": 96, "target": 186, "value": 49.434}, {"source": 97, "target": 186, "value": 3.9965}, {"source": 98, "target": 186, "value": 5.0249999999999995}, {"source": 99, "target": 105, "value": 49.6535}, {"source": 99, "target": 136, "value": 49.9775}, {"source": 99, "target": 156, "value": 49.9935}, {"source": 99, "target": 186, "value": 49.714}, {"source": 100, "target": 186, "value": 49.8715}, {"source": 101, "target": 186, "value": 3.468}, {"source": 102, "target": 105, "value": 3.6390000000000002}, {"source": 103, "target": 63, "value": 8.4755}, {"source": 104, "target": 186, "value": 8.437}, {"source": 105, "target": 0, "value": 5.6365}, {"source": 105, "target": 3, "value": 49.267}, {"source": 105, "target": 4, "value": 5.1105}, {"source": 105, "target": 6, "value": 49.2595}, {"source": 105, "target": 9, "value": 49.423}, {"source": 105, "target": 12, "value": 4.5435}, {"source": 105, "target": 21, "value": 49.937}, {"source": 105, "target": 22, "value": 49.361}, {"source": 105, "target": 24, "value": 6.9185}, {"source": 105, "target": 26, "value": 49.8745}, {"source": 105, "target": 30, "value": 49.9705}, {"source": 105, "target": 33, "value": 5.084499999999999}, {"source": 105, "target": 36, "value": 49.623}, {"source": 105, "target": 39, "value": 49.191}, {"source": 105, "target": 43, "value": 49.93000000000001}, {"source": 105, "target": 50, "value": 8.33}, {"source": 105, "target": 53, "value": 49.253}, {"source": 105, "target": 61, "value": 49.82300000000001}, {"source": 105, "target": 66, "value": 7.313}, {"source": 105, "target": 76, "value": 49.958999999999996}, {"source": 105, "target": 79, "value": 49.9455}, {"source": 105, "target": 82, "value": 49.921499999999995}, {"source": 105, "target": 88, "value": 49.486}, {"source": 105, "target": 90, "value": 49.672}, {"source": 105, "target": 96, "value": 49.72749999999999}, {"source": 105, "target": 99, "value": 49.6535}, {"source": 105, "target": 102, "value": 3.6390000000000002}, {"source": 105, "target": 122, "value": 49.744}, {"source": 105, "target": 124, "value": 5.4155}, {"source": 105, "target": 126, "value": 49.3075}, {"source": 105, "target": 130, "value": 49.321}, {"source": 105, "target": 142, "value": 49.557500000000005}, {"source": 105, "target": 145, "value": 49.5265}, {"source": 105, "target": 153, "value": 49.202000000000005}, {"source": 105, "target": 155, "value": 5.819}, {"source": 105, "target": 159, "value": 49.55}, {"source": 105, "target": 166, "value": 49.6125}, {"source": 105, "target": 171, "value": 49.5125}, {"source": 105, "target": 179, "value": 49.878}, {"source": 105, "target": 181, "value": 5.212}, {"source": 105, "target": 182, "value": 4.4725}, {"source": 105, "target": 183, "value": 5.233499999999999}, {"source": 105, "target": 197, "value": 49.9555}, {"source": 106, "target": 186, "value": 5.093}, {"source": 107, "target": 111, "value": 49.962999999999994}, {"source": 107, "target": 116, "value": 49.7035}, {"source": 107, "target": 129, "value": 49.7935}, {"source": 107, "target": 130, "value": 49.991}, {"source": 107, "target": 160, "value": 49.9195}, {"source": 107, "target": 162, "value": 49.5155}, {"source": 107, "target": 174, "value": 49.870999999999995}, {"source": 107, "target": 185, "value": 49.4305}, {"source": 107, "target": 186, "value": 48.2655}, {"source": 107, "target": 188, "value": 49.708}, {"source": 108, "target": 186, "value": 4.626}, {"source": 110, "target": 186, "value": 7.944}, {"source": 111, "target": 37, "value": 49.909499999999994}, {"source": 111, "target": 107, "value": 49.962999999999994}, {"source": 111, "target": 136, "value": 49.3905}, {"source": 111, "target": 147, "value": 49.885000000000005}, {"source": 111, "target": 156, "value": 49.495}, {"source": 111, "target": 157, "value": 49.8355}, {"source": 111, "target": 170, "value": 49.96000000000001}, {"source": 111, "target": 178, "value": 49.971500000000006}, {"source": 111, "target": 184, "value": 49.762}, {"source": 111, "target": 186, "value": 49.0885}, {"source": 112, "target": 186, "value": 5.814500000000001}, {"source": 113, "target": 179, "value": 7.319}, {"source": 114, "target": 186, "value": 3.556}, {"source": 115, "target": 186, "value": 5.999499999999999}, {"source": 116, "target": 107, "value": 49.7035}, {"source": 116, "target": 128, "value": 49.967}, {"source": 116, "target": 147, "value": 49.9455}, {"source": 116, "target": 156, "value": 49.2275}, {"source": 116, "target": 157, "value": 49.7525}, {"source": 116, "target": 170, "value": 49.9015}, {"source": 116, "target": 178, "value": 49.7855}, {"source": 116, "target": 184, "value": 49.573}, {"source": 116, "target": 185, "value": 49.849}, {"source": 116, "target": 186, "value": 48.708999999999996}, {"source": 117, "target": 186, "value": 5.5344999999999995}, {"source": 118, "target": 186, "value": 4.5169999999999995}, {"source": 120, "target": 132, "value": 4.1065000000000005}, {"source": 122, "target": 63, "value": 49.8825}, {"source": 122, "target": 67, "value": 49.938}, {"source": 122, "target": 105, "value": 49.744}, {"source": 122, "target": 136, "value": 49.845}, {"source": 122, "target": 156, "value": 49.992999999999995}, {"source": 122, "target": 186, "value": 49.4735}, {"source": 123, "target": 186, "value": 3.7555}, {"source": 124, "target": 105, "value": 5.4155}, {"source": 125, "target": 186, "value": 5.114999999999999}, {"source": 126, "target": 63, "value": 49.49849999999999}, {"source": 126, "target": 67, "value": 49.521}, {"source": 126, "target": 92, "value": 49.947}, {"source": 126, "target": 105, "value": 49.3075}, {"source": 126, "target": 132, "value": 49.862}, {"source": 126, "target": 136, "value": 49.285500000000006}, {"source": 126, "target": 156, "value": 49.474000000000004}, {"source": 126, "target": 157, "value": 49.8835}, {"source": 126, "target": 184, "value": 49.7055}, {"source": 126, "target": 186, "value": 49.0925}, {"source": 127, "target": 186, "value": 3.9465}, {"source": 128, "target": 53, "value": 49.889}, {"source": 128, "target": 95, "value": 49.9795}, {"source": 128, "target": 116, "value": 49.967}, {"source": 128, "target": 129, "value": 49.82599999999999}, {"source": 128, "target": 160, "value": 49.968500000000006}, {"source": 128, "target": 162, "value": 49.745}, {"source": 128, "target": 174, "value": 49.840999999999994}, {"source": 128, "target": 185, "value": 49.5}, {"source": 128, "target": 186, "value": 48.344500000000004}, {"source": 128, "target": 188, "value": 49.63}, {"source": 129, "target": 92, "value": 49.718999999999994}, {"source": 129, "target": 94, "value": 49.5915}, {"source": 129, "target": 107, "value": 49.7935}, {"source": 129, "target": 128, "value": 49.82599999999999}, {"source": 129, "target": 162, "value": 49.896}, {"source": 129, "target": 170, "value": 49.753}, {"source": 129, "target": 178, "value": 49.735}, {"source": 129, "target": 184, "value": 49.5035}, {"source": 129, "target": 185, "value": 49.8595}, {"source": 129, "target": 186, "value": 48.698499999999996}, {"source": 130, "target": 63, "value": 49.587500000000006}, {"source": 130, "target": 67, "value": 49.5085}, {"source": 130, "target": 105, "value": 49.321}, {"source": 130, "target": 107, "value": 49.991}, {"source": 130, "target": 132, "value": 49.815}, {"source": 130, "target": 136, "value": 49.473}, {"source": 130, "target": 156, "value": 49.559}, {"source": 130, "target": 157, "value": 49.954}, {"source": 130, "target": 184, "value": 49.932}, {"source": 130, "target": 186, "value": 49.132}, {"source": 131, "target": 186, "value": 3.583}, {"source": 132, "target": 3, "value": 49.836}, {"source": 132, "target": 6, "value": 49.956500000000005}, {"source": 132, "target": 9, "value": 49.79599999999999}, {"source": 132, "target": 13, "value": 49.7375}, {"source": 132, "target": 20, "value": 6.5264999999999995}, {"source": 132, "target": 22, "value": 49.6415}, {"source": 132, "target": 36, "value": 49.7335}, {"source": 132, "target": 39, "value": 49.805}, {"source": 132, "target": 53, "value": 49.7645}, {"source": 132, "target": 56, "value": 49.71}, {"source": 132, "target": 57, "value": 6.994}, {"source": 132, "target": 83, "value": 6.9830000000000005}, {"source": 132, "target": 88, "value": 49.84}, {"source": 132, "target": 89, "value": 6.8955}, {"source": 132, "target": 90, "value": 49.801}, {"source": 132, "target": 95, "value": 49.7065}, {"source": 132, "target": 120, "value": 4.1065000000000005}, {"source": 132, "target": 126, "value": 49.862}, {"source": 132, "target": 130, "value": 49.815}, {"source": 132, "target": 140, "value": 8.415000000000001}, {"source": 132, "target": 142, "value": 49.9575}, {"source": 132, "target": 145, "value": 49.9315}, {"source": 132, "target": 153, "value": 49.8445}, {"source": 132, "target": 159, "value": 49.75}, {"source": 132, "target": 179, "value": 49.818}, {"source": 132, "target": 190, "value": 4.9159999999999995}, {"source": 132, "target": 193, "value": 7.837}, {"source": 132, "target": 194, "value": 49.784499999999994}, {"source": 133, "target": 186, "value": 4.526}, {"source": 134, "target": 186, "value": 5.674}, {"source": 135, "target": 186, "value": 4.284}, {"source": 136, "target": 1, "value": 48.9735}, {"source": 136, "target": 3, "value": 49.473}, {"source": 136, "target": 6, "value": 49.389}, {"source": 136, "target": 9, "value": 49.4565}, {"source": 136, "target": 13, "value": 48.9995}, {"source": 136, "target": 22, "value": 49.540499999999994}, {"source": 136, "target": 26, "value": 49.9445}, {"source": 136, "target": 36, "value": 49.7705}, {"source": 136, "target": 39, "value": 49.235}, {"source": 136, "target": 53, "value": 49.4255}, {"source": 136, "target": 56, "value": 49.215}, {"source": 136, "target": 61, "value": 49.925}, {"source": 136, "target": 79, "value": 49.968}, {"source": 136, "target": 88, "value": 49.714}, {"source": 136, "target": 90, "value": 49.938}, {"source": 136, "target": 95, "value": 49.301}, {"source": 136, "target": 96, "value": 49.7975}, {"source": 136, "target": 99, "value": 49.9775}, {"source": 136, "target": 111, "value": 49.3905}, {"source": 136, "target": 122, "value": 49.845}, {"source": 136, "target": 126, "value": 49.285500000000006}, {"source": 136, "target": 130, "value": 49.473}, {"source": 136, "target": 142, "value": 49.7305}, {"source": 136, "target": 145, "value": 49.6235}, {"source": 136, "target": 153, "value": 49.3835}, {"source": 136, "target": 159, "value": 49.656000000000006}, {"source": 136, "target": 166, "value": 49.727}, {"source": 136, "target": 171, "value": 49.528999999999996}, {"source": 136, "target": 194, "value": 49.5415}, {"source": 137, "target": 161, "value": 8.386}, {"source": 137, "target": 186, "value": 5.4265}, {"source": 138, "target": 186, "value": 7.686}, {"source": 140, "target": 132, "value": 8.415000000000001}, {"source": 142, "target": 5, "value": 49.975500000000004}, {"source": 142, "target": 23, "value": 49.974999999999994}, {"source": 142, "target": 51, "value": 49.87650000000001}, {"source": 142, "target": 63, "value": 49.828}, {"source": 142, "target": 67, "value": 49.892}, {"source": 142, "target": 105, "value": 49.557500000000005}, {"source": 142, "target": 132, "value": 49.9575}, {"source": 142, "target": 136, "value": 49.7305}, {"source": 142, "target": 156, "value": 49.7555}, {"source": 142, "target": 186, "value": 49.405}, {"source": 143, "target": 186, "value": 5.4655}, {"source": 145, "target": 23, "value": 49.952}, {"source": 145, "target": 25, "value": 49.9605}, {"source": 145, "target": 51, "value": 49.727}, {"source": 145, "target": 63, "value": 49.690000000000005}, {"source": 145, "target": 67, "value": 49.762}, {"source": 145, "target": 105, "value": 49.5265}, {"source": 145, "target": 132, "value": 49.9315}, {"source": 145, "target": 136, "value": 49.6235}, {"source": 145, "target": 156, "value": 49.669999999999995}, {"source": 145, "target": 186, "value": 49.227}, {"source": 146, "target": 186, "value": 3.711}, {"source": 147, "target": 1, "value": 49.773500000000006}, {"source": 147, "target": 13, "value": 49.973}, {"source": 147, "target": 56, "value": 49.814}, {"source": 147, "target": 58, "value": 49.73}, {"source": 147, "target": 95, "value": 49.9735}, {"source": 147, "target": 111, "value": 49.885000000000005}, {"source": 147, "target": 116, "value": 49.9455}, {"source": 147, "target": 160, "value": 49.905499999999996}, {"source": 147, "target": 162, "value": 49.711999999999996}, {"source": 147, "target": 174, "value": 49.947}, {"source": 149, "target": 160, "value": 8.4825}, {"source": 150, "target": 186, "value": 6.861000000000001}, {"source": 151, "target": 186, "value": 3.7319999999999998}, {"source": 152, "target": 186, "value": 5.9395}, {"source": 153, "target": 51, "value": 49.6995}, {"source": 153, "target": 63, "value": 49.4305}, {"source": 153, "target": 67, "value": 49.584}, {"source": 153, "target": 105, "value": 49.202000000000005}, {"source": 153, "target": 132, "value": 49.8445}, {"source": 153, "target": 136, "value": 49.3835}, {"source": 153, "target": 156, "value": 49.3395}, {"source": 153, "target": 170, "value": 49.997499999999995}, {"source": 153, "target": 184, "value": 49.9345}, {"source": 153, "target": 186, "value": 49.0315}, {"source": 154, "target": 186, "value": 8.3715}, {"source": 155, "target": 105, "value": 5.819}, {"source": 156, "target": 1, "value": 49.0585}, {"source": 156, "target": 3, "value": 49.4575}, {"source": 156, "target": 6, "value": 49.524}, {"source": 156, "target": 9, "value": 49.488}, {"source": 156, "target": 13, "value": 49.226}, {"source": 156, "target": 22, "value": 49.57900000000001}, {"source": 156, "target": 36, "value": 49.794}, {"source": 156, "target": 39, "value": 49.4585}, {"source": 156, "target": 53, "value": 49.3785}, {"source": 156, "target": 56, "value": 49.157000000000004}, {"source": 156, "target": 58, "value": 49.0295}, {"source": 156, "target": 88, "value": 49.660000000000004}, {"source": 156, "target": 90, "value": 49.81}, {"source": 156, "target": 95, "value": 49.464499999999994}, {"source": 156, "target": 96, "value": 49.677499999999995}, {"source": 156, "target": 99, "value": 49.9935}, {"source": 156, "target": 111, "value": 49.495}, {"source": 156, "target": 116, "value": 49.2275}, {"source": 156, "target": 122, "value": 49.992999999999995}, {"source": 156, "target": 126, "value": 49.474000000000004}, {"source": 156, "target": 130, "value": 49.559}, {"source": 156, "target": 142, "value": 49.7555}, {"source": 156, "target": 145, "value": 49.669999999999995}, {"source": 156, "target": 153, "value": 49.3395}, {"source": 156, "target": 159, "value": 49.707499999999996}, {"source": 156, "target": 166, "value": 49.7355}, {"source": 156, "target": 171, "value": 49.7005}, {"source": 156, "target": 179, "value": 49.859}, {"source": 156, "target": 194, "value": 49.5965}, {"source": 157, "target": 1, "value": 49.463}, {"source": 157, "target": 3, "value": 49.992999999999995}, {"source": 157, "target": 6, "value": 49.989}, {"source": 157, "target": 13, "value": 49.694500000000005}, {"source": 157, "target": 22, "value": 49.973}, {"source": 157, "target": 39, "value": 49.709500000000006}, {"source": 157, "target": 53, "value": 49.874}, {"source": 157, "target": 56, "value": 49.8565}, {"source": 157, "target": 58, "value": 49.6495}, {"source": 157, "target": 95, "value": 49.925}, {"source": 157, "target": 111, "value": 49.8355}, {"source": 157, "target": 116, "value": 49.7525}, {"source": 157, "target": 126, "value": 49.8835}, {"source": 157, "target": 130, "value": 49.954}, {"source": 157, "target": 188, "value": 49.565}, {"source": 157, "target": 194, "value": 49.982499999999995}, {"source": 159, "target": 23, "value": 49.882999999999996}, {"source": 159, "target": 51, "value": 49.831}, {"source": 159, "target": 63, "value": 49.793000000000006}, {"source": 159, "target": 67, "value": 49.739000000000004}, {"source": 159, "target": 105, "value": 49.55}, {"source": 159, "target": 132, "value": 49.75}, {"source": 159, "target": 136, "value": 49.656000000000006}, {"source": 159, "target": 156, "value": 49.707499999999996}, {"source": 159, "target": 184, "value": 49.8745}, {"source": 159, "target": 186, "value": 49.3495}, {"source": 160, "target": 28, "value": 49.714}, {"source": 160, "target": 58, "value": 49.897999999999996}, {"source": 160, "target": 77, "value": 5.5055}, {"source": 160, "target": 92, "value": 49.5795}, {"source": 160, "target": 94, "value": 49.739000000000004}, {"source": 160, "target": 107, "value": 49.9195}, {"source": 160, "target": 128, "value": 49.968500000000006}, {"source": 160, "target": 147, "value": 49.905499999999996}, {"source": 160, "target": 149, "value": 8.4825}, {"source": 160, "target": 186, "value": 48.771}, {"source": 161, "target": 137, "value": 8.386}, {"source": 162, "target": 28, "value": 49.5985}, {"source": 162, "target": 37, "value": 49.908500000000004}, {"source": 162, "target": 107, "value": 49.5155}, {"source": 162, "target": 128, "value": 49.745}, {"source": 162, "target": 129, "value": 49.896}, {"source": 162, "target": 147, "value": 49.711999999999996}, {"source": 162, "target": 170, "value": 49.489999999999995}, {"source": 162, "target": 174, "value": 49.980000000000004}, {"source": 162, "target": 188, "value": 49.743500000000004}, {"source": 162, "target": 198, "value": 7.866999999999999}, {"source": 163, "target": 186, "value": 4.3195}, {"source": 164, "target": 186, "value": 4.2635000000000005}, {"source": 166, "target": 5, "value": 49.913}, {"source": 166, "target": 25, "value": 49.9795}, {"source": 166, "target": 51, "value": 49.7935}, {"source": 166, "target": 63, "value": 49.812000000000005}, {"source": 166, "target": 105, "value": 49.6125}, {"source": 166, "target": 136, "value": 49.727}, {"source": 166, "target": 156, "value": 49.7355}, {"source": 166, "target": 186, "value": 49.352000000000004}, {"source": 167, "target": 186, "value": 4.1685}, {"source": 168, "target": 186, "value": 5.669499999999999}, {"source": 169, "target": 186, "value": 4.6555}, {"source": 170, "target": 1, "value": 49.711}, {"source": 170, "target": 13, "value": 49.987500000000004}, {"source": 170, "target": 22, "value": 49.939499999999995}, {"source": 170, "target": 28, "value": 49.403}, {"source": 170, "target": 37, "value": 49.6595}, {"source": 170, "target": 53, "value": 49.9885}, {"source": 170, "target": 58, "value": 49.6715}, {"source": 170, "target": 95, "value": 49.979}, {"source": 170, "target": 111, "value": 49.96000000000001}, {"source": 170, "target": 116, "value": 49.9015}, {"source": 170, "target": 129, "value": 49.753}, {"source": 170, "target": 153, "value": 49.997499999999995}, {"source": 170, "target": 162, "value": 49.489999999999995}, {"source": 170, "target": 174, "value": 49.757999999999996}, {"source": 170, "target": 188, "value": 49.741}, {"source": 171, "target": 5, "value": 49.7295}, {"source": 171, "target": 25, "value": 49.9445}, {"source": 171, "target": 51, "value": 49.7715}, {"source": 171, "target": 63, "value": 49.67399999999999}, {"source": 171, "target": 67, "value": 49.7705}, {"source": 171, "target": 105, "value": 49.5125}, {"source": 171, "target": 136, "value": 49.528999999999996}, {"source": 171, "target": 156, "value": 49.7005}, {"source": 171, "target": 186, "value": 49.146}, {"source": 172, "target": 186, "value": 5.768}, {"source": 173, "target": 186, "value": 5.954000000000001}, {"source": 174, "target": 1, "value": 49.814499999999995}, {"source": 174, "target": 23, "value": 49.438500000000005}, {"source": 174, "target": 28, "value": 49.851}, {"source": 174, "target": 37, "value": 49.897}, {"source": 174, "target": 92, "value": 49.824}, {"source": 174, "target": 107, "value": 49.870999999999995}, {"source": 174, "target": 128, "value": 49.840999999999994}, {"source": 174, "target": 147, "value": 49.947}, {"source": 174, "target": 162, "value": 49.980000000000004}, {"source": 174, "target": 170, "value": 49.757999999999996}, {"source": 174, "target": 188, "value": 49.935}, {"source": 175, "target": 186, "value": 5.3295}, {"source": 177, "target": 186, "value": 4.703}, {"source": 178, "target": 1, "value": 49.5185}, {"source": 178, "target": 5, "value": 48.697}, {"source": 178, "target": 13, "value": 49.8665}, {"source": 178, "target": 23, "value": 48.8675}, {"source": 178, "target": 28, "value": 49.387}, {"source": 178, "target": 37, "value": 49.596000000000004}, {"source": 178, "target": 53, "value": 49.842000000000006}, {"source": 178, "target": 56, "value": 49.84}, {"source": 178, "target": 58, "value": 49.6845}, {"source": 178, "target": 92, "value": 49.465}, {"source": 178, "target": 94, "value": 49.132}, {"source": 178, "target": 111, "value": 49.971500000000006}, {"source": 178, "target": 116, "value": 49.7855}, {"source": 178, "target": 129, "value": 49.735}, {"source": 178, "target": 188, "value": 49.668}, {"source": 179, "target": 42, "value": 6.941000000000001}, {"source": 179, "target": 87, "value": 7.7700000000000005}, {"source": 179, "target": 105, "value": 49.878}, {"source": 179, "target": 113, "value": 7.319}, {"source": 179, "target": 132, "value": 49.818}, {"source": 179, "target": 156, "value": 49.859}, {"source": 179, "target": 186, "value": 49.735}, {"source": 179, "target": 199, "value": 6.021}, {"source": 180, "target": 186, "value": 5.093}, {"source": 181, "target": 105, "value": 5.212}, {"source": 182, "target": 105, "value": 4.4725}, {"source": 183, "target": 105, "value": 5.233499999999999}, {"source": 184, "target": 1, "value": 49.3355}, {"source": 184, "target": 3, "value": 49.92}, {"source": 184, "target": 5, "value": 48.4915}, {"source": 184, "target": 6, "value": 49.9125}, {"source": 184, "target": 13, "value": 49.4745}, {"source": 184, "target": 22, "value": 49.8565}, {"source": 184, "target": 23, "value": 48.75149999999999}, {"source": 184, "target": 28, "value": 49.230000000000004}, {"source": 184, "target": 37, "value": 49.507000000000005}, {"source": 184, "target": 39, "value": 49.8055}, {"source": 184, "target": 53, "value": 49.8125}, {"source": 184, "target": 56, "value": 49.733999999999995}, {"source": 184, "target": 58, "value": 49.473}, {"source": 184, "target": 88, "value": 49.9455}, {"source": 184, "target": 92, "value": 49.245999999999995}, {"source": 184, "target": 94, "value": 48.900499999999994}, {"source": 184, "target": 95, "value": 49.834500000000006}, {"source": 184, "target": 111, "value": 49.762}, {"source": 184, "target": 116, "value": 49.573}, {"source": 184, "target": 126, "value": 49.7055}, {"source": 184, "target": 129, "value": 49.5035}, {"source": 184, "target": 130, "value": 49.932}, {"source": 184, "target": 153, "value": 49.9345}, {"source": 184, "target": 159, "value": 49.8745}, {"source": 184, "target": 191, "value": 7.6805}, {"source": 185, "target": 1, "value": 49.756}, {"source": 185, "target": 5, "value": 48.7715}, {"source": 185, "target": 13, "value": 49.900000000000006}, {"source": 185, "target": 23, "value": 49.1}, {"source": 185, "target": 25, "value": 48.896}, {"source": 185, "target": 28, "value": 49.4555}, {"source": 185, "target": 37, "value": 49.8385}, {"source": 185, "target": 56, "value": 49.962999999999994}, {"source": 185, "target": 58, "value": 49.75749999999999}, {"source": 185, "target": 92, "value": 49.488}, {"source": 185, "target": 94, "value": 49.25}, {"source": 185, "target": 107, "value": 49.4305}, {"source": 185, "target": 116, "value": 49.849}, {"source": 185, "target": 128, "value": 49.5}, {"source": 185, "target": 129, "value": 49.8595}, {"source": 185, "target": 188, "value": 49.7615}, {"source": 186, "target": 1, "value": 48.556999999999995}, {"source": 186, "target": 2, "value": 5.1259999999999994}, {"source": 186, "target": 3, "value": 49.1965}, {"source": 186, "target": 5, "value": 47.4705}, {"source": 186, "target": 6, "value": 49.1095}, {"source": 186, "target": 7, "value": 3.598}, {"source": 186, "target": 8, "value": 5.6805}, {"source": 186, "target": 9, "value": 49.0905}, {"source": 186, "target": 10, "value": 3.4395}, {"source": 186, "target": 11, "value": 8.306000000000001}, {"source": 186, "target": 13, "value": 48.721500000000006}, {"source": 186, "target": 14, "value": 8.499}, {"source": 186, "target": 15, "value": 3.554}, {"source": 186, "target": 19, "value": 7.033}, {"source": 186, "target": 21, "value": 49.775}, {"source": 186, "target": 22, "value": 49.179}, {"source": 186, "target": 23, "value": 47.830000000000005}, {"source": 186, "target": 25, "value": 47.74549999999999}, {"source": 186, "target": 26, "value": 49.650999999999996}, {"source": 186, "target": 28, "value": 48.3545}, {"source": 186, "target": 30, "value": 49.925}, {"source": 186, "target": 31, "value": 3.8975}, {"source": 186, "target": 32, "value": 5.412}, {"source": 186, "target": 34, "value": 4.0785}, {"source": 186, "target": 35, "value": 6.1855}, {"source": 186, "target": 36, "value": 49.463}, {"source": 186, "target": 37, "value": 48.587999999999994}, {"source": 186, "target": 38, "value": 5.6895}, {"source": 186, "target": 39, "value": 48.933499999999995}, {"source": 186, "target": 41, "value": 5.8865}, {"source": 186, "target": 43, "value": 49.848}, {"source": 186, "target": 44, "value": 49.9735}, {"source": 186, "target": 45, "value": 3.966}, {"source": 186, "target": 47, "value": 4.51}, {"source": 186, "target": 52, "value": 5.944500000000001}, {"source": 186, "target": 53, "value": 49.0445}, {"source": 186, "target": 54, "value": 7.523499999999999}, {"source": 186, "target": 55, "value": 6.2195}, {"source": 186, "target": 56, "value": 48.830999999999996}, {"source": 186, "target": 58, "value": 48.4965}, {"source": 186, "target": 59, "value": 4.138}, {"source": 186, "target": 60, "value": 4.086}, {"source": 186, "target": 61, "value": 49.6335}, {"source": 186, "target": 62, "value": 3.708}, {"source": 186, "target": 64, "value": 5.819999999999999}, {"source": 186, "target": 65, "value": 6.768999999999999}, {"source": 186, "target": 68, "value": 4.82}, {"source": 186, "target": 69, "value": 7.634499999999999}, {"source": 186, "target": 71, "value": 4.286}, {"source": 186, "target": 72, "value": 3.5104999999999995}, {"source": 186, "target": 73, "value": 3.9524999999999997}, {"source": 186, "target": 74, "value": 49.971500000000006}, {"source": 186, "target": 75, "value": 3.5585}, {"source": 186, "target": 76, "value": 49.86150000000001}, {"source": 186, "target": 78, "value": 3.8455}, {"source": 186, "target": 79, "value": 49.636500000000005}, {"source": 186, "target": 80, "value": 3.524}, {"source": 186, "target": 81, "value": 49.8595}, {"source": 186, "target": 82, "value": 49.72749999999999}, {"source": 186, "target": 84, "value": 4.378}, {"source": 186, "target": 85, "value": 4.2145}, {"source": 186, "target": 86, "value": 6.6674999999999995}, {"source": 186, "target": 88, "value": 49.3745}, {"source": 186, "target": 90, "value": 49.61}, {"source": 186, "target": 91, "value": 3.8455}, {"source": 186, "target": 92, "value": 48.2675}, {"source": 186, "target": 93, "value": 4.0325}, {"source": 186, "target": 94, "value": 47.878}, {"source": 186, "target": 95, "value": 49.0295}, {"source": 186, "target": 96, "value": 49.434}, {"source": 186, "target": 97, "value": 3.9965}, {"source": 186, "target": 98, "value": 5.0249999999999995}, {"source": 186, "target": 99, "value": 49.714}, {"source": 186, "target": 100, "value": 49.8715}, {"source": 186, "target": 101, "value": 3.468}, {"source": 186, "target": 104, "value": 8.437}, {"source": 186, "target": 106, "value": 5.093}, {"source": 186, "target": 107, "value": 48.2655}, {"source": 186, "target": 108, "value": 4.626}, {"source": 186, "target": 110, "value": 7.944}, {"source": 186, "target": 111, "value": 49.0885}, {"source": 186, "target": 112, "value": 5.814500000000001}, {"source": 186, "target": 114, "value": 3.556}, {"source": 186, "target": 115, "value": 5.999499999999999}, {"source": 186, "target": 116, "value": 48.708999999999996}, {"source": 186, "target": 117, "value": 5.5344999999999995}, {"source": 186, "target": 118, "value": 4.5169999999999995}, {"source": 186, "target": 122, "value": 49.4735}, {"source": 186, "target": 123, "value": 3.7555}, {"source": 186, "target": 125, "value": 5.114999999999999}, {"source": 186, "target": 126, "value": 49.0925}, {"source": 186, "target": 127, "value": 3.9465}, {"source": 186, "target": 128, "value": 48.344500000000004}, {"source": 186, "target": 129, "value": 48.698499999999996}, {"source": 186, "target": 130, "value": 49.132}, {"source": 186, "target": 131, "value": 3.583}, {"source": 186, "target": 133, "value": 4.526}, {"source": 186, "target": 134, "value": 5.674}, {"source": 186, "target": 135, "value": 4.284}, {"source": 186, "target": 137, "value": 5.4265}, {"source": 186, "target": 138, "value": 7.686}, {"source": 186, "target": 142, "value": 49.405}, {"source": 186, "target": 143, "value": 5.4655}, {"source": 186, "target": 145, "value": 49.227}, {"source": 186, "target": 146, "value": 3.711}, {"source": 186, "target": 150, "value": 6.861000000000001}, {"source": 186, "target": 151, "value": 3.7319999999999998}, {"source": 186, "target": 152, "value": 5.9395}, {"source": 186, "target": 153, "value": 49.0315}, {"source": 186, "target": 154, "value": 8.3715}, {"source": 186, "target": 159, "value": 49.3495}, {"source": 186, "target": 160, "value": 48.771}, {"source": 186, "target": 163, "value": 4.3195}, {"source": 186, "target": 164, "value": 4.2635000000000005}, {"source": 186, "target": 166, "value": 49.352000000000004}, {"source": 186, "target": 167, "value": 4.1685}, {"source": 186, "target": 168, "value": 5.669499999999999}, {"source": 186, "target": 169, "value": 4.6555}, {"source": 186, "target": 171, "value": 49.146}, {"source": 186, "target": 172, "value": 5.768}, {"source": 186, "target": 173, "value": 5.954000000000001}, {"source": 186, "target": 175, "value": 5.3295}, {"source": 186, "target": 177, "value": 4.703}, {"source": 186, "target": 179, "value": 49.735}, {"source": 186, "target": 180, "value": 5.093}, {"source": 186, "target": 187, "value": 4.203}, {"source": 186, "target": 189, "value": 6.432}, {"source": 186, "target": 192, "value": 4.423}, {"source": 186, "target": 194, "value": 49.215999999999994}, {"source": 186, "target": 195, "value": 3.645}, {"source": 186, "target": 196, "value": 6.2405}, {"source": 186, "target": 197, "value": 49.94799999999999}, {"source": 187, "target": 186, "value": 4.203}, {"source": 188, "target": 5, "value": 49.2715}, {"source": 188, "target": 23, "value": 49.428}, {"source": 188, "target": 25, "value": 49.3485}, {"source": 188, "target": 28, "value": 49.634}, {"source": 188, "target": 37, "value": 49.988}, {"source": 188, "target": 92, "value": 49.8965}, {"source": 188, "target": 94, "value": 49.6985}, {"source": 188, "target": 107, "value": 49.708}, {"source": 188, "target": 128, "value": 49.63}, {"source": 188, "target": 157, "value": 49.565}, {"source": 188, "target": 162, "value": 49.743500000000004}, {"source": 188, "target": 170, "value": 49.741}, {"source": 188, "target": 174, "value": 49.935}, {"source": 188, "target": 178, "value": 49.668}, {"source": 188, "target": 185, "value": 49.7615}, {"source": 189, "target": 186, "value": 6.432}, {"source": 190, "target": 132, "value": 4.9159999999999995}, {"source": 191, "target": 184, "value": 7.6805}, {"source": 192, "target": 186, "value": 4.423}, {"source": 193, "target": 132, "value": 7.837}, {"source": 194, "target": 5, "value": 49.6695}, {"source": 194, "target": 23, "value": 49.921499999999995}, {"source": 194, "target": 25, "value": 49.635999999999996}, {"source": 194, "target": 51, "value": 49.8035}, {"source": 194, "target": 67, "value": 49.6385}, {"source": 194, "target": 132, "value": 49.784499999999994}, {"source": 194, "target": 136, "value": 49.5415}, {"source": 194, "target": 156, "value": 49.5965}, {"source": 194, "target": 157, "value": 49.982499999999995}, {"source": 194, "target": 186, "value": 49.215999999999994}, {"source": 195, "target": 186, "value": 3.645}, {"source": 196, "target": 186, "value": 6.2405}, {"source": 197, "target": 105, "value": 49.9555}, {"source": 197, "target": 186, "value": 49.94799999999999}, {"source": 198, "target": 162, "value": 7.866999999999999}, {"source": 199, "target": 179, "value": 6.021}];
+
+var len_of_links = links.length;
+var temp_link;
+for (var i = 0; i < len_of_links; ++i){
+  for (var j = len_of_links-1; j > i; --j){
+    if (links[j-1].value > links[j].value){
+      temp_link = links[j-1];
+      links[j-1] = links[j];
+      links[j] = temp_link;
+    }
+  }
+}
+
+color_list = ["#B43232", "#00FF00", "#0000FF", "FFFF00", "#FF8C00", "#00FFFF", "#FFFAFA", "#6495ED", "#FF00FF", "#F0E68C", "#20B2AA", "#2E8B57", "#7B68EE"];
+
+links.forEach(function(link, i) {
+  link.id = i;
+  link.source = nodes[link.source] || (nodes[link.source] = findNodeInfo(link.source, node_info));
+  link.target = nodes[link.target] || (nodes[link.target] = findNodeInfo(link.target, node_info));
+});
+
+node_info.forEach(function(node, i){
+  name_to_id[node.name] = node.id;
+  if (!(nodes[node.id])){
+    nodes[node.id] = findNodeInfo(node.id, node_info);
+  }
+});
+
+list = ThresholdList(0); //初步设置为0
+
+edges = links;
+
+var fromToHtml = "";
+node_info.forEach(function(variable, i){
+  fromToHtml += "<option value='" + variable.name + "'>" + variable.name + "</option>";
+});
+$("#fromOptions").html(fromToHtml);
+$("#toOptions").html(fromToHtml);
+
+//记录当前被点中的点的信息
+clickedNode = nodes[1];
+
+width = 3120;
+height = 1600;
+
+
+force = d3.layout.force()//layout将json格式转化为力学图可用的格式
+    .nodes(d3.values(nodes))//设定节点数组
+    .links(links)//设定连线数组
+    .size([width, height])//作用域的大小
+    .linkDistance(200)//连接线长度
+    .charge(-200)//顶点的电荷数。该参数决定是排斥还是吸引，数值越小越互相排斥
+    .on("tick", tick)//指时间间隔，隔一段时间刷新一次画面
+    .start();//开始转换
+
+svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("left", "0px")
+    .attr("top", "0px")
+    .attr("position", "absolute");
+
+  ///////////////////////////////////////////////////////////////////////////
+  ///////////// Create the gradient for the forward movement ////////////////
+  ///////////////////////////////////////////////////////////////////////////
+  var forwardGradient_list = [];
+  var defs;
+  var temp_gradient;
+  for (var i = 0; i < links.length; ++i){
+    defs = svg.append("g").append("defs");
+    temp_gradient = defs.append("linearGradient")
+    //.attr("gradientUnits", "userSpaceOnUse")
+      .attr("id","forwardGradient")
+      .attr("x1","0%")
+      .attr("y1","0%")
+      .attr("x2","100%")
+      .attr("y2","0")
+      .attr("spreadMethod", "reflect");
+
+    temp_gradient.selectAll(".stop")
+      .data([   
+            {offset: 0, color: "#bf8639"},                          
+            {offset: 0.475, color: "#debd91"},      
+            {offset: 0.525, color: "#debd91"},        
+            {offset: 1.0, color: "#bf8639"}     
+      ])                  
+      .enter().append("stop")
+      .attr("offset", function(d,i) { return d.offset; })   
+      .attr("stop-color", function(d) { return d.color; });
+
+    temp_gradient.append("animate")
+      .attr("attributeName","x1")
+      .attr("values","0%;100%")
+      .attr("dur", "10s")
+      .attr("repeatCount","indefinite");
+
+    temp_gradient.append("animate")
+      .attr("attributeName","x2")
+      .attr("values","100%;300%")
+      .attr("dur","10s")
+      .attr("repeatCount", "indefinite");
+    forwardGradient_list.push(temp_gradient);
+  }
+
+//设置连接线    
+edges_line = svg.selectAll(".edgepath")
+    .data(force.links())
+    .enter()
+    .append("path")
+      .attr({
+          'd': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
+          'class':'edgepath',
+          'id':function(d,i) {return 'edgepath'+i;}})
+      .style("stroke", "#bf8639")
+      .style("pointer-events", "none")
+      .style("stroke-width",0.5);//线条粗细
+
+/*svg.select("#edgepath")
+  .transition()
+  .delay()
+  .style("stroke", "url(#forwardGradient)");
+//$("#edgepath"+0).css("stroke", "url(#forwardGradient)");*/
+
+
+
+
+/*edges_text = svg.append("g").selectAll(".edgelabel")
+.data(force.links())
+.enter()
+.append("text")
+.style("pointer-events", "none")
+.attr({  'class':'edgelabel',
+               'id':function(d,i){return 'edgepath'+i;},
+               'dx':80,
+               'dy':0
+               });*/
+
+//圆圈
+circle = svg.append("g").selectAll("circle")
+    .data(force.nodes())//表示使用force.nodes数据
+    .enter().append("circle")
+    .attr("id", function(d, i){
+      return "node" + i;
+    })
+    .style("fill","#B43232")
+    .style('stroke',"#B43232")
+    .attr("r", 5)//设置圆圈半径
+    .on("mouseover", function(node){
+
+        edges_line.style("stroke-width",function(line){
+            if(line.source.name==node.name || line.target.name==node.name){
+                return 4;
+            }else{
+                return 0.5;
+            }
+        });
+
+        var html = "";
+        html = getClickedNodeInfo(node);
+        $('#node_info').html(html);
+    })
+    .on("click",function(node){
+        //记录当前被点中的点的信息
+        clickedNode = node;
+        //单击时让连接线加粗
+        edges_line.style("stroke-width",function(line){
+            if(line.source.name==node.name || line.target.name==node.name){
+                return 4;
+            }else{
+                return 0.5;
+            }
+        });
+
+        var html = "";
+        html = getClickedNodeInfo(node);
+        $('#node_info').html(html);
+    })
+    .call(force.drag);//将当前选中的元素传到drag函数中，使顶点可以被拖动
+  //圆圈的提示文字
+  circle.append("svg:title")  
+        .text(function(node) { 
+            var link=links[node.index];
+            if(node.name==link.source.name){
+                return "双击可查看详情"
+            }
+         });  
+
+text = svg.append("g").selectAll("text")
+    .data(force.nodes())
+    //返回缺失元素的占位对象（placeholder），指向绑定的数据中比选定元素集多出的一部分元素。
+    .enter()
+    .append("text")
+    .attr("dx", 8)
+    .attr("dy", ".35em")  
+    .style('fill',"#B43232")
+    .text(function(d) { 
+        return d.user_name; 
+    });
+
+var slider = document.getElementById("slider");
+slider.style.left = "0px";
+slider.style.top = "0px";
+slider.style.width = "300px";
+slider.style.position = "absolute";
+
+var weightSliderInt = document.getElementById("weightSliderInt");
+weightSliderInt.style.left = "0px";
+weightSliderIntTopVal = slider.offsetHeight + 40;
+weightSliderInt.style.top = weightSliderIntTopVal + "px";
+weightSliderInt.style.width = "300px";
+weightSliderInt.style.position = "absolute";
+
+var weightSliderFloat = document.getElementById("weightSliderFloat");
+weightSliderFloat.style.left = "0px";
+weightSliderFloatTopVal = weightSliderIntTopVal + weightSliderInt.offsetHeight + 40;
+weightSliderFloat.style.top = weightSliderFloatTopVal + "px";
+weightSliderFloat.style.width = "300px";
+weightSliderFloat.style.position = "absolute";
+
+var selector = document.getElementById("selector");
+selector.style.left = "0px";
+selectorTopVal = weightSliderFloatTopVal + weightSliderFloat.offsetHeight + 40;
+selector.style.top = selectorTopVal + "px";
+selector.style.position = "absolute";
+
+var gotoSelector = document.getElementById("gotoSelector");
+gotoSelector.style.left = "0px";
+gotoSelectorTopVal = selectorTopVal + selector.offsetHeight + 40;
+gotoSelector.style.top = gotoSelectorTopVal + "px";
+gotoSelector.style.position = "absolute";
+
+var clearButton = document.getElementById("clearButton");
+clearButton.style.left = "0px";
+clearButton.style.top = gotoSelectorTopVal + gotoSelector.offsetHeight + 40 + "px";
+clearButton.style.position = "absolute";
+
+
+//水平滚动条，根据滚动的程度按钮跟动
+window.onscroll = function(){
+  scrollleft = document.documentElement.scrollLeft || document.body.scrollLeft;
+  scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+
+  slider.style.left = scrollleft + "px";
+  slider.style.top = scrolltop + "px";
+
+  weightSliderInt.style.left = scrollleft + "px";
+  weightSliderIntTopVal = scrolltop + slider.offsetHeight + 40;
+  weightSliderInt.style.top = weightSliderIntTopVal + "px";
+
+  weightSliderFloat.style.left = scrollleft + "px";
+  weightSliderFloatTopVal = weightSliderIntTopVal + weightSliderInt.offsetHeight + 40;
+  weightSliderFloat.style.top = weightSliderFloatTopVal + "px";
+
+
+  selector.style.left = scrollleft + "px";
+  selectorTopVal = weightSliderFloatTopVal + weightSliderFloat.offsetHeight + 40;
+  selector.style.top = selectorTopVal+ "px";
+
+  gotoSelector.style.left = scrollleft + "px";
+  gotoSelectorTopVal = selectorTopVal + selector.offsetHeight + 40;
+  gotoSelector.style.top = gotoSelectorTopVal + "px";
+
+  clearButton.style.left = scrollleft + "px";
+  clearButton.style.top = gotoSelectorTopVal + gotoSelector.offsetHeight + 40 + "px";
+
+  node_info_pos = document.getElementById("node_info");
+  node_info_pos.style.left = scrollleft + screenw - 150 + "px";
+  node_info_pos.style.top = scrolltop + "px";
+}
 </script>
+<!--<script type="text/javascript" src="static/js/Data.js"></script>-->
 <script src="static/js/priority.js"></script>
 <script src="static/js/algorithm.js"></script>
